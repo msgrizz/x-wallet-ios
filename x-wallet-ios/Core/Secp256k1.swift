@@ -6,6 +6,7 @@
 
 import Foundation
 import secp256k1_ios
+import CryptoSwift
 
 /// `Secp256k1` provides functions for the ECDSA curve used in Ethereum.
 ///
@@ -23,17 +24,23 @@ public final class Secp256k1 {
     }
 
     /// Extracts the public key from a private key.
-    public func pubicKey(from privateKey: Data) -> Data {
+    public func pubicKey(from privateKey: Data, compressed: Bool = true) -> Data {
         var pubKey = secp256k1_pubkey()
-        var pubKeyData = Data(count: 65)
+        var pubKeyData = Data(count: compressed ? 33 : 65)
         _ = privateKey.withUnsafeBytes { key in
             secp256k1_ec_pubkey_create(context, &pubKey, key)
         }
         _ = pubKeyData.withUnsafeMutableBytes { (output: UnsafeMutablePointer<UInt8>) in
             var len = pubKeyData.count
-            secp256k1_ec_pubkey_serialize(context, output, &len, &pubKey, UInt32(SECP256K1_EC_UNCOMPRESSED))
+            secp256k1_ec_pubkey_serialize(context, output, &len, &pubKey, UInt32(compressed ? SECP256K1_EC_COMPRESSED : SECP256K1_EC_UNCOMPRESSED))
         }
         return pubKeyData
+    }
+
+    public func address(from privateKey: Data) -> Data {
+        var uncompressedPubKeyData = self.pubicKey(from: privateKey, compressed: false)
+        var address = uncompressedPubKeyData[1...].sha3(.keccak256)[12..<32]
+        return address;
     }
 
     /// Signs a hash with a private key.
@@ -46,7 +53,6 @@ public final class Secp256k1 {
     public func sign(hash: Data, privateKey: Data) throws -> Data {
         precondition(hash.count == 32, "Expect hash size to be 32")
         precondition(privateKey.count == 32, "Expect private key size to be 32")
-
         var signature = secp256k1_ecdsa_recoverable_signature()
         try privateKey.withUnsafeBytes { (key: UnsafePointer<UInt8>) in
             if secp256k1_ec_seckey_verify(context, key) != 1 {
@@ -67,7 +73,7 @@ public final class Secp256k1 {
         }
 
         // add back recid to get 65 bytes sig
-        output[64] = UInt8(recid)
+        output[64] = UInt8(recid + 27)
 
         return output
     }

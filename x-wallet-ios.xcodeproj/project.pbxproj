@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122FB004205A5F4F002827F4 /* UdapApiInvoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FB003205A5F4F002827F4 /* UdapApiInvoke.swift */; };
+		122FB006205A7C9E002827F4 /* PrivatePublicAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122FB005205A7C9E002827F4 /* PrivatePublicAddressTests.swift */; };
 		12B49B2A20591A40001F7A6C /* DerivationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B2420591A40001F7A6C /* DerivationPath.swift */; };
 		12B49B2B20591A40001F7A6C /* DerivationPath.Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B2520591A40001F7A6C /* DerivationPath.Index.swift */; };
 		12B49B2C20591A40001F7A6C /* HDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B2620591A40001F7A6C /* HDKey.swift */; };
@@ -18,6 +20,7 @@
 		12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D4E20592903001414BD /* x_wallet_iosTests.swift */; };
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
+		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
@@ -129,6 +132,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		122FB003205A5F4F002827F4 /* UdapApiInvoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdapApiInvoke.swift; sourceTree = "<group>"; };
+		122FB005205A7C9E002827F4 /* PrivatePublicAddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddressTests.swift; sourceTree = "<group>"; };
 		12B49B2420591A40001F7A6C /* DerivationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DerivationPath.swift; sourceTree = "<group>"; };
 		12B49B2520591A40001F7A6C /* DerivationPath.Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DerivationPath.Index.swift; sourceTree = "<group>"; };
 		12B49B2620591A40001F7A6C /* HDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDKey.swift; sourceTree = "<group>"; };
@@ -144,6 +149,7 @@
 		3A859E82B811E1B9945BC55E /* Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios_x_wallet_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416D5C8D72EBE5BDFF17199F /* Pods-x-wallet-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C80047CA3755F43019EE93A6 /* Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +296,7 @@
 				12D36D4E20592903001414BD /* x_wallet_iosTests.swift */,
 				12D36D5020592903001414BD /* Info.plist */,
 				12D36D5620592927001414BD /* walletTests.swift */,
+				122FB005205A7C9E002827F4 /* PrivatePublicAddressTests.swift */,
 			);
 			path = "x-wallet-iosTests";
 			sourceTree = "<group>";
@@ -549,6 +556,7 @@
 				D5ADC2C42058FE6E001307E8 /* ScryptParams.swift */,
 				12B49B3020591AD9001F7A6C /* Secp256k1.swift */,
 				12B49B2320591A40001F7A6C /* Wallet */,
+				122FB003205A5F4F002827F4 /* UdapApiInvoke.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -568,6 +576,7 @@
 				D5ADC2BE2058FE6E001307E8 /* PrivateKey.swift */,
 				D5ADC2BF2058FE6E001307E8 /* Profile.swift */,
 				D5ADC2C02058FE6E001307E8 /* Timestamp.swift */,
+				B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -957,6 +966,7 @@
 			files = (
 				12D36D5720592927001414BD /* walletTests.swift in Sources */,
 				12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */,
+				122FB006205A7C9E002827F4 /* PrivatePublicAddressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,6 +1040,7 @@
 				D5A48971204E6D54001031F6 /* StackViewController.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5ADC2D02058FE6E001307E8 /* Profile.swift in Sources */,
+				122FB004205A5F4F002827F4 /* UdapApiInvoke.swift in Sources */,
 				D5ADC2AB2058F177001307E8 /* XWSearchViewController.swift in Sources */,
 				D5ADC2C72058FE6E001307E8 /* Contact.swift in Sources */,
 				D58FC3FA20523BCA008C05AE /* UIBaseNavigationViewController.swift in Sources */,
@@ -1051,6 +1062,7 @@
 				D5A4896A204E6D54001031F6 /* Decimal.swift in Sources */,
 				D5ADC2CA2058FE6E001307E8 /* FileSystemKeystore.swift in Sources */,
 				D5A48974204E6D54001031F6 /* UIButton.swift in Sources */,
+				B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
