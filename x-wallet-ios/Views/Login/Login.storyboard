@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wu9-xX-56d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="yEE-e1-6ui">
+            <objects>
+                <viewController storyboardIdentifier="XWLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wu9-xX-56d" customClass="XWLoginViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gzi-pK-tQG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dvO-6E-mYw">
+                                <rect key="frame" x="153" y="85" width="68" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="VSe-9T-PtH"/>
+                                    <constraint firstAttribute="width" constant="68" id="dvh-7n-w9x"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfC-Iv-o5p">
+                                <rect key="frame" x="83" y="216" width="209" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Mkt-pW-2eg"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" textContentType="username"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wu9-xX-56d" id="el7-BM-t5c"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2H-3l-Cfo">
+                                <rect key="frame" x="83" y="273" width="209" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="UMp-pl-yyX"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wu9-xX-56d" id="kV6-J5-BrS"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVD-a3-MGH">
+                                <rect key="frame" x="112" y="381" width="150" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="9V5-A8-gTf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Sign in" backgroundImage="signInButton">
+                                    <color key="titleColor" red="0.94901960784313721" green="0.36078431372549019" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInAction:" destination="wu9-xX-56d" eventType="touchUpInside" id="J0P-sc-sSw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esn-a9-NnB">
+                                <rect key="frame" x="112" y="457" width="150" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="N76-gG-0sY"/>
+                                    <constraint firstAttribute="height" constant="48" id="gWx-BR-xwO"/>
+                                </constraints>
+                                <state key="normal" title="Create" backgroundImage="signUpButton"/>
+                                <connections>
+                                    <action selector="createAction:" destination="wu9-xX-56d" eventType="touchUpInside" id="HL2-I3-g39"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1843137255" green="0.21960784310000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AJs-Nc-ULF" firstAttribute="trailing" secondItem="l2H-3l-Cfo" secondAttribute="trailing" constant="83" id="1HC-wu-YoP"/>
+                            <constraint firstItem="l2H-3l-Cfo" firstAttribute="top" secondItem="IfC-Iv-o5p" secondAttribute="bottom" constant="32" id="1TV-Oe-UOQ"/>
+                            <constraint firstItem="IfC-Iv-o5p" firstAttribute="top" secondItem="dvO-6E-mYw" secondAttribute="bottom" constant="63" id="2HF-AU-G9O"/>
+                            <constraint firstItem="esn-a9-NnB" firstAttribute="centerX" secondItem="Gzi-pK-tQG" secondAttribute="centerX" id="ARb-Ol-naL"/>
+                            <constraint firstItem="IfC-Iv-o5p" firstAttribute="leading" secondItem="AJs-Nc-ULF" secondAttribute="leading" constant="83" id="CCb-cZ-d8r"/>
+                            <constraint firstItem="dvO-6E-mYw" firstAttribute="top" secondItem="AJs-Nc-ULF" secondAttribute="top" constant="65" id="HiD-vw-OlT"/>
+                            <constraint firstItem="AJs-Nc-ULF" firstAttribute="trailing" secondItem="IfC-Iv-o5p" secondAttribute="trailing" constant="83" id="KN3-Sn-eEQ"/>
+                            <constraint firstItem="dvO-6E-mYw" firstAttribute="centerX" secondItem="Gzi-pK-tQG" secondAttribute="centerX" id="Omw-xh-EAV"/>
+                            <constraint firstItem="uVD-a3-MGH" firstAttribute="top" secondItem="l2H-3l-Cfo" secondAttribute="bottom" constant="83" id="R9P-zE-9IN"/>
+                            <constraint firstItem="uVD-a3-MGH" firstAttribute="leading" secondItem="AJs-Nc-ULF" secondAttribute="leading" constant="112" id="czE-5I-QPf"/>
+                            <constraint firstItem="uVD-a3-MGH" firstAttribute="centerX" secondItem="Gzi-pK-tQG" secondAttribute="centerX" id="fSM-Md-5FG"/>
+                            <constraint firstItem="l2H-3l-Cfo" firstAttribute="leading" secondItem="AJs-Nc-ULF" secondAttribute="leading" constant="83" id="itK-Mb-N5G"/>
+                            <constraint firstItem="esn-a9-NnB" firstAttribute="top" secondItem="uVD-a3-MGH" secondAttribute="bottom" constant="28" id="zoi-d0-VI8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AJs-Nc-ULF"/>
+                    </view>
+                    <connections>
+                        <outlet property="createButton" destination="esn-a9-NnB" id="N0Y-BI-mlB"/>
+                        <outlet property="nameTextField" destination="IfC-Iv-o5p" id="BWn-qO-rKz"/>
+                        <outlet property="passwordTextField" destination="l2H-3l-Cfo" id="H1a-OG-b8e"/>
+                        <outlet property="signInButton" destination="uVD-a3-MGH" id="9fe-SN-yJo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myg-sM-Tbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginIcon" width="68" height="68"/>
+        <image name="signInButton" width="150" height="48"/>
+        <image name="signUpButton" width="150" height="48"/>
+    </resources>
+</document>

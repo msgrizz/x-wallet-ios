@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="XWContractCollectionViewCell" reuseIdentifier="XWContractCollectionViewCell" id="gTV-IL-0wX" customClass="XWContractCollectionViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcT-7z-Ind">
+                        <rect key="frame" x="14" y="0.0" width="347" height="82"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniContractBack" translatesAutoresizingMaskIntoConstraints="NO" id="IdC-Mf-5ek">
+                                <rect key="frame" x="0.0" y="0.0" width="347" height="82"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uR7-y8-dYR">
+                                <rect key="frame" x="9" y="14" width="13" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="NSf-bU-26M"/>
+                                    <constraint firstAttribute="width" constant="13" id="r4C-1Z-E0P"/>
+                                </constraints>
+                                <state key="normal" image="starTag"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment Contract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-bB-Ivk">
+                                <rect key="frame" x="26" y="10" width="209" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Z9B-ck-mw2"/>
+                                    <constraint firstAttribute="width" constant="209" id="dDy-Y4-9jT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYm-kT-ihn">
+                                <rect key="frame" x="329" y="0.0" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="1Ph-ed-bTP"/>
+                                    <constraint firstAttribute="height" constant="18" id="oEw-vl-yQw"/>
+                                </constraints>
+                                <state key="normal" image="newMessageTag"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IdC-Mf-5ek" firstAttribute="top" secondItem="qcT-7z-Ind" secondAttribute="top" id="0WS-hG-Ndm"/>
+                            <constraint firstItem="sNb-bB-Ivk" firstAttribute="top" secondItem="qcT-7z-Ind" secondAttribute="top" constant="10" id="4LR-f4-qJZ"/>
+                            <constraint firstAttribute="trailing" secondItem="SYm-kT-ihn" secondAttribute="trailing" id="8li-IJ-5We"/>
+                            <constraint firstAttribute="height" constant="82" id="COs-sl-xrZ"/>
+                            <constraint firstAttribute="bottom" secondItem="IdC-Mf-5ek" secondAttribute="bottom" id="JYW-gB-58Y"/>
+                            <constraint firstItem="uR7-y8-dYR" firstAttribute="top" secondItem="qcT-7z-Ind" secondAttribute="top" constant="14" id="UxT-JW-edj"/>
+                            <constraint firstItem="SYm-kT-ihn" firstAttribute="top" secondItem="qcT-7z-Ind" secondAttribute="top" id="Vn6-Qr-JLa"/>
+                            <constraint firstItem="sNb-bB-Ivk" firstAttribute="leading" secondItem="uR7-y8-dYR" secondAttribute="trailing" constant="4" id="Wof-W9-7kZ"/>
+                            <constraint firstItem="IdC-Mf-5ek" firstAttribute="leading" secondItem="qcT-7z-Ind" secondAttribute="leading" id="q6d-hm-Xk4"/>
+                            <constraint firstAttribute="trailing" secondItem="IdC-Mf-5ek" secondAttribute="trailing" id="wX8-1w-t6X"/>
+                            <constraint firstItem="uR7-y8-dYR" firstAttribute="leading" secondItem="qcT-7z-Ind" secondAttribute="leading" constant="9" id="yOw-Li-fOL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qcT-7z-Ind" secondAttribute="trailing" constant="14" id="Cjg-b8-ulo"/>
+                <constraint firstItem="qcT-7z-Ind" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HbC-tE-DeB"/>
+                <constraint firstItem="qcT-7z-Ind" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Llx-2w-jSH"/>
+                <constraint firstItem="qcT-7z-Ind" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="msy-2I-haH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="359" height="50"/>
+            <connections>
+                <outlet property="dataView" destination="qcT-7z-Ind" id="Hyb-GW-QvK"/>
+                <outlet property="titleLabel" destination="sNb-bB-Ivk" id="YH0-FC-4Iu"/>
+            </connections>
+            <point key="canvasLocation" x="-146.5" y="-52"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="miniContractBack" width="347" height="82"/>
+        <image name="newMessageTag" width="18" height="18"/>
+        <image name="starTag" width="13" height="13"/>
+    </resources>
+</document>

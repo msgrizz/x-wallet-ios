@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8B1-o4-f15">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="KDg-EG-eaQ">
+            <objects>
+                <viewController storyboardIdentifier="XWWelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8B1-o4-f15" customClass="XWWelcomeViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ja2-dS-cwU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-ZR-l5N">
+                                <rect key="frame" x="31" y="553" width="312" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mNc-mi-03d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Join Now" backgroundImage="joinNowButton">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinAction:" destination="8B1-o4-f15" eventType="touchUpInside" id="nIz-kx-bTn"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4ov-nH-W9M">
+                                <rect key="frame" x="168" y="515" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="79A-lJ-04B"/>
+                                    <constraint firstAttribute="width" constant="39" id="eeo-fX-YEw"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XWallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-lN-BOv">
+                                <rect key="frame" x="106" y="54" width="163.5" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="chG-oH-qHX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asset Encryption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-db-hPJ">
+                                <rect key="frame" x="129.5" y="124" width="116" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cis-Bl-nb7" firstAttribute="bottom" secondItem="ylS-ZR-l5N" secondAttribute="bottom" constant="64" id="DhN-e9-lDg"/>
+                            <constraint firstItem="9xY-lN-BOv" firstAttribute="centerX" secondItem="ja2-dS-cwU" secondAttribute="centerX" id="O7r-68-jMS"/>
+                            <constraint firstItem="9xY-lN-BOv" firstAttribute="top" secondItem="cis-Bl-nb7" secondAttribute="top" constant="34" id="ZTO-3w-GS2"/>
+                            <constraint firstItem="ylS-ZR-l5N" firstAttribute="centerX" secondItem="ja2-dS-cwU" secondAttribute="centerX" id="cyL-ts-OmO"/>
+                            <constraint firstItem="3dh-db-hPJ" firstAttribute="centerX" secondItem="ja2-dS-cwU" secondAttribute="centerX" id="ibr-8c-PBu"/>
+                            <constraint firstItem="3dh-db-hPJ" firstAttribute="top" secondItem="9xY-lN-BOv" secondAttribute="bottom" constant="7" id="l3x-6b-RWc"/>
+                            <constraint firstItem="4ov-nH-W9M" firstAttribute="centerX" secondItem="ja2-dS-cwU" secondAttribute="centerX" id="qe8-DJ-UJc"/>
+                            <constraint firstItem="ylS-ZR-l5N" firstAttribute="top" secondItem="4ov-nH-W9M" secondAttribute="bottom" constant="1" id="w6Q-L7-goc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cis-Bl-nb7"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="3dh-db-hPJ" id="nfe-p8-FjX"/>
+                        <outlet property="joinButton" destination="ylS-ZR-l5N" id="VKS-8S-Ie2"/>
+                        <outlet property="pageControl" destination="4ov-nH-W9M" id="zGK-Gu-iby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8a-db-db9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="joinNowButton" width="312" height="50"/>
+    </resources>
+</document>

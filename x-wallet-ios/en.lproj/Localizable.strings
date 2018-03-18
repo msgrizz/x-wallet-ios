@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  x-wallet-ios
+
+  Created by 爱班 on 2018/3/7.
+  Copyright © 2018年 linkio. All rights reserved.
+*/
+
+"Asset Encryption" = "Asset Encryption";
+"Mini Contract" = "Mini Contract";
+"Message" = "Message";
+
+"Enter User Name" = "Enter User Name";
+"Enter Password" = "Enter Password";
+
+"Wallet" = "Wallet";
+"Search" = "Search";
+
+
+
+"Message" = "Message";
+"My" = "My";
