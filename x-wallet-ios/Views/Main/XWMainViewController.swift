@@ -71,7 +71,9 @@ class XWMainViewController: UIBaseViewController {
         oneCard.frame = getAppRect(cardNum: oneCard.cards.count)
         oneCard.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(getAppRect(cardNum: oneCard.cards.count).height)
+            make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
         }
+        oneCard.contractButton.addTarget(self, action: #selector(goToLists), for: UIControlEvents.touchUpInside)
         self.stackView.addArrangedSubview(oneCard)
 
         let twoCard: XWContractView = XWContractView.fromNib()
@@ -79,6 +81,7 @@ class XWMainViewController: UIBaseViewController {
         twoCard.frame = getAppRect(cardNum: twoCard.cards.count)
         twoCard.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(getAppRect(cardNum: twoCard.cards.count).height)
+//            make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
         }
         self.stackView.addArrangedSubview(twoCard)
 
@@ -87,6 +90,7 @@ class XWMainViewController: UIBaseViewController {
         threeCard.frame = getAppRect(cardNum: threeCard.cards.count)
         threeCard.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(getAppRect(cardNum: threeCard.cards.count).height)
+//            make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
         }
         self.stackView.addArrangedSubview(threeCard)
         
@@ -110,7 +114,6 @@ class XWMainViewController: UIBaseViewController {
     }
     
     @objc func add(_ : UIBarButtonItem) {
-        /*
         let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
         myAppdelegate.window?.addSubview(self.blurView)
         myAppdelegate.window?.addSubview(slideView)
@@ -118,7 +121,9 @@ class XWMainViewController: UIBaseViewController {
             self.blurView.blurRadius = 30
             self.slideView.alpha = 1
         }
-        */
+    }
+    
+    @objc func goToLists(_ : UIButton) {
         self.performSegue(withIdentifier: "goToCardList", sender: nil)
     }
     

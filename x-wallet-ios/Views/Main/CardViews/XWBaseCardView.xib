@@ -67,7 +67,7 @@
                 <outlet property="tagButton" destination="etE-dF-LLK" id="lnJ-C4-np0"/>
                 <outlet property="titleLabel" destination="5OZ-oN-G40" id="lp1-Wt-5pr"/>
             </connections>
-            <point key="canvasLocation" x="-204.5" y="45"/>
+            <point key="canvasLocation" x="78" y="-105"/>
         </view>
     </objects>
     <resources>

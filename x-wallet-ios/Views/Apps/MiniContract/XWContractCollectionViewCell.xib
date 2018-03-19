@@ -81,7 +81,7 @@
                 <outlet property="dataView" destination="qcT-7z-Ind" id="Hyb-GW-QvK"/>
                 <outlet property="titleLabel" destination="sNb-bB-Ivk" id="YH0-FC-4Iu"/>
             </connections>
-            <point key="canvasLocation" x="-146.5" y="-52"/>
+            <point key="canvasLocation" x="50" y="-40"/>
         </collectionViewCell>
     </objects>
     <resources>

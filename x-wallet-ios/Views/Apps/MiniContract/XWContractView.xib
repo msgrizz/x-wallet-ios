@@ -70,6 +70,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="60Y-eu-vxN" secondAttribute="trailing" id="3MG-G3-had"/>
                         <constraint firstItem="I8B-oO-zSN" firstAttribute="leading" secondItem="cvg-2Y-Bnu" secondAttribute="leading" id="6KX-5l-wEL"/>
+                        <constraint firstItem="60Y-eu-vxN" firstAttribute="centerX" secondItem="cvg-2Y-Bnu" secondAttribute="centerX" id="9UI-b4-wmW"/>
                         <constraint firstAttribute="bottom" secondItem="60Y-eu-vxN" secondAttribute="bottom" priority="999" constant="27" id="E4e-3Z-968"/>
                         <constraint firstAttribute="trailing" secondItem="DwH-YY-1ke" secondAttribute="trailing" id="Eh6-cB-ebo"/>
                         <constraint firstItem="60Y-eu-vxN" firstAttribute="leading" secondItem="cvg-2Y-Bnu" secondAttribute="leading" id="PWt-9U-6pL"/>
@@ -94,6 +95,7 @@
                 <outlet property="backImageView" destination="DwH-YY-1ke" id="PXx-FJ-oRg"/>
                 <outlet property="bottomView" destination="RV1-V2-rla" id="IBX-Uq-YkE"/>
                 <outlet property="contentView" destination="60Y-eu-vxN" id="Fkm-pX-Rmg"/>
+                <outlet property="contractButton" destination="NSz-gP-qOm" id="Vmk-sL-cdA"/>
             </connections>
             <point key="canvasLocation" x="-134" y="-323"/>
         </view>
