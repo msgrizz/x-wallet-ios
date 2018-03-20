@@ -22,9 +22,9 @@ target 'x-wallet-ios' do
   pod 'IHKeyboardAvoiding'
   pod 'swiftScan', '~> 1.1.2'
   pod 'DynamicBlurView'
-  pod 'RealmSwift'
   pod 'Mask'
-  
+  pod 'WebViewBridge.Swift'
+pod 'SwiftWebViewBridge', '~> 0.3.0'
   
   pod 'secp256k1_ios', git: 'https://github.com/shamatar/secp256k1_ios.git', inhibit_warnings: true
   pod 'TrezorCrypto', inhibit_warnings: true
