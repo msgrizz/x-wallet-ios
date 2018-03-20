@@ -20,6 +20,7 @@
 		12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D4E20592903001414BD /* x_wallet_iosTests.swift */; };
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
+		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
@@ -149,6 +150,7 @@
 		3A859E82B811E1B9945BC55E /* Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios_x_wallet_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416D5C8D72EBE5BDFF17199F /* Pods-x-wallet-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C80047CA3755F43019EE93A6 /* Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				D5A489EA204FD2DC001031F6 /* UIBaseViewController.swift */,
 				D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */,
 				D58FC3F920523BCA008C05AE /* UIBaseNavigationViewController.swift */,
+				A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1052,6 +1055,7 @@
 				D5ADC20B2057BAD5001307E8 /* DefaultsKeys.swift in Sources */,
 				12B49B2C20591A40001F7A6C /* HDKey.swift in Sources */,
 				D58FC4202056853B008C05AE /* PrivacyViewController.swift in Sources */,
+				A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */,
 				12B49B2E20591A40001F7A6C /* MnemonicWords.swift in Sources */,
 				12B49B2D20591A40001F7A6C /* Mnemonic.swift in Sources */,
 				D5ADC2CC2058FE6E001307E8 /* Info.swift in Sources */,
