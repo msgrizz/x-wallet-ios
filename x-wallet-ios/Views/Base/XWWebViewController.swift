@@ -7,13 +7,26 @@
 //
 
 import UIKit
-
+import WebKit
+import WebViewBridge_Swift
+import SnapKit
 class XWWebViewController: UIBaseViewController {
-
+    var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        webView = WKWebView()
+        self.view.addSubview(webView)
+        webView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+        }
+        
+        let bridge = ZHWebViewBridge<WKWebView>.bridge(webView)
+        bridge.registerHandler("Image.updatePlaceHolder") { (args:[Any]) -> (Bool, [Any]?) in
+            return (true, ["place_holder.png"])
+        }
     }
 
     override func didReceiveMemoryWarning() {
