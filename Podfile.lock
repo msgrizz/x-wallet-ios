@@ -21,13 +21,14 @@ PODS:
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
   - Spring (1.0.5)
+  - SwaggerClient (1.0.1):
+    - Alamofire (~> 4.0)
   - swiftScan (1.1.3)
   - SwiftWebViewBridge (0.3.0)
   - SwiftyJSON (4.0.0)
   - SwiftyUserDefaults (3.0.1)
   - Toast-Swift (3.0.1)
   - TrezorCrypto (0.0.4)
-  - WebViewBridge.Swift (2.2)
 
 DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.0)
@@ -45,13 +46,13 @@ DEPENDENCIES:
   - SkeletonView (~> 1.1)
   - SnapKit (~> 4.0)
   - Spring (~> 1.0)
+  - SwaggerClient
   - swiftScan (~> 1.1.2)
   - SwiftWebViewBridge (~> 0.3.0)
   - SwiftyJSON (~> 4.0)
   - SwiftyUserDefaults (~> 3.0)
   - Toast-Swift (~> 3.0)
   - TrezorCrypto
-  - WebViewBridge.Swift
 
 EXTERNAL SOURCES:
   secp256k1_ios:
@@ -80,14 +81,14 @@ SPEC CHECKSUMS:
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
+  SwaggerClient: cce7dcf06841576548a63246f886b1774f0de0cc
   swiftScan: ad753846f4292c19a376dd159db035d62b689458
   SwiftWebViewBridge: 902b8e6945352c74aa5c0975c4dcd48f420f7d44
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   TrezorCrypto: 7f87a2296cf13872b21565c29fd9f7882dd00803
-  WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: c0776752d7abccb0cea48ab5d9b44ae3c4ecca3f
+PODFILE CHECKSUM: 055941f933ddd364518bdd0ea931d16340dac2e3
 
 COCOAPODS: 1.4.0
