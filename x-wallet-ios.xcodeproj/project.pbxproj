@@ -23,6 +23,9 @@
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
+		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
+		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
+		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -113,13 +116,6 @@
 		D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */; };
 		D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2ED205A424A001307E8 /* XWContractView.swift */; };
 		D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EF205A425B001307E8 /* XWContractView.xib */; };
-		D5ADC2FE205B6193001307E8 /* HFCardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2FA205B6193001307E8 /* HFCardCollectionView.swift */; };
-		D5ADC2FF205B6193001307E8 /* HFCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2FB205B6193001307E8 /* HFCardCollectionViewCell.swift */; };
-		D5ADC300205B6193001307E8 /* HFCardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2FC205B6193001307E8 /* HFCardCollectionViewLayout.swift */; };
-		D5ADC301205B6193001307E8 /* HFCardCollectionViewLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2FD205B6193001307E8 /* HFCardCollectionViewLayoutDelegate.swift */; };
-		D5ADC304205B6BB7001307E8 /* XWContractCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC302205B6BB7001307E8 /* XWContractCollectionViewCell.swift */; };
-		D5ADC305205B6BB7001307E8 /* XWContractCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC303205B6BB7001307E8 /* XWContractCollectionViewCell.xib */; };
-		D5ADC307205B6D36001307E8 /* XWCardListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC306205B6D36001307E8 /* XWCardListCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +150,9 @@
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C80047CA3755F43019EE93A6 /* Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
+		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
+		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -248,13 +247,6 @@
 		D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWBaseCardView.xib; sourceTree = "<group>"; };
 		D5ADC2ED205A424A001307E8 /* XWContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractView.swift; sourceTree = "<group>"; };
 		D5ADC2EF205A425B001307E8 /* XWContractView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractView.xib; sourceTree = "<group>"; };
-		D5ADC2FA205B6193001307E8 /* HFCardCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFCardCollectionView.swift; sourceTree = "<group>"; };
-		D5ADC2FB205B6193001307E8 /* HFCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		D5ADC2FC205B6193001307E8 /* HFCardCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFCardCollectionViewLayout.swift; sourceTree = "<group>"; };
-		D5ADC2FD205B6193001307E8 /* HFCardCollectionViewLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFCardCollectionViewLayoutDelegate.swift; sourceTree = "<group>"; };
-		D5ADC302205B6BB7001307E8 /* XWContractCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractCollectionViewCell.swift; sourceTree = "<group>"; };
-		D5ADC303205B6BB7001307E8 /* XWContractCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractCollectionViewCell.xib; sourceTree = "<group>"; };
-		D5ADC306205B6D36001307E8 /* XWCardListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardListCollectionViewController.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -338,11 +330,11 @@
 				D5ADC2E8205A3B21001307E8 /* CardViewModels */,
 				D5ADC2E5205A3ADB001307E8 /* CardViews */,
 				D58FC3F3205236CF008C05AE /* XWMainViewController.swift */,
+				D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */,
 				D5ADC2D620591077001307E8 /* XWSlideView.swift */,
 				D5ADC2D820591088001307E8 /* XWSlideView.xib */,
 				D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */,
 				D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */,
-				D5ADC306205B6D36001307E8 /* XWCardListCollectionViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -510,7 +502,6 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				D5ADC2F9205B6193001307E8 /* HFCardCollectionViewLayout */,
 				D58FC4292057961D008C05AE /* UINavigationBar+Transparent */,
 				D58FC40A20564523008C05AE /* FSPagerView */,
 				D58FC4012052680B008C05AE /* launchImage@2x.png */,
@@ -612,23 +603,12 @@
 		D5ADC2F4205B57D4001307E8 /* MiniContract */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */,
+				D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */,
 				D5ADC2ED205A424A001307E8 /* XWContractView.swift */,
 				D5ADC2EF205A425B001307E8 /* XWContractView.xib */,
-				D5ADC302205B6BB7001307E8 /* XWContractCollectionViewCell.swift */,
-				D5ADC303205B6BB7001307E8 /* XWContractCollectionViewCell.xib */,
 			);
 			path = MiniContract;
-			sourceTree = "<group>";
-		};
-		D5ADC2F9205B6193001307E8 /* HFCardCollectionViewLayout */ = {
-			isa = PBXGroup;
-			children = (
-				D5ADC2FA205B6193001307E8 /* HFCardCollectionView.swift */,
-				D5ADC2FB205B6193001307E8 /* HFCardCollectionViewCell.swift */,
-				D5ADC2FC205B6193001307E8 /* HFCardCollectionViewLayout.swift */,
-				D5ADC2FD205B6193001307E8 /* HFCardCollectionViewLayoutDelegate.swift */,
-			);
-			path = HFCardCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -746,10 +726,10 @@
 				D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */,
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
+				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
-				D5ADC305205B6BB7001307E8 /* XWContractCollectionViewCell.xib in Resources */,
 				D5ADC2B12058F878001307E8 /* XWSearchTableViewCell.xib in Resources */,
 				D5A489DC204FB30D001031F6 /* Localizable.strings in Resources */,
 				D5ADC20F2057BF66001307E8 /* XWConversationTableViewCell.xib in Resources */,
@@ -808,11 +788,11 @@
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SwaggerClient/SwaggerClient.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftWebViewBridge/SwiftWebViewBridge.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/TrezorCrypto/TrezorCrypto.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewBridge.Swift/WebViewBridge_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/swiftScan/swiftScan.framework",
 			);
@@ -835,11 +815,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwaggerClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebViewBridge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrezorCrypto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewBridge_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swiftScan.framework",
 			);
@@ -920,11 +900,11 @@
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/SwaggerClient/SwaggerClient.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftWebViewBridge/SwiftWebViewBridge.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/TrezorCrypto/TrezorCrypto.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewBridge.Swift/WebViewBridge_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/swiftScan/swiftScan.framework",
 			);
@@ -947,11 +927,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwaggerClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebViewBridge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrezorCrypto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewBridge_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swiftScan.framework",
 			);
@@ -990,11 +970,9 @@
 				D58FC41720564523008C05AE /* FSPageViewLayout.swift in Sources */,
 				D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */,
 				D5ADC2DB20591ECC001307E8 /* XWBaseRequest.swift in Sources */,
-				D5ADC301205B6193001307E8 /* HFCardCollectionViewLayoutDelegate.swift in Sources */,
 				D5ADC2D52058FE6E001307E8 /* ScryptParams.swift in Sources */,
 				D5ADC2D32058FE6E001307E8 /* KeystoreKeyHeader.swift in Sources */,
 				D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */,
-				D5ADC2FF205B6193001307E8 /* HFCardCollectionViewCell.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
 				D5ADC2DE205A0961001307E8 /* XWNoCardView.swift in Sources */,
 				D58FC41B20564EED008C05AE /* MyAuthenticationCollectionViewCell.swift in Sources */,
@@ -1006,16 +984,16 @@
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				12B49B2A20591A40001F7A6C /* DerivationPath.swift in Sources */,
 				12B49B2B20591A40001F7A6C /* DerivationPath.Index.swift in Sources */,
+				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,
 				D5A48906204E3761001031F6 /* AppDelegate.swift in Sources */,
-				D5ADC2FE205B6193001307E8 /* HFCardCollectionView.swift in Sources */,
 				D58FC41E2056576A008C05AE /* MyCardViewController.swift in Sources */,
 				D5ADC2C52058FE6E001307E8 /* DataHex.swift in Sources */,
 				D5ADC2C92058FE6E001307E8 /* DataWrapper.swift in Sources */,
 				D58FC3FE20523CE9008C05AE /* XWMyViewController.swift in Sources */,
 				D5ADC2162057C60F001307E8 /* XWConversationViewMode.swift in Sources */,
 				D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */,
-				D5ADC304205B6BB7001307E8 /* XWContractCollectionViewCell.swift in Sources */,
 				D58FC41820564523008C05AE /* FSPageViewTransformer.swift in Sources */,
+				D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */,
 				D5A48977204E6D54001031F6 /* UIImage.swift in Sources */,
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
 				D5A48968204E6D54001031F6 /* CALayer.swift in Sources */,
@@ -1035,10 +1013,8 @@
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A4896D204E6D54001031F6 /* Double.swift in Sources */,
-				D5ADC307205B6D36001307E8 /* XWCardListCollectionViewController.swift in Sources */,
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
 				D5ADC2CF2058FE6E001307E8 /* PrivateKey.swift in Sources */,
-				D5ADC300205B6193001307E8 /* HFCardCollectionViewLayout.swift in Sources */,
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
 				D5A48971204E6D54001031F6 /* StackViewController.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,

@@ -81,7 +81,6 @@ class XWMainViewController: UIBaseViewController {
         twoCard.frame = getAppRect(cardNum: twoCard.cards.count)
         twoCard.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(getAppRect(cardNum: twoCard.cards.count).height)
-//            make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
         }
         self.stackView.addArrangedSubview(twoCard)
 
@@ -90,7 +89,6 @@ class XWMainViewController: UIBaseViewController {
         threeCard.frame = getAppRect(cardNum: threeCard.cards.count)
         threeCard.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(getAppRect(cardNum: threeCard.cards.count).height)
-//            make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
         }
         self.stackView.addArrangedSubview(threeCard)
         
@@ -121,8 +119,8 @@ class XWMainViewController: UIBaseViewController {
             self.blurView.blurRadius = 30
             self.slideView.alpha = 1
         }
-    }
-    
+ }
+ 
     @objc func goToLists(_ : UIButton) {
         self.performSegue(withIdentifier: "goToCardList", sender: nil)
     }

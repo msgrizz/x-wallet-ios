@@ -23,7 +23,7 @@ target 'x-wallet-ios' do
   pod 'swiftScan', '~> 1.1.2'
   pod 'DynamicBlurView'
   pod 'Mask'
-  pod 'SwiftWebViewBridge', '~> 0.3.0'
+  pod 'WebViewBridge.Swift'
   pod 'SwaggerClient'
   
   pod 'secp256k1_ios', git: 'https://github.com/shamatar/secp256k1_ios.git', inhibit_warnings: true

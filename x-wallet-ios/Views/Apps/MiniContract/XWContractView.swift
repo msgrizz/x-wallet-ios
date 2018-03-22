@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 class XWContractView: UIView {
     let insert = 23
@@ -15,15 +14,13 @@ class XWContractView: UIView {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var contractButton: UIButton!
+
     var cards: [BaseCardModel] = [BaseCardModel]() {
         didSet {
             for (i, item) in cards.enumerated() {
                 let cardView = XWBaseCardView.fromNib()
                 cardView.card = item
                 cardView.frame = getCardRect(index: i)
-//                cardView.snp.makeConstraints { (make) -> Void in
-//                    make.width.equalTo(getCardRect(index: i).width)
-//                }
                 self.contentView.addSubview(cardView)
             }
             backImageView.layer.borderColor = UIColor.clear.cgColor
