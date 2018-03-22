@@ -17,7 +17,6 @@ target 'x-wallet-ios' do
   pod 'Toast-Swift', '~> 3.0'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'Eureka', '~> 4.0.1'
-  pod 'SeedStackViewController'
   pod 'NVActivityIndicatorView'
   pod 'IHKeyboardAvoiding'
   pod 'swiftScan', '~> 1.1.2'

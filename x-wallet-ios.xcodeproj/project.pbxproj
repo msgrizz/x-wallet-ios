@@ -29,6 +29,8 @@
 		D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */; };
 		D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */; };
 		D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94320635B33005ABED8 /* XWProtectViewController.swift */; };
+		D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */; };
+		D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -63,7 +65,6 @@
 		D5A4896D204E6D54001031F6 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A48957204E6D54001031F6 /* Double.swift */; };
 		D5A4896F204E6D54001031F6 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A48959204E6D54001031F6 /* NSAttributedString.swift */; };
 		D5A48970204E6D54001031F6 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4895A204E6D54001031F6 /* NSObject.swift */; };
-		D5A48971204E6D54001031F6 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4895B204E6D54001031F6 /* StackViewController.swift */; };
 		D5A48972204E6D54001031F6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4895C204E6D54001031F6 /* String.swift */; };
 		D5A48974204E6D54001031F6 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4895E204E6D54001031F6 /* UIButton.swift */; };
 		D5A48975204E6D54001031F6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A4895F204E6D54001031F6 /* UIColor.swift */; };
@@ -159,6 +160,8 @@
 		D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardListHeaderView.swift; sourceTree = "<group>"; };
 		D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardListHeaderView.xib; sourceTree = "<group>"; };
 		D58DB94320635B33005ABED8 /* XWProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWProtectViewController.swift; sourceTree = "<group>"; };
+		D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactTableViewCell.swift; sourceTree = "<group>"; };
+		D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyContactTableViewCell.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +198,6 @@
 		D5A48957204E6D54001031F6 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		D5A48959204E6D54001031F6 /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		D5A4895A204E6D54001031F6 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
-		D5A4895B204E6D54001031F6 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		D5A4895C204E6D54001031F6 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D5A4895E204E6D54001031F6 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D5A4895F204E6D54001031F6 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -353,6 +355,8 @@
 				D5ADC2102057C568001307E8 /* ViewModels */,
 				D58FC3F720523B6E008C05AE /* XWMessageListTableViewController.swift */,
 				D5ADC2A52058C620001307E8 /* XWContactListTableViewController.swift */,
+				D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */,
+				D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */,
 				D5ADC20C2057BF66001307E8 /* XWConversationTableViewCell.swift */,
 				D5ADC20D2057BF66001307E8 /* XWConversationTableViewCell.xib */,
 				D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */,
@@ -448,7 +452,6 @@
 				D5A48957204E6D54001031F6 /* Double.swift */,
 				D5A48959204E6D54001031F6 /* NSAttributedString.swift */,
 				D5A4895A204E6D54001031F6 /* NSObject.swift */,
-				D5A4895B204E6D54001031F6 /* StackViewController.swift */,
 				D5A4895C204E6D54001031F6 /* String.swift */,
 				D5A4895E204E6D54001031F6 /* UIButton.swift */,
 				D5A4895F204E6D54001031F6 /* UIColor.swift */,
@@ -792,7 +795,6 @@
 				"${BUILT_PRODUCTS_DIR}/Mask/Mask.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SeedStackViewController/StackViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -819,7 +821,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mask.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StackViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -904,7 +905,6 @@
 				"${BUILT_PRODUCTS_DIR}/Mask/Mask.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SeedStackViewController/StackViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -931,7 +931,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mask.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StackViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -970,6 +969,7 @@
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */,
+				D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */,
 				D5A4896C204E6D54001031F6 /* Dictionary.swift in Sources */,
 				D58FC42B2057961D008C05AE /* UINavigationBar+Transparent.swift in Sources */,
 				D5ADC2D42058FE6E001307E8 /* Scrypt.swift in Sources */,
@@ -980,6 +980,7 @@
 				D58FC41720564523008C05AE /* FSPageViewLayout.swift in Sources */,
 				D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */,
 				D5ADC2DB20591ECC001307E8 /* XWBaseRequest.swift in Sources */,
+				D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */,
 				D5ADC2D52058FE6E001307E8 /* ScryptParams.swift in Sources */,
 				D5ADC2D32058FE6E001307E8 /* KeystoreKeyHeader.swift in Sources */,
 				D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */,
@@ -1026,7 +1027,6 @@
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
 				D5ADC2CF2058FE6E001307E8 /* PrivateKey.swift in Sources */,
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
-				D5A48971204E6D54001031F6 /* StackViewController.swift in Sources */,
 				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5ADC2D02058FE6E001307E8 /* Profile.swift in Sources */,

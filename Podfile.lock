@@ -16,7 +16,6 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.1.1)
   - ObjectMapper (3.1.0)
   - secp256k1_ios (0.1.2)
-  - SeedStackViewController (0.4.0)
   - SipHash (1.2.0)
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
@@ -42,7 +41,6 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - ObjectMapper (~> 3.1)
   - secp256k1_ios (from `https://github.com/shamatar/secp256k1_ios.git`)
-  - SeedStackViewController
   - SkeletonView (~> 1.1)
   - SnapKit (~> 4.0)
   - Spring (~> 1.0)
@@ -76,7 +74,6 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   secp256k1_ios: 168c6c49ed9771db51875f5255c8f9847e4cf554
-  SeedStackViewController: 45e88ca1493a610e74d661d3feced7098f72dbd3
   SipHash: c6e9e43e9c531b5bc6602545130c26194a6d31ce
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
@@ -89,6 +86,6 @@ SPEC CHECKSUMS:
   TrezorCrypto: 7f87a2296cf13872b21565c29fd9f7882dd00803
   WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: c393e7f2466671b44253fc4dfef0ef4308de23e4
+PODFILE CHECKSUM: bd670bfd223b44c2060c957b1e6b104006113688
 
 COCOAPODS: 1.4.0

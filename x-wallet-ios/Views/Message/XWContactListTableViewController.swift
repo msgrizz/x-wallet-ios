@@ -22,8 +22,9 @@ class XWContactListTableViewController: UIBaseTableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         let search = UISearchController(searchResultsController: nil)
+        search.searchBar.searchBarStyle = UISearchBarStyle.minimal
         self.navigationItem.searchController = search
-        self.view.backgroundColor =  UIColor.white
+        self.navigationItem.hidesSearchBarWhenScrolling = false
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationItem.title = "Contact List"
         addButton = UIBarButtonItem(
@@ -46,26 +47,45 @@ class XWContactListTableViewController: UIBaseTableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 80
+        }else {
+            return 44
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if section == 0 {
+            return 1
+        }else {
+            return 30
+        }
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath)
+            
+            // Configure the cell...
+            
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath)
+            
+            // Configure the cell...
+            
+            return cell
+        }
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
