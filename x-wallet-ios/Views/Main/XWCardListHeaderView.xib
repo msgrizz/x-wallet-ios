@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XWCardListHeaderView" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ongoing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-Su-m5H">
+                    <rect key="frame" x="20" y="17" width="55" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="aK5-KT-9P2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtj-0k-XpC">
+                    <rect key="frame" x="329" y="14" width="30" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="OS3-m9-JUx"/>
+                        <constraint firstAttribute="height" constant="22" id="b8g-L9-4Xx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title=" 11" image="starTag"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mxX-Su-m5H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8mt-tB-n5h"/>
+                <constraint firstItem="mxX-Su-m5H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="QSm-Bb-yQe"/>
+                <constraint firstItem="Qtj-0k-XpC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="ZpZ-2A-P7w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mxX-Su-m5H" secondAttribute="bottom" constant="16" id="cn7-Q6-MTa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qtj-0k-XpC" secondAttribute="trailing" constant="16" id="pbq-qY-lfS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qtj-0k-XpC" secondAttribute="bottom" constant="14" id="qXz-CO-Y1M"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="numberButton" destination="Qtj-0k-XpC" id="Wvf-Rx-e69"/>
+                <outlet property="titleLabel" destination="mxX-Su-m5H" id="gc1-rT-YLE"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="starTag" width="13" height="13"/>
+    </resources>
+</document>

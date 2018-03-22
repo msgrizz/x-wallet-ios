@@ -99,7 +99,6 @@ class XWMainViewController: UIBaseViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height + 20)
-        print(self.stackView.arrangedSubviews[0].frame)
     }
     
     override func didReceiveMemoryWarning() {

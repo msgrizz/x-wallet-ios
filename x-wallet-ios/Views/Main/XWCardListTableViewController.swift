@@ -23,13 +23,22 @@ class XWCardListTableViewController: UIBaseTableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.tableView.register(UINib(nibName: "XWContractTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        super.viewDidDisappear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
 
     // MARK: - Table view data source
@@ -56,13 +65,17 @@ class XWCardListTableViewController: UIBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        
-        
-        
-        
-        return UIView()
+        let headView = XWCardListHeaderView.fromNib()
+        headView.clearData()
+        if section==0 {
+            headView.titleLabel.text = "Ongoing"
+            headView.numberButton.isHidden = false
+        }else {
+            headView.titleLabel.text = "Completed"
+        }
+        return headView
     }
+
 
     /*
     // Override to support conditional editing of the table view.

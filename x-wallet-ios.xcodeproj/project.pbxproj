@@ -26,6 +26,8 @@
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
 		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
+		D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */; };
+		D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -153,6 +155,8 @@
 		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
+		D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardListHeaderView.swift; sourceTree = "<group>"; };
+		D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardListHeaderView.xib; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -335,6 +339,8 @@
 				D5ADC2D820591088001307E8 /* XWSlideView.xib */,
 				D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */,
 				D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */,
+				D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */,
+				D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -727,6 +733,7 @@
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
+				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
@@ -1017,6 +1024,7 @@
 				D5ADC2CF2058FE6E001307E8 /* PrivateKey.swift in Sources */,
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
 				D5A48971204E6D54001031F6 /* StackViewController.swift in Sources */,
+				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5ADC2D02058FE6E001307E8 /* Profile.swift in Sources */,
 				122FB004205A5F4F002827F4 /* UdapApiInvoke.swift in Sources */,
