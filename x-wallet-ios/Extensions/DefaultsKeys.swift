@@ -13,4 +13,6 @@ extension DefaultsKeys {
     static let username = DefaultsKey<String?>("username")
     static let launchCount = DefaultsKey<Int>("launchCount")
     static let lastLaunchVersion = DefaultsKey<String>("lastLaunchVersion")
+    static let isOpenProtect = DefaultsKey<Bool>("isOpenProtect")
+
 }
