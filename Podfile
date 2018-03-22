@@ -19,7 +19,6 @@ target 'x-wallet-ios' do
   pod 'Eureka', '~> 4.0.1'
   pod 'NVActivityIndicatorView'
   pod 'IHKeyboardAvoiding'
-  pod 'swiftScan', '~> 1.1.2'
   pod 'DynamicBlurView'
   pod 'Mask'
   pod 'WebViewBridge.Swift'

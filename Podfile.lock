@@ -22,7 +22,6 @@ PODS:
   - Spring (1.0.5)
   - SwaggerClient (1.0.1):
     - Alamofire (~> 4.0)
-  - swiftScan (1.1.3)
   - SwiftyJSON (4.0.0)
   - SwiftyUserDefaults (3.0.1)
   - Toast-Swift (3.0.1)
@@ -45,7 +44,6 @@ DEPENDENCIES:
   - SnapKit (~> 4.0)
   - Spring (~> 1.0)
   - SwaggerClient
-  - swiftScan (~> 1.1.2)
   - SwiftyJSON (~> 4.0)
   - SwiftyUserDefaults (~> 3.0)
   - Toast-Swift (~> 3.0)
@@ -79,13 +77,12 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   SwaggerClient: cce7dcf06841576548a63246f886b1774f0de0cc
-  swiftScan: ad753846f4292c19a376dd159db035d62b689458
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   TrezorCrypto: 7f87a2296cf13872b21565c29fd9f7882dd00803
   WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: bd670bfd223b44c2060c957b1e6b104006113688
+PODFILE CHECKSUM: 638c46d214e6f99c66a41427560f8efc9d6a66a2
 
 COCOAPODS: 1.4.0

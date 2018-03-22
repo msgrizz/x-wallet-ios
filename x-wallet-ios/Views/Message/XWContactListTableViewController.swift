@@ -38,7 +38,18 @@ class XWContactListTableViewController: UIBaseTableViewController {
     }
     
     @objc func add(_ : UIBarButtonItem) {
-        
+        AVCaptureSessionManager.checkAuthorizationStatusForCamera(grant: {
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "XWScanViewController")
+            self.navigationController?.pushViewController(controller, animated: true)
+        }){
+            let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: { (action) in
+                let url = URL(string: UIApplicationOpenSettingsURLString)
+                UIApplication.shared.open(url!, options: [String: Any](), completionHandler: nil)
+            })
+            let con = UIAlertController(title: "权限未开启", message: "您未开启相机权限，点击确定跳转至系统设置开启", preferredStyle: UIAlertControllerStyle.alert)
+            con.addAction(action)
+            self.present(con, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

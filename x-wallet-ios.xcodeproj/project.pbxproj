@@ -31,6 +31,10 @@
 		D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94320635B33005ABED8 /* XWProtectViewController.swift */; };
 		D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */; };
 		D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */; };
+		D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94B2063A80B005ABED8 /* XWScanViewController.swift */; };
+		D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */; };
+		D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */; };
+		D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -162,6 +166,10 @@
 		D58DB94320635B33005ABED8 /* XWProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWProtectViewController.swift; sourceTree = "<group>"; };
 		D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyContactTableViewCell.swift; sourceTree = "<group>"; };
+		D58DB94B2063A80B005ABED8 /* XWScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWScanViewController.swift; sourceTree = "<group>"; };
+		D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionManager.swift; sourceTree = "<group>"; };
+		D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ZZYQRCodeImage.swift"; sourceTree = "<group>"; };
+		D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +357,16 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		D58DB94D2063A991005ABED8 /* ZZYQRCodeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */,
+				D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */,
+				D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */,
+			);
+			path = ZZYQRCodeSwift;
+			sourceTree = "<group>";
+		};
 		D58FC3F520523AC4008C05AE /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +516,7 @@
 				D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */,
 				D58FC3F920523BCA008C05AE /* UIBaseNavigationViewController.swift */,
 				A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */,
+				D58DB94B2063A80B005ABED8 /* XWScanViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -514,6 +533,7 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB94D2063A991005ABED8 /* ZZYQRCodeSwift */,
 				D58FC4292057961D008C05AE /* UINavigationBar+Transparent */,
 				D58FC40A20564523008C05AE /* FSPagerView */,
 				D58FC4012052680B008C05AE /* launchImage@2x.png */,
@@ -750,6 +770,7 @@
 				D5A489E3204FBC82001031F6 /* Main.storyboard in Resources */,
 				D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */,
 				D58FC400205267B4008C05AE /* Assets.xcassets in Resources */,
+				D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */,
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
 				D58FC4042052680B008C05AE /* launchImage@3x.png in Resources */,
@@ -806,7 +827,6 @@
 				"${BUILT_PRODUCTS_DIR}/TrezorCrypto/TrezorCrypto.framework",
 				"${BUILT_PRODUCTS_DIR}/WebViewBridge.Swift/WebViewBridge_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
-				"${BUILT_PRODUCTS_DIR}/swiftScan/swiftScan.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -832,7 +852,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrezorCrypto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewBridge_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swiftScan.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -916,7 +935,6 @@
 				"${BUILT_PRODUCTS_DIR}/TrezorCrypto/TrezorCrypto.framework",
 				"${BUILT_PRODUCTS_DIR}/WebViewBridge.Swift/WebViewBridge_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
-				"${BUILT_PRODUCTS_DIR}/swiftScan/swiftScan.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -942,7 +960,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrezorCrypto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewBridge_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swiftScan.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -967,6 +984,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
+				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */,
 				D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */,
@@ -1008,6 +1026,7 @@
 				D5A48977204E6D54001031F6 /* UIImage.swift in Sources */,
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
 				D5A48968204E6D54001031F6 /* CALayer.swift in Sources */,
+				D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */,
 				D58FC41620564523008C05AE /* FSPagerViewLayoutAttributes.swift in Sources */,
 				D5ADC2D22058FE6E001307E8 /* DecryptError.swift in Sources */,
 				D5A48967204E6D54001031F6 /* Bundle.swift in Sources */,
@@ -1020,6 +1039,7 @@
 				D5ADC2B02058F878001307E8 /* XWSearchTableViewCell.swift in Sources */,
 				D5ADC2CD2058FE6E001307E8 /* Mac.swift in Sources */,
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
+				D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */,
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
