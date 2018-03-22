@@ -28,6 +28,7 @@
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
 		D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */; };
 		D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */; };
+		D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94320635B33005ABED8 /* XWProtectViewController.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -157,6 +158,7 @@
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
 		D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardListHeaderView.swift; sourceTree = "<group>"; };
 		D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardListHeaderView.xib; sourceTree = "<group>"; };
+		D58DB94320635B33005ABED8 /* XWProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWProtectViewController.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				D58FC41F2056853B008C05AE /* PrivacyViewController.swift */,
 				D58FC423205777DC008C05AE /* XWChangePasswordViewController.swift */,
 				D58FC4272057952E008C05AE /* XWInviteViewController.swift */,
+				D58DB94320635B33005ABED8 /* XWProtectViewController.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -1027,6 +1030,7 @@
 				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5ADC2D02058FE6E001307E8 /* Profile.swift in Sources */,
+				D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */,
 				122FB004205A5F4F002827F4 /* UdapApiInvoke.swift in Sources */,
 				D5ADC2AB2058F177001307E8 /* XWSearchViewController.swift in Sources */,
 				D5ADC2C72058FE6E001307E8 /* Contact.swift in Sources */,
