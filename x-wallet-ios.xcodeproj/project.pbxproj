@@ -36,6 +36,22 @@
 		D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */; };
 		D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */; };
 		D58DB9552063B3C8005ABED8 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9542063B3C7005ABED8 /* countries.json */; };
+		D58DB95720649635005ABED8 /* XWMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB95620649635005ABED8 /* XWMessageViewController.swift */; };
+		D58DB95A20649D9C005ABED8 /* XWSenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB95920649D9C005ABED8 /* XWSenderTableViewCell.swift */; };
+		D58DB95C20649DAD005ABED8 /* XWRecieverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB95B20649DAD005ABED8 /* XWRecieverTableViewCell.swift */; };
+		D58DB96E2064A7FF005ABED8 /* GTExtensionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB96C2064A7FF005ABED8 /* GTExtensionSDK.framework */; };
+		D58DB96F2064A7FF005ABED8 /* GTSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB96D2064A7FF005ABED8 /* GTSDK.framework */; };
+		D58DB9712064A81F005ABED8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9702064A81F005ABED8 /* UserNotifications.framework */; };
+		D58DB9732064A82D005ABED8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9722064A82D005ABED8 /* CoreLocation.framework */; };
+		D58DB9752064A83F005ABED8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9742064A83F005ABED8 /* AVFoundation.framework */; };
+		D58DB9772064A846005ABED8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9762064A846005ABED8 /* MobileCoreServices.framework */; };
+		D58DB9792064A857005ABED8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9782064A857005ABED8 /* CoreTelephony.framework */; };
+		D58DB97B2064A867005ABED8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB97A2064A866005ABED8 /* SystemConfiguration.framework */; };
+		D58DB97D2064A88B005ABED8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB97C2064A88B005ABED8 /* libsqlite3.tbd */; };
+		D58DB97F2064A89C005ABED8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB97E2064A89C005ABED8 /* libc++.tbd */; };
+		D58DB9812064A8A6005ABED8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9802064A8A6005ABED8 /* libz.tbd */; };
+		D58DB9832064A8B1005ABED8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9822064A8B1005ABED8 /* PushKit.framework */; };
+		D58DB9862064A8CE005ABED8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9842064A8CE005ABED8 /* NotificationService.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -172,6 +188,23 @@
 		D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ZZYQRCodeImage.swift"; sourceTree = "<group>"; };
 		D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
 		D58DB9542063B3C7005ABED8 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		D58DB95620649635005ABED8 /* XWMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMessageViewController.swift; sourceTree = "<group>"; };
+		D58DB95920649D9C005ABED8 /* XWSenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSenderTableViewCell.swift; sourceTree = "<group>"; };
+		D58DB95B20649DAD005ABED8 /* XWRecieverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWRecieverTableViewCell.swift; sourceTree = "<group>"; };
+		D58DB96C2064A7FF005ABED8 /* GTExtensionSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTExtensionSDK.framework; sourceTree = "<group>"; };
+		D58DB96D2064A7FF005ABED8 /* GTSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTSDK.framework; sourceTree = "<group>"; };
+		D58DB9702064A81F005ABED8 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D58DB9722064A82D005ABED8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D58DB9742064A83F005ABED8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D58DB9762064A846005ABED8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D58DB9782064A857005ABED8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D58DB97A2064A866005ABED8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D58DB97C2064A88B005ABED8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D58DB97E2064A89C005ABED8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D58DB9802064A8A6005ABED8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D58DB9822064A8B1005ABED8 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		D58DB9842064A8CE005ABED8 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		D58DB9852064A8CE005ABED8 /* GtSdkDemo-swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GtSdkDemo-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -281,7 +314,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58DB9832064A8B1005ABED8 /* PushKit.framework in Frameworks */,
+				D58DB9812064A8A6005ABED8 /* libz.tbd in Frameworks */,
+				D58DB97F2064A89C005ABED8 /* libc++.tbd in Frameworks */,
+				D58DB97D2064A88B005ABED8 /* libsqlite3.tbd in Frameworks */,
+				D58DB97B2064A867005ABED8 /* SystemConfiguration.framework in Frameworks */,
+				D58DB9792064A857005ABED8 /* CoreTelephony.framework in Frameworks */,
+				D58DB9772064A846005ABED8 /* MobileCoreServices.framework in Frameworks */,
+				D58DB9752064A83F005ABED8 /* AVFoundation.framework in Frameworks */,
+				D58DB9732064A82D005ABED8 /* CoreLocation.framework in Frameworks */,
+				D58DB9712064A81F005ABED8 /* UserNotifications.framework in Frameworks */,
+				D58DB96F2064A7FF005ABED8 /* GTSDK.framework in Frameworks */,
 				D5A4891C204E3BDA001031F6 /* Security.framework in Frameworks */,
+				D58DB96E2064A7FF005ABED8 /* GTExtensionSDK.framework in Frameworks */,
 				8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +361,16 @@
 		305D19097D96ADDB535A2360 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB9822064A8B1005ABED8 /* PushKit.framework */,
+				D58DB9802064A8A6005ABED8 /* libz.tbd */,
+				D58DB97E2064A89C005ABED8 /* libc++.tbd */,
+				D58DB97C2064A88B005ABED8 /* libsqlite3.tbd */,
+				D58DB97A2064A866005ABED8 /* SystemConfiguration.framework */,
+				D58DB9782064A857005ABED8 /* CoreTelephony.framework */,
+				D58DB9762064A846005ABED8 /* MobileCoreServices.framework */,
+				D58DB9742064A83F005ABED8 /* AVFoundation.framework */,
+				D58DB9722064A82D005ABED8 /* CoreLocation.framework */,
+				D58DB9702064A81F005ABED8 /* UserNotifications.framework */,
 				D5A4891B204E3BDA001031F6 /* Security.framework */,
 				F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */,
 				3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */,
@@ -369,9 +424,30 @@
 			path = ZZYQRCodeSwift;
 			sourceTree = "<group>";
 		};
+		D58DB95820649D88005ABED8 /* MessageCells */ = {
+			isa = PBXGroup;
+			children = (
+				D58DB95920649D9C005ABED8 /* XWSenderTableViewCell.swift */,
+				D58DB95B20649DAD005ABED8 /* XWRecieverTableViewCell.swift */,
+			);
+			path = MessageCells;
+			sourceTree = "<group>";
+		};
+		D58DB96B2064A7FF005ABED8 /* GtSdkLib */ = {
+			isa = PBXGroup;
+			children = (
+				D58DB9852064A8CE005ABED8 /* GtSdkDemo-swift-Bridging-Header.h */,
+				D58DB9842064A8CE005ABED8 /* NotificationService.swift */,
+				D58DB96C2064A7FF005ABED8 /* GTExtensionSDK.framework */,
+				D58DB96D2064A7FF005ABED8 /* GTSDK.framework */,
+			);
+			path = GtSdkLib;
+			sourceTree = "<group>";
+		};
 		D58FC3F520523AC4008C05AE /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB95820649D88005ABED8 /* MessageCells */,
 				D5ADC2102057C568001307E8 /* ViewModels */,
 				D58FC3F720523B6E008C05AE /* XWMessageListTableViewController.swift */,
 				D5ADC2A52058C620001307E8 /* XWContactListTableViewController.swift */,
@@ -381,6 +457,7 @@
 				D5ADC20D2057BF66001307E8 /* XWConversationTableViewCell.xib */,
 				D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */,
 				D5ADC2182058B7FA001307E8 /* XWNewConversationTableViewCell.xib */,
+				D58DB95620649635005ABED8 /* XWMessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -535,6 +612,7 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB96B2064A7FF005ABED8 /* GtSdkLib */,
 				D58DB9542063B3C7005ABED8 /* countries.json */,
 				D58DB94D2063A991005ABED8 /* ZZYQRCodeSwift */,
 				D58FC4292057961D008C05AE /* UINavigationBar+Transparent */,
@@ -710,6 +788,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.DataProtection = {
 								enabled = 0;
 							};
@@ -991,6 +1072,7 @@
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */,
+				D58DB95720649635005ABED8 /* XWMessageViewController.swift in Sources */,
 				D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */,
 				D5A4896C204E6D54001031F6 /* Dictionary.swift in Sources */,
 				D58FC42B2057961D008C05AE /* UINavigationBar+Transparent.swift in Sources */,
@@ -1031,6 +1113,7 @@
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
 				D5A48968204E6D54001031F6 /* CALayer.swift in Sources */,
 				D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */,
+				D58DB95A20649D9C005ABED8 /* XWSenderTableViewCell.swift in Sources */,
 				D58FC41620564523008C05AE /* FSPagerViewLayoutAttributes.swift in Sources */,
 				D5ADC2D22058FE6E001307E8 /* DecryptError.swift in Sources */,
 				D5A48967204E6D54001031F6 /* Bundle.swift in Sources */,
@@ -1044,6 +1127,7 @@
 				D5ADC2CD2058FE6E001307E8 /* Mac.swift in Sources */,
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
 				D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */,
+				D58DB95C20649DAD005ABED8 /* XWRecieverTableViewCell.swift in Sources */,
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
@@ -1060,6 +1144,7 @@
 				D5ADC2C72058FE6E001307E8 /* Contact.swift in Sources */,
 				D58FC3FA20523BCA008C05AE /* UIBaseNavigationViewController.swift in Sources */,
 				D5A4896F204E6D54001031F6 /* NSAttributedString.swift in Sources */,
+				D58DB9862064A8CE005ABED8 /* NotificationService.swift in Sources */,
 				12B49B2F20591A40001F7A6C /* Wallet.swift in Sources */,
 				D5ADC2D12058FE6E001307E8 /* Timestamp.swift in Sources */,
 				D5A489AE204F96FD001031F6 /* AppStyle.swift in Sources */,
@@ -1268,10 +1353,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LU83BUKNNC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/GTSDK",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/GTExtensionSDK",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib",
+				);
 				INFOPLIST_FILE = "x-wallet-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib/GtSdkDemo-swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1289,10 +1381,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LU83BUKNNC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/GTSDK",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/GTExtensionSDK",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib",
+				);
 				INFOPLIST_FILE = "x-wallet-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib/GtSdkDemo-swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
