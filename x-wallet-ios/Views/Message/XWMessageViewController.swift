@@ -38,7 +38,6 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.contentInset.bottom = self.barHeight
         self.tableView.scrollIndicatorInsets.bottom = self.barHeight
-        self.navigationItem.setHidesBackButton(true, animated: false)
         self.locationManager.delegate = self
         inputTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("", comment: ""),
                                                                  attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
@@ -113,6 +112,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.inputBar.backgroundColor = Colors.backGroundColor
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         self.customization()
     }
 

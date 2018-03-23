@@ -52,6 +52,7 @@
 		D58DB9812064A8A6005ABED8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9802064A8A6005ABED8 /* libz.tbd */; };
 		D58DB9832064A8B1005ABED8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9822064A8B1005ABED8 /* PushKit.framework */; };
 		D58DB9862064A8CE005ABED8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9842064A8CE005ABED8 /* NotificationService.swift */; };
+		D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9872064D88B005ABED8 /* PaddingTextField.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -205,6 +206,7 @@
 		D58DB9822064A8B1005ABED8 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		D58DB9842064A8CE005ABED8 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		D58DB9852064A8CE005ABED8 /* GtSdkDemo-swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GtSdkDemo-swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		D58DB9872064D88B005ABED8 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 				D5A48965204E6D54001031F6 /* UIViewController.swift */,
 				D5ADC20A2057BAD5001307E8 /* DefaultsKeys.swift */,
 				D5ADC2A32058C08D001307E8 /* AuthManager.swift */,
+				D58DB9872064D88B005ABED8 /* PaddingTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1123,6 +1126,7 @@
 				D5ADC2CE2058FE6E001307E8 /* MnemonicWord.swift in Sources */,
 				D5ADC2C82058FE6E001307E8 /* DataType.swift in Sources */,
 				12B49B3120591AD9001F7A6C /* Secp256k1.swift in Sources */,
+				D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */,
 				D5ADC2B02058F878001307E8 /* XWSearchTableViewCell.swift in Sources */,
 				D5ADC2CD2058FE6E001307E8 /* Mac.swift in Sources */,
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
