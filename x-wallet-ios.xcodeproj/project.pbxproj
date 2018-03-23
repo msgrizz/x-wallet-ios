@@ -35,6 +35,7 @@
 		D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */; };
 		D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */; };
 		D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */; };
+		D58DB9552063B3C8005ABED8 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9542063B3C7005ABED8 /* countries.json */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -170,6 +171,7 @@
 		D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionManager.swift; sourceTree = "<group>"; };
 		D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ZZYQRCodeImage.swift"; sourceTree = "<group>"; };
 		D58DB9502063A991005ABED8 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
+		D58DB9542063B3C7005ABED8 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB9542063B3C7005ABED8 /* countries.json */,
 				D58DB94D2063A991005ABED8 /* ZZYQRCodeSwift */,
 				D58FC4292057961D008C05AE /* UINavigationBar+Transparent */,
 				D58FC40A20564523008C05AE /* FSPagerView */,
@@ -773,6 +776,7 @@
 				D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */,
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
+				D58DB9552063B3C8005ABED8 /* countries.json in Resources */,
 				D58FC4042052680B008C05AE /* launchImage@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

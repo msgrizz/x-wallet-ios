@@ -8,9 +8,11 @@
 
 import UIKit
 
-class XWContactListTableViewController: UIBaseTableViewController {
+class XWContactListTableViewController: UITableViewController {
     var addButton: UIBarButtonItem!
-    
+    var json = NSArray()
+    var arr_name = NSArray()
+    var arrIndexSection : NSArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,13 @@ class XWContactListTableViewController: UIBaseTableViewController {
         )
         addButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = addButton
+        
+//        let path = Bundle.main.path(forResource: "countries", ofType: "json")
+//        let data = try! Data(contentsOf:URL(fileURLWithPath: path!))
+//        print(String(data: data, encoding: String.Encoding.utf8) as String!)
+//        json = (try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)) as! NSArray
+//        arr_name = json.value(forKey: "name") as! NSArray;
+//        self.tableView.reloadData()
     }
     
     @objc func add(_ : UIBarButtonItem) {
@@ -59,43 +68,89 @@ class XWContactListTableViewController: UIBaseTableViewController {
 
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 80
-        }else {
-            return 44
-        }
-    }
-
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.section == 0 {
+//            return 80
+//        }else {
+//            return 44
+//        }
+//    }
+//
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 2
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        if section == 0 {
+//            return 1
+//        }else {
+//            return 30
+//        }
+//    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if indexPath.section == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath)
+//
+//            // Configure the cell...
+//
+//            return cell
+//        }
+//        else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath)
+//
+//            // Configure the cell...
+//
+//            return cell
+//        }
+//    }
+//
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "A"
+//    }
+//
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int{
+//
+//        return 26
+//    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 26
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        if section == 0 {
-            return 1
-        }else {
-            return 30
-        }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return self.arrIndexSection as? [String] //Side Section title
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath)
-            
-            // Configure the cell...
-            
-            return cell
-        }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath)
-            
-            // Configure the cell...
-            
-            return cell
-        }
+    
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int
+    {
+        return index
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return arrIndexSection.object(at: section) as? String
+    }
+    
+    
+    // number of rows in table view
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        let predicate = NSPredicate(format: "SELF beginswith[c] %@", arrIndexSection.object(at: section) as! CVarArg)
+        let arrContacts = (arr_name as NSArray).filtered(using: predicate)
+        return arrContacts.count;
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath)
+        let predicate = NSPredicate(format: "SELF beginswith[c] %@", arrIndexSection.object(at: indexPath.section) as! CVarArg)
+        let arrContacts = (arr_name as NSArray).filtered(using: predicate) as NSArray
+        cell.textLabel?.text = arrContacts.object(at: indexPath.row) as? String
+        return cell
     }
 
     /*
