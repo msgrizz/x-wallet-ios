@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,7 +53,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyB-3H-QRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="-1567"/>
+            <point key="canvasLocation" x="484" y="-2002"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="7IN-uz-Ys4">
@@ -97,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="-1567"/>
+            <point key="canvasLocation" x="1137" y="-2002"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="D9c-mC-AbP">
@@ -115,7 +116,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="psk-Jf-1II"/>
                     <connections>
                         <segue destination="xXw-Vy-HC5" kind="show" identifier="goToMyList" id="gHS-7u-Lyp"/>
-                        <segue destination="nyx-aR-DEa" kind="show" id="nHC-ge-Q2D"/>
+                        <segue destination="nyx-aR-DEa" kind="show" identifier="goToMessageView" id="nHC-ge-Q2D"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bo-vU-oUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -357,8 +358,67 @@
                             <outlet property="delegate" destination="nyx-aR-DEa" id="tsD-fv-wr4"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="inputBar" destination="Bdc-40-cyR" id="qCq-k8-KPD"/>
+                        <outlet property="inputTextField" destination="aFF-Ie-mmX" id="xq8-zL-0V2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTz-zm-LZt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Bdc-40-cyR" userLabel="InputBar">
+                    <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nJ-7g-2V9" userLabel="Container View">
+                            <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type message..." adjustsFontSizeToFit="NO" minimumFontSize="17" background="inputBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aFF-Ie-mmX">
+                                    <rect key="frame" x="57" y="5" width="262" height="40"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="nyx-aR-DEa" id="Mdu-er-hh6"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtA-Xg-KDn">
+                                    <rect key="frame" x="331" y="9" width="33" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="33" id="NTB-sh-alv"/>
+                                        <constraint firstAttribute="height" constant="33" id="xmv-Y6-1jH"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="moreButton"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-gO-kIa">
+                                    <rect key="frame" x="12" y="9" width="33" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="33" id="Arm-wn-MaM"/>
+                                        <constraint firstAttribute="height" constant="33" id="Tnx-qr-hmz"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="voiceButton"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="2Dt-b3-zKk"/>
+                                <constraint firstItem="aFF-Ie-mmX" firstAttribute="leading" secondItem="dIX-gO-kIa" secondAttribute="trailing" constant="12" id="OlI-6H-7Td"/>
+                                <constraint firstItem="dIX-gO-kIa" firstAttribute="centerY" secondItem="4nJ-7g-2V9" secondAttribute="centerY" id="Qtr-3B-Aaf"/>
+                                <constraint firstAttribute="trailing" secondItem="qtA-Xg-KDn" secondAttribute="trailing" constant="12" id="T7r-gZ-Hpy"/>
+                                <constraint firstItem="dIX-gO-kIa" firstAttribute="leading" secondItem="4nJ-7g-2V9" secondAttribute="leading" constant="12" id="Y3J-en-hT5"/>
+                                <constraint firstItem="aFF-Ie-mmX" firstAttribute="height" secondItem="4nJ-7g-2V9" secondAttribute="height" multiplier="0.8" id="fJO-b7-Xz2"/>
+                                <constraint firstItem="aFF-Ie-mmX" firstAttribute="centerY" secondItem="4nJ-7g-2V9" secondAttribute="centerY" id="l82-V5-ZJ8"/>
+                                <constraint firstItem="qtA-Xg-KDn" firstAttribute="centerY" secondItem="4nJ-7g-2V9" secondAttribute="centerY" id="mOZ-Ws-XO4"/>
+                                <constraint firstItem="qtA-Xg-KDn" firstAttribute="leading" secondItem="aFF-Ie-mmX" secondAttribute="trailing" constant="12" id="spj-wk-SEa"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4nJ-7g-2V9" secondAttribute="bottom" id="Chr-qf-G8g"/>
+                        <constraint firstItem="4nJ-7g-2V9" firstAttribute="width" secondItem="Bdc-40-cyR" secondAttribute="width" id="h8U-ea-Z3h"/>
+                        <constraint firstItem="4nJ-7g-2V9" firstAttribute="centerX" secondItem="Bdc-40-cyR" secondAttribute="centerX" id="ic1-6L-UnV"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="YAf-1A-CDe"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1318" y="-790"/>
         </scene>
@@ -1689,7 +1749,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-n9-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-1567"/>
+            <point key="canvasLocation" x="1785" y="-2003"/>
         </scene>
         <!--Scan-->
         <scene sceneID="3EN-x4-4do">
@@ -1758,6 +1818,7 @@
         <image name="dashLine" width="305" height="1"/>
         <image name="defaultHead" width="65" height="65"/>
         <image name="guardImage" width="25" height="30"/>
+        <image name="inputBackground" width="276" height="43"/>
         <image name="inviteLine" width="286" height="1"/>
         <image name="logoutButton" width="375" height="88"/>
         <image name="mainButton" width="25" height="25"/>
@@ -1766,6 +1827,7 @@
         <image name="meButtonPress" width="26" height="25"/>
         <image name="messageButton" width="26" height="26"/>
         <image name="messageButtonPress" width="26" height="26"/>
+        <image name="moreButton" width="33" height="33"/>
         <image name="myMask" width="335" height="179"/>
         <image name="passwordBack" width="335" height="168"/>
         <image name="passwordLine" width="297" height="2"/>
@@ -1779,6 +1841,7 @@
         <image name="settings" width="20" height="21"/>
         <image name="testHead" width="57" height="57"/>
         <image name="testURLCode" width="180" height="180"/>
+        <image name="voiceButton" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yfg-Ps-FbV"/>

@@ -35,13 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
 //         [ GTSdk ]：是否运行电子围栏Lbs功能和是否SDK主动请求用户定位
         GeTuiSdk.lbsLocationEnable(true, andUserVerify: true);
 //         [ GTSdk ]：自定义渠道
-        GeTuiSdk.setChannelId("GT-Channel");
+        GeTuiSdk.setChannelId("APP-Store");
 //         [ GTSdk ]：使用APPID/APPKEY/APPSECRENT启动个推
         GeTuiSdk.start(withAppId: kGtAppId, appKey: kGtAppKey, appSecret: kGtAppSecret, delegate: self);
 //         注册APNs - custom method - 开发者自定义的方法
         self.registerRemoteNotification();
 //         注册VOIP
-        self.voipRegistration();
+//        self.voipRegistration();
         
         
         window = UIWindow(frame: UIScreen.main.bounds)

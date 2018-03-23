@@ -73,6 +73,10 @@ class XWMessageListTableViewController: UIBaseTableViewController {
             return cell
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goToMessageView", sender: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
