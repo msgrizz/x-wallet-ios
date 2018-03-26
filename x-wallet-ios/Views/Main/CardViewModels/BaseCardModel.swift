@@ -8,6 +8,15 @@
 
 import UIKit
 
+enum AppType {
+    case MiniContract
+    case Membership
+    case Coin
+    case Receipt
+    case Ticket
+}
+
+
 struct BaseCardModel {
     var title = "Employment Contract"
     var stared: Bool = true

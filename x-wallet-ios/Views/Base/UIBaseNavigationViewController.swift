@@ -18,7 +18,8 @@ class UIBaseNavigationViewController: UINavigationController {
         
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationBar.largeTitleTextAttributes  = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
+        self.navigationBar.tintColor = Colors.tintColor
+
         
 //        self.navigationBar.setBackgroundImage(UIImage.init(), for: UIBarMetrics.compact)
 //        self.navigationBar.setBarColor(UIColor.clear)

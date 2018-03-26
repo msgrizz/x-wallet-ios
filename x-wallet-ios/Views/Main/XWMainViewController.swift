@@ -149,7 +149,7 @@ class XWMainViewController: UIBaseViewController {
             self.blurView.blurRadius = 70
             self.slideView.alpha = 1
         }
- }
+    }
  
     @objc func goToLists(_ : UIButton) {
         self.performSegue(withIdentifier: "goToCardList", sender: nil)
@@ -184,15 +184,15 @@ class XWMainViewController: UIBaseViewController {
 
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToCardList" {
+            let vc = segue.destination as! XWCardListTableViewController
+            vc.title = "Mini Contract"
+        }
     }
-    */
 
 }
 

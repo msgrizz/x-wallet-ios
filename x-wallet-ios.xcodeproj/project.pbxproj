@@ -61,6 +61,7 @@
 		D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */; };
 		D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */; };
 		D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */; };
+		D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -223,6 +224,7 @@
 		D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTwoCardDemoView.swift; sourceTree = "<group>"; };
 		D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWOneCardDemoView.xib; sourceTree = "<group>"; };
 		D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWTwoCardDemoView.xib; sourceTree = "<group>"; };
+		D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCreateCoinViewController.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -469,6 +471,21 @@
 				D58DB98C2068A223005ABED8 /* XWUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D58DB99A2068E987005ABED8 /* Membership */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Membership;
+			sourceTree = "<group>";
+		};
+		D58DB99B2068F95D005ABED8 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */,
+			);
+			path = Coin;
 			sourceTree = "<group>";
 		};
 		D58FC3F520523AC4008C05AE /* Message */ = {
@@ -743,6 +760,8 @@
 		D5ADC2F3205B57AB001307E8 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB99B2068F95D005ABED8 /* Coin */,
+				D58DB99A2068E987005ABED8 /* Membership */,
 				D5ADC2F4205B57D4001307E8 /* MiniContract */,
 			);
 			path = Apps;
@@ -1116,6 +1135,7 @@
 				D5A4896C204E6D54001031F6 /* Dictionary.swift in Sources */,
 				D58FC42B2057961D008C05AE /* UINavigationBar+Transparent.swift in Sources */,
 				D5ADC2D42058FE6E001307E8 /* Scrypt.swift in Sources */,
+				D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */,
 				D5A48976204E6D54001031F6 /* UIGestureRecognizer+Closure.swift in Sources */,
 				D5A4897B204E6D54001031F6 /* UIViewController.swift in Sources */,
 				D5ADC2E7205A3AF5001307E8 /* XWBaseCardView.swift in Sources */,
