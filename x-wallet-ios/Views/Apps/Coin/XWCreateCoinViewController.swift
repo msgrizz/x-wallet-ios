@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+import IHKeyboardAvoiding
 class XWCreateCoinViewController: UIBaseViewController {
-
+    @IBOutlet weak var avoidingView:UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Create Coin"
         // Do any additional setup after loading the view.
+        KeyboardAvoiding.setAvoidingView(self.view, withTriggerView: self.avoidingView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +23,13 @@ class XWCreateCoinViewController: UIBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func issueAction(_ : UIButton) {
+        
+    }
+    
+    @IBAction func addImageAction(_ : UIButton) {
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -49,7 +49,7 @@ class XWCardListTableViewController: UIBaseTableViewController {
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-        self.navigationController?.view.addSubview(self.addMoreButton)
+
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -63,7 +63,7 @@ class XWCardListTableViewController: UIBaseTableViewController {
         if isMiniContract {
             
         }else {
-            
+            self.performSegue(withIdentifier: "createCoin", sender: nil)
         }
     }
 
@@ -84,6 +84,7 @@ class XWCardListTableViewController: UIBaseTableViewController {
 //        self.bottomBar.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 71, width: UIScreen.main.bounds.width, height: 71)
 //        self.bottomBar.bringSubview(toFront: self.addButton)
 //        self.navigationController?.view.addSubview(self.bottomBar)
+        self.navigationController?.view.addSubview(self.addMoreButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
