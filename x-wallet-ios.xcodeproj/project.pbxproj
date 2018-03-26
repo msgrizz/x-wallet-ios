@@ -17,6 +17,7 @@
 		12B49B2F20591A40001F7A6C /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B2920591A40001F7A6C /* Wallet.swift */; };
 		12B49B3120591AD9001F7A6C /* Secp256k1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B3020591AD9001F7A6C /* Secp256k1.swift */; };
 		12B49B3320591B17001F7A6C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B3220591B17001F7A6C /* Address.swift */; };
+		12C5070F2068DB320080112C /* Membership.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C5070E2068DB320080112C /* Membership.storyboard */; };
 		12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D4E20592903001414BD /* x_wallet_iosTests.swift */; };
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
@@ -172,6 +173,7 @@
 		12B49B2920591A40001F7A6C /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		12B49B3020591AD9001F7A6C /* Secp256k1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secp256k1.swift; sourceTree = "<group>"; };
 		12B49B3220591B17001F7A6C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		12C5070E2068DB320080112C /* Membership.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Membership.storyboard; sourceTree = "<group>"; };
 		12D36D4C20592903001414BD /* x-wallet-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-wallet-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D36D4E20592903001414BD /* x_wallet_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_wallet_iosTests.swift; sourceTree = "<group>"; };
 		12D36D5020592903001414BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 				D5A48913204E3761001031F6 /* Info.plist */,
 				D5A489E2204FBC82001031F6 /* Main.storyboard */,
 				D5A489DE204FB30D001031F6 /* Localizable.strings */,
+				12C5070E2068DB320080112C /* Membership.storyboard */,
 			);
 			path = "x-wallet-ios";
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
 				D5ADC2B12058F878001307E8 /* XWSearchTableViewCell.xib in Resources */,
+				12C5070F2068DB320080112C /* Membership.storyboard in Resources */,
 				D5A489DC204FB30D001031F6 /* Localizable.strings in Resources */,
 				D5ADC20F2057BF66001307E8 /* XWConversationTableViewCell.xib in Resources */,
 				D58FC4032052680B008C05AE /* launchImage@2x.png in Resources */,
