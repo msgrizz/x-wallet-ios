@@ -12,7 +12,9 @@ class XWRecieverTableViewCell: UITableViewCell {
 
     @IBOutlet weak var message: UITextView!
     @IBOutlet weak var messageBackground: UIImageView!
-    
+    @IBOutlet weak var profilePic: RoundedImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+
     func clearCellData()  {
         self.message.text = nil
         self.message.isHidden = false

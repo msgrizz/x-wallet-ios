@@ -14,7 +14,7 @@ import CoreLocation
 class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
     let barHeight: CGFloat = 50
-
+    var isScrollDown: Bool = true
     @IBOutlet var inputBar: UIView!
     @IBOutlet weak var inputTextField: UITextField!
     override var inputAccessoryView: UIView? {
@@ -61,9 +61,13 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     //MARK: NotificationCenter handlers
     @objc func showKeyboard(notification: Notification) {
+        self.tableView.contentInset.bottom = 0
+        self.tableView.contentInset.top = 10
+        self.tableView.scrollIndicatorInsets.bottom = 0
         if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let height = frame.cgRectValue.height
             self.tableView.contentInset.bottom = height
+            self.tableView.contentInset.top = 10
             self.tableView.scrollIndicatorInsets.bottom = height
             if self.items.count > 0 {
                 self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
@@ -72,8 +76,9 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+//        textField.resignFirstResponder()
         self.composeMessage(type: .text, content: textField.text!)
+        textField.text = ""
         return true
     }
     
@@ -159,6 +164,8 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
             cell.clearCellData()
             if self.items[indexPath.row].type == .text {
                 cell.message.text = self.items[indexPath.row].content
+                cell.profilePic.image = self.items[indexPath.row].headImage
+                cell.nameLabel.text = self.items[indexPath.row].name
 //            case .photo:
 //                if let image = self.items[indexPath.row].image {
 //                    cell.messageBackground.image = image
@@ -182,9 +189,11 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "XWSenderTableViewCell", for: indexPath) as! XWSenderTableViewCell
             cell.clearCellData()
-//            cell.profilePic.image = self.currentUser?.profilePic
+            cell.profilePic.image = self.currentUser?.profilePic
             if self.items[indexPath.row].type == .text {
                 cell.message.text = self.items[indexPath.row].content
+                cell.profilePic.image = self.items[indexPath.row].headImage
+                cell.nameLabel.text = self.items[indexPath.row].name
 //            case .photo:
 //                if let image = self.items[indexPath.row].image {
 //                    cell.messageBackground.image = image
@@ -225,4 +234,16 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
 //        default: break
 //        }
     }
+    
+//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView == self.tableView {
+//            let y = scrollView.contentOffset.y
+//            if (y > self.lastScrollOffset) {
+//                isScrollDown = true
+//            } else {
+//                isScrollDown = false
+//            }
+//            self.lastScrollOffset = y;
+//        }
+//    }
 }
