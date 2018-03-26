@@ -41,7 +41,7 @@ class XWMessageListTableViewController: UIBaseTableViewController {
     }
     
     func fakeData() -> [XWConversationViewModel] {
-        return [XWConversationViewModel(),XWConversationViewModel(),XWConversationViewModel()]
+        return [XWConversationViewModel()]
     }
 
     override func didReceiveMemoryWarning() {

@@ -52,6 +52,7 @@
                                 <rect key="frame" x="112" y="381" width="150" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="9V5-A8-gTf"/>
+                                    <constraint firstAttribute="width" constant="150" id="HhX-iO-dHl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign in" backgroundImage="signInButton">
@@ -84,7 +85,6 @@
                             <constraint firstItem="AJs-Nc-ULF" firstAttribute="trailing" secondItem="IfC-Iv-o5p" secondAttribute="trailing" constant="83" id="KN3-Sn-eEQ"/>
                             <constraint firstItem="dvO-6E-mYw" firstAttribute="centerX" secondItem="Gzi-pK-tQG" secondAttribute="centerX" id="Omw-xh-EAV"/>
                             <constraint firstItem="uVD-a3-MGH" firstAttribute="top" secondItem="l2H-3l-Cfo" secondAttribute="bottom" constant="83" id="R9P-zE-9IN"/>
-                            <constraint firstItem="uVD-a3-MGH" firstAttribute="leading" secondItem="AJs-Nc-ULF" secondAttribute="leading" constant="112" id="czE-5I-QPf"/>
                             <constraint firstItem="uVD-a3-MGH" firstAttribute="centerX" secondItem="Gzi-pK-tQG" secondAttribute="centerX" id="fSM-Md-5FG"/>
                             <constraint firstItem="l2H-3l-Cfo" firstAttribute="leading" secondItem="AJs-Nc-ULF" secondAttribute="leading" constant="83" id="itK-Mb-N5G"/>
                             <constraint firstItem="esn-a9-NnB" firstAttribute="top" secondItem="uVD-a3-MGH" secondAttribute="bottom" constant="28" id="zoi-d0-VI8"/>
