@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="98e-5R-Rrk" customClass="XWTwoCardDemoView" customModule="x_wallet_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noCardBack" translatesAutoresizingMaskIntoConstraints="NO" id="F33-1y-zlZ">
-                    <rect key="frame" x="20" y="0.0" width="335" height="150"/>
+                    <rect key="frame" x="20" y="0.0" width="335" height="151"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

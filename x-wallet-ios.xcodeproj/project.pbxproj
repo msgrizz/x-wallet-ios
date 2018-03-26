@@ -24,6 +24,8 @@
 		12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D4E20592903001414BD /* x_wallet_iosTests.swift */; };
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
+		A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766A1502069257300B6525A /* XWThreeCardDemoView.swift */; };
+		A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A766A1522069258400B6525A /* XWThreeCardDemoView.xib */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
@@ -190,6 +192,8 @@
 		3A859E82B811E1B9945BC55E /* Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios_x_wallet_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416D5C8D72EBE5BDFF17199F /* Pods-x-wallet-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A766A1502069257300B6525A /* XWThreeCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWThreeCardDemoView.swift; sourceTree = "<group>"; };
+		A766A1522069258400B6525A /* XWThreeCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWThreeCardDemoView.xib; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -483,13 +487,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D58DB99A2068E987005ABED8 /* Membership */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Membership;
-			sourceTree = "<group>";
-		};
 		D58DB99B2068F95D005ABED8 /* Coin */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,6 +757,8 @@
 				D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */,
 				D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */,
 				D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */,
+				A766A1502069257300B6525A /* XWThreeCardDemoView.swift */,
+				A766A1522069258400B6525A /* XWThreeCardDemoView.xib */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -776,7 +775,6 @@
 			isa = PBXGroup;
 			children = (
 				D58DB99B2068F95D005ABED8 /* Coin */,
-				D58DB99A2068E987005ABED8 /* Membership */,
 				D5ADC2F4205B57D4001307E8 /* MiniContract */,
 			);
 			path = Apps;
@@ -910,6 +908,7 @@
 			files = (
 				D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */,
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
+				A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
 				12C50711206908050080112C /* Ticket.storyboard in Resources */,
@@ -1176,6 +1175,7 @@
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
+				A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */,
 				12B49B2A20591A40001F7A6C /* DerivationPath.swift in Sources */,
 				12B49B2B20591A40001F7A6C /* DerivationPath.Index.swift in Sources */,
 				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,

@@ -11,30 +11,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XWOneCardDemoView" customModule="x_wallet_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XWThreeCardDemoView" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noCardBack" translatesAutoresizingMaskIntoConstraints="NO" id="sOQ-Ao-i2l">
-                    <rect key="frame" x="20" y="0.0" width="335" height="108"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo2" translatesAutoresizingMaskIntoConstraints="NO" id="QCh-bp-fzZ">
+                    <rect key="frame" x="20" y="0.0" width="335" height="198"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="sOQ-Ao-i2l" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8oK-ty-ZNn"/>
-                <constraint firstItem="sOQ-Ao-i2l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cDB-fv-A70"/>
-                <constraint firstItem="sOQ-Ao-i2l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="evw-1q-mKh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sOQ-Ao-i2l" secondAttribute="trailing" constant="20" id="nct-T2-mng"/>
+                <constraint firstItem="QCh-bp-fzZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="66V-IN-53O"/>
+                <constraint firstItem="QCh-bp-fzZ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="dlz-f9-Ajs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QCh-bp-fzZ" secondAttribute="trailing" constant="20" id="dp2-Ie-k0w"/>
+                <constraint firstItem="QCh-bp-fzZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="mAX-iq-k4E"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="backImageView" destination="sOQ-Ao-i2l" id="UMs-UO-YI1"/>
-            </connections>
-            <point key="canvasLocation" x="-219" y="34"/>
+            <point key="canvasLocation" x="33.5" y="54"/>
         </view>
     </objects>
     <resources>
-        <image name="noCardBack" width="334" height="114"/>
+        <image name="demo2" width="334" height="194"/>
     </resources>
 </document>
