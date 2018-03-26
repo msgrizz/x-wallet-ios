@@ -55,6 +55,7 @@
 		D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9872064D88B005ABED8 /* PaddingTextField.swift */; };
 		D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9892068998C005ABED8 /* MessageViewModel.swift */; };
 		D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98C2068A223005ABED8 /* XWUser.swift */; };
+		D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -211,6 +212,7 @@
 		D58DB9872064D88B005ABED8 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
 		D58DB9892068998C005ABED8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		D58DB98C2068A223005ABED8 /* XWUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWUser.swift; sourceTree = "<group>"; };
+		D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractHeadTableViewCell.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			children = (
 				D58DB95920649D9C005ABED8 /* XWSenderTableViewCell.swift */,
 				D58DB95B20649DAD005ABED8 /* XWRecieverTableViewCell.swift */,
+				D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */,
 			);
 			path = MessageCells;
 			sourceTree = "<group>";
@@ -1123,6 +1126,7 @@
 				D5ADC2C52058FE6E001307E8 /* DataHex.swift in Sources */,
 				D5ADC2C92058FE6E001307E8 /* DataWrapper.swift in Sources */,
 				D58FC3FE20523CE9008C05AE /* XWMyViewController.swift in Sources */,
+				D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */,
 				D5ADC2162057C60F001307E8 /* XWConversationViewMode.swift in Sources */,
 				D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */,
 				D58FC41820564523008C05AE /* FSPageViewTransformer.swift in Sources */,

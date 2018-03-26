@@ -61,9 +61,6 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     //MARK: NotificationCenter handlers
     @objc func showKeyboard(notification: Notification) {
-        self.tableView.contentInset.bottom = 0
-        self.tableView.contentInset.top = 10
-        self.tableView.scrollIndicatorInsets.bottom = 0
         if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
             let height = frame.cgRectValue.height
             self.tableView.contentInset.bottom = height
@@ -145,7 +142,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.items.count
+        return self.items.count + 1
         
     }
     
@@ -159,91 +156,71 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.items[indexPath.row].owner == .receiver{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWRecieverTableViewCell", for: indexPath) as! XWRecieverTableViewCell
-            cell.clearCellData()
-            if self.items[indexPath.row].type == .text {
-                cell.message.text = self.items[indexPath.row].content
-                cell.profilePic.image = self.items[indexPath.row].headImage
-                cell.nameLabel.text = self.items[indexPath.row].name
-//            case .photo:
-//                if let image = self.items[indexPath.row].image {
-//                    cell.messageBackground.image = image
-//                    cell.message.isHidden = true
-//                } else {
-//                    cell.messageBackground.image = UIImage.init(named: "loading")
-//                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
-//                        if state == true {
-//                            DispatchQueue.main.async {
-//                                self.tableView.reloadData()
-//                            }
-//                        }
-//                    })
-//                }
-//            case .location:
-//                cell.messageBackground.image = UIImage.init(named: "location")
-//                cell.message.isHidden = true
-            }
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractHeadTableViewCell", for: indexPath) as! XWContractHeadTableViewCell
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWSenderTableViewCell", for: indexPath) as! XWSenderTableViewCell
-            cell.clearCellData()
-            cell.profilePic.image = self.currentUser?.profilePic
-            if self.items[indexPath.row].type == .text {
-                cell.message.text = self.items[indexPath.row].content
-                cell.profilePic.image = self.items[indexPath.row].headImage
-                cell.nameLabel.text = self.items[indexPath.row].name
-//            case .photo:
-//                if let image = self.items[indexPath.row].image {
-//                    cell.messageBackground.image = image
-//                    cell.message.isHidden = true
-//                } else {
-//                    cell.messageBackground.image = UIImage.init(named: "loading")
-//                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
-//                        if state == true {
-//                            DispatchQueue.main.async {
-//                                self.tableView.reloadData()
-//                            }
-//                        }
-//                    })
-//                }
-//            case .location:
-//                cell.messageBackground.image = UIImage.init(named: "location")
-//                cell.message.isHidden = true
+            let message = self.items[indexPath.row - 1]
+            if message.owner == .receiver{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "XWRecieverTableViewCell", for: indexPath) as! XWRecieverTableViewCell
+                cell.clearCellData()
+                if message.type == .text {
+                    cell.message.text = message.content
+                    cell.profilePic.image = message.headImage
+                    cell.nameLabel.text = message.name
+                    //            case .photo:
+                    //                if let image = self.items[indexPath.row].image {
+                    //                    cell.messageBackground.image = image
+                    //                    cell.message.isHidden = true
+                    //                } else {
+                    //                    cell.messageBackground.image = UIImage.init(named: "loading")
+                    //                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
+                    //                        if state == true {
+                    //                            DispatchQueue.main.async {
+                    //                                self.tableView.reloadData()
+                    //                            }
+                    //                        }
+                    //                    })
+                    //                }
+                    //            case .location:
+                    //                cell.messageBackground.image = UIImage.init(named: "location")
+                    //                cell.message.isHidden = true
+                }
+                return cell
             }
-            return cell
+            else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "XWSenderTableViewCell", for: indexPath) as! XWSenderTableViewCell
+                cell.clearCellData()
+                cell.profilePic.image = self.currentUser?.profilePic
+                if message.type == .text {
+                    cell.message.text = message.content
+                    cell.profilePic.image = message.headImage
+                    cell.nameLabel.text = message.name
+                    //            case .photo:
+                    //                if let image = self.items[indexPath.row].image {
+                    //                    cell.messageBackground.image = image
+                    //                    cell.message.isHidden = true
+                    //                } else {
+                    //                    cell.messageBackground.image = UIImage.init(named: "loading")
+                    //                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
+                    //                        if state == true {
+                    //                            DispatchQueue.main.async {
+                    //                                self.tableView.reloadData()
+                    //                            }
+                    //                        }
+                    //                    })
+                    //                }
+                    //            case .location:
+                    //                cell.messageBackground.image = UIImage.init(named: "location")
+                    //                cell.message.isHidden = true
+                }
+                return cell
+            }
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.inputTextField.resignFirstResponder()
-//        switch self.items[indexPath.row].type {
-//        case .photo:
-//            if let photo = self.items[indexPath.row].image {
-//                let info = ["viewType" : ShowExtraView.preview, "pic": photo] as [String : Any]
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showExtraView"), object: nil, userInfo: info)
-//                self.inputAccessoryView?.isHidden = true
-//            }
-//        case .location:
-//            let coordinates = (self.items[indexPath.row].content as! String).components(separatedBy: ":")
-//            let location = CLLocationCoordinate2D.init(latitude: CLLocationDegrees(coordinates[0])!, longitude: CLLocationDegrees(coordinates[1])!)
-//            let info = ["viewType" : ShowExtraView.map, "location": location] as [String : Any]
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showExtraView"), object: nil, userInfo: info)
-//            self.inputAccessoryView?.isHidden = true
-//        default: break
-//        }
     }
-    
-//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView == self.tableView {
-//            let y = scrollView.contentOffset.y
-//            if (y > self.lastScrollOffset) {
-//                isScrollDown = true
-//            } else {
-//                isScrollDown = false
-//            }
-//            self.lastScrollOffset = y;
-//        }
-//    }
 }
