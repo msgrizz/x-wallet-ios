@@ -13,8 +13,6 @@ class XWMessageListTableViewController: UIBaseTableViewController {
     var addContactButton: UIBarButtonItem!
     var dataModels: [XWConversationViewModel] = [XWConversationViewModel]()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Message", comment: "")
