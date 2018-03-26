@@ -78,6 +78,34 @@
             <point key="canvasLocation" x="41" y="2848"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="viX-Sb-9hK">
+            <objects>
+                <viewController id="5jn-Q1-Wbf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nrm-oD-PXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vipCard" translatesAutoresizingMaskIntoConstraints="NO" id="R0i-p8-VTp">
+                                <rect key="frame" x="20" y="20" width="335" height="564"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="564" id="7vJ-SB-GCj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R0i-p8-VTp" firstAttribute="leading" secondItem="3KW-Hi-kZd" secondAttribute="leading" constant="20" id="aaw-H6-eD1"/>
+                            <constraint firstItem="R0i-p8-VTp" firstAttribute="top" secondItem="3KW-Hi-kZd" secondAttribute="top" id="bBi-fi-4bU"/>
+                            <constraint firstItem="3KW-Hi-kZd" firstAttribute="trailing" secondItem="R0i-p8-VTp" secondAttribute="trailing" constant="20" id="npa-2v-dPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3KW-Hi-kZd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRp-PW-eU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="3545"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="iKC-h2-w1R">
             <objects>
                 <viewController id="84d-Ze-RXV" sceneMemberID="viewController">
@@ -155,12 +183,188 @@
             </objects>
             <point key="canvasLocation" x="774" y="2848"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hg2-wU-W5R">
+            <objects>
+                <viewController id="gTo-pV-y0p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t0E-sM-EJt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welldees" translatesAutoresizingMaskIntoConstraints="NO" id="bkV-uq-bE6">
+                                <rect key="frame" x="20" y="20" width="335" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="318" id="yy5-SE-MZ9"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUu-dK-3m2">
+                                <rect key="frame" x="0.0" y="537" width="375" height="130"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000001192092896" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aU0-sd-kqP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bib-de-5go">
+                                            <rect key="frame" x="20" y="18.5" width="70" height="93"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="cGJ-9g-ZF2"/>
+                                                <constraint firstAttribute="height" constant="93" id="dtD-Mz-R7X"/>
+                                            </constraints>
+                                            <state key="normal" image="member"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-pG-DYa">
+                                            <rect key="frame" x="106" y="19" width="70" height="93"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="EYV-fW-f3A"/>
+                                                <constraint firstAttribute="height" constant="93" id="MPj-bZ-TXU"/>
+                                            </constraints>
+                                            <state key="normal" image="star"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="xZi-pG-DYa" firstAttribute="centerY" secondItem="aU0-sd-kqP" secondAttribute="centerY" id="Qte-JL-kVg"/>
+                                        <constraint firstItem="bib-de-5go" firstAttribute="centerY" secondItem="aU0-sd-kqP" secondAttribute="centerY" id="WP6-kC-AwJ"/>
+                                        <constraint firstItem="bib-de-5go" firstAttribute="leading" secondItem="aU0-sd-kqP" secondAttribute="leading" constant="20" id="ZEi-7w-PGt"/>
+                                        <constraint firstItem="xZi-pG-DYa" firstAttribute="leading" secondItem="bib-de-5go" secondAttribute="trailing" constant="16" id="rfa-Ud-v6O"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="etX-VS-d6h"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A4B-q1-MNs" firstAttribute="trailing" secondItem="bkV-uq-bE6" secondAttribute="trailing" constant="20" id="OkO-jE-mML"/>
+                            <constraint firstItem="A4B-q1-MNs" firstAttribute="trailing" secondItem="aUu-dK-3m2" secondAttribute="trailing" id="dle-UI-6PK"/>
+                            <constraint firstItem="bkV-uq-bE6" firstAttribute="top" secondItem="A4B-q1-MNs" secondAttribute="top" id="dpF-gi-obF"/>
+                            <constraint firstItem="bkV-uq-bE6" firstAttribute="leading" secondItem="A4B-q1-MNs" secondAttribute="leading" constant="20" id="llP-i4-vgk"/>
+                            <constraint firstItem="aUu-dK-3m2" firstAttribute="leading" secondItem="A4B-q1-MNs" secondAttribute="leading" id="vni-nD-bEz"/>
+                            <constraint firstItem="A4B-q1-MNs" firstAttribute="bottom" secondItem="aUu-dK-3m2" secondAttribute="bottom" id="ytA-g9-Sza"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4B-q1-MNs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSa-g7-0Be" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="2848"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MW3-MZ-Gvr">
+            <objects>
+                <viewController id="AXc-X7-J3p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7CG-7O-nLT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sendCard" translatesAutoresizingMaskIntoConstraints="NO" id="zfo-Wy-x32">
+                                <rect key="frame" x="20" y="20" width="335" height="386"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="386" id="csa-cU-THv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZk-0R-hUl">
+                                <rect key="frame" x="20" y="599" width="335" height="48"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.1764705882352941" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="zDc-fR-wyk"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wym-iI-w83" firstAttribute="bottom" secondItem="fZk-0R-hUl" secondAttribute="bottom" constant="20" id="SGn-Zp-ffh"/>
+                            <constraint firstItem="wym-iI-w83" firstAttribute="trailing" secondItem="zfo-Wy-x32" secondAttribute="trailing" constant="20" id="UFk-OF-cLG"/>
+                            <constraint firstItem="fZk-0R-hUl" firstAttribute="leading" secondItem="wym-iI-w83" secondAttribute="leading" constant="20" id="c6q-Rj-aFD"/>
+                            <constraint firstItem="wym-iI-w83" firstAttribute="trailing" secondItem="fZk-0R-hUl" secondAttribute="trailing" constant="20" id="egQ-aI-dyg"/>
+                            <constraint firstItem="zfo-Wy-x32" firstAttribute="top" secondItem="wym-iI-w83" secondAttribute="top" id="t3X-rN-ZIc"/>
+                            <constraint firstItem="zfo-Wy-x32" firstAttribute="leading" secondItem="wym-iI-w83" secondAttribute="leading" constant="20" id="u5C-zb-dDO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wym-iI-w83"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZB-0B-gkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="2848"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2G7-sP-03B">
+            <objects>
+                <viewController id="cyJ-W9-27j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eTe-4J-dfk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workCard" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-fV-Xpt">
+                                <rect key="frame" x="20" y="20" width="335" height="564"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="564" id="BXn-Ml-v1Q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1tL-fV-Xpt" firstAttribute="top" secondItem="Hgj-eq-bVC" secondAttribute="top" id="XYP-pu-Yig"/>
+                            <constraint firstItem="Hgj-eq-bVC" firstAttribute="trailing" secondItem="1tL-fV-Xpt" secondAttribute="trailing" constant="20" id="inN-kr-iE2"/>
+                            <constraint firstItem="1tL-fV-Xpt" firstAttribute="leading" secondItem="Hgj-eq-bVC" secondAttribute="leading" constant="20" id="xml-gh-hTS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hgj-eq-bVC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uL5-IM-Hrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="3545"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4V4-4u-z3W">
+            <objects>
+                <viewController id="HgF-rH-ZKF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HUx-sZ-gS8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="studentIdCard" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-FM-xOX">
+                                <rect key="frame" x="20" y="20" width="335" height="564"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="564" id="4yd-rA-VfY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cRw-FM-xOX" firstAttribute="top" secondItem="RTJ-6c-kPX" secondAttribute="top" id="Kzi-t2-VhV"/>
+                            <constraint firstItem="RTJ-6c-kPX" firstAttribute="trailing" secondItem="cRw-FM-xOX" secondAttribute="trailing" constant="20" id="bjh-tj-paV"/>
+                            <constraint firstItem="cRw-FM-xOX" firstAttribute="leading" secondItem="RTJ-6c-kPX" secondAttribute="leading" constant="20" id="h4A-BL-C2F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RTJ-6c-kPX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8m-yW-u0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="3545"/>
+        </scene>
     </scenes>
     <resources>
         <image name="creation" width="335" height="456"/>
         <image name="del" width="70" height="92"/>
+        <image name="member" width="70" height="92"/>
         <image name="modify" width="70" height="96"/>
+        <image name="sendCard" width="335" height="386"/>
         <image name="star" width="70" height="96"/>
+        <image name="studentIdCard" width="335" height="485"/>
+        <image name="vipCard" width="335" height="565"/>
         <image name="welldees" width="335" height="327"/>
+        <image name="workCard" width="335" height="545"/>
     </resources>
 </document>
