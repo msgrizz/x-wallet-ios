@@ -56,6 +56,10 @@
 		D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9892068998C005ABED8 /* MessageViewModel.swift */; };
 		D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98C2068A223005ABED8 /* XWUser.swift */; };
 		D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */; };
+		D58DB9912068D8C3005ABED8 /* XWOneCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */; };
+		D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */; };
+		D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */; };
+		D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -213,6 +217,10 @@
 		D58DB9892068998C005ABED8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		D58DB98C2068A223005ABED8 /* XWUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWUser.swift; sourceTree = "<group>"; };
 		D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractHeadTableViewCell.swift; sourceTree = "<group>"; };
+		D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWOneCardDemoView.swift; sourceTree = "<group>"; };
+		D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTwoCardDemoView.swift; sourceTree = "<group>"; };
+		D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWOneCardDemoView.xib; sourceTree = "<group>"; };
+		D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWTwoCardDemoView.xib; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -713,6 +721,10 @@
 			children = (
 				D5ADC2E6205A3AF5001307E8 /* XWBaseCardView.swift */,
 				D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */,
+				D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */,
+				D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */,
+				D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */,
+				D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */,
 			);
 			path = CardViews;
 			sourceTree = "<group>";
@@ -863,6 +875,7 @@
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
+				D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */,
 				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
@@ -875,6 +888,7 @@
 				D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */,
 				D58FC400205267B4008C05AE /* Assets.xcassets in Resources */,
 				D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */,
+				D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */,
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
 				D58DB9552063B3C8005ABED8 /* countries.json in Resources */,
@@ -1089,6 +1103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
+				D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */,
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */,
@@ -1143,6 +1158,7 @@
 				D5A489ED204FD4B1001031F6 /* XWLoginViewController.swift in Sources */,
 				D58FC3F820523B6E008C05AE /* XWMessageListTableViewController.swift in Sources */,
 				D5ADC2CE2058FE6E001307E8 /* MnemonicWord.swift in Sources */,
+				D58DB9912068D8C3005ABED8 /* XWOneCardDemoView.swift in Sources */,
 				D5ADC2C82058FE6E001307E8 /* DataType.swift in Sources */,
 				12B49B3120591AD9001F7A6C /* Secp256k1.swift in Sources */,
 				D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */,

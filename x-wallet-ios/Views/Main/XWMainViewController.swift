@@ -76,21 +76,52 @@ class XWMainViewController: UIBaseViewController {
         oneCard.contractButton.addTarget(self, action: #selector(goToLists), for: UIControlEvents.touchUpInside)
         self.stackView.addArrangedSubview(oneCard)
 
-        let twoCard: XWContractView = XWContractView.fromNib()
-        twoCard.cards = [BaseCardModel(),BaseCardModel()]
-        twoCard.frame = getAppRect(cardNum: twoCard.cards.count)
-        twoCard.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(getAppRect(cardNum: twoCard.cards.count).height)
-        }
-        self.stackView.addArrangedSubview(twoCard)
-
-        let threeCard: XWContractView = XWContractView.fromNib()
-        threeCard.cards = [BaseCardModel(),BaseCardModel(),BaseCardModel()]
-        threeCard.frame = getAppRect(cardNum: threeCard.cards.count)
-        threeCard.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(getAppRect(cardNum: threeCard.cards.count).height)
-        }
-        self.stackView.addArrangedSubview(threeCard)
+//        let twoCard: XWContractView = XWContractView.fromNib()
+//        twoCard.cards = [BaseCardModel(),BaseCardModel()]
+//        twoCard.frame = getAppRect(cardNum: twoCard.cards.count)
+//        twoCard.snp.makeConstraints { (make) -> Void in
+//            make.height.equalTo(getAppRect(cardNum: twoCard.cards.count).height)
+//        }
+//        self.stackView.addArrangedSubview(twoCard)
+//
+//        let threeCard: XWContractView = XWContractView.fromNib()
+//        threeCard.cards = [BaseCardModel(),BaseCardModel(),BaseCardModel()]
+//        threeCard.frame = getAppRect(cardNum: threeCard.cards.count)
+//        threeCard.snp.makeConstraints { (make) -> Void in
+//            make.height.equalTo(getAppRect(cardNum: threeCard.cards.count).height)
+//        }
+//        self.stackView.addArrangedSubview(threeCard)
+        let demoTwoCard1: XWTwoCardDemoView = XWTwoCardDemoView.fromNib()
+        demoTwoCard1.backImageView.image = UIImage(named: "demo8")
+        self.stackView.addArrangedSubview(demoTwoCard1)
+        
+        let demoOneCard1: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoOneCard1.backImageView.image = UIImage(named: "demo1")
+        self.stackView.addArrangedSubview(demoOneCard1)
+        
+        let demoTwoCard2: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoTwoCard2.backImageView.image = UIImage(named: "demo7")
+        self.stackView.addArrangedSubview(demoTwoCard2)
+        
+        let demoOneCard2: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoOneCard2.backImageView.image = UIImage(named: "demo6")
+        self.stackView.addArrangedSubview(demoOneCard2)
+        
+        let demoOneCard3: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoOneCard3.backImageView.image = UIImage(named: "demo5")
+        self.stackView.addArrangedSubview(demoOneCard3)
+        
+        let demoTwoCard3: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoTwoCard3.backImageView.image = UIImage(named: "demo4")
+        self.stackView.addArrangedSubview(demoTwoCard3)
+        
+        let demoOneCard4: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoOneCard4.backImageView.image = UIImage(named: "demo3")
+        self.stackView.addArrangedSubview(demoOneCard4)
+        
+        let demoTwoCard4: XWOneCardDemoView = XWOneCardDemoView.fromNib()
+        demoTwoCard4.backImageView.image = UIImage(named: "demo2")
+        self.stackView.addArrangedSubview(demoTwoCard4)
         
         let noCard: XWNoCardView = XWNoCardView.fromNib()
         self.stackView.addArrangedSubview(noCard)
