@@ -14,6 +14,9 @@ class XWCardListTableViewController: UIBaseTableViewController {
     
     var isScrollDown: Bool = true
 
+    
+    @IBOutlet weak var bottomBar: UIView!
+    @IBOutlet weak var addButton:UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +27,7 @@ class XWCardListTableViewController: UIBaseTableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.register(UINib(nibName: "XWContractTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractTableViewCell")
+        self.bottomBar.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 71, width: UIScreen.main.bounds.width, height: 71)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,12 +37,14 @@ class XWCardListTableViewController: UIBaseTableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.bottomBar.removeFromSuperview()
         super.viewDidDisappear(animated)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.view.addSubview(self.bottomBar)
     }
 
     // MARK: - Table view data source

@@ -307,9 +307,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workCard" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-fV-Xpt">
-                                <rect key="frame" x="20" y="20" width="335" height="564"/>
+                                <rect key="frame" x="20" y="20" width="335" height="545"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="564" id="BXn-Ml-v1Q"/>
+                                    <constraint firstAttribute="height" constant="545" id="BXn-Ml-v1Q"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -335,9 +335,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="studentIdCard" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-FM-xOX">
-                                <rect key="frame" x="20" y="20" width="335" height="564"/>
+                                <rect key="frame" x="20" y="20" width="335" height="485"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="564" id="4yd-rA-VfY"/>
+                                    <constraint firstAttribute="height" constant="485" id="4yd-rA-VfY"/>
                                 </constraints>
                             </imageView>
                         </subviews>
