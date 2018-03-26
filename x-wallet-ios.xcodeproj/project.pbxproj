@@ -63,6 +63,7 @@
 		D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */; };
 		D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */; };
 		D58DB99F20691D2E005ABED8 /* XWTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB99E20691D2E005ABED8 /* XWTransferViewController.swift */; };
+		D58DB9A120691F0A005ABED8 /* XWCoinTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9A020691F0A005ABED8 /* XWCoinTrackViewController.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -227,6 +228,7 @@
 		D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWTwoCardDemoView.xib; sourceTree = "<group>"; };
 		D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCreateCoinViewController.swift; sourceTree = "<group>"; };
 		D58DB99E20691D2E005ABED8 /* XWTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTransferViewController.swift; sourceTree = "<group>"; };
+		D58DB9A020691F0A005ABED8 /* XWCoinTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinTrackViewController.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 			children = (
 				D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */,
 				D58DB99E20691D2E005ABED8 /* XWTransferViewController.swift */,
+				D58DB9A020691F0A005ABED8 /* XWCoinTrackViewController.swift */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
@@ -1133,6 +1136,7 @@
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */,
+				D58DB9A120691F0A005ABED8 /* XWCoinTrackViewController.swift in Sources */,
 				D58DB95720649635005ABED8 /* XWMessageViewController.swift in Sources */,
 				D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */,
 				D5A4896C204E6D54001031F6 /* Dictionary.swift in Sources */,

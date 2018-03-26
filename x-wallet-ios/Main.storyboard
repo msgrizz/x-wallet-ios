@@ -1839,7 +1839,7 @@
                         <outlet property="addButton" destination="jHz-nG-f2L" id="cwL-hJ-lvL"/>
                         <outlet property="bottomBar" destination="3pQ-Hm-CnD" id="AEW-Tc-kM4"/>
                         <segue destination="hBI-hA-tIL" kind="show" identifier="createCoin" id="9iS-fx-haj"/>
-                        <segue destination="WIv-W7-9qM" kind="show" id="UzH-3m-IFX"/>
+                        <segue destination="WIv-W7-9qM" kind="show" identifier="goToCoinTrack" id="UzH-3m-IFX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-n9-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2076,13 +2076,19 @@
             </objects>
             <point key="canvasLocation" x="2546" y="-1861"/>
         </scene>
-        <!--View Controller-->
+        <!--Coin Track View Controller-->
         <scene sceneID="e8x-Qa-lx8">
             <objects>
-                <viewController id="WIv-W7-9qM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWCoinTrackViewController" hidesBottomBarWhenPushed="YES" id="WIv-W7-9qM" customClass="XWCoinTrackViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8LH-U0-E2q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coinTrack" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-sq-2Zx">
+                                <rect key="frame" x="20" y="79" width="335" height="553"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8VE-7u-HMN"/>
                     </view>
@@ -2298,6 +2304,7 @@
         <image name="coinCount" width="77" height="17"/>
         <image name="coinLine" width="210" height="1"/>
         <image name="coinScan" width="20" height="20"/>
+        <image name="coinTrack" width="334" height="553"/>
         <image name="copyButton" width="88" height="31"/>
         <image name="countInput" width="100" height="29"/>
         <image name="dashLine" width="305" height="1"/>
