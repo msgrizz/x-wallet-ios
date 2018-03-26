@@ -21,13 +21,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx0-8g-hrw">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                                        <rect key="frame" x="5" y="0.0" width="365" height="1136"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="healthReport" translatesAutoresizingMaskIntoConstraints="NO" id="9Rj-K5-dXs">
-                                                <rect key="frame" x="8.5" y="0.0" width="358" height="1136"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="1136"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1136" id="ibq-fl-r0U"/>
-                                                    <constraint firstAttribute="width" constant="358" id="rbl-fM-y9v"/>
+                                                    <constraint firstAttribute="width" constant="365" id="rbl-fM-y9v"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -35,16 +35,16 @@
                                         <constraints>
                                             <constraint firstItem="9Rj-K5-dXs" firstAttribute="centerX" secondItem="hx0-8g-hrw" secondAttribute="centerX" id="EiY-d2-Zmj"/>
                                             <constraint firstAttribute="bottom" secondItem="9Rj-K5-dXs" secondAttribute="bottom" id="JSZ-a2-l5g"/>
-                                            <constraint firstAttribute="width" constant="375" id="pNG-N2-u9b"/>
+                                            <constraint firstAttribute="width" constant="365" id="pNG-N2-u9b"/>
                                             <constraint firstItem="9Rj-K5-dXs" firstAttribute="top" secondItem="hx0-8g-hrw" secondAttribute="top" id="vUS-OJ-seb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hx0-8g-hrw" secondAttribute="trailing" id="I3p-UE-NEC"/>
-                                    <constraint firstItem="hx0-8g-hrw" firstAttribute="leading" secondItem="hHO-b2-8br" secondAttribute="leading" id="MIF-0j-OBV"/>
+                                    <constraint firstItem="hx0-8g-hrw" firstAttribute="leading" secondItem="hHO-b2-8br" secondAttribute="leading" constant="5" id="K1X-JL-wpb"/>
                                     <constraint firstAttribute="bottom" secondItem="hx0-8g-hrw" secondAttribute="bottom" constant="31" id="Xkt-wk-WiY"/>
                                     <constraint firstItem="hx0-8g-hrw" firstAttribute="top" secondItem="hHO-b2-8br" secondAttribute="top" id="y2d-fg-ldF"/>
+                                    <constraint firstAttribute="trailing" secondItem="hx0-8g-hrw" secondAttribute="trailing" constant="5" id="yb2-tq-ro3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -179,6 +179,6 @@
     <resources>
         <image name="ctReport" width="375" height="727"/>
         <image name="healthIndex" width="375" height="824"/>
-        <image name="healthReport" width="358" height="1136"/>
+        <image name="healthReport" width="365" height="1136"/>
     </resources>
 </document>
