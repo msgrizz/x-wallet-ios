@@ -129,6 +129,16 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
         self.inputBar.backgroundColor = Colors.backGroundColor
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.customization()
+        
+        let moreButton = UIBarButtonItem(
+            image: UIImage(named: "messageMore"), style: .plain, target: self, action: #selector(moreAction(_ :))
+        )
+        moreButton.tintColor = Colors.tintColor
+        self.navigationItem.rightBarButtonItem = moreButton
+    }
+    
+    @objc func moreAction(_ : UIBarButtonItem) {
+        
     }
 
     override func didReceiveMemoryWarning() {
