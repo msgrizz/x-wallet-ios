@@ -21,6 +21,7 @@
 		12C50711206908050080112C /* Ticket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C50710206908050080112C /* Ticket.storyboard */; };
 		12C5071320690A790080112C /* Health.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C5071220690A790080112C /* Health.storyboard */; };
 		12C5071520690EC40080112C /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C5071420690EC40080112C /* Coupon.storyboard */; };
+		12C50717206926440080112C /* Academic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C50716206926440080112C /* Academic.storyboard */; };
 		12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D4E20592903001414BD /* x_wallet_iosTests.swift */; };
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
@@ -185,6 +186,7 @@
 		12C50710206908050080112C /* Ticket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ticket.storyboard; sourceTree = "<group>"; };
 		12C5071220690A790080112C /* Health.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Health.storyboard; sourceTree = "<group>"; };
 		12C5071420690EC40080112C /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
+		12C50716206926440080112C /* Academic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Academic.storyboard; sourceTree = "<group>"; };
 		12D36D4C20592903001414BD /* x-wallet-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-wallet-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D36D4E20592903001414BD /* x_wallet_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_wallet_iosTests.swift; sourceTree = "<group>"; };
 		12D36D5020592903001414BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 				12C50710206908050080112C /* Ticket.storyboard */,
 				12C5071220690A790080112C /* Health.storyboard */,
 				12C5071420690EC40080112C /* Coupon.storyboard */,
+				12C50716206926440080112C /* Academic.storyboard */,
 			);
 			path = "x-wallet-ios";
 			sourceTree = "<group>";
@@ -910,6 +913,7 @@
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
 				A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
+				12C50717206926440080112C /* Academic.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
 				12C50711206908050080112C /* Ticket.storyboard in Resources */,
 				D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */,
