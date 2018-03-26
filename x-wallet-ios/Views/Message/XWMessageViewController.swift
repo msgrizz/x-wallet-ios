@@ -45,6 +45,8 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
         inputTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("", comment: ""),
                                                                  attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         inputTextField.textColor = UIColor.white
+        
+        self.title = NSLocalizedString("Contract Progress", comment: "")
     }
     
     func checkLocationPermission() -> Bool {
