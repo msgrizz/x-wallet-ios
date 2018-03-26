@@ -53,6 +53,8 @@
 		D58DB9832064A8B1005ABED8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58DB9822064A8B1005ABED8 /* PushKit.framework */; };
 		D58DB9862064A8CE005ABED8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9842064A8CE005ABED8 /* NotificationService.swift */; };
 		D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9872064D88B005ABED8 /* PaddingTextField.swift */; };
+		D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9892068998C005ABED8 /* MessageViewModel.swift */; };
+		D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98C2068A223005ABED8 /* XWUser.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
 		D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */; };
 		D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3F3205236CF008C05AE /* XWMainViewController.swift */; };
@@ -207,6 +209,8 @@
 		D58DB9842064A8CE005ABED8 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		D58DB9852064A8CE005ABED8 /* GtSdkDemo-swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GtSdkDemo-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		D58DB9872064D88B005ABED8 /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		D58DB9892068998C005ABED8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		D58DB98C2068A223005ABED8 /* XWUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWUser.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
 		D58FC3F120523598008C05AE /* UIBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTableViewController.swift; sourceTree = "<group>"; };
 		D58FC3F3205236CF008C05AE /* XWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMainViewController.swift; sourceTree = "<group>"; };
@@ -446,6 +450,14 @@
 			path = GtSdkLib;
 			sourceTree = "<group>";
 		};
+		D58DB98B2068A20D005ABED8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D58DB98C2068A223005ABED8 /* XWUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D58FC3F520523AC4008C05AE /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +536,7 @@
 		D5A48904204E3761001031F6 /* x-wallet-ios */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB98B2068A20D005ABED8 /* Models */,
 				D5ADC2B22058FE6E001307E8 /* Core */,
 				D545A1492050D92D00F9B4BB /* Requests */,
 				D5A489E4204FBD8E001031F6 /* Others */,
@@ -639,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				D5ADC2152057C60F001307E8 /* XWConversationViewMode.swift */,
+				D58DB9892068998C005ABED8 /* MessageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1099,6 +1113,7 @@
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
+				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				12B49B2A20591A40001F7A6C /* DerivationPath.swift in Sources */,
 				12B49B2B20591A40001F7A6C /* DerivationPath.Index.swift in Sources */,
@@ -1159,6 +1174,7 @@
 				A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */,
 				12B49B2E20591A40001F7A6C /* MnemonicWords.swift in Sources */,
 				12B49B2D20591A40001F7A6C /* Mnemonic.swift in Sources */,
+				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
 				D5ADC2CC2058FE6E001307E8 /* Info.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
 				D5ADC2C62058FE6E001307E8 /* Account.swift in Sources */,
