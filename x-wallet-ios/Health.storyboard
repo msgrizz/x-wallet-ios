@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="2vE-WZ-iE8">
+            <objects>
+                <viewController id="GUt-yw-Pao" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37Z-2v-1ag">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-b2-8br">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx0-8g-hrw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="healthReport" translatesAutoresizingMaskIntoConstraints="NO" id="9Rj-K5-dXs">
+                                                <rect key="frame" x="8.5" y="0.0" width="358" height="1136"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1136" id="ibq-fl-r0U"/>
+                                                    <constraint firstAttribute="width" constant="358" id="rbl-fM-y9v"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="9Rj-K5-dXs" firstAttribute="centerX" secondItem="hx0-8g-hrw" secondAttribute="centerX" id="EiY-d2-Zmj"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Rj-K5-dXs" secondAttribute="bottom" id="JSZ-a2-l5g"/>
+                                            <constraint firstAttribute="width" constant="375" id="pNG-N2-u9b"/>
+                                            <constraint firstItem="9Rj-K5-dXs" firstAttribute="top" secondItem="hx0-8g-hrw" secondAttribute="top" id="vUS-OJ-seb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hx0-8g-hrw" secondAttribute="trailing" id="I3p-UE-NEC"/>
+                                    <constraint firstItem="hx0-8g-hrw" firstAttribute="leading" secondItem="hHO-b2-8br" secondAttribute="leading" id="MIF-0j-OBV"/>
+                                    <constraint firstAttribute="bottom" secondItem="hx0-8g-hrw" secondAttribute="bottom" constant="31" id="Xkt-wk-WiY"/>
+                                    <constraint firstItem="hx0-8g-hrw" firstAttribute="top" secondItem="hHO-b2-8br" secondAttribute="top" id="y2d-fg-ldF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hHO-b2-8br" firstAttribute="leading" secondItem="ibe-qE-a6e" secondAttribute="leading" id="2X7-e9-nco"/>
+                            <constraint firstItem="hHO-b2-8br" firstAttribute="bottom" secondItem="ibe-qE-a6e" secondAttribute="bottom" id="D3I-KP-Eot"/>
+                            <constraint firstItem="hHO-b2-8br" firstAttribute="trailing" secondItem="ibe-qE-a6e" secondAttribute="trailing" id="Zcp-MY-7HM"/>
+                            <constraint firstItem="hHO-b2-8br" firstAttribute="top" secondItem="ibe-qE-a6e" secondAttribute="top" id="euU-Rc-gwy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ibe-qE-a6e"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cx0-wQ-9VT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="1837.3313343328336"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="8Wd-HN-K0E">
+            <objects>
+                <viewController id="Lj0-mw-X9I" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5r-UB-Vvq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5m-iU-nlX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="780"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YA-Uo-6eu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="727"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ctReport" translatesAutoresizingMaskIntoConstraints="NO" id="iFU-Ng-5q9">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="727"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="727" id="Mov-np-tAT"/>
+                                                    <constraint firstAttribute="width" constant="375" id="NMi-7R-Vgd"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="iFU-Ng-5q9" firstAttribute="leading" secondItem="0YA-Uo-6eu" secondAttribute="leading" id="DNb-DY-SZ3"/>
+                                            <constraint firstItem="iFU-Ng-5q9" firstAttribute="top" secondItem="0YA-Uo-6eu" secondAttribute="top" id="P3B-dm-oQ9"/>
+                                            <constraint firstAttribute="width" constant="375" id="UDj-ma-dH5"/>
+                                            <constraint firstAttribute="trailing" secondItem="iFU-Ng-5q9" secondAttribute="trailing" id="X0y-89-2QM"/>
+                                            <constraint firstAttribute="bottom" secondItem="iFU-Ng-5q9" secondAttribute="bottom" id="r6I-xA-Ebe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0YA-Uo-6eu" firstAttribute="top" secondItem="S5m-iU-nlX" secondAttribute="top" id="Dvr-pu-EkQ"/>
+                                    <constraint firstItem="0YA-Uo-6eu" firstAttribute="leading" secondItem="S5m-iU-nlX" secondAttribute="leading" id="hTj-fb-Fkr"/>
+                                    <constraint firstAttribute="bottom" secondItem="0YA-Uo-6eu" secondAttribute="bottom" constant="31" id="tqV-p5-KP0"/>
+                                    <constraint firstAttribute="trailing" secondItem="0YA-Uo-6eu" secondAttribute="trailing" id="zQG-ZR-cOY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S5m-iU-nlX" firstAttribute="top" secondItem="dqd-6u-I38" secondAttribute="top" id="GJd-7c-LCW"/>
+                            <constraint firstItem="S5m-iU-nlX" firstAttribute="leading" secondItem="dqd-6u-I38" secondAttribute="leading" id="S1c-hi-zWZ"/>
+                            <constraint firstItem="S5m-iU-nlX" firstAttribute="bottom" secondItem="dqd-6u-I38" secondAttribute="bottom" id="bN7-dy-dHv"/>
+                            <constraint firstItem="S5m-iU-nlX" firstAttribute="trailing" secondItem="dqd-6u-I38" secondAttribute="trailing" id="sSZ-6S-cPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dqd-6u-I38"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="800"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdV-vd-hku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="1657"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="Qzg-9e-5H4">
+            <objects>
+                <viewController id="jwx-m6-UBD" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEG-4y-WbC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWb-Gr-kPs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="930"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-Lk-nxU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="824"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="healthIndex" translatesAutoresizingMaskIntoConstraints="NO" id="W5x-vr-200">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="824"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="824" id="fl5-NB-w1p"/>
+                                                    <constraint firstAttribute="width" constant="375" id="zZd-up-Be5"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="W5x-vr-200" firstAttribute="top" secondItem="jKg-Lk-nxU" secondAttribute="top" id="IyT-N8-qdP"/>
+                                            <constraint firstAttribute="width" constant="375" id="LYV-Ox-HEV"/>
+                                            <constraint firstAttribute="bottom" secondItem="W5x-vr-200" secondAttribute="bottom" id="eUk-TI-BX0"/>
+                                            <constraint firstItem="W5x-vr-200" firstAttribute="centerX" secondItem="jKg-Lk-nxU" secondAttribute="centerX" id="xWN-vp-sHp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jKg-Lk-nxU" secondAttribute="bottom" constant="31" id="3US-mi-U9P"/>
+                                    <constraint firstItem="jKg-Lk-nxU" firstAttribute="top" secondItem="AWb-Gr-kPs" secondAttribute="top" id="P0f-8M-ea9"/>
+                                    <constraint firstItem="jKg-Lk-nxU" firstAttribute="leading" secondItem="AWb-Gr-kPs" secondAttribute="leading" id="clo-ry-DLm"/>
+                                    <constraint firstAttribute="trailing" secondItem="jKg-Lk-nxU" secondAttribute="trailing" id="h6L-3P-KF2"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AWb-Gr-kPs" firstAttribute="bottom" secondItem="uSR-Z3-bwq" secondAttribute="bottom" id="HXO-TO-98X"/>
+                            <constraint firstItem="AWb-Gr-kPs" firstAttribute="top" secondItem="uSR-Z3-bwq" secondAttribute="top" id="V7M-34-PIB"/>
+                            <constraint firstItem="AWb-Gr-kPs" firstAttribute="leading" secondItem="uSR-Z3-bwq" secondAttribute="leading" id="mvC-PF-FgD"/>
+                            <constraint firstItem="AWb-Gr-kPs" firstAttribute="trailing" secondItem="uSR-Z3-bwq" secondAttribute="trailing" id="uvj-BT-y7q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uSR-Z3-bwq"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="950"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSo-mA-EV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1113" y="1837"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ctReport" width="375" height="727"/>
+        <image name="healthIndex" width="375" height="824"/>
+        <image name="healthReport" width="358" height="1136"/>
+    </resources>
+</document>

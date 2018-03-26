@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="c3m-AE-dNr">
+            <objects>
+                <viewController id="5gk-Ao-poU" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ezr-9R-fbt" customClass="UIBase">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticketIndex" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-jS-tuy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="353"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Zoj-dl-7x5"/>
+                                    <constraint firstAttribute="height" constant="353" id="tmW-00-SRj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T8s-jS-tuy" firstAttribute="top" secondItem="Bd1-lH-kMK" secondAttribute="top" id="BKm-lg-VMb"/>
+                            <constraint firstItem="T8s-jS-tuy" firstAttribute="centerX" secondItem="ezr-9R-fbt" secondAttribute="centerX" id="eaH-ob-iQI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bd1-lH-kMK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyh-uk-fX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1142" y="1837"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="MGX-8c-aXZ">
+            <objects>
+                <viewController id="M4u-bQ-D9a" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j7J-yD-Yps">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGv-4a-ECD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1V-qE-ojG">
+                                        <rect key="frame" x="8.5" y="0.0" width="358" height="646"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myTicket" translatesAutoresizingMaskIntoConstraints="NO" id="Z0k-OA-D5i">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="646"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="358" id="Hpa-yU-Fb5"/>
+                                                    <constraint firstAttribute="height" constant="646" id="dGI-4f-JEH"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Z0k-OA-D5i" secondAttribute="bottom" id="CeX-mr-mfn"/>
+                                            <constraint firstAttribute="height" constant="646" id="JWR-JB-sia"/>
+                                            <constraint firstItem="Z0k-OA-D5i" firstAttribute="top" secondItem="q1V-qE-ojG" secondAttribute="top" id="U16-AQ-3XC"/>
+                                            <constraint firstAttribute="width" constant="358" id="ps1-4N-I8r"/>
+                                            <constraint firstItem="Z0k-OA-D5i" firstAttribute="centerX" secondItem="q1V-qE-ojG" secondAttribute="centerX" id="q4P-dO-omY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="q1V-qE-ojG" firstAttribute="leading" secondItem="PGv-4a-ECD" secondAttribute="leading" constant="8.5" id="1U4-MD-nzu"/>
+                                    <constraint firstAttribute="trailing" secondItem="q1V-qE-ojG" secondAttribute="trailing" constant="8.5" id="Jqu-f6-S6T"/>
+                                    <constraint firstItem="q1V-qE-ojG" firstAttribute="centerX" secondItem="PGv-4a-ECD" secondAttribute="centerX" id="R3t-VM-QOX"/>
+                                    <constraint firstItem="q1V-qE-ojG" firstAttribute="top" secondItem="PGv-4a-ECD" secondAttribute="top" id="XTr-eI-cBu"/>
+                                    <constraint firstAttribute="bottom" secondItem="q1V-qE-ojG" secondAttribute="bottom" id="xce-DV-ZNU"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PGv-4a-ECD" firstAttribute="bottom" secondItem="i5f-K1-NCs" secondAttribute="bottom" id="5Jw-ad-0jT"/>
+                            <constraint firstItem="PGv-4a-ECD" firstAttribute="trailing" secondItem="i5f-K1-NCs" secondAttribute="trailing" id="ADq-og-UX8"/>
+                            <constraint firstItem="PGv-4a-ECD" firstAttribute="leading" secondItem="i5f-K1-NCs" secondAttribute="leading" id="V6g-ok-fZ3"/>
+                            <constraint firstItem="PGv-4a-ECD" firstAttribute="top" secondItem="i5f-K1-NCs" secondAttribute="top" id="eV3-av-4gc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i5f-K1-NCs"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="900"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAA-jk-CwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="1941"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="myTicket" width="358" height="646"/>
+        <image name="ticketIndex" width="375" height="357"/>
+    </resources>
+</document>

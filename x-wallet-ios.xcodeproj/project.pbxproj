@@ -18,6 +18,9 @@
 		12B49B3120591AD9001F7A6C /* Secp256k1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B3020591AD9001F7A6C /* Secp256k1.swift */; };
 		12B49B3320591B17001F7A6C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B49B3220591B17001F7A6C /* Address.swift */; };
 		12C5070F2068DB320080112C /* Membership.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C5070E2068DB320080112C /* Membership.storyboard */; };
+		12C50711206908050080112C /* Ticket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C50710206908050080112C /* Ticket.storyboard */; };
+		12C5071320690A790080112C /* Health.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C5071220690A790080112C /* Health.storyboard */; };
+		12C5071520690EC40080112C /* Coupon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C5071420690EC40080112C /* Coupon.storyboard */; };
 		12D36D4F20592903001414BD /* x_wallet_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D4E20592903001414BD /* x_wallet_iosTests.swift */; };
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
@@ -177,6 +180,9 @@
 		12B49B3020591AD9001F7A6C /* Secp256k1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secp256k1.swift; sourceTree = "<group>"; };
 		12B49B3220591B17001F7A6C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		12C5070E2068DB320080112C /* Membership.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Membership.storyboard; sourceTree = "<group>"; };
+		12C50710206908050080112C /* Ticket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ticket.storyboard; sourceTree = "<group>"; };
+		12C5071220690A790080112C /* Health.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Health.storyboard; sourceTree = "<group>"; };
+		12C5071420690EC40080112C /* Coupon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupon.storyboard; sourceTree = "<group>"; };
 		12D36D4C20592903001414BD /* x-wallet-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "x-wallet-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D36D4E20592903001414BD /* x_wallet_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x_wallet_iosTests.swift; sourceTree = "<group>"; };
 		12D36D5020592903001414BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -586,6 +592,9 @@
 				D5A489E2204FBC82001031F6 /* Main.storyboard */,
 				D5A489DE204FB30D001031F6 /* Localizable.strings */,
 				12C5070E2068DB320080112C /* Membership.storyboard */,
+				12C50710206908050080112C /* Ticket.storyboard */,
+				12C5071220690A790080112C /* Health.storyboard */,
+				12C5071420690EC40080112C /* Coupon.storyboard */,
 			);
 			path = "x-wallet-ios";
 			sourceTree = "<group>";
@@ -903,8 +912,11 @@
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
+				12C50711206908050080112C /* Ticket.storyboard in Resources */,
 				D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */,
+				12C5071320690A790080112C /* Health.storyboard in Resources */,
 				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
+				12C5071520690EC40080112C /* Coupon.storyboard in Resources */,
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
