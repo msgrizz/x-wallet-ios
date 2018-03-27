@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XWCardListTableViewController: UIBaseTableViewController {
+class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDelegate {
     
     var lastScrollOffset: CGFloat = 0
     
@@ -58,7 +58,8 @@ class XWCardListTableViewController: UIBaseTableViewController {
     }
     
     @objc func add(_ : UIButton) {
-        
+        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise","Iow")
+        alertSheet.show(in: self.view)
     }
 
     override func didReceiveMemoryWarning() {
@@ -166,6 +167,20 @@ class XWCardListTableViewController: UIBaseTableViewController {
                 isScrollDown = false
             }
             self.lastScrollOffset = y;
+        }
+    }
+    
+    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
+        if buttonIndex == 1{
+            
+        }else if buttonIndex == 2{
+            
+        }else if buttonIndex == 3{
+            
+        }else if buttonIndex == 4{
+            
+        }
+        else {
         }
     }
 
