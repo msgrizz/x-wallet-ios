@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pdc-Ed-Psl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Create Coupon-->
         <scene sceneID="7e5-PP-iUb">
             <objects>
-                <viewController id="o1t-Bx-ns4" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create Coupon" id="o1t-Bx-ns4" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Acd-2Z-fnM" customClass="UIBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +58,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="NWQ-Zb-qjN" kind="show" id="esL-18-3Gu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxI-dy-GKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="2780"/>
+            <point key="canvasLocation" x="118" y="2778"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="NDI-P0-1NA">
@@ -132,12 +135,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5x-QO-qEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="2885"/>
+            <point key="canvasLocation" x="-2113" y="2209"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Coupon-->
         <scene sceneID="1QB-Ag-axE">
             <objects>
-                <viewController id="Sav-85-Oav" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Coupon" id="Sav-85-Oav" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C9p-u5-ySo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +168,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="NWQ-Zb-qjN" kind="show" id="6au-lF-3Gj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msz-ih-1bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="2780"/>
+            <point key="canvasLocation" x="1036" y="2777"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="CqQ-yU-0Zm">
@@ -228,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dJ-mM-Uej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="2779"/>
+            <point key="canvasLocation" x="-1121" y="1990"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="TWu-p8-ckH">
@@ -256,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNp-la-KJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="2780"/>
+            <point key="canvasLocation" x="1666" y="3523"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="oJc-ic-csj">
@@ -284,12 +290,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSw-xn-rrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3700" y="2778"/>
+            <point key="canvasLocation" x="2935" y="2776"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Transfer Coupon-->
         <scene sceneID="Pev-6X-wes">
             <objects>
-                <viewController id="NWQ-Zb-qjN" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Transfer Coupon" id="NWQ-Zb-qjN" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U9o-a2-EIY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,12 +318,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goI-Fs-AXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4415" y="2780"/>
+            <point key="canvasLocation" x="118" y="3685"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Coupon-->
         <scene sceneID="w3F-mJ-gzD">
             <objects>
-                <viewController id="PZr-Ba-j9G" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Coupon" id="PZr-Ba-j9G" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13M-Hq-Wcg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,7 +342,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="x8K-lq-78u" firstAttribute="top" secondItem="CXI-CZ-3uo" secondAttribute="top" id="5Mk-MR-yNL"/>
                                             <constraint firstAttribute="width" constant="365" id="Jr1-cR-Fbm"/>
@@ -369,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj3-9W-mbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3700" y="3595"/>
+            <point key="canvasLocation" x="-714" y="3931"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="PUH-Rp-HJ6">
@@ -426,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmZ-RW-8Rz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4414" y="3595"/>
+            <point key="canvasLocation" x="-2164" y="3171"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="mRl-ft-AyG">
@@ -454,12 +460,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T51-aj-GRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="2780"/>
+            <point key="canvasLocation" x="2121" y="2776"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Coupon List View Controller-->
         <scene sceneID="vW9-IU-NXH">
             <objects>
-                <viewController id="Pdc-Ed-Psl" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWCouponListViewController" hidesBottomBarWhenPushed="YES" id="Pdc-Ed-Psl" customClass="XWCouponListViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Q1-Eb-VBZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,18 +477,54 @@
                                     <constraint firstAttribute="height" constant="527" id="rbs-lP-Oqy"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq3-Kd-c4E">
+                                <rect key="frame" x="259" y="505" width="116" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="KT5-UB-5eZ"/>
+                                    <constraint firstAttribute="width" constant="116" id="s9n-xN-XM2"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="o1t-Bx-ns4" kind="show" id="PZD-t6-D9K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rps-h8-qVw">
+                                <rect key="frame" x="22" y="277" width="329" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="gJR-Ng-Q7P"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="PZr-Ba-j9G" kind="show" id="pDV-wS-A4E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQ1-5m-MTI">
+                                <rect key="frame" x="23" y="46" width="329" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="3xs-50-hrj"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Sav-85-Oav" kind="show" id="Db9-u9-ZFo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7eZ-Ce-aKT" firstAttribute="centerX" secondItem="2Q1-Eb-VBZ" secondAttribute="centerX" id="3U9-9Z-I41"/>
+                            <constraint firstItem="rps-h8-qVw" firstAttribute="leading" secondItem="sdE-Xq-hpm" secondAttribute="leading" constant="22" id="LS7-lP-S8g"/>
+                            <constraint firstItem="eq3-Kd-c4E" firstAttribute="top" secondItem="sdE-Xq-hpm" secondAttribute="top" constant="485" id="YoM-hl-Kca"/>
+                            <constraint firstItem="sdE-Xq-hpm" firstAttribute="trailing" secondItem="rps-h8-qVw" secondAttribute="trailing" constant="24" id="eBk-wT-hux"/>
+                            <constraint firstItem="eq3-Kd-c4E" firstAttribute="trailing" secondItem="sdE-Xq-hpm" secondAttribute="trailing" id="eFb-2H-zUw"/>
+                            <constraint firstItem="rps-h8-qVw" firstAttribute="top" secondItem="sdE-Xq-hpm" secondAttribute="top" constant="257" id="nfz-Cc-bMR"/>
+                            <constraint firstItem="MQ1-5m-MTI" firstAttribute="leading" secondItem="sdE-Xq-hpm" secondAttribute="leading" constant="23" id="sgX-oY-MCn"/>
+                            <constraint firstItem="MQ1-5m-MTI" firstAttribute="top" secondItem="sdE-Xq-hpm" secondAttribute="top" constant="26" id="vp6-os-m7w"/>
                             <constraint firstItem="7eZ-Ce-aKT" firstAttribute="top" secondItem="sdE-Xq-hpm" secondAttribute="top" id="wTv-X1-by8"/>
+                            <constraint firstItem="sdE-Xq-hpm" firstAttribute="trailing" secondItem="MQ1-5m-MTI" secondAttribute="trailing" constant="23" id="x6C-NS-gOR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sdE-Xq-hpm"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ex9-jm-r9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-714" y="2779"/>
+            <point key="canvasLocation" x="-714.39999999999998" y="2778.2608695652175"/>
         </scene>
     </scenes>
     <resources>
@@ -496,4 +538,7 @@
         <image name="revokeNoti" width="375" height="623"/>
         <image name="sendRecord" width="252" height="538"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6au-lF-3Gj"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -105,6 +105,8 @@ class XWMainViewController: UIBaseViewController {
         
         let demoTwoCard3: XWOneCardDemoView = XWOneCardDemoView.fromNib()
         demoTwoCard3.backImageView.image = UIImage(named: "demo6")
+        let tap6 = UITapGestureRecognizer.init(target: self, action: #selector(goToCoupon(_:)))
+        demoTwoCard3.addGestureRecognizer(tap6)
         self.stackView.addArrangedSubview(demoTwoCard3)
         
         let noCard: XWNoCardView = XWNoCardView.fromNib()
@@ -157,6 +159,11 @@ class XWMainViewController: UIBaseViewController {
     @objc func goToHealth(_ : UIButton) {
         let Health: UIStoryboard = UIStoryboard(name: "Health", bundle: nil)
         self.navigationController?.pushViewController(Health.instantiateInitialViewController()!, animated: true)
+    }
+    
+    @objc func goToCoupon(_ : UIButton) {
+        let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
+        self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
     }
     
     @objc func dismissSlide(_ :UIButton) {
