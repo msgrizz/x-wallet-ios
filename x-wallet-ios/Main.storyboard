@@ -1728,7 +1728,7 @@
                                                     <constraint firstAttribute="width" constant="89" id="SKo-us-kf3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Password Protection" backgroundImage="settingButton1"/>
+                                                <state key="normal" backgroundImage="pass1"/>
                                                 <connections>
                                                     <segue destination="EZG-wk-8FD" kind="show" id="Yhd-6f-EeA"/>
                                                 </connections>
@@ -1740,7 +1740,7 @@
                                                     <constraint firstAttribute="width" constant="89" id="xQD-BG-tbM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Password Settings" backgroundImage="settingButton2"/>
+                                                <state key="normal" backgroundImage="pass2"/>
                                                 <connections>
                                                     <segue destination="13O-Wq-627" kind="show" id="4hO-Yv-SqI"/>
                                                 </connections>
@@ -1752,7 +1752,7 @@
                                                     <constraint firstAttribute="width" constant="89" id="Lj6-lR-wYb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="Backup" backgroundImage="settingButton3"/>
+                                                <state key="normal" backgroundImage="pass3"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2340,15 +2340,15 @@
         <image name="moreButton" width="33" height="33"/>
         <image name="myMask" width="335" height="179"/>
         <image name="noCoinCount" width="91" height="17"/>
+        <image name="pass1" width="89" height="84"/>
+        <image name="pass2" width="90" height="84"/>
+        <image name="pass3" width="89" height="84"/>
         <image name="passwordBack" width="335" height="168"/>
         <image name="passwordLine" width="297" height="2"/>
         <image name="pravicyBackground" width="335" height="592"/>
         <image name="qrcode_border" width="51" height="50"/>
         <image name="qrcode_scanline_qrcode" width="218" height="170"/>
         <image name="seperateLine" width="375" height="2"/>
-        <image name="settingButton1" width="89" height="84"/>
-        <image name="settingButton2" width="90" height="84"/>
-        <image name="settingButton3" width="89" height="84"/>
         <image name="settings" width="20" height="21"/>
         <image name="testHead" width="57" height="57"/>
         <image name="testURLCode" width="180" height="180"/>

@@ -124,6 +124,15 @@ extension XWMyViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyAuthenticationCollectionViewCell", for: indexPath) as! MyAuthenticationCollectionViewCell
+        if indexPath.row == 0 {
+            cell.imageView.image = UIImage(named:"au1")
+        }else if indexPath.row == 1{
+            cell.imageView.image = UIImage(named:"au2")
+        }else if indexPath.row == 2{
+            cell.imageView.image = UIImage(named:"au3")
+        }else if indexPath.row == 3{
+            cell.imageView.image = UIImage(named:"au4")
+        }
         return cell
     }
 }

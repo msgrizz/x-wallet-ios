@@ -132,7 +132,7 @@ class XWMainViewController: UIBaseViewController {
         myAppdelegate.window?.addSubview(self.blurView)
         myAppdelegate.window?.addSubview(slideView)
         UIView.animate(withDuration: 0.5) {
-            self.blurView.blurRadius = 70
+            self.blurView.blurRadius = 30
             self.slideView.alpha = 1
         }
     }
