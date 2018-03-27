@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gk-Ao-poU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Ticket-->
         <scene sceneID="c3m-AE-dNr">
             <objects>
-                <viewController id="5gk-Ao-poU" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Ticket" hidesBottomBarWhenPushed="YES" id="5gk-Ao-poU" customClass="XWTicketListViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ezr-9R-fbt" customClass="UIBase">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,23 +24,35 @@
                                     <constraint firstAttribute="height" constant="353" id="tmW-00-SRj"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMA-0H-NfF">
+                                <rect key="frame" x="22" y="20" width="332" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="rA5-YX-2eT"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="M4u-bQ-D9a" kind="show" id="T65-HP-T6c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="T8s-jS-tuy" firstAttribute="top" secondItem="Bd1-lH-kMK" secondAttribute="top" id="BKm-lg-VMb"/>
+                            <constraint firstItem="eMA-0H-NfF" firstAttribute="leading" secondItem="Bd1-lH-kMK" secondAttribute="leading" constant="22" id="aLA-lc-5jZ"/>
                             <constraint firstItem="T8s-jS-tuy" firstAttribute="centerX" secondItem="ezr-9R-fbt" secondAttribute="centerX" id="eaH-ob-iQI"/>
+                            <constraint firstItem="eMA-0H-NfF" firstAttribute="top" secondItem="Bd1-lH-kMK" secondAttribute="top" id="fdq-Uo-gjJ"/>
+                            <constraint firstItem="Bd1-lH-kMK" firstAttribute="trailing" secondItem="eMA-0H-NfF" secondAttribute="trailing" constant="21" id="hDu-dB-SUx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bd1-lH-kMK"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyh-uk-fX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1142" y="1837"/>
+            <point key="canvasLocation" x="-1143.2" y="1836.4317841079462"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Admission Ticket-->
         <scene sceneID="MGX-8c-aXZ">
             <objects>
-                <viewController id="M4u-bQ-D9a" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Admission Ticket" id="M4u-bQ-D9a" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j7J-yD-Yps">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +71,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Z0k-OA-D5i" secondAttribute="bottom" id="CeX-mr-mfn"/>
                                             <constraint firstAttribute="height" constant="646" id="JWR-JB-sia"/>

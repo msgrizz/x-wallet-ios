@@ -30,6 +30,14 @@ class UIBaseViewController: UIViewController {
         searchButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = searchButton
     }
+    
+    open func addMoreButon() {
+        let moreButton = UIBarButtonItem(
+            image: UIImage(named: "messageMore"), style: .plain, target: self, action: #selector(moreAction(_ :))
+        )
+        moreButton.tintColor = Colors.tintColor
+        self.navigationItem.rightBarButtonItem = moreButton
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,6 +62,10 @@ class UIBaseViewController: UIViewController {
         self.present(search.instantiateInitialViewController() as! UINavigationController, animated: true) {
             
         }
+    }
+    
+    @objc func moreAction(_ : UIBarButtonItem) {
+
     }
     /*
     // MARK: - Navigation
