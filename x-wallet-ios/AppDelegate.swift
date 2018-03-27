@@ -251,6 +251,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         let c2: [Contact] = fsk.read(dataType: .Contact, password: password)
         print(c2)
     }
+    
+
 
 }
 

@@ -223,6 +223,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="headView" destination="yS3-3S-B6u" id="c30-uq-BSx"/>
+                                            <outlet property="nameLabel" destination="Gu8-gt-gFx" id="mXd-tK-HkJ"/>
+                                            <outlet property="numberLabel" destination="5AU-xh-ZnB" id="WmZ-Tc-XnP"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="XWContactTableViewCell" id="EOs-09-6ur" customClass="XWContactTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="375" height="44"/>

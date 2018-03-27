@@ -9,7 +9,9 @@
 import UIKit
 
 class XWMyContactTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var headView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

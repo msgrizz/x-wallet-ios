@@ -47,6 +47,9 @@
 		A773E614206A3B6D002C5721 /* XWImportantContractTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */; };
 		A773E616206A3CD3002C5721 /* XWImportantHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E615206A3CD3002C5721 /* XWImportantHeadView.swift */; };
 		A773E618206A3CE1002C5721 /* XWImportantHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */; };
+		A773E61A206A6E3C002C5721 /* XWContactHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E619206A6E3C002C5721 /* XWContactHeadView.swift */; };
+		A773E61C206A6E47002C5721 /* XWContactHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E61B206A6E47002C5721 /* XWContactHeadView.xib */; };
+		A773E61E206A7275002C5721 /* XWDemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E61D206A7275002C5721 /* XWDemoData.swift */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
@@ -236,6 +239,9 @@
 		A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantContractTableViewController.swift; sourceTree = "<group>"; };
 		A773E615206A3CD3002C5721 /* XWImportantHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantHeadView.swift; sourceTree = "<group>"; };
 		A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWImportantHeadView.xib; sourceTree = "<group>"; };
+		A773E619206A6E3C002C5721 /* XWContactHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactHeadView.swift; sourceTree = "<group>"; };
+		A773E61B206A6E47002C5721 /* XWContactHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContactHeadView.xib; sourceTree = "<group>"; };
+		A773E61D206A7275002C5721 /* XWDemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDemoData.swift; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -608,6 +614,8 @@
 				D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */,
 				D5ADC2182058B7FA001307E8 /* XWNewConversationTableViewCell.xib */,
 				D58DB95620649635005ABED8 /* XWMessageViewController.swift */,
+				A773E619206A6E3C002C5721 /* XWContactHeadView.swift */,
+				A773E61B206A6E47002C5721 /* XWContactHeadView.xib */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -712,6 +720,7 @@
 				D5ADC20A2057BAD5001307E8 /* DefaultsKeys.swift */,
 				D5ADC2A32058C08D001307E8 /* AuthManager.swift */,
 				D58DB9872064D88B005ABED8 /* PaddingTextField.swift */,
+				A773E61D206A7275002C5721 /* XWDemoData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1047,6 +1056,7 @@
 				D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */,
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
+				A773E61C206A6E47002C5721 /* XWContactHeadView.xib in Resources */,
 				D58DB9552063B3C8005ABED8 /* countries.json in Resources */,
 				D58FC4042052680B008C05AE /* launchImage@3x.png in Resources */,
 			);
@@ -1291,6 +1301,7 @@
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
+				A773E61E206A7275002C5721 /* XWDemoData.swift in Sources */,
 				A773E614206A3B6D002C5721 /* XWImportantContractTableViewController.swift in Sources */,
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
 				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
@@ -1314,6 +1325,7 @@
 				D5A48977204E6D54001031F6 /* UIImage.swift in Sources */,
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
 				D5A48968204E6D54001031F6 /* CALayer.swift in Sources */,
+				A773E61A206A6E3C002C5721 /* XWContactHeadView.swift in Sources */,
 				D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */,
 				D58DB95A20649D9C005ABED8 /* XWSenderTableViewCell.swift in Sources */,
 				D58FC41620564523008C05AE /* FSPagerViewLayoutAttributes.swift in Sources */,

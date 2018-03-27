@@ -14,10 +14,11 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
 
-    
+    var userData: XWDemoData!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.fakeData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -78,36 +79,49 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         if section == 0 {
             return 1
         }else {
-            return 20
+            return userData.users.count
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath)
-
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath) as! XWMyContactTableViewCell
+            cell.headView.image = userData.myself.profilePic
+            cell.nameLabel.text = userData.myself.name
+            cell.numberLabel.text = "My Number:"+userData.myself.id
             // Configure the cell...
 
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath)
-
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath) as! XWContactTableViewCell
+            let user = userData.users[indexPath.row]
+            cell.headView.image = user.profilePic
+            cell.nameLabel.text = user.name
             // Configure the cell...
-
             return cell
         }
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "A"
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0
         }else {
-            return 24
+            return 28
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headView = XWContactHeadView.fromNib()
+        headView.titleLabel.text = "A"
+        return headView
+    }
+    
+    func fakeData() {
+        userData = XWDemoData()
+        userData.myself = XWUser.init(name: "Jane Smith", email: "test@gmail.com", id: "887gcfw23444wq2803", profilePic: UIImage(named: "head1")!)
+        userData.users = [XWUser.init(name: "Bill Anderson", email: "test@gmail.com", id: "887gcfw23444wq1561", profilePic: UIImage(named: "head2")!),
+                          XWUser.init(name: "Pauline Banister", email: "test@gmail.com", id: "887gcfw23444wq1522", profilePic: UIImage(named: "head3")!),
+                          XWUser.init(name: "Michael Barlow", email: "test@gmail.com", id: "887gcfw23444wq1211", profilePic: UIImage(named: "head4")!)]
     }
 }
