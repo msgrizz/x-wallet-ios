@@ -33,6 +33,8 @@
 		A773E5F52069F23A002C5721 /* XWAcademicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5F42069F23A002C5721 /* XWAcademicListViewController.swift */; };
 		A773E5F82069F43A002C5721 /* XWHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5F72069F43A002C5721 /* XWHealthViewController.swift */; };
 		A773E5FB2069F784002C5721 /* XWCouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5FA2069F784002C5721 /* XWCouponListViewController.swift */; };
+		A773E5FD206A09DE002C5721 /* XWCreateCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5FC206A09DE002C5721 /* XWCreateCouponViewController.swift */; };
+		A773E5FF206A0A2D002C5721 /* XWSendCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5FE206A0A2D002C5721 /* XWSendCouponViewController.swift */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
@@ -208,6 +210,8 @@
 		A773E5F42069F23A002C5721 /* XWAcademicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAcademicListViewController.swift; sourceTree = "<group>"; };
 		A773E5F72069F43A002C5721 /* XWHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWHealthViewController.swift; sourceTree = "<group>"; };
 		A773E5FA2069F784002C5721 /* XWCouponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCouponListViewController.swift; sourceTree = "<group>"; };
+		A773E5FC206A09DE002C5721 /* XWCreateCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCreateCouponViewController.swift; sourceTree = "<group>"; };
+		A773E5FE206A0A2D002C5721 /* XWSendCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSendCouponViewController.swift; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -479,6 +483,8 @@
 			children = (
 				12C5071420690EC40080112C /* Coupon.storyboard */,
 				A773E5FA2069F784002C5721 /* XWCouponListViewController.swift */,
+				A773E5FC206A09DE002C5721 /* XWCreateCouponViewController.swift */,
+				A773E5FE206A0A2D002C5721 /* XWSendCouponViewController.swift */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -1231,6 +1237,7 @@
 				D5ADC2DE205A0961001307E8 /* XWNoCardView.swift in Sources */,
 				D58FC41B20564EED008C05AE /* MyAuthenticationCollectionViewCell.swift in Sources */,
 				D58FC41220564523008C05AE /* FSPageControl.swift in Sources */,
+				A773E5FD206A09DE002C5721 /* XWCreateCouponViewController.swift in Sources */,
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
@@ -1273,6 +1280,7 @@
 				A773E5FB2069F784002C5721 /* XWCouponListViewController.swift in Sources */,
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
 				D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */,
+				A773E5FF206A0A2D002C5721 /* XWSendCouponViewController.swift in Sources */,
 				D58DB95C20649DAD005ABED8 /* XWRecieverTableViewCell.swift in Sources */,
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
