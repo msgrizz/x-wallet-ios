@@ -81,6 +81,8 @@ class XWMainViewController: UIBaseViewController {
         self.stackView.addArrangedSubview(demoTwoCard1)
         
         let demoThreeCard: XWThreeCardDemoView = XWThreeCardDemoView.fromNib()
+        let tap2 = UITapGestureRecognizer.init(target: self, action: #selector(goToMembership))
+        demoThreeCard.addGestureRecognizer(tap2)
         self.stackView.addArrangedSubview(demoThreeCard)
         
         let demoOneCard1: XWOneCardDemoView = XWOneCardDemoView.fromNib()
@@ -129,6 +131,11 @@ class XWMainViewController: UIBaseViewController {
  
     @objc func goToLists(_ : UIButton) {
         self.performSegue(withIdentifier: "goToCardList", sender: nil)
+    }
+    
+    @objc func goToMembership(_ : UIButton) {
+        let Membership: UIStoryboard = UIStoryboard(name: "Membership", bundle: nil)
+        self.navigationController?.pushViewController(Membership.instantiateInitialViewController()!, animated: true)
     }
     
     @objc func dismissSlide(_ :UIButton) {

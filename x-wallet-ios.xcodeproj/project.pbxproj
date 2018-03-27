@@ -27,6 +27,8 @@
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
 		A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766A1502069257300B6525A /* XWThreeCardDemoView.swift */; };
 		A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A766A1522069258400B6525A /* XWThreeCardDemoView.xib */; };
+		A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */; };
+		A773E5EF2069ECEC002C5721 /* XWSendMembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5EE2069ECEC002C5721 /* XWSendMembershipViewController.swift */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
@@ -196,6 +198,8 @@
 		416D5C8D72EBE5BDFF17199F /* Pods-x-wallet-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.release.xcconfig"; sourceTree = "<group>"; };
 		A766A1502069257300B6525A /* XWThreeCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWThreeCardDemoView.swift; sourceTree = "<group>"; };
 		A766A1522069258400B6525A /* XWThreeCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWThreeCardDemoView.xib; sourceTree = "<group>"; };
+		A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMembershipListViewController.swift; sourceTree = "<group>"; };
+		A773E5EE2069ECEC002C5721 /* XWSendMembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSendMembershipViewController.swift; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -425,6 +429,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A773E5EB2069EB84002C5721 /* Membership */ = {
+			isa = PBXGroup;
+			children = (
+				A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */,
+				A773E5EE2069ECEC002C5721 /* XWSendMembershipViewController.swift */,
+				12C5070E2068DB320080112C /* Membership.storyboard */,
+			);
+			path = Membership;
+			sourceTree = "<group>";
+		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,7 +604,6 @@
 				D5A48913204E3761001031F6 /* Info.plist */,
 				D5A489E2204FBC82001031F6 /* Main.storyboard */,
 				D5A489DE204FB30D001031F6 /* Localizable.strings */,
-				12C5070E2068DB320080112C /* Membership.storyboard */,
 				12C50710206908050080112C /* Ticket.storyboard */,
 				12C5071220690A790080112C /* Health.storyboard */,
 				12C5071420690EC40080112C /* Coupon.storyboard */,
@@ -777,6 +790,7 @@
 		D5ADC2F3205B57AB001307E8 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				A773E5EB2069EB84002C5721 /* Membership */,
 				D58DB99B2068F95D005ABED8 /* Coin */,
 				D5ADC2F4205B57D4001307E8 /* MiniContract */,
 			);
@@ -1205,6 +1219,7 @@
 				D5A489ED204FD4B1001031F6 /* XWLoginViewController.swift in Sources */,
 				D58FC3F820523B6E008C05AE /* XWMessageListTableViewController.swift in Sources */,
 				D5ADC2CE2058FE6E001307E8 /* MnemonicWord.swift in Sources */,
+				A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */,
 				D58DB9912068D8C3005ABED8 /* XWOneCardDemoView.swift in Sources */,
 				D5ADC2C82058FE6E001307E8 /* DataType.swift in Sources */,
 				12B49B3120591AD9001F7A6C /* Secp256k1.swift in Sources */,
@@ -1236,6 +1251,7 @@
 				D5ADC2D12058FE6E001307E8 /* Timestamp.swift in Sources */,
 				D5A489AE204F96FD001031F6 /* AppStyle.swift in Sources */,
 				12B49B3320591B17001F7A6C /* Address.swift in Sources */,
+				A773E5EF2069ECEC002C5721 /* XWSendMembershipViewController.swift in Sources */,
 				D5ADC20B2057BAD5001307E8 /* DefaultsKeys.swift in Sources */,
 				12B49B2C20591A40001F7A6C /* HDKey.swift in Sources */,
 				D58FC4202056853B008C05AE /* PrivacyViewController.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 
 class UIBaseViewController: UIViewController {
+    var searchButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +17,18 @@ class UIBaseViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor =  Colors.backGroundColor
-        
+
+    }
+    
+    open func addSearchButton() {
+        searchButton = UIBarButtonItem(
+            image: UIImage.init(named: "searchButton"),
+            style: .plain,
+            target: self,
+            action: #selector(search(_:))
+        )
+        searchButton.tintColor = Colors.tintColor
+        self.navigationItem.rightBarButtonItem = searchButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +49,12 @@ class UIBaseViewController: UIViewController {
         self.navigationController?.navigationBar.hideShadow(true)
     }
     
-
+    @objc func search(_ : UIBarButtonItem) {
+        let search: UIStoryboard = UIStoryboard(name: "Search", bundle: nil)
+        self.present(search.instantiateInitialViewController() as! UINavigationController, animated: true) {
+            
+        }
+    }
     /*
     // MARK: - Navigation
 

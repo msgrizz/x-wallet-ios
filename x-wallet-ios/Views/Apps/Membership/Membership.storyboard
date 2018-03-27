@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6hh-8Q-RXQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Create-->
         <scene sceneID="7KL-jl-Q6V">
             <objects>
-                <viewController id="FZe-7h-8ko" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create" id="FZe-7h-8ko" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bPM-s3-EGk" customClass="UIBaseView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="S7J-z2-W1I" kind="show" id="GI9-GH-owe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PJ-a9-yY5">
                                 <rect key="frame" x="193" y="599" width="162" height="48"/>
@@ -58,6 +61,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="AXc-X7-J3p" kind="show" id="Ywj-0o-pjQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="41" y="2848"/>
         </scene>
-        <!--View Controller-->
+        <!--VIP Card-->
         <scene sceneID="viX-Sb-9hK">
             <objects>
-                <viewController id="5jn-Q1-Wbf" sceneMemberID="viewController">
+                <viewController title="VIP Card" id="5jn-Q1-Wbf" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nrm-oD-PXS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,12 +109,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRp-PW-eU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="3545"/>
+            <point key="canvasLocation" x="41" y="3879"/>
         </scene>
-        <!--View Controller-->
+        <!--Base View Controller-->
         <scene sceneID="iKC-h2-w1R">
             <objects>
-                <viewController id="84d-Ze-RXV" sceneMemberID="viewController">
+                <viewController id="84d-Ze-RXV" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IZp-oj-LmG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="2848"/>
         </scene>
-        <!--View Controller-->
+        <!--Base View Controller-->
         <scene sceneID="hg2-wU-W5R">
             <objects>
-                <viewController id="gTo-pV-y0p" sceneMemberID="viewController">
+                <viewController id="gTo-pV-y0p" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0E-sM-EJt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1516" y="2848"/>
         </scene>
-        <!--View Controller-->
+        <!--Send Card-->
         <scene sceneID="MW3-MZ-Gvr">
             <objects>
-                <viewController id="AXc-X7-J3p" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWSendMembershipViewController" title="Send Card" id="AXc-X7-J3p" customClass="XWSendMembershipViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7CG-7O-nLT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,6 +286,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendAction:" destination="AXc-X7-J3p" eventType="touchUpInside" id="1z6-0N-3x5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -298,10 +307,10 @@
             </objects>
             <point key="canvasLocation" x="2294" y="2848"/>
         </scene>
-        <!--View Controller-->
+        <!--Work Card-->
         <scene sceneID="2G7-sP-03B">
             <objects>
-                <viewController id="cyJ-W9-27j" sceneMemberID="viewController">
+                <viewController title="Work Card" id="cyJ-W9-27j" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eTe-4J-dfk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,12 +333,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uL5-IM-Hrz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="3545"/>
+            <point key="canvasLocation" x="774" y="3878"/>
         </scene>
-        <!--View Controller-->
+        <!--Student Card-->
         <scene sceneID="4V4-4u-z3W">
             <objects>
-                <viewController id="HgF-rH-ZKF" sceneMemberID="viewController">
+                <viewController title="Student Card" id="HgF-rH-ZKF" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HUx-sZ-gS8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,12 +361,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8m-yW-u0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="3545"/>
+            <point key="canvasLocation" x="-639" y="3880"/>
         </scene>
-        <!--View Controller-->
+        <!--Card-->
         <scene sceneID="fEc-He-ar8">
             <objects>
-                <viewController id="S7J-z2-W1I" sceneMemberID="viewController">
+                <viewController title="Card" id="S7J-z2-W1I" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QcJ-Ny-vq1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,6 +393,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="AXc-X7-J3p" kind="show" id="hl6-Ca-KgK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -402,10 +414,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="2157"/>
         </scene>
-        <!--View Controller-->
+        <!--Membership-->
         <scene sceneID="Btk-bE-aFi">
             <objects>
-                <viewController id="6hh-8Q-RXQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWMembershipListViewController" title="Membership" hidesBottomBarWhenPushed="YES" id="6hh-8Q-RXQ" customClass="XWMembershipListViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gWr-c2-04d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,18 +429,77 @@
                                     <constraint firstAttribute="width" constant="375" id="gcy-rZ-Qhw"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqB-Ev-bQD">
+                                <rect key="frame" x="288" y="506" width="87" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="2Cp-uN-CgZ"/>
+                                    <constraint firstAttribute="height" constant="161" id="vK7-Oi-ovx"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="FZe-7h-8ko" kind="show" id="7NQ-xp-U8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQk-4p-bKh">
+                                <rect key="frame" x="22" y="47" width="328" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="32B-vH-p8D"/>
+                                    <constraint firstAttribute="height" constant="54" id="kwi-ut-8eE"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1w-mq-Q7Q">
+                                <rect key="frame" x="23" y="343" width="328" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="kQa-hN-3cS"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="HgF-rH-ZKF" kind="show" id="vtd-j0-f5J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMv-B3-Eab">
+                                <rect key="frame" x="23" y="220" width="328" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="543-Dh-jYQ"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="5jn-Q1-Wbf" kind="show" id="wLW-QF-YyD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLb-sO-knn">
+                                <rect key="frame" x="23" y="281" width="328" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="ofD-jQ-HYd"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="cyJ-W9-27j" kind="show" id="xpK-Xn-Hgb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="uLb-sO-knn" secondAttribute="trailing" constant="24" id="1In-Pa-i4f"/>
+                            <constraint firstItem="uLb-sO-knn" firstAttribute="top" secondItem="yMv-B3-Eab" secondAttribute="bottom" constant="7" id="45U-K6-ugm"/>
+                            <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="HQk-4p-bKh" secondAttribute="trailing" constant="25" id="Aag-R9-WVo"/>
+                            <constraint firstItem="q1w-mq-Q7Q" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="23" id="OTz-WI-aBJ"/>
                             <constraint firstItem="KoR-nM-uhx" firstAttribute="centerX" secondItem="gWr-c2-04d" secondAttribute="centerX" id="PtO-ti-Tw7"/>
+                            <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="yMv-B3-Eab" secondAttribute="trailing" constant="24" id="TZa-q3-VlS"/>
+                            <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="q1w-mq-Q7Q" secondAttribute="trailing" constant="24" id="XCO-Yp-GhJ"/>
+                            <constraint firstItem="HQk-4p-bKh" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="22" id="ZGV-i0-mNk"/>
+                            <constraint firstItem="q1w-mq-Q7Q" firstAttribute="top" secondItem="HQk-4p-bKh" secondAttribute="bottom" constant="242" id="gAg-5D-vM8"/>
+                            <constraint firstItem="uLb-sO-knn" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="23" id="gzY-UO-ch3"/>
                             <constraint firstItem="KoR-nM-uhx" firstAttribute="top" secondItem="H85-ap-hsz" secondAttribute="top" id="ika-Sr-Zou"/>
+                            <constraint firstItem="HQk-4p-bKh" firstAttribute="top" secondItem="H85-ap-hsz" secondAttribute="top" constant="27" id="ir1-dC-Imm"/>
+                            <constraint firstItem="iqB-Ev-bQD" firstAttribute="bottom" secondItem="H85-ap-hsz" secondAttribute="bottom" id="j1J-KX-fTg"/>
+                            <constraint firstItem="yMv-B3-Eab" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="23" id="l0S-Tb-qW7"/>
+                            <constraint firstItem="yMv-B3-Eab" firstAttribute="top" secondItem="HQk-4p-bKh" secondAttribute="bottom" constant="119" id="lfL-wE-2nm"/>
+                            <constraint firstItem="iqB-Ev-bQD" firstAttribute="trailing" secondItem="H85-ap-hsz" secondAttribute="trailing" id="p1i-jh-Na5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H85-ap-hsz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rJD-Wc-hVI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG6-vW-wvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-638" y="2848"/>
+            <point key="canvasLocation" x="-639.20000000000005" y="2847.5262368815593"/>
         </scene>
     </scenes>
     <resources>
@@ -444,4 +515,7 @@
         <image name="welldees" width="335" height="327"/>
         <image name="workCard" width="335" height="545"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ywj-0o-pjQ"/>
+    </inferredMetricsTieBreakers>
 </document>
