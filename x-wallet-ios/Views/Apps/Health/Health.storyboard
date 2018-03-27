@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jwx-m6-UBD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Routine Blood Test-->
         <scene sceneID="2vE-WZ-iE8">
             <objects>
-                <viewController id="GUt-yw-Pao" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Routine Blood Test" hidesBottomBarWhenPushed="YES" id="GUt-yw-Pao" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="37Z-2v-1ag">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="9Rj-K5-dXs" firstAttribute="centerX" secondItem="hx0-8g-hrw" secondAttribute="centerX" id="EiY-d2-Zmj"/>
                                             <constraint firstAttribute="bottom" secondItem="9Rj-K5-dXs" secondAttribute="bottom" id="JSZ-a2-l5g"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="-340" y="1837.3313343328336"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Brain CT Report-->
         <scene sceneID="8Wd-HN-K0E">
             <objects>
-                <viewController id="Lj0-mw-X9I" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Brain CT Report" id="Lj0-mw-X9I" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5r-UB-Vvq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="iFU-Ng-5q9" firstAttribute="leading" secondItem="0YA-Uo-6eu" secondAttribute="leading" id="DNb-DY-SZ3"/>
                                             <constraint firstItem="iFU-Ng-5q9" firstAttribute="top" secondItem="0YA-Uo-6eu" secondAttribute="top" id="P3B-dm-oQ9"/>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="407" y="1657"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Health View Controller-->
         <scene sceneID="Qzg-9e-5H4">
             <objects>
-                <viewController id="jwx-m6-UBD" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWHealthViewController" hidesBottomBarWhenPushed="YES" id="jwx-m6-UBD" customClass="XWHealthViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEG-4y-WbC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,11 +141,35 @@
                                                     <constraint firstAttribute="width" constant="375" id="zZd-up-Be5"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAA-Jo-gYi">
+                                                <rect key="frame" x="29" y="470" width="315" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="pgM-Ne-SlG"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="GUt-yw-Pao" kind="show" id="I8O-Qz-XeL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MR-A5-eLE">
+                                                <rect key="frame" x="30" y="708" width="315" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="aKS-FN-y0V"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="Lj0-mw-X9I" kind="show" id="xRC-dv-bHS"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="WAA-Jo-gYi" firstAttribute="leading" secondItem="jKg-Lk-nxU" secondAttribute="leading" constant="29" id="3ye-yG-t83"/>
+                                            <constraint firstItem="WAA-Jo-gYi" firstAttribute="top" secondItem="jKg-Lk-nxU" secondAttribute="top" constant="470" id="DN2-lX-Anl"/>
+                                            <constraint firstAttribute="trailing" secondItem="4MR-A5-eLE" secondAttribute="trailing" constant="30" id="Ftg-eJ-Ipt"/>
                                             <constraint firstItem="W5x-vr-200" firstAttribute="top" secondItem="jKg-Lk-nxU" secondAttribute="top" id="IyT-N8-qdP"/>
                                             <constraint firstAttribute="width" constant="375" id="LYV-Ox-HEV"/>
+                                            <constraint firstItem="4MR-A5-eLE" firstAttribute="leading" secondItem="jKg-Lk-nxU" secondAttribute="leading" constant="30" id="Yoz-Fn-ApO"/>
+                                            <constraint firstItem="4MR-A5-eLE" firstAttribute="top" secondItem="WAA-Jo-gYi" secondAttribute="bottom" constant="192" id="bd5-EZ-jRs"/>
+                                            <constraint firstAttribute="trailing" secondItem="WAA-Jo-gYi" secondAttribute="trailing" constant="31" id="c0I-6M-7M9"/>
                                             <constraint firstAttribute="bottom" secondItem="W5x-vr-200" secondAttribute="bottom" id="eUk-TI-BX0"/>
                                             <constraint firstItem="W5x-vr-200" firstAttribute="centerX" secondItem="jKg-Lk-nxU" secondAttribute="centerX" id="xWN-vp-sHp"/>
                                         </constraints>
@@ -159,7 +183,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AWb-Gr-kPs" firstAttribute="bottom" secondItem="uSR-Z3-bwq" secondAttribute="bottom" id="HXO-TO-98X"/>
                             <constraint firstItem="AWb-Gr-kPs" firstAttribute="top" secondItem="uSR-Z3-bwq" secondAttribute="top" id="V7M-34-PIB"/>
@@ -173,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSo-mA-EV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1113" y="1837"/>
+            <point key="canvasLocation" x="-1114.4000000000001" y="1836.88155922039"/>
         </scene>
     </scenes>
     <resources>
