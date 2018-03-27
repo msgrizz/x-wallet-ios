@@ -35,6 +35,10 @@
 		A773E5FB2069F784002C5721 /* XWCouponListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5FA2069F784002C5721 /* XWCouponListViewController.swift */; };
 		A773E5FD206A09DE002C5721 /* XWCreateCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5FC206A09DE002C5721 /* XWCreateCouponViewController.swift */; };
 		A773E5FF206A0A2D002C5721 /* XWSendCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5FE206A0A2D002C5721 /* XWSendCouponViewController.swift */; };
+		A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E600206A1435002C5721 /* XWCoinTableViewCell.swift */; };
+		A773E603206A1435002C5721 /* XWCoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E601206A1435002C5721 /* XWCoinTableViewCell.xib */; };
+		A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E604206A16A9002C5721 /* XWCoinListTableViewController.swift */; };
+		A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E607206A19BC002C5721 /* CoinsModel.swift */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
@@ -212,6 +216,10 @@
 		A773E5FA2069F784002C5721 /* XWCouponListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCouponListViewController.swift; sourceTree = "<group>"; };
 		A773E5FC206A09DE002C5721 /* XWCreateCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCreateCouponViewController.swift; sourceTree = "<group>"; };
 		A773E5FE206A0A2D002C5721 /* XWSendCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSendCouponViewController.swift; sourceTree = "<group>"; };
+		A773E600206A1435002C5721 /* XWCoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinTableViewCell.swift; sourceTree = "<group>"; };
+		A773E601206A1435002C5721 /* XWCoinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCoinTableViewCell.xib; sourceTree = "<group>"; };
+		A773E604206A16A9002C5721 /* XWCoinListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinListTableViewController.swift; sourceTree = "<group>"; };
+		A773E607206A19BC002C5721 /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +497,14 @@
 			path = Coupon;
 			sourceTree = "<group>";
 		};
+		A773E606206A19A6002C5721 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A773E607206A19BC002C5721 /* CoinsModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,13 +519,8 @@
 				D5ADC2E8205A3B21001307E8 /* CardViewModels */,
 				D5ADC2E5205A3ADB001307E8 /* CardViews */,
 				D58FC3F3205236CF008C05AE /* XWMainViewController.swift */,
-				D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */,
 				D5ADC2D620591077001307E8 /* XWSlideView.swift */,
 				D5ADC2D820591088001307E8 /* XWSlideView.xib */,
-				D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */,
-				D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */,
-				D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */,
-				D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -556,9 +567,13 @@
 		D58DB99B2068F95D005ABED8 /* Coin */ = {
 			isa = PBXGroup;
 			children = (
+				A773E606206A19A6002C5721 /* ViewModel */,
 				D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */,
 				D58DB99E20691D2E005ABED8 /* XWTransferViewController.swift */,
 				D58DB9A020691F0A005ABED8 /* XWCoinTrackViewController.swift */,
+				A773E600206A1435002C5721 /* XWCoinTableViewCell.swift */,
+				A773E601206A1435002C5721 /* XWCoinTableViewCell.xib */,
+				A773E604206A16A9002C5721 /* XWCoinListTableViewController.swift */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
@@ -813,6 +828,10 @@
 		D5ADC2E5205A3ADB001307E8 /* CardViews */ = {
 			isa = PBXGroup;
 			children = (
+				D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */,
+				D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */,
+				D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */,
+				D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */,
 				D5ADC2E6205A3AF5001307E8 /* XWBaseCardView.swift */,
 				D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */,
 				D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */,
@@ -850,6 +869,7 @@
 		D5ADC2F4205B57D4001307E8 /* MiniContract */ = {
 			isa = PBXGroup;
 			children = (
+				D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */,
 				D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */,
 				D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */,
 				D5ADC2ED205A424A001307E8 /* XWContractView.swift */,
@@ -996,6 +1016,7 @@
 				D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */,
 				D58FC400205267B4008C05AE /* Assets.xcassets in Resources */,
 				D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */,
+				A773E603206A1435002C5721 /* XWCoinTableViewCell.xib in Resources */,
 				D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */,
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
@@ -1211,6 +1232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
+				A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */,
 				D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */,
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
@@ -1242,10 +1264,12 @@
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
+				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */,
 				12B49B2A20591A40001F7A6C /* DerivationPath.swift in Sources */,
+				A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */,
 				12B49B2B20591A40001F7A6C /* DerivationPath.Index.swift in Sources */,
 				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,
 				D5A48906204E3761001031F6 /* AppDelegate.swift in Sources */,

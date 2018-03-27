@@ -55,13 +55,13 @@ extension XWSearchViewController: UITextFieldDelegate {
 extension XWSearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "XWSearchTableViewCell", for: indexPath) as! XWSearchTableViewCell
-        cell.contentLabel.text = "adsad"
+        cell.contentLabel.text = "Employment Contract"
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -70,7 +70,7 @@ extension XWSearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return 1
     }
 }
 

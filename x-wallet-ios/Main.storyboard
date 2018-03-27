@@ -94,6 +94,7 @@
                         <outlet property="scrollView" destination="wwV-JS-6xM" id="q2S-ez-4JQ"/>
                         <outlet property="searchBar" destination="L03-EF-hIo" id="vBo-Wd-uwz"/>
                         <segue destination="TaT-nC-o1N" kind="show" identifier="goToCardList" id="p4b-o4-5BU"/>
+                        <segue destination="4cR-nF-xwH" kind="show" identifier="goToCoinList" id="q1k-UN-smi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1634,7 +1635,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APg-3Z-u8K">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="795"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="780"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pravicyBackground" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-Yi-496">
                                                 <rect key="frame" x="20" y="17" width="335" height="592"/>
@@ -1645,9 +1646,9 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGT-0Y-XHU">
-                                                <rect key="frame" x="20" y="609" width="335" height="88"/>
+                                                <rect key="frame" x="20" y="634" width="335" height="48"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="88" id="HjP-26-rmp"/>
+                                                    <constraint firstAttribute="height" constant="48" id="HjP-26-rmp"/>
                                                     <constraint firstAttribute="width" constant="335" id="YqE-od-PSk"/>
                                                 </constraints>
                                                 <state key="normal" title="Log out" backgroundImage="logoutButton"/>
@@ -1787,7 +1788,7 @@
                                             <constraint firstAttribute="trailing" secondItem="YM0-nY-lfV" secondAttribute="trailing" constant="44" id="l1O-9h-gLW"/>
                                             <constraint firstItem="uQe-Nb-pne" firstAttribute="centerX" secondItem="APg-3Z-u8K" secondAttribute="centerX" id="m5r-dr-diK"/>
                                             <constraint firstItem="FZd-kz-um0" firstAttribute="top" secondItem="APg-3Z-u8K" secondAttribute="top" constant="42" id="q8M-oE-1r9"/>
-                                            <constraint firstItem="xGT-0Y-XHU" firstAttribute="top" secondItem="x7t-Yi-496" secondAttribute="bottom" id="s9b-tD-axL"/>
+                                            <constraint firstItem="xGT-0Y-XHU" firstAttribute="top" secondItem="x7t-Yi-496" secondAttribute="bottom" constant="25" id="s9b-tD-axL"/>
                                             <constraint firstItem="Hr1-rM-TRn" firstAttribute="leading" secondItem="APg-3Z-u8K" secondAttribute="leading" constant="43" id="vQ1-xN-dYl"/>
                                             <constraint firstItem="hzk-X1-7PL" firstAttribute="top" secondItem="vKZ-Dj-jd9" secondAttribute="bottom" constant="28" id="vgY-93-hBY"/>
                                             <constraint firstAttribute="trailing" secondItem="dYS-dD-8Lu" secondAttribute="trailing" constant="44" id="zK2-0a-54z"/>
@@ -1853,8 +1854,6 @@
                     <connections>
                         <outlet property="addButton" destination="jHz-nG-f2L" id="cwL-hJ-lvL"/>
                         <outlet property="bottomBar" destination="3pQ-Hm-CnD" id="AEW-Tc-kM4"/>
-                        <segue destination="hBI-hA-tIL" kind="show" identifier="createCoin" id="9iS-fx-haj"/>
-                        <segue destination="WIv-W7-9qM" kind="show" identifier="goToCoinTrack" id="UzH-3m-IFX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-n9-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2089,7 +2088,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgb-wD-67j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546" y="-1861"/>
+            <point key="canvasLocation" x="2545" y="-3307"/>
+        </scene>
+        <!--Coin-->
+        <scene sceneID="go4-S8-zWF">
+            <objects>
+                <tableViewController storyboardIdentifier="XWCoinListTableViewController" title="Coin" hidesBottomBarWhenPushed="YES" id="4cR-nF-xwH" customClass="XWCoinListTableViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="eRS-jz-0Uz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="4cR-nF-xwH" id="G5b-xy-x30"/>
+                            <outlet property="delegate" destination="4cR-nF-xwH" id="CdU-gY-1S9"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="hBI-hA-tIL" kind="show" identifier="createCoin" id="2gc-DI-Zzu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opI-gH-y4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="-2866"/>
         </scene>
         <!--Coin Track View Controller-->
         <scene sceneID="e8x-Qa-lx8">
@@ -2248,7 +2268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osg-aD-gdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3333.5999999999999" y="-2031.6341829085459"/>
+            <point key="canvasLocation" x="3524" y="-3298"/>
         </scene>
         <!--Scan-->
         <scene sceneID="3EN-x4-4do">
@@ -2329,7 +2349,7 @@
         <image name="inputBackground" width="276" height="43"/>
         <image name="inviteLine" width="286" height="1"/>
         <image name="issueButton" width="335" height="48"/>
-        <image name="logoutButton" width="375" height="88"/>
+        <image name="logoutButton" width="340" height="48"/>
         <image name="mainButton" width="25" height="25"/>
         <image name="mainButtonPress" width="25" height="25"/>
         <image name="meButton" width="26" height="25"/>

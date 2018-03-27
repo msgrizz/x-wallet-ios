@@ -78,6 +78,8 @@ class XWMainViewController: UIBaseViewController {
 
         let demoTwoCard1: XWTwoCardDemoView = XWTwoCardDemoView.fromNib()
         demoTwoCard1.backImageView.image = UIImage(named: "demo1")
+        let tap1 = UITapGestureRecognizer.init(target: self, action: #selector(goToCoin))
+        demoTwoCard1.addGestureRecognizer(tap1)
         self.stackView.addArrangedSubview(demoTwoCard1)
         
         let demoThreeCard: XWThreeCardDemoView = XWThreeCardDemoView.fromNib()
@@ -139,6 +141,10 @@ class XWMainViewController: UIBaseViewController {
  
     @objc func goToLists(_ : UIButton) {
         self.performSegue(withIdentifier: "goToCardList", sender: nil)
+    }
+    
+    @objc func goToCoin(_ : UIButton) {
+        self.performSegue(withIdentifier: "goToCoinList", sender: nil)
     }
     
     @objc func goToMembership(_ : UIButton) {
