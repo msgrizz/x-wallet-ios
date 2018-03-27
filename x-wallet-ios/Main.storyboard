@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="-2002"/>
+            <point key="canvasLocation" x="1006" y="-2752"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="D9c-mC-AbP">
@@ -1888,6 +1888,7 @@
                     <connections>
                         <outlet property="addButton" destination="jHz-nG-f2L" id="cwL-hJ-lvL"/>
                         <outlet property="bottomBar" destination="3pQ-Hm-CnD" id="AEW-Tc-kM4"/>
+                        <segue destination="eoz-ZL-raP" kind="show" identifier="goToImportant" id="Dhv-O3-hGs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-n9-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1944,6 +1945,24 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="1785" y="-2003"/>
+        </scene>
+        <!--Mini Contract-->
+        <scene sceneID="0zH-lb-Ts3">
+            <objects>
+                <tableViewController title="Mini Contract" id="eoz-ZL-raP" customClass="XWImportantContractTableViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="nhk-es-CUH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="eoz-ZL-raP" id="jxW-Kc-pW7"/>
+                            <outlet property="delegate" destination="eoz-ZL-raP" id="AG0-A6-4R9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PiD-Zr-tNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526" y="-1882"/>
         </scene>
         <!--Create Coin View Controller-->
         <scene sceneID="aCy-fl-MFs">

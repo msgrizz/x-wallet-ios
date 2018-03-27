@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JpO-6C-QgH" userLabel="XWImportantHeadView" customClass="XWImportantHeadView" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ss-t7-2Gt">
+                    <rect key="frame" x="324" y="14" width="35" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="AGM-NH-qf7"/>
+                        <constraint firstAttribute="width" constant="35" id="Mht-WK-DTv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="ALL">
+                        <color key="titleColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-vQ-wna">
+                    <rect key="frame" x="16" y="14" width="113" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="LU5-oN-Yga"/>
+                        <constraint firstAttribute="width" constant="113" id="ilp-B8-3G1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="  Improtant 3" image="starTag"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wyj-vQ-wna" firstAttribute="leading" secondItem="3dh-ad-qRT" secondAttribute="leading" constant="16" id="ITk-5c-2lz"/>
+                <constraint firstItem="wyj-vQ-wna" firstAttribute="top" secondItem="3dh-ad-qRT" secondAttribute="top" constant="14" id="Lek-wo-lQ8"/>
+                <constraint firstItem="7Ss-t7-2Gt" firstAttribute="top" secondItem="3dh-ad-qRT" secondAttribute="top" constant="14" id="oQ2-m5-5Zu"/>
+                <constraint firstItem="3dh-ad-qRT" firstAttribute="trailing" secondItem="7Ss-t7-2Gt" secondAttribute="trailing" constant="16" id="oUt-p3-zeG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="3dh-ad-qRT"/>
+            <point key="canvasLocation" x="33.5" y="55"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="starTag" width="13" height="13"/>
+    </resources>
+</document>

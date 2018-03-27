@@ -1,39 +1,37 @@
 //
-//  XWCardListTableViewController.swift
+//  XWImportantContractTableViewController.swift
 //  x-wallet-ios
 //
-//  Created by 爱班 on 2018/3/16.
+//  Created by 胡波 on 2018/3/27.
 //  Copyright © 2018年 linkio. All rights reserved.
 //
 
 import UIKit
 
-class XWCardListTableViewController: UIBaseTableViewController {
-    
+class XWImportantContractTableViewController: UIBaseTableViewController {
+
     var lastScrollOffset: CGFloat = 0
     
     var isScrollDown: Bool = true
-
+    
     var searchButton: UIBarButtonItem!
     
     var addMoreButton:UIButton!
-
-    @IBOutlet weak var bottomBar: UIView!
-    @IBOutlet weak var addButton:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.register(UINib(nibName: "XWContractDemoTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractDemoTableViewCell")
-
         
-//        self.tableView.contentInset.bottom = self.bottomBar.frame.size.height
-//        self.tableView.scrollIndicatorInsets.bottom = self.bottomBar.frame.size.height
+        
+        //        self.tableView.contentInset.bottom = self.bottomBar.frame.size.height
+        //        self.tableView.scrollIndicatorInsets.bottom = self.bottomBar.frame.size.height
         
         searchButton = UIBarButtonItem(
             image: UIImage.init(named: "searchButton"),
@@ -47,7 +45,6 @@ class XWCardListTableViewController: UIBaseTableViewController {
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -60,7 +57,7 @@ class XWCardListTableViewController: UIBaseTableViewController {
     @objc func add(_ : UIButton) {
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -68,62 +65,41 @@ class XWCardListTableViewController: UIBaseTableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        self.addMoreButton.removeFromSuperview()
         super.viewDidDisappear(animated)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
-//        self.bottomBar.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 71, width: UIScreen.main.bounds.width, height: 71)
-//        self.bottomBar.bringSubview(toFront: self.addButton)
-//        self.navigationController?.view.addSubview(self.bottomBar)
-        self.navigationController?.view.addSubview(self.addMoreButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0 {
-            return 2
-        }else if section == 1{
-            return 1
-        }else if section == 2{
-            return 2
-        }else {
-            return 1
-        }
+        return 3
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 cell.backImageView.image = UIImage(named: "card1")
-            }else {
-                cell.backImageView.image = UIImage(named: "card2")
+            }else if indexPath.row == 1{
+                cell.backImageView.image = UIImage(named: "card3")
+            }else{
+                cell.backImageView.image = UIImage(named: "card6")
             }
-        }else if indexPath.section == 1{
-            cell.backImageView.image = UIImage(named: "card3")
-        }else if indexPath.section == 2{
-            if indexPath.row == 0 {
-                cell.backImageView.image = UIImage(named: "card4")
-            }else {
-                cell.backImageView.image = UIImage(named: "card5")
-            }
-        }else {
-            cell.backImageView.image = UIImage(named: "card6")
         }
         return cell
     }
@@ -135,26 +111,8 @@ class XWCardListTableViewController: UIBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headView = XWContractHeadView.fromNib()
-        headView.clearData()
-        if section==0 {
-            headView.titleLabel.text = "Currency"
-            headView.starButton.isHidden = false
-            headView.checkButton.isHidden = false
-            let tap1 = UITapGestureRecognizer.init(target: self, action: #selector(goToImportant))
-            headView.addGestureRecognizer(tap1)
-        }else if section == 1{
-            headView.titleLabel.text = "Receipt"
-        }else if section == 2{
-            headView.titleLabel.text = "Promise"
-        }else{
-            headView.titleLabel.text = "Iou"
-        }
+        let headView = XWImportantHeadView.fromNib()
         return headView
-    }
-    
-    @objc func goToImportant() {
-        self.performSegue(withIdentifier: "goToImportant", sender: nil)
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

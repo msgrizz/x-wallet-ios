@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XWContractDemoTableViewCell" rowHeight="73" id="gRe-FJ-fVc" userLabel="XWContractDemoTableViewCell" customClass="XWContractDemoTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRe-FJ-fVc" id="Iqt-MO-UZJ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VW-rJ-hTd">
+                        <rect key="frame" x="14" y="0.0" width="347" height="70"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniContractBack" translatesAutoresizingMaskIntoConstraints="NO" id="Ppd-TC-5iQ">
+                                <rect key="frame" x="0.0" y="-3" width="347" height="82"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="H2p-9T-oab"/>
+                            <constraint firstAttribute="trailing" secondItem="Ppd-TC-5iQ" secondAttribute="trailing" id="Ig6-Of-JTg"/>
+                            <constraint firstItem="Ppd-TC-5iQ" firstAttribute="leading" secondItem="3VW-rJ-hTd" secondAttribute="leading" id="NpF-s0-gPx"/>
+                            <constraint firstAttribute="bottom" secondItem="Ppd-TC-5iQ" secondAttribute="bottom" constant="-9" id="Qa6-sj-GcA"/>
+                            <constraint firstItem="Ppd-TC-5iQ" firstAttribute="top" secondItem="3VW-rJ-hTd" secondAttribute="top" constant="-3" id="dee-RL-5EN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="3VW-rJ-hTd" firstAttribute="leading" secondItem="Iqt-MO-UZJ" secondAttribute="leading" constant="14" id="5pa-SC-5Gx"/>
+                    <constraint firstItem="3VW-rJ-hTd" firstAttribute="top" secondItem="Iqt-MO-UZJ" secondAttribute="top" id="Hsf-Tz-kOZ"/>
+                    <constraint firstAttribute="trailing" secondItem="3VW-rJ-hTd" secondAttribute="trailing" constant="14" id="W6X-xf-mKn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="4rA-Mt-SKu"/>
+            <connections>
+                <outlet property="backImageView" destination="Ppd-TC-5iQ" id="X52-og-sAg"/>
+            </connections>
+            <point key="canvasLocation" x="-135.5" y="59"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="miniContractBack" width="347" height="82"/>
+    </resources>
+</document>

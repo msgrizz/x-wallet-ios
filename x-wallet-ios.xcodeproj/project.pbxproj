@@ -40,6 +40,13 @@
 		A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E604206A16A9002C5721 /* XWCoinListTableViewController.swift */; };
 		A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E607206A19BC002C5721 /* CoinsModel.swift */; };
 		A773E60A206A20C9002C5721 /* XWAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E609206A20C9002C5721 /* XWAppsViewController.swift */; };
+		A773E60D206A3062002C5721 /* XWContractDemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E60B206A3062002C5721 /* XWContractDemoTableViewCell.swift */; };
+		A773E60E206A3062002C5721 /* XWContractDemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E60C206A3062002C5721 /* XWContractDemoTableViewCell.xib */; };
+		A773E610206A3984002C5721 /* XWContractHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E60F206A3984002C5721 /* XWContractHeadView.swift */; };
+		A773E612206A398F002C5721 /* XWContractHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E611206A398F002C5721 /* XWContractHeadView.xib */; };
+		A773E614206A3B6D002C5721 /* XWImportantContractTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */; };
+		A773E616206A3CD3002C5721 /* XWImportantHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E615206A3CD3002C5721 /* XWImportantHeadView.swift */; };
+		A773E618206A3CE1002C5721 /* XWImportantHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		B30DBC57F6A180364AD04683 /* PrivatePublicAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
@@ -222,6 +229,13 @@
 		A773E604206A16A9002C5721 /* XWCoinListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinListTableViewController.swift; sourceTree = "<group>"; };
 		A773E607206A19BC002C5721 /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
 		A773E609206A20C9002C5721 /* XWAppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppsViewController.swift; sourceTree = "<group>"; };
+		A773E60B206A3062002C5721 /* XWContractDemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractDemoTableViewCell.swift; sourceTree = "<group>"; };
+		A773E60C206A3062002C5721 /* XWContractDemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractDemoTableViewCell.xib; sourceTree = "<group>"; };
+		A773E60F206A3984002C5721 /* XWContractHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractHeadView.swift; sourceTree = "<group>"; };
+		A773E611206A398F002C5721 /* XWContractHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractHeadView.xib; sourceTree = "<group>"; };
+		A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantContractTableViewController.swift; sourceTree = "<group>"; };
+		A773E615206A3CD3002C5721 /* XWImportantHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantHeadView.swift; sourceTree = "<group>"; };
+		A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWImportantHeadView.xib; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B30DB7C7BED1E184B8865066 /* PrivatePublicAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivatePublicAddress.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -873,10 +887,17 @@
 			isa = PBXGroup;
 			children = (
 				D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */,
+				A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */,
 				D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */,
 				D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */,
 				D5ADC2ED205A424A001307E8 /* XWContractView.swift */,
 				D5ADC2EF205A425B001307E8 /* XWContractView.xib */,
+				A773E60B206A3062002C5721 /* XWContractDemoTableViewCell.swift */,
+				A773E60C206A3062002C5721 /* XWContractDemoTableViewCell.xib */,
+				A773E60F206A3984002C5721 /* XWContractHeadView.swift */,
+				A773E611206A398F002C5721 /* XWContractHeadView.xib */,
+				A773E615206A3CD3002C5721 /* XWImportantHeadView.swift */,
+				A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */,
 			);
 			path = MiniContract;
 			sourceTree = "<group>";
@@ -998,11 +1019,14 @@
 			files = (
 				D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */,
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
+				A773E618206A3CE1002C5721 /* XWImportantHeadView.xib in Resources */,
 				A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
 				12C50717206926440080112C /* Academic.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
+				A773E612206A398F002C5721 /* XWContractHeadView.xib in Resources */,
 				12C50711206908050080112C /* Ticket.storyboard in Resources */,
+				A773E60E206A3062002C5721 /* XWContractDemoTableViewCell.xib in Resources */,
 				D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */,
 				12C5071320690A790080112C /* Health.storyboard in Resources */,
 				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
@@ -1247,6 +1271,7 @@
 				D58FC42B2057961D008C05AE /* UINavigationBar+Transparent.swift in Sources */,
 				D5ADC2D42058FE6E001307E8 /* Scrypt.swift in Sources */,
 				D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */,
+				A773E610206A3984002C5721 /* XWContractHeadView.swift in Sources */,
 				D5A48976204E6D54001031F6 /* UIGestureRecognizer+Closure.swift in Sources */,
 				D5A4897B204E6D54001031F6 /* UIViewController.swift in Sources */,
 				D5ADC2E7205A3AF5001307E8 /* XWBaseCardView.swift in Sources */,
@@ -1266,6 +1291,7 @@
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
+				A773E614206A3B6D002C5721 /* XWImportantContractTableViewController.swift in Sources */,
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
 				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
@@ -1319,6 +1345,8 @@
 				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5ADC2D02058FE6E001307E8 /* Profile.swift in Sources */,
+				A773E60D206A3062002C5721 /* XWContractDemoTableViewCell.swift in Sources */,
+				A773E616206A3CD3002C5721 /* XWImportantHeadView.swift in Sources */,
 				D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */,
 				122FB004205A5F4F002827F4 /* UdapApiInvoke.swift in Sources */,
 				D5ADC2AB2058F177001307E8 /* XWSearchViewController.swift in Sources */,
