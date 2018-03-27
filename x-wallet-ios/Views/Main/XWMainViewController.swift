@@ -93,6 +93,8 @@ class XWMainViewController: UIBaseViewController {
         
         let demoOneCard2: XWOneCardDemoView = XWOneCardDemoView.fromNib()
         demoOneCard2.backImageView.image = UIImage(named: "demo4")
+        let tap4 = UITapGestureRecognizer.init(target: self, action: #selector(goToAcademic))
+        demoOneCard2.addGestureRecognizer(tap4)
         self.stackView.addArrangedSubview(demoOneCard2)
         
         let demoOneCard3: XWOneCardDemoView = XWOneCardDemoView.fromNib()
@@ -143,6 +145,11 @@ class XWMainViewController: UIBaseViewController {
     @objc func goToTicket(_ : UIButton) {
         let Ticket: UIStoryboard = UIStoryboard(name: "Ticket", bundle: nil)
         self.navigationController?.pushViewController(Ticket.instantiateInitialViewController()!, animated: true)
+    }
+    
+    @objc func goToAcademic(_ : UIButton) {
+        let Academic: UIStoryboard = UIStoryboard(name: "Academic", bundle: nil)
+        self.navigationController?.pushViewController(Academic.instantiateInitialViewController()!, animated: true)
     }
     
     @objc func dismissSlide(_ :UIButton) {
