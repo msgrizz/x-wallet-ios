@@ -171,17 +171,32 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     }
     
     func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
+        let vc = XWWebViewController()
         if buttonIndex == 1{
-            
+            vc.launchURL = "https://udapfront.iclass.cn/#/createCurrency"
+            vc.title = "Create Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if buttonIndex == 2{
-            
+            vc.launchURL = "https://udapfront.iclass.cn/#/createReceipt"
+            vc.title = "Create Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
         }else if buttonIndex == 3{
-            
+            vc.launchURL = "https://udapfront.iclass.cn/#/createPromise"
+            vc.title = "Create Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+
         }else if buttonIndex == 4{
-            
+            vc.launchURL = "https://udapfront.iclass.cn/#/createIow"
+            vc.title = "Create Iow"
+            self.navigationController?.pushViewController(vc, animated: true)
+
+        }else if buttonIndex == 5{
+
+
         }
         else {
         }
+        
     }
 
 }

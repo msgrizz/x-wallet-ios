@@ -16,7 +16,6 @@ class XWAppsViewController: XWWebViewController {
         // Do any additional setup after loading the view.
         self.title = "Apps"
         self.launchURL = "http://www.baidu.com"
-        self.loadURL()
     }
 
     override func didReceiveMemoryWarning() {
