@@ -13,7 +13,12 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-
+    
+    
+    typealias fucBlock = (_ name :String) ->()
+    
+    var blockproerty:fucBlock!
+    
     var userData: XWDemoData!
 
     override func viewDidLoad() {
@@ -100,6 +105,15 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
             cell.nameLabel.text = user.name
             // Configure the cell...
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1{
+            if let _ = blockproerty{
+                let user = userData.users[indexPath.row]
+                blockproerty(user.name)
+            }
         }
     }
     

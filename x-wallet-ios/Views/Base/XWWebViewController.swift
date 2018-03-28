@@ -11,10 +11,16 @@ import WebKit
 import WebViewBridge_Swift
 import SnapKit
 import NVActivityIndicatorView
+import Toast_Swift
 class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     var webView: WKWebView!
     open var launchURL: String!
     var activityIndicatorView: NVActivityIndicatorView!
+    
+    var bridge:ZHWebViewBridge<WKWebView>!
+
+    var selectPersonCallBack:ZHBridgeActionCallback!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,20 +35,44 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
         webView.backgroundColor = UIColor.clear
         webView.scrollView.backgroundColor = UIColor.clear
         webView.navigationDelegate = self
-        let bridge = ZHWebViewBridge<WKWebView>.bridge(webView)
-        bridge.registerHandler("Image.updatePlaceHolder") { (args:[Any]) -> (Bool, [Any]?) in
-            return (true, ["place_holder.png"])
+        webView.scrollView.bouncesZoom = false
+        bridge = ZHWebViewBridge.bridge(webView)
+        selectPersonCallBack = bridge.registerHandler("Person.select") { (args:[Any]) -> (Bool, [Any]?) in
+            DispatchQueue.main.async {
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
+                contact.blockproerty={ (name) in
+                    DispatchQueue.main.async {
+                        contact.dismiss(animated: true, completion: nil)
+                        self.bridge.callJsHandler("Person.selectCallback", args: [name], callback: nil)
+                        print(name)
+                    }
+                }
+                let navi = UIBaseNavigationViewController(rootViewController: contact)
+                self.navigationController?.present(navi, animated: true, completion: {
+        
+                })
+            }
+            return (true, [])
+        }
+        
+        bridge.registerHandler("Push.transfer") { (args:[Any]) -> (Bool, [Any]?) in
+            DispatchQueue.main.async {
+                let vc = self.navigationController?.viewControllers[1] as! XWCoinListTableViewController
+                self.navigationController?.popToViewController(vc, animated: true)
+            }
+            return (true, nil)
         }
         
         activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 40), type: NVActivityIndicatorType.lineScale)
         activityIndicatorView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
         activityIndicatorView.color = Colors.tintColor
         self.view.addSubview(activityIndicatorView)
+        self.loadURL()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadURL()
     }
     
     open func loadURL() {
