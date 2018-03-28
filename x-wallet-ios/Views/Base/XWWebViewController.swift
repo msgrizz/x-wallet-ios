@@ -27,6 +27,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
             make.right.equalTo(self.view.safeAreaLayoutGuide.snp.right)
         }
         webView.backgroundColor = UIColor.clear
+        webView.scrollView.backgroundColor = UIColor.clear
         webView.navigationDelegate = self
         let bridge = ZHWebViewBridge<WKWebView>.bridge(webView)
         bridge.registerHandler("Image.updatePlaceHolder") { (args:[Any]) -> (Bool, [Any]?) in

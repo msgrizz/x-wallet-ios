@@ -45,12 +45,20 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
     }
     
     @IBAction func issueAction(_ : UIButton) {
-        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController")
-        let navi = UIBaseNavigationViewController(rootViewController: contact)
-        self.navigationController?.present(navi, animated: true, completion: {
-            
-        })
+        
+        let vc = XWWebViewController()
+        
+        vc.launchURL = kTransferCoinsURL
+        vc.title = "Transfer Coins"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+//        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController")
+//        let navi = UIBaseNavigationViewController(rootViewController: contact)
+//        self.navigationController?.present(navi, animated: true, completion: {
+//
+//        })
     }
     
     @IBAction func addImageAction(_ : UIButton) {

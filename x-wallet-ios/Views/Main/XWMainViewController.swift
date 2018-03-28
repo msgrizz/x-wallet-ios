@@ -67,7 +67,7 @@ class XWMainViewController: UIBaseViewController {
         }
         
         let oneCard: XWContractView = XWContractView.fromNib()
-        oneCard.cards = [BaseCardModel(),BaseCardModel()]
+        oneCard.cards = [BaseCardModel(),BaseCardModel.init(title: "Second-hand Car Sale Contract", stared: false, newMessage: false, isClear: false)]
         oneCard.frame = getAppRect(cardNum: oneCard.cards.count)
         oneCard.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(getAppRect(cardNum: oneCard.cards.count).height)

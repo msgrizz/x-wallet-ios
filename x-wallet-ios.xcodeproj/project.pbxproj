@@ -26,6 +26,7 @@
 		12D36D5720592927001414BD /* walletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D36D5620592927001414BD /* walletTests.swift */; };
 		8756CF0976B0E5C10DDADE93 /* Pods_x_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */; };
 		A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE047206B33000012A4D7 /* XWCoinDetailViewController.swift */; };
+		A70EE04A206B86170012A4D7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE049206B86170012A4D7 /* Constant.swift */; };
 		A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766A1502069257300B6525A /* XWThreeCardDemoView.swift */; };
 		A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A766A1522069258400B6525A /* XWThreeCardDemoView.xib */; };
 		A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */; };
@@ -218,6 +219,7 @@
 		3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios_x_wallet_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416D5C8D72EBE5BDFF17199F /* Pods-x-wallet-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.release.xcconfig"; sourceTree = "<group>"; };
 		A70EE047206B33000012A4D7 /* XWCoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinDetailViewController.swift; sourceTree = "<group>"; };
+		A70EE049206B86170012A4D7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A766A1502069257300B6525A /* XWThreeCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWThreeCardDemoView.swift; sourceTree = "<group>"; };
 		A766A1522069258400B6525A /* XWThreeCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWThreeCardDemoView.xib; sourceTree = "<group>"; };
 		A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMembershipListViewController.swift; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 			isa = PBXGroup;
 			children = (
 				D5A489AA204F96FC001031F6 /* AppStyle.swift */,
+				A70EE049206B86170012A4D7 /* Constant.swift */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -1310,6 +1313,7 @@
 				A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */,
 				12B49B2A20591A40001F7A6C /* DerivationPath.swift in Sources */,
 				A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */,
+				A70EE04A206B86170012A4D7 /* Constant.swift in Sources */,
 				12B49B2B20591A40001F7A6C /* DerivationPath.Index.swift in Sources */,
 				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,
 				D5A48906204E3761001031F6 /* AppDelegate.swift in Sources */,

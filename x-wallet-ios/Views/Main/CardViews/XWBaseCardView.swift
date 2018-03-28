@@ -13,6 +13,8 @@ class XWBaseCardView: UIView {
         didSet {
             backImage.image = card.backgroundImage
             titleLabel.text = card.title
+            tagButton.isHidden = !card.stared
+            newMessageButton.isHidden = !card.newMessage
         }
     }
     @IBOutlet weak var backImage: UIImageView!

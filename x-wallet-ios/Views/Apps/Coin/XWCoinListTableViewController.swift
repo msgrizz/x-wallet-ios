@@ -114,6 +114,10 @@ class XWCoinListTableViewController: UIBaseTableViewController {
             cell.coinData = holdDataModels[indexPath.row]
         }else {
             cell.coinData = issuedDataModels[indexPath.row]
+            if indexPath.row == 0 {
+                cell.transferButton.addTarget(self, action: #selector(transferAction(_:)), for: .touchUpInside)
+                cell.transferButton.tag = indexPath.row
+            }
         }
         return cell
     }
@@ -145,6 +149,15 @@ class XWCoinListTableViewController: UIBaseTableViewController {
             headView.titleLabel.text = "Issued"
         }
         return headView
+    }
+    
+    @objc func transferAction(_ button: UIButton) {
+        if button.tag == 0 {
+            let vc = XWWebViewController()
+            vc.launchURL = kTransferCoinsURL
+            vc.title = "Transfer Coins"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XWImportantContractTableViewController: UIBaseTableViewController {
+class XWImportantContractTableViewController: UIBaseTableViewController,UIActionSheetDelegate {
 
     var lastScrollOffset: CGFloat = 0
     
@@ -55,7 +55,8 @@ class XWImportantContractTableViewController: UIBaseTableViewController {
     }
     
     @objc func add(_ : UIButton) {
-        
+        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise","Lou")
+        alertSheet.show(in: self.view)
     }
     
     override func didReceiveMemoryWarning() {
@@ -104,6 +105,24 @@ class XWImportantContractTableViewController: UIBaseTableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = XWWebViewController()
+        
+        if indexPath.row == 0 {
+            vc.launchURL = kMiniContractURL
+            vc.title = "Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.row == 1{
+            vc.launchURL = kReceiptURL
+            vc.title = "Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+            vc.launchURL = kLouURL
+            vc.title = "Lou"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if isScrollDown {
             self.tableView.bringSubview(toFront: cell)
@@ -125,6 +144,35 @@ class XWImportantContractTableViewController: UIBaseTableViewController {
             }
             self.lastScrollOffset = y;
         }
+    }
+    
+    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
+        let vc = XWWebViewController()
+        if buttonIndex == 1{
+            vc.launchURL = kCreateContractURL
+            vc.title = "Create Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if buttonIndex == 2{
+            vc.launchURL = kCreatReceiptURL
+            vc.title = "Create Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if buttonIndex == 3{
+            vc.launchURL = kCreatePromiseURL
+            vc.title = "Create Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if buttonIndex == 4{
+            vc.launchURL = kCreateLouURL
+            vc.title = "Create Lou"
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if buttonIndex == 5{
+            
+            
+        }
+        else {
+        }
+        
     }
 
 }

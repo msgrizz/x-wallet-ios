@@ -57,7 +57,7 @@ class XWMyViewController: UIBaseViewController,FSPagerViewDataSource,FSPagerView
     }
     
     func configUser(){
-        headImage.image = UIImage.init(named: "defaultHead")
+        headImage.image = UIImage.init(named: "head1")
         creditLabel.text = "Credit：85"
         nameLabel.text = "Blanche Reed"
         contentLabel.text = "123"

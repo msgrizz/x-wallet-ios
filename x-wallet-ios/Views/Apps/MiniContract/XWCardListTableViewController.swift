@@ -58,7 +58,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     }
     
     @objc func add(_ : UIButton) {
-        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise","Iow")
+        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise","Lou")
         alertSheet.show(in: self.view)
     }
 
@@ -135,6 +135,28 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = XWWebViewController()
+
+        if indexPath.section == 0 {
+            vc.launchURL = kMiniContractURL
+            vc.title = "Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.section == 1{
+            vc.launchURL = kReceiptURL
+            vc.title = "Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.section == 2{
+            vc.launchURL = kPromiseURL
+            vc.title = "Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+            vc.launchURL = kLouURL
+            vc.title = "Lou"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headView = XWContractHeadView.fromNib()
         headView.clearData()
@@ -149,7 +171,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }else if section == 2{
             headView.titleLabel.text = "Promise"
         }else{
-            headView.titleLabel.text = "Iou"
+            headView.titleLabel.text = "Lou"
         }
         return headView
     }
@@ -173,21 +195,21 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
         let vc = XWWebViewController()
         if buttonIndex == 1{
-            vc.launchURL = "https://udapfront.iclass.cn/#/createCurrency"
+            vc.launchURL = kCreateContractURL
             vc.title = "Create Currency"
             self.navigationController?.pushViewController(vc, animated: true)
         }else if buttonIndex == 2{
-            vc.launchURL = "https://udapfront.iclass.cn/#/createReceipt"
+            vc.launchURL = kCreatReceiptURL
             vc.title = "Create Receipt"
             self.navigationController?.pushViewController(vc, animated: true)
         }else if buttonIndex == 3{
-            vc.launchURL = "https://udapfront.iclass.cn/#/createPromise"
+            vc.launchURL = kCreatePromiseURL
             vc.title = "Create Promise"
             self.navigationController?.pushViewController(vc, animated: true)
 
         }else if buttonIndex == 4{
-            vc.launchURL = "https://udapfront.iclass.cn/#/createIow"
-            vc.title = "Create Iow"
+            vc.launchURL = kCreateLouURL
+            vc.title = "Create Lou"
             self.navigationController?.pushViewController(vc, animated: true)
 
         }else if buttonIndex == 5{
