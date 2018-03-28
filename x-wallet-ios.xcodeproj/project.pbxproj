@@ -149,7 +149,7 @@
 		D5ADC2162057C60F001307E8 /* XWConversationViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2152057C60F001307E8 /* XWConversationViewMode.swift */; };
 		D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */; };
 		D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2182058B7FA001307E8 /* XWNewConversationTableViewCell.xib */; };
-		D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2A32058C08D001307E8 /* AuthManager.swift */; settings = {COMPILER_FLAGS = "-"; }; };
+		D5ADC2A42058C08D001307E8 /* ICanHas.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2A32058C08D001307E8 /* ICanHas.swift */; settings = {COMPILER_FLAGS = "-"; }; };
 		D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2A52058C620001307E8 /* XWContactListTableViewController.swift */; };
 		D5ADC2AB2058F177001307E8 /* XWSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2AA2058F177001307E8 /* XWSearchViewController.swift */; };
 		D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2AC2058F1DD001307E8 /* Search.storyboard */; };
@@ -347,7 +347,7 @@
 		D5ADC2152057C60F001307E8 /* XWConversationViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWConversationViewMode.swift; sourceTree = "<group>"; };
 		D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNewConversationTableViewCell.swift; sourceTree = "<group>"; };
 		D5ADC2182058B7FA001307E8 /* XWNewConversationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWNewConversationTableViewCell.xib; sourceTree = "<group>"; };
-		D5ADC2A32058C08D001307E8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		D5ADC2A32058C08D001307E8 /* ICanHas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICanHas.swift; sourceTree = "<group>"; };
 		D5ADC2A52058C620001307E8 /* XWContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactListTableViewController.swift; sourceTree = "<group>"; };
 		D5ADC2AA2058F177001307E8 /* XWSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSearchViewController.swift; sourceTree = "<group>"; };
 		D5ADC2AC2058F1DD001307E8 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -718,7 +718,7 @@
 				D5A48964204E6D54001031F6 /* UIView.swift */,
 				D5A48965204E6D54001031F6 /* UIViewController.swift */,
 				D5ADC20A2057BAD5001307E8 /* DefaultsKeys.swift */,
-				D5ADC2A32058C08D001307E8 /* AuthManager.swift */,
+				D5ADC2A32058C08D001307E8 /* ICanHas.swift */,
 				D58DB9872064D88B005ABED8 /* PaddingTextField.swift */,
 				A773E61D206A7275002C5721 /* XWDemoData.swift */,
 			);
@@ -1273,7 +1273,7 @@
 				D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */,
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
-				D5ADC2A42058C08D001307E8 /* AuthManager.swift in Sources */,
+				D5ADC2A42058C08D001307E8 /* ICanHas.swift in Sources */,
 				D58DB9A120691F0A005ABED8 /* XWCoinTrackViewController.swift in Sources */,
 				D58DB95720649635005ABED8 /* XWMessageViewController.swift in Sources */,
 				D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */,

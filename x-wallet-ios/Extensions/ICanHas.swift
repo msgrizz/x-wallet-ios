@@ -1,5 +1,5 @@
 //
-//  AuthManager.swift
+//  ICanHas.swift
 //  x-wallet-ios
 //
 //  Created by 爱班 on 2018/3/14.
@@ -42,7 +42,7 @@ private func observeOnce(notificationName: Notification.Name, queue: OperationQu
     }
 }
 
-open class AuthManager {
+open class ICanHas {
     
     fileprivate class func onMain(_ closure: @escaping () -> Void) { DispatchQueue.main.async(execute: closure) }
     
@@ -233,7 +233,7 @@ open class AuthManager {
         onMain {
             hasLocationClosures.append(closure)
             guard !isHasingLocation else { return }
-            AuthManager.isHasingLocation = true
+            ICanHas.isHasingLocation = true
             let done: AuthStatusClosure<CLAuthorizationStatus> = { authorized, status in
                 complete(&hasLocationClosures, &isHasingLocation, (authorized, status))
             }

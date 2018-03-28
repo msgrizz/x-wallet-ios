@@ -8,14 +8,18 @@
 
 import UIKit
 import IHKeyboardAvoiding
-class XWCreateCoinViewController: UIBaseViewController {
+class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    var imagePicker = UIImagePickerController()
     @IBOutlet weak var avoidingView:UITextField!
+    @IBOutlet weak var coinButton:UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Create Coin"
         // Do any additional setup after loading the view.
         KeyboardAvoiding.setAvoidingView(self.view, withTriggerView: self.avoidingView)
-        
+        ICanHas.photos { authorized, status in
+            print(authorized ? "You're authorized to access photos!" : "You're not authorized to access photos!")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +37,17 @@ class XWCreateCoinViewController: UIBaseViewController {
     }
     
     @IBAction func addImageAction(_ : UIButton) {
-        
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true) {
+            
+        }
+        coinButton.setImage(info[UIImagePickerControllerOriginalImage] as? UIImage, for: .normal)
     }
 
     /*

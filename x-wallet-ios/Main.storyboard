@@ -2142,6 +2142,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="avoidingView" destination="mba-CI-Yph" id="XNF-wZ-wql"/>
+                        <outlet property="coinButton" destination="jgH-rq-DWg" id="s0d-s4-3fH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgb-wD-67j" userLabel="First Responder" sceneMemberID="firstResponder"/>
