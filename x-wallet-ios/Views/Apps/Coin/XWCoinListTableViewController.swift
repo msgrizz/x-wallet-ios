@@ -118,6 +118,16 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            
+        }else {
+            if indexPath.row == 0 {
+                self.performSegue(withIdentifier: "goToDetail", sender: nil)
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if isScrollDown {
             self.tableView.bringSubview(toFront: cell)

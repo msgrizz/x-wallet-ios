@@ -12,6 +12,10 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
     var imagePicker = UIImagePickerController()
     @IBOutlet weak var avoidingView:UITextField!
     @IBOutlet weak var coinButton:UIButton!
+    
+    @IBOutlet weak var limiteButton:UIButton!
+    @IBOutlet weak var unlimiteButton:UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Create Coin"
@@ -25,6 +29,19 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func countAction(_ button: UIButton) {
+        if button == self.limiteButton {
+            self.limiteButton.isSelected = false
+            self.unlimiteButton.isSelected = true
+            self.avoidingView.isEnabled = true
+        }else {
+            self.limiteButton.isSelected = true
+            self.unlimiteButton.isSelected = false
+            self.avoidingView.text = ""
+            self.avoidingView.isEnabled = false
+        }
     }
     
     @IBAction func issueAction(_ : UIButton) {

@@ -1,19 +1,31 @@
 //
-//  XWTransferViewController.swift
+//  XWCoinDetailViewController.swift
 //  x-wallet-ios
 //
-//  Created by 爱班 on 2018/3/26.
+//  Created by 胡波 on 2018/3/28.
 //  Copyright © 2018年 linkio. All rights reserved.
 //
 
 import UIKit
 
-class XWTransferViewController: UIBaseViewController {
+class XWCoinDetailViewController: UIBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let trackButton = UIBarButtonItem(
+            title: "Track",
+            style: .plain,
+            target: self,
+            action: #selector(track(_:))
+        )
+        trackButton.tintColor = Colors.tintColor
+        self.navigationItem.rightBarButtonItem = trackButton
+    }
+    
+    @objc func track(_ : UIBarButtonItem) {
+        self.performSegue(withIdentifier: "goToTrack", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
