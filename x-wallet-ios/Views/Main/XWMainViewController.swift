@@ -73,6 +73,8 @@ class XWMainViewController: UIBaseViewController {
             make.height.equalTo(getAppRect(cardNum: oneCard.cards.count).height)
             make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
         }
+        let tapsss = UITapGestureRecognizer.init(target: self, action: #selector(goToLists))
+        oneCard.addGestureRecognizer(tapsss)
         oneCard.contractButton.addTarget(self, action: #selector(goToLists), for: UIControlEvents.touchUpInside)
         self.stackView.addArrangedSubview(oneCard)
 

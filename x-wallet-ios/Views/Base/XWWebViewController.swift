@@ -20,6 +20,23 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     var bridge:ZHWebViewBridge<WKWebView>!
 
     var selectPersonCallBack:ZHBridgeActionCallback!
+    
+    var isCreate = false {
+        didSet {
+            if self.isCreate {
+                let trackButton = UIBarButtonItem(
+                    title: "Save",
+                    style: .plain,
+                    target: self,
+                    action: #selector(save(_:))
+                )
+                trackButton.tintColor = Colors.tintColor
+                self.navigationItem.rightBarButtonItem = trackButton
+            }else {
+                
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +115,9 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
         activityIndicatorView.stopAnimating()
     }
     
-    
+    @objc func save(_ : UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

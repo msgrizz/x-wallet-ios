@@ -8,7 +8,7 @@
 
 import UIKit
 import IHKeyboardAvoiding
-class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     var imagePicker = UIImagePickerController()
     @IBOutlet weak var avoidingView:UITextField!
     @IBOutlet weak var coinButton:UIButton!
@@ -68,6 +68,11 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
             
         }
         coinButton.setImage(info[UIImagePickerControllerOriginalImage] as? UIImage, for: .normal)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.avoidingView.resignFirstResponder()
+        return true
     }
 
     /*

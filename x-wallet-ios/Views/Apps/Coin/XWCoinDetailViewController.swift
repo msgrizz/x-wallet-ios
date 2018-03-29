@@ -9,7 +9,8 @@
 import UIKit
 
 class XWCoinDetailViewController: UIBaseViewController {
-
+    @IBOutlet weak var coinView: UIImageView!
+    var coinImage: UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,7 @@ class XWCoinDetailViewController: UIBaseViewController {
         )
         trackButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = trackButton
+        self.coinView.image = self.coinImage
     }
     
     @objc func track(_ : UIBarButtonItem) {

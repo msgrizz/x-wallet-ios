@@ -136,23 +136,23 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = XWWebViewController()
-
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWMessageViewController") as! XWMessageViewController
         if indexPath.section == 0 {
-            vc.launchURL = kMiniContractURL
-            vc.title = "Currency"
+            let data = XWContract.init(title: "Currency", type: .Currency, content: "Currency")
+            vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.section == 1{
-            vc.launchURL = kReceiptURL
-            vc.title = "Receipt"
+            let data = XWContract.init(title: "Receipt", type: .Receipt, content: "Receipt")
+            vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.section == 2{
-            vc.launchURL = kPromiseURL
-            vc.title = "Promise"
+            let data = XWContract.init(title: "Promise", type: .Promise, content: "Promise")
+            vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
-            vc.launchURL = kIOUURL
-            vc.title = NSLocalizedString("I.O.U", comment: "")
+            let data = XWContract.init(title: "I.O.U", type: .IOU, content: "I.O.U")
+            vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -194,6 +194,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     
     func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
         let vc = XWWebViewController()
+        vc.isCreate = true
         if buttonIndex == 1{
             vc.launchURL = kCreateContractURL
             vc.title = "Create Currency"

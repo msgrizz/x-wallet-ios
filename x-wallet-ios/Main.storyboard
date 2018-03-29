@@ -301,16 +301,16 @@
         <scene sceneID="y5H-rc-dsE">
             <objects>
                 <tableViewController storyboardIdentifier="XWMessageViewController" hidesBottomBarWhenPushed="YES" id="nyx-aR-DEa" customClass="XWMessageViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vtw-4y-87W">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vtw-4y-87W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="XWContractHeadTableViewCell" rowHeight="130" id="zC7-oV-3nG" customClass="XWContractHeadTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="XWContractHeadTableViewCell" rowHeight="217" id="zC7-oV-3nG" customClass="XWContractHeadTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="217"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zC7-oV-3nG" id="Org-8i-Luw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gd-76-sOB">
@@ -322,7 +322,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment Contract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw0-gk-JyR">
                                                     <rect key="frame" x="18" y="14" width="306" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="Pbq-gi-Aja"/>
+                                                        <constraint firstAttribute="height" constant="25" id="J08-o5-RTo"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -338,33 +338,42 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="122" id="13y-uA-WoF"/>
-                                                <constraint firstItem="7BL-QQ-bCz" firstAttribute="top" secondItem="7Gd-76-sOB" secondAttribute="top" id="9gb-7w-0Xs"/>
-                                                <constraint firstAttribute="trailing" secondItem="7BL-QQ-bCz" secondAttribute="trailing" id="BhH-SK-nWY"/>
-                                                <constraint firstItem="DUa-Ch-jGg" firstAttribute="top" secondItem="Xw0-gk-JyR" secondAttribute="bottom" constant="4" id="Hdb-2o-unf"/>
-                                                <constraint firstItem="Xw0-gk-JyR" firstAttribute="top" secondItem="7Gd-76-sOB" secondAttribute="top" constant="14" id="IEd-Rd-ORO"/>
-                                                <constraint firstItem="Xw0-gk-JyR" firstAttribute="leading" secondItem="7Gd-76-sOB" secondAttribute="leading" constant="18" id="LSV-kg-26e"/>
-                                                <constraint firstItem="7BL-QQ-bCz" firstAttribute="leading" secondItem="7Gd-76-sOB" secondAttribute="leading" id="NKJ-4x-B7Y"/>
-                                                <constraint firstAttribute="trailing" secondItem="DUa-Ch-jGg" secondAttribute="trailing" constant="19" id="Rjg-Yi-7gw"/>
-                                                <constraint firstItem="DUa-Ch-jGg" firstAttribute="leading" secondItem="7Gd-76-sOB" secondAttribute="leading" constant="18" id="eLm-Ie-cpP"/>
-                                                <constraint firstAttribute="bottom" secondItem="7BL-QQ-bCz" secondAttribute="bottom" id="eam-cc-bVK"/>
-                                                <constraint firstAttribute="bottom" secondItem="DUa-Ch-jGg" secondAttribute="bottom" constant="19" id="eki-JC-jZm"/>
-                                                <constraint firstAttribute="trailing" secondItem="Xw0-gk-JyR" secondAttribute="trailing" constant="19" id="vy7-Je-9EQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="7BL-QQ-bCz" secondAttribute="bottom" id="6at-5T-zyn"/>
+                                                <constraint firstAttribute="trailing" secondItem="DUa-Ch-jGg" secondAttribute="trailing" constant="19" id="8Yf-gc-RJo"/>
+                                                <constraint firstAttribute="height" constant="122" id="AFd-7p-GxJ"/>
+                                                <constraint firstItem="Xw0-gk-JyR" firstAttribute="top" secondItem="7Gd-76-sOB" secondAttribute="top" constant="14" id="CjU-j3-N9D"/>
+                                                <constraint firstAttribute="trailing" secondItem="7BL-QQ-bCz" secondAttribute="trailing" id="DTP-Hc-FGV"/>
+                                                <constraint firstItem="DUa-Ch-jGg" firstAttribute="top" secondItem="Xw0-gk-JyR" secondAttribute="bottom" constant="4" id="UzJ-qV-1f3"/>
+                                                <constraint firstItem="Xw0-gk-JyR" firstAttribute="leading" secondItem="7Gd-76-sOB" secondAttribute="leading" constant="18" id="aM7-Jg-8CE"/>
+                                                <constraint firstItem="7BL-QQ-bCz" firstAttribute="top" secondItem="7Gd-76-sOB" secondAttribute="top" id="cOG-V8-Ksc"/>
+                                                <constraint firstItem="7BL-QQ-bCz" firstAttribute="leading" secondItem="7Gd-76-sOB" secondAttribute="leading" id="iT6-EJ-edX"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xw0-gk-JyR" secondAttribute="trailing" constant="19" id="jLb-Wx-gEg"/>
+                                                <constraint firstAttribute="bottom" secondItem="DUa-Ch-jGg" secondAttribute="bottom" constant="19" id="tVn-Qu-Lwc"/>
+                                                <constraint firstItem="DUa-Ch-jGg" firstAttribute="leading" secondItem="7Gd-76-sOB" secondAttribute="leading" constant="18" id="v41-6B-yK1"/>
                                             </constraints>
                                         </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demoSign" translatesAutoresizingMaskIntoConstraints="NO" id="3wF-GX-eGb">
+                                            <rect key="frame" x="59" y="134" width="257" height="83"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="83" id="Ndt-R5-1uy"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="7Gd-76-sOB" firstAttribute="leading" secondItem="Org-8i-Luw" secondAttribute="leading" constant="16" id="Nvd-29-duX"/>
-                                        <constraint firstAttribute="trailing" secondItem="7Gd-76-sOB" secondAttribute="trailing" constant="16" id="T7l-2D-Eyn"/>
-                                        <constraint firstItem="7Gd-76-sOB" firstAttribute="top" secondItem="Org-8i-Luw" secondAttribute="top" constant="4" id="poy-U1-73j"/>
-                                        <constraint firstAttribute="bottom" secondItem="7Gd-76-sOB" secondAttribute="bottom" constant="4" id="ukl-Yj-Qkl"/>
+                                        <constraint firstItem="7Gd-76-sOB" firstAttribute="leading" secondItem="Org-8i-Luw" secondAttribute="leading" constant="16" id="1et-NW-otX"/>
+                                        <constraint firstAttribute="trailing" secondItem="3wF-GX-eGb" secondAttribute="trailing" constant="59" id="2oc-94-xBQ"/>
+                                        <constraint firstItem="7Gd-76-sOB" firstAttribute="top" secondItem="Org-8i-Luw" secondAttribute="top" constant="4" id="AxM-qR-AQq"/>
+                                        <constraint firstAttribute="bottom" secondItem="3wF-GX-eGb" secondAttribute="bottom" id="bqc-ez-9aT"/>
+                                        <constraint firstItem="3wF-GX-eGb" firstAttribute="leading" secondItem="Org-8i-Luw" secondAttribute="leading" constant="59" id="hLH-Pr-4ID"/>
+                                        <constraint firstAttribute="trailing" secondItem="7Gd-76-sOB" secondAttribute="trailing" constant="16" id="iUJ-nY-ie1"/>
+                                        <constraint firstItem="3wF-GX-eGb" firstAttribute="top" secondItem="7Gd-76-sOB" secondAttribute="bottom" constant="8" id="rgJ-4q-NXE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="XWRecieverTableViewCell" rowHeight="60" id="Yi4-Bd-IPr" customClass="XWRecieverTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="158" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="XWRecieverTableViewCell" rowHeight="60" id="Yi4-Bd-IPr" customClass="XWRecieverTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="245" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yi4-Bd-IPr" id="Mob-Fj-lHx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -430,8 +439,8 @@
                                     <outlet property="profilePic" destination="QmD-aJ-LZo" id="dfF-pO-0uw"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="XWSenderTableViewCell" rowHeight="60" id="KOm-oZ-agy" customClass="XWSenderTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="218" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="XWSenderTableViewCell" rowHeight="60" id="KOm-oZ-agy" customClass="XWSenderTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="305" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KOm-oZ-agy" id="939-gW-i1L">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -1972,7 +1981,7 @@
         <!--Coin-->
         <scene sceneID="yVj-j2-wGX">
             <objects>
-                <viewController title="Coin" hidesBottomBarWhenPushed="YES" id="n7E-fa-W6q" customClass="XWCoinDetailViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWCoinDetailViewController" title="Coin" hidesBottomBarWhenPushed="YES" id="n7E-fa-W6q" customClass="XWCoinDetailViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B3d-jR-uHo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1993,6 +2002,7 @@
                         <viewLayoutGuide key="safeArea" id="bEn-1e-d3D"/>
                     </view>
                     <connections>
+                        <outlet property="coinView" destination="ORy-1B-AHV" id="hL7-4q-Znb"/>
                         <segue destination="WIv-W7-9qM" kind="show" identifier="goToTrack" id="Sru-Bo-ohZ"/>
                     </connections>
                 </viewController>
@@ -2110,6 +2120,9 @@
                                                         <color key="textColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hBI-hA-tIL" id="bGH-7S-NTE"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.25882352941176467" green="0.31372549019607843" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2323,6 +2336,7 @@
         <image name="countInput" width="100" height="29"/>
         <image name="dashLine" width="305" height="1"/>
         <image name="defaultHead" width="65" height="65"/>
+        <image name="demoSign" width="257" height="83"/>
         <image name="guardImage" width="25" height="30"/>
         <image name="inputBackground" width="276" height="43"/>
         <image name="inviteLine" width="286" height="1"/>

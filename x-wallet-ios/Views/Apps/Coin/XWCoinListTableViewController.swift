@@ -123,13 +123,24 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWCoinDetailViewController") as! XWCoinDetailViewController
         if indexPath.section == 0 {
-            
+            if indexPath.row == 0 {
+                vc.coinImage = UIImage(named: "Coin5")
+            }else if indexPath.row == 1{
+                vc.coinImage = UIImage(named: "Coin4")
+            }else {
+                vc.coinImage = UIImage(named: "Coin3")
+            }
         }else {
             if indexPath.row == 0 {
-                self.performSegue(withIdentifier: "goToDetail", sender: nil)
+                vc.coinImage = UIImage(named: "Coin1")
+            }else {
+                vc.coinImage = UIImage(named: "Coin2")
             }
         }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

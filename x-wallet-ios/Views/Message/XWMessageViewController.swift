@@ -15,6 +15,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     let barHeight: CGFloat = 50
     var isScrollDown: Bool = true
+    var contractModel: XWContract!
     @IBOutlet var inputBar: UIView!
     @IBOutlet weak var inputTextField: UITextField!
     override var inputAccessoryView: UIView? {
@@ -154,8 +155,11 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.items.count + 1
-        
+        if self.contractModel != nil {
+            return self.items.count + 1
+        }else {
+            return self.items.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -168,12 +172,71 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractHeadTableViewCell", for: indexPath) as! XWContractHeadTableViewCell
-            return cell
-        }
-        else {
-            let message = self.items[indexPath.row - 1]
+        if self.contractModel != nil {
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractHeadTableViewCell", for: indexPath) as! XWContractHeadTableViewCell
+                return cell
+            }
+            else {
+                let message = self.items[indexPath.row - 1]
+                if message.owner == .receiver{
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "XWRecieverTableViewCell", for: indexPath) as! XWRecieverTableViewCell
+                    cell.clearCellData()
+                    if message.type == .text {
+                        cell.message.text = message.content
+                        cell.profilePic.image = message.headImage
+                        cell.nameLabel.text = message.name
+                        //            case .photo:
+                        //                if let image = self.items[indexPath.row].image {
+                        //                    cell.messageBackground.image = image
+                        //                    cell.message.isHidden = true
+                        //                } else {
+                        //                    cell.messageBackground.image = UIImage.init(named: "loading")
+                        //                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
+                        //                        if state == true {
+                        //                            DispatchQueue.main.async {
+                        //                                self.tableView.reloadData()
+                        //                            }
+                        //                        }
+                        //                    })
+                        //                }
+                        //            case .location:
+                        //                cell.messageBackground.image = UIImage.init(named: "location")
+                        //                cell.message.isHidden = true
+                    }
+                    return cell
+                }
+                else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "XWSenderTableViewCell", for: indexPath) as! XWSenderTableViewCell
+                    cell.clearCellData()
+                    cell.profilePic.image = self.currentUser?.profilePic
+                    if message.type == .text {
+                        cell.message.text = message.content
+                        cell.profilePic.image = message.headImage
+                        cell.nameLabel.text = message.name
+                        //            case .photo:
+                        //                if let image = self.items[indexPath.row].image {
+                        //                    cell.messageBackground.image = image
+                        //                    cell.message.isHidden = true
+                        //                } else {
+                        //                    cell.messageBackground.image = UIImage.init(named: "loading")
+                        //                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
+                        //                        if state == true {
+                        //                            DispatchQueue.main.async {
+                        //                                self.tableView.reloadData()
+                        //                            }
+                        //                        }
+                        //                    })
+                        //                }
+                        //            case .location:
+                        //                cell.messageBackground.image = UIImage.init(named: "location")
+                        //                cell.message.isHidden = true
+                    }
+                    return cell
+                }
+            }
+        }else {
+            let message = self.items[indexPath.row]
             if message.owner == .receiver{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "XWRecieverTableViewCell", for: indexPath) as! XWRecieverTableViewCell
                 cell.clearCellData()
@@ -233,6 +296,28 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.contractModel != nil {
+            if indexPath.row == 0 {
+                let vc = XWWebViewController()
+                if self.contractModel.type == .Currency {
+                    vc.launchURL = kMiniContractURL
+                    vc.title = "Currency"
+                }else if self.contractModel.type == .Receipt {
+                    vc.launchURL = kReceiptURL
+                    vc.title = "Receipt"
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }else if self.contractModel.type == .Promise {
+                    vc.launchURL = kPromiseURL
+                    vc.title = "Promise"
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }else {
+                    vc.launchURL = kIOUURL
+                    vc.title = NSLocalizedString("I.O.U", comment: "")
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
         self.inputTextField.resignFirstResponder()
     }
 }
