@@ -117,8 +117,8 @@ class XWImportantContractTableViewController: UIBaseTableViewController,UIAction
             vc.title = "Receipt"
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
-            vc.launchURL = kLouURL
-            vc.title = "Lou"
+            vc.launchURL = kIOUURL
+            vc.title = NSLocalizedString("I.O.U", comment: "")
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -162,8 +162,8 @@ class XWImportantContractTableViewController: UIBaseTableViewController,UIAction
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if buttonIndex == 4{
-            vc.launchURL = kCreateLouURL
-            vc.title = "Create Lou"
+            vc.launchURL = kCreateIOUURL
+            vc.title = NSLocalizedString("Create I.O.U", comment: "")
             self.navigationController?.pushViewController(vc, animated: true)
             
         }else if buttonIndex == 5{

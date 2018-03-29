@@ -33,7 +33,7 @@
                         <constraint firstAttribute="width" constant="113" id="ilp-B8-3G1"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="  Improtant 3" image="starTag"/>
+                    <state key="normal" title="  Important 3" image="starTag"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

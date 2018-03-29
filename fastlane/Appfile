@@ -1,0 +1,8 @@
+app_identifier("com.iclass.x-wallet-ios") # The bundle identifier of your app
+apple_id("linkio.hu@gmail.com") # Your Apple email address
+
+itc_team_id("1179391") # iTunes Connect Team ID
+team_id("LU83BUKNNC") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

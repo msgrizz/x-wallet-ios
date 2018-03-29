@@ -68,3 +68,4 @@ fastlane/screenshots
 
 .DS_Store
 /x-wallet-ios.xcworkspace/xcuserdata/aiban.xcuserdatad/UserInterfaceState.xcuserstate
+/x-wallet-ios.app.dSYM.zip

@@ -58,7 +58,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     }
     
     @objc func add(_ : UIButton) {
-        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise","Lou")
+        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise",NSLocalizedString("I.O.U", comment: ""))
         alertSheet.show(in: self.view)
     }
 
@@ -151,8 +151,8 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
             vc.title = "Promise"
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
-            vc.launchURL = kLouURL
-            vc.title = "Lou"
+            vc.launchURL = kIOUURL
+            vc.title = NSLocalizedString("I.O.U", comment: "")
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -171,7 +171,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }else if section == 2{
             headView.titleLabel.text = "Promise"
         }else{
-            headView.titleLabel.text = "Lou"
+            headView.titleLabel.text = NSLocalizedString("I.O.U", comment: "")
         }
         return headView
     }
@@ -208,8 +208,8 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
             self.navigationController?.pushViewController(vc, animated: true)
 
         }else if buttonIndex == 4{
-            vc.launchURL = kCreateLouURL
-            vc.title = "Create Lou"
+            vc.launchURL = kCreateIOUURL
+            vc.title = NSLocalizedString("Create I.O.U",comment: "")
             self.navigationController?.pushViewController(vc, animated: true)
 
         }else if buttonIndex == 5{

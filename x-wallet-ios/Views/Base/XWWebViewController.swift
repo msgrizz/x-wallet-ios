@@ -99,7 +99,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     }
     
     
-    
 
     /*
     // MARK: - Navigation
