@@ -9,7 +9,7 @@
 import UIKit
 import DynamicBlurView
 import SnapKit
-class XWMainViewController: UIBaseViewController {
+class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     
     var slideView: XWSlideView!
     var blurView: DynamicBlurView!
@@ -41,14 +41,8 @@ class XWMainViewController: UIBaseViewController {
         let contract = UITapGestureRecognizer.init(target: self, action: #selector(addContractAction(_:)))
         slideView.miniContract.addGestureRecognizer(contract)
         
-        let token = UITapGestureRecognizer.init(target: self, action: #selector(addTokenAction(_:)))
-        slideView.token.addGestureRecognizer(token)
-        
-        let myCard = UITapGestureRecognizer.init(target: self, action: #selector(addCardAction(_:)))
-        slideView.myCard.addGestureRecognizer(myCard)
-        
-        let scan = UITapGestureRecognizer.init(target: self, action: #selector(addScanAction(_:)))
-        slideView.scan.addGestureRecognizer(scan)
+        let token = UITapGestureRecognizer.init(target: self, action: #selector(addCoinAction(_:)))
+        slideView.coin.addGestureRecognizer(token)
         
         blurView = DynamicBlurView(frame: slideView.bounds)
         
@@ -186,15 +180,21 @@ class XWMainViewController: UIBaseViewController {
     
     @objc func addContractAction(_ :UITapGestureRecognizer) {
         dismissSlide(_ :UIButton())
+        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise",NSLocalizedString("I.O.U", comment: ""))
+        alertSheet.show(in: self.view)
     }
     
     @objc func addScanAction(_ :UITapGestureRecognizer) {
         dismissSlide(_ :UIButton())
 
+
     }
     
-    @objc func addTokenAction(_ :UITapGestureRecognizer) {
+    @objc func addCoinAction(_ :UITapGestureRecognizer) {
         dismissSlide(_ :UIButton())
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWCreateCoinViewController") as! XWCreateCoinViewController
+        self.navigationController?.pushViewController(vc, animated: true)
 
     }
     
@@ -211,6 +211,36 @@ class XWMainViewController: UIBaseViewController {
             let vc = segue.destination as! XWCardListTableViewController
             vc.title = "Mini Contract"
         }
+    }
+    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+        vc.isCreate = true
+        if buttonIndex == 1{
+            vc.launchURL = kCreateContractURL
+            vc.title = "Create Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if buttonIndex == 2{
+            vc.launchURL = kCreatReceiptURL
+            vc.title = "Create Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if buttonIndex == 3{
+            vc.launchURL = kCreatePromiseURL
+            vc.title = "Create Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if buttonIndex == 4{
+            vc.launchURL = kCreateIOUURL
+            vc.title = NSLocalizedString("Create I.O.U",comment: "")
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        }else if buttonIndex == 5{
+            
+            
+        }
+        else {
+        }
+        
     }
 
 }

@@ -412,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tde-cq-JuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="2157"/>
+            <point key="canvasLocation" x="286" y="2177"/>
         </scene>
         <!--Membership-->
         <scene sceneID="Btk-bE-aFi">
@@ -473,17 +473,40 @@
                                     <segue destination="cyJ-W9-27j" kind="show" id="xpK-Xn-Hgb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6a-ee-loq">
+                                <rect key="frame" x="18" y="47" width="337" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="WW3-bj-EiZ"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="S7J-z2-W1I" kind="show" id="cC1-bn-l28"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGd-8m-0jT">
+                                <rect key="frame" x="19" y="109" width="337" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="9tx-og-fGK"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="T7C-jM-Tnd" kind="show" id="kWP-wC-hPd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="uLb-sO-knn" secondAttribute="trailing" constant="24" id="1In-Pa-i4f"/>
                             <constraint firstItem="uLb-sO-knn" firstAttribute="top" secondItem="yMv-B3-Eab" secondAttribute="bottom" constant="7" id="45U-K6-ugm"/>
                             <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="HQk-4p-bKh" secondAttribute="trailing" constant="25" id="Aag-R9-WVo"/>
+                            <constraint firstItem="mGd-8m-0jT" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="19" id="EUJ-c7-PL4"/>
+                            <constraint firstItem="M6a-ee-loq" firstAttribute="top" secondItem="H85-ap-hsz" secondAttribute="top" constant="27" id="N02-vo-jMl"/>
                             <constraint firstItem="q1w-mq-Q7Q" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="23" id="OTz-WI-aBJ"/>
                             <constraint firstItem="KoR-nM-uhx" firstAttribute="centerX" secondItem="gWr-c2-04d" secondAttribute="centerX" id="PtO-ti-Tw7"/>
                             <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="yMv-B3-Eab" secondAttribute="trailing" constant="24" id="TZa-q3-VlS"/>
+                            <constraint firstItem="M6a-ee-loq" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="18" id="TxD-wf-l7z"/>
                             <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="q1w-mq-Q7Q" secondAttribute="trailing" constant="24" id="XCO-Yp-GhJ"/>
                             <constraint firstItem="HQk-4p-bKh" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="22" id="ZGV-i0-mNk"/>
+                            <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="M6a-ee-loq" secondAttribute="trailing" constant="20" id="aNx-Ix-WIy"/>
+                            <constraint firstItem="mGd-8m-0jT" firstAttribute="top" secondItem="HQk-4p-bKh" secondAttribute="bottom" constant="8" id="cS6-2D-hDy"/>
                             <constraint firstItem="q1w-mq-Q7Q" firstAttribute="top" secondItem="HQk-4p-bKh" secondAttribute="bottom" constant="242" id="gAg-5D-vM8"/>
                             <constraint firstItem="uLb-sO-knn" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="23" id="gzY-UO-ch3"/>
                             <constraint firstItem="KoR-nM-uhx" firstAttribute="top" secondItem="H85-ap-hsz" secondAttribute="top" id="ika-Sr-Zou"/>
@@ -492,6 +515,7 @@
                             <constraint firstItem="yMv-B3-Eab" firstAttribute="leading" secondItem="H85-ap-hsz" secondAttribute="leading" constant="23" id="l0S-Tb-qW7"/>
                             <constraint firstItem="yMv-B3-Eab" firstAttribute="top" secondItem="HQk-4p-bKh" secondAttribute="bottom" constant="119" id="lfL-wE-2nm"/>
                             <constraint firstItem="iqB-Ev-bQD" firstAttribute="trailing" secondItem="H85-ap-hsz" secondAttribute="trailing" id="p1i-jh-Na5"/>
+                            <constraint firstItem="H85-ap-hsz" firstAttribute="trailing" secondItem="mGd-8m-0jT" secondAttribute="trailing" constant="19" id="uOt-wC-lzT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H85-ap-hsz"/>
                     </view>
@@ -501,11 +525,63 @@
             </objects>
             <point key="canvasLocation" x="-639.20000000000005" y="2847.5262368815593"/>
         </scene>
+        <!--Card-->
+        <scene sceneID="7Hs-Ht-hQl">
+            <objects>
+                <viewController title="Card" id="T7C-jM-Tnd" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EM-Ps-x4o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memberDemo1" translatesAutoresizingMaskIntoConstraints="NO" id="43J-uy-NNL">
+                                <rect key="frame" x="20" y="20" width="335" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="318" id="jcY-dO-IJi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56b-mC-zD9">
+                                <rect key="frame" x="20" y="599" width="335" height="48"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Did-zN-XMz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="MZD-2f-8Ie"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="AXc-X7-J3p" kind="show" id="lOM-IC-OtZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="56b-mC-zD9" firstAttribute="leading" secondItem="xcr-oX-Bj8" secondAttribute="leading" constant="20" id="4FN-0c-FjO"/>
+                            <constraint firstItem="43J-uy-NNL" firstAttribute="top" secondItem="xcr-oX-Bj8" secondAttribute="top" id="JCh-pf-DJf"/>
+                            <constraint firstItem="xcr-oX-Bj8" firstAttribute="bottom" secondItem="56b-mC-zD9" secondAttribute="bottom" constant="20" id="JFK-Ji-pUv"/>
+                            <constraint firstItem="43J-uy-NNL" firstAttribute="leading" secondItem="xcr-oX-Bj8" secondAttribute="leading" constant="20" id="KT9-kF-f9r"/>
+                            <constraint firstItem="xcr-oX-Bj8" firstAttribute="trailing" secondItem="56b-mC-zD9" secondAttribute="trailing" constant="20" id="LdF-EV-Utf"/>
+                            <constraint firstItem="xcr-oX-Bj8" firstAttribute="trailing" secondItem="43J-uy-NNL" secondAttribute="trailing" constant="20" id="OfC-HS-1x8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xcr-oX-Bj8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yw9-zQ-CJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-383" y="2178"/>
+        </scene>
     </scenes>
     <resources>
         <image name="creation" width="335" height="456"/>
         <image name="del" width="70" height="92"/>
         <image name="member" width="70" height="92"/>
+        <image name="memberDemo1" width="335" height="288"/>
         <image name="mindex" width="375" height="527"/>
         <image name="modify" width="70" height="96"/>
         <image name="sendCard" width="335" height="386"/>
@@ -516,6 +592,7 @@
         <image name="workCard" width="335" height="545"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ywj-0o-pjQ"/>
+        <segue reference="cC1-bn-l28"/>
+        <segue reference="lOM-IC-OtZ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,9 +19,8 @@ class XWSlideView: UIView {
     */
     
     @IBOutlet var closeButton: UIButton!
-    
     @IBOutlet var miniContract: UILabel!
-    @IBOutlet var token: UILabel!
+    @IBOutlet var coin: UILabel!
     @IBOutlet var myCard: UILabel!
     @IBOutlet var scan: UILabel!
 

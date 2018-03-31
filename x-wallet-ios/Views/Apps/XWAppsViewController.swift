@@ -17,6 +17,7 @@ class XWAppsViewController: XWWebViewController {
         self.title = "Apps"
         self.launchURL = kMarketURL
         self.loadURL()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func didReceiveMemoryWarning() {

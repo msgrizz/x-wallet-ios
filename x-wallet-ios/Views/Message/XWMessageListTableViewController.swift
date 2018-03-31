@@ -73,7 +73,9 @@ class XWMessageListTableViewController: UIBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "goToMessageView", sender: nil)
+        if indexPath.row != 0{
+            self.performSegue(withIdentifier: "goToMessageView", sender: nil)
+        }
     }
 
     /*

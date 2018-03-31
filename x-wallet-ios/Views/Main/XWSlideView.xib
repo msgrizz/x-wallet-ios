@@ -132,10 +132,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="closeButton" destination="HWH-o6-Zfo" id="meG-8Q-Kud"/>
-                <outlet property="miniContract" destination="XlU-r7-MQH" id="wBC-MW-EN6"/>
-                <outlet property="myCard" destination="bYy-2N-QUQ" id="E9x-Ke-muD"/>
-                <outlet property="scan" destination="Ed5-9W-ozl" id="Qxk-1s-4ew"/>
-                <outlet property="token" destination="xnB-c5-ig9" id="Cb0-Zy-unQ"/>
+                <outlet property="coin" destination="xdr-UG-0ZK" id="7Hg-4u-oGx"/>
+                <outlet property="miniContract" destination="XlU-r7-MQH" id="DMk-bx-YAS"/>
             </connections>
             <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>

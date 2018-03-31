@@ -19,7 +19,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     
     var bridge:ZHWebViewBridge<WKWebView>!
 
-    var selectPersonCallBack:ZHBridgeActionCallback!
     
     var isCreate = false {
         didSet {
@@ -40,6 +39,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         // Do any additional setup after loading the view.
         webView = WKWebView.init(frame: self.view.bounds)
         self.view.addSubview(webView)
@@ -54,7 +54,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
         webView.navigationDelegate = self
         webView.scrollView.bouncesZoom = false
         bridge = ZHWebViewBridge.bridge(webView)
-        selectPersonCallBack = bridge.registerHandler("Person.select") { (args:[Any]) -> (Bool, [Any]?) in
+        bridge.registerHandler("Person.select") { (args:[Any]) -> (Bool, [Any]?) in
             DispatchQueue.main.async {
                 let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
