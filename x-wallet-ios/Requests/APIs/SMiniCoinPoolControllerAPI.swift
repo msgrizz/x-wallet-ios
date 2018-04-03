@@ -46,4 +46,36 @@ open class SMiniCoinPoolControllerAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
+    /**
+     get
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsingGET2(completion: @escaping ((_ data: [SMiniCoinPool]?,_ error: Error?) -> Void)) {
+        getUsingGET2WithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     get
+     - GET /miniCoinPools
+     - examples: [{output=none}]
+
+     - returns: RequestBuilder<[SMiniCoinPool]> 
+     */
+    open class func getUsingGET2WithRequestBuilder() -> RequestBuilder<[SMiniCoinPool]> {
+        let path = "/miniCoinPools"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[SMiniCoinPool]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
 }

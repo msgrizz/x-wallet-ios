@@ -34,12 +34,10 @@ open class SMiniContract: Codable {
     public var title: String?
     public var version: Int64?
     public var videoUrl: String?
-    public var isImportant: Bool?
-    public var isComplete: Bool?
 
 
     
-    public init(abolished: Bool?, activated: Bool?, audioUrl: String?, complete: Bool?, confirmed: Bool?, content: String?, createTime: Int64?, id: Int64?, important: Bool?, lastModifyTime: Int64?, miniContractType: MiniContractType?, photoUrl: String?, receiver: SAccount?, sender: SAccount?, title: String?, version: Int64?, videoUrl: String?, isImportant: Bool?, isComplete: Bool?) {
+    public init(abolished: Bool?, activated: Bool?, audioUrl: String?, complete: Bool?, confirmed: Bool?, content: String?, createTime: Int64?, id: Int64?, important: Bool?, lastModifyTime: Int64?, miniContractType: MiniContractType?, photoUrl: String?, receiver: SAccount?, sender: SAccount?, title: String?, version: Int64?, videoUrl: String?) {
         self.abolished = abolished
         self.activated = activated
         self.audioUrl = audioUrl
@@ -57,8 +55,6 @@ open class SMiniContract: Codable {
         self.title = title
         self.version = version
         self.videoUrl = videoUrl
-        self.isImportant = isImportant
-        self.isComplete = isComplete
     }
     
 
@@ -85,8 +81,6 @@ open class SMiniContract: Codable {
         try container.encodeIfPresent(title, forKey: "title")
         try container.encodeIfPresent(version, forKey: "version")
         try container.encodeIfPresent(videoUrl, forKey: "videoUrl")
-        try container.encodeIfPresent(isImportant, forKey: "isImportant")
-        try container.encodeIfPresent(isComplete, forKey: "isComplete")
     }
 
     // Decodable protocol methods
@@ -111,8 +105,6 @@ open class SMiniContract: Codable {
         title = try container.decodeIfPresent(String.self, forKey: "title")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")
         videoUrl = try container.decodeIfPresent(String.self, forKey: "videoUrl")
-        isImportant = try container.decodeIfPresent(Bool.self, forKey: "isImportant")
-        isComplete = try container.decodeIfPresent(Bool.self, forKey: "isComplete")
     }
 }
 

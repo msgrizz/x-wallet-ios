@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class UIBaseViewController: UIViewController {
     var searchButton: UIBarButtonItem!
+    var activityIndicatorView: NVActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 40), type: NVActivityIndicatorType.lineScale)
+        activityIndicatorView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
+        activityIndicatorView.color = Colors.tintColor
+        self.view.addSubview(activityIndicatorView)
         self.view.backgroundColor =  Colors.backGroundColor
 
     }

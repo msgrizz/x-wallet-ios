@@ -138,4 +138,8 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
                           XWUser.init(name: "Pauline Banister", email: "test@gmail.com", id: "887gcfw23444wq1522", profilePic: UIImage(named: "head3")!),
                           XWUser.init(name: "Michael Barlow", email: "test@gmail.com", id: "887gcfw23444wq1211", profilePic: UIImage(named: "head4")!)]
     }
+    
+    func getUserData() {
+        
+    }
 }

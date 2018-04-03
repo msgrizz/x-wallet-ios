@@ -30,25 +30,32 @@ class XWLoginViewController: UIBaseViewController {
     }
     
     @IBAction func signInAction(_ button: UIButton) {
-        let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
-        myAppdelegate.window?.rootViewController = main.instantiateInitialViewController();
+        if self.nameTextField.text != nil && self.passwordTextField.text != nil {
+            self.activityIndicatorView.startAnimating()
+            self.loginRequest()
+        }
     }
     
     @IBAction func createAction(_ button: UIButton) {
+        if self.nameTextField.text != nil && self.passwordTextField.text != nil {
+            self.activityIndicatorView.startAnimating()
+            self.loginRequest()
+        }
+    }
+
+    func loginRequest() {
+        let localAccount = SAccount(about: "", activated: true, avatar: "", createTime: 1, email: "", id: 1, lastModifyTime: 1, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: "", nickname: self.nameTextField.text, paymentPass: "", version: 1)
+        SAccountEntityAPI.saveSAccountUsingPOST(body: localAccount) { (account, error) in
+            print(account)
+            self.activityIndicatorView.stopAnimating()
+        }
+    }
+    
+    func goToMain() {
         let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
         myAppdelegate.window?.rootViewController = main.instantiateInitialViewController();
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

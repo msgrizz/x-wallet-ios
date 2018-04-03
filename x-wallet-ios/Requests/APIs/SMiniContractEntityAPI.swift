@@ -77,16 +77,17 @@ open class SMiniContractEntityAPI {
   "content" : [ {
     "abolished" : true,
     "receiver" : {
+      "about" : "about",
+      "mobile" : "mobile",
+      "avatar" : "avatar",
+      "version" : 5,
       "createTime" : 0,
       "lastModifyTime" : 1,
       "loginName" : "loginName",
-      "about" : "about",
-      "mobile" : "mobile",
       "nickname" : "nickname",
       "loginPass" : "loginPass",
       "paymentPass" : "paymentPass",
       "id" : 6,
-      "version" : 5,
       "email" : "email",
       "activated" : true
     },
@@ -100,39 +101,39 @@ open class SMiniContractEntityAPI {
     "videoUrl" : "videoUrl",
     "createTime" : 0,
     "sender" : {
+      "about" : "about",
+      "mobile" : "mobile",
+      "avatar" : "avatar",
+      "version" : 5,
       "createTime" : 0,
       "lastModifyTime" : 1,
       "loginName" : "loginName",
-      "about" : "about",
-      "mobile" : "mobile",
       "nickname" : "nickname",
       "loginPass" : "loginPass",
       "paymentPass" : "paymentPass",
       "id" : 6,
-      "version" : 5,
       "email" : "email",
       "activated" : true
     },
     "lastModifyTime" : 1,
-    "isImportant" : true,
     "miniContractType" : "Currency",
     "id" : 6,
     "complete" : true,
-    "activated" : true,
-    "isComplete" : true
+    "activated" : true
   }, {
     "abolished" : true,
     "receiver" : {
+      "about" : "about",
+      "mobile" : "mobile",
+      "avatar" : "avatar",
+      "version" : 5,
       "createTime" : 0,
       "lastModifyTime" : 1,
       "loginName" : "loginName",
-      "about" : "about",
-      "mobile" : "mobile",
       "nickname" : "nickname",
       "loginPass" : "loginPass",
       "paymentPass" : "paymentPass",
       "id" : 6,
-      "version" : 5,
       "email" : "email",
       "activated" : true
     },
@@ -146,26 +147,25 @@ open class SMiniContractEntityAPI {
     "videoUrl" : "videoUrl",
     "createTime" : 0,
     "sender" : {
+      "about" : "about",
+      "mobile" : "mobile",
+      "avatar" : "avatar",
+      "version" : 5,
       "createTime" : 0,
       "lastModifyTime" : 1,
       "loginName" : "loginName",
-      "about" : "about",
-      "mobile" : "mobile",
       "nickname" : "nickname",
       "loginPass" : "loginPass",
       "paymentPass" : "paymentPass",
       "id" : 6,
-      "version" : 5,
       "email" : "email",
       "activated" : true
     },
     "lastModifyTime" : 1,
-    "isImportant" : true,
     "miniContractType" : "Currency",
     "id" : 6,
     "complete" : true,
-    "activated" : true,
-    "isComplete" : true
+    "activated" : true
   } ]
 }}]
      
