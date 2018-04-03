@@ -3,86 +3,52 @@ PODS:
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
-  - BigInt (3.0.1):
-    - SipHash (~> 1.2)
-  - CryptoSwift (0.8.3)
   - DynamicBlurView (2.0.2)
-  - Eureka (4.0.1)
   - IHKeyboardAvoiding (4.2)
   - Kingfisher (4.6.3)
-  - Mask (0.0.6)
   - NVActivityIndicatorView (4.1.1):
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
   - ObjectMapper (3.1.0)
-  - secp256k1_ios (0.1.2)
-  - SipHash (1.2.0)
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
   - Spring (1.0.5)
-  - SwaggerClient (1.0.1):
-    - Alamofire (~> 4.0)
   - SwiftyJSON (4.0.0)
   - SwiftyUserDefaults (3.0.1)
   - Toast-Swift (3.0.1)
-  - TrezorCrypto (0.0.4)
   - WebViewBridge.Swift (2.2)
 
 DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.0)
-  - BigInt
-  - CryptoSwift
   - DynamicBlurView
-  - Eureka (~> 4.0.1)
   - IHKeyboardAvoiding
   - Kingfisher (~> 4.6)
-  - Mask
   - NVActivityIndicatorView
   - ObjectMapper (~> 3.1)
-  - secp256k1_ios (from `https://github.com/shamatar/secp256k1_ios.git`)
   - SkeletonView (~> 1.1)
   - SnapKit (~> 4.0)
   - Spring (~> 1.0)
-  - SwaggerClient
   - SwiftyJSON (~> 4.0)
   - SwiftyUserDefaults (~> 3.0)
   - Toast-Swift (~> 3.0)
-  - TrezorCrypto
   - WebViewBridge.Swift
-
-EXTERNAL SOURCES:
-  secp256k1_ios:
-    :git: https://github.com/shamatar/secp256k1_ios.git
-
-CHECKOUT OPTIONS:
-  secp256k1_ios:
-    :commit: 506e3ca08780e3757ff07c5dfa65ea3cc3faae4b
-    :git: https://github.com/shamatar/secp256k1_ios.git
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
-  BigInt: 8e8a52161c745cd3ab78e3dc346a9fbee51e6cf6
-  CryptoSwift: 033efc3523865d19cc6ab6612fa17a62613b5dfa
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
-  Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
   IHKeyboardAvoiding: 9fbf816b7c3c84911964802ff110d12caf40ebef
   Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
-  Mask: 5a4847e234124e02e540f517fd9b4b1036486f86
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  secp256k1_ios: 168c6c49ed9771db51875f5255c8f9847e4cf554
-  SipHash: c6e9e43e9c531b5bc6602545130c26194a6d31ce
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
-  SwaggerClient: cce7dcf06841576548a63246f886b1774f0de0cc
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
-  TrezorCrypto: 7f87a2296cf13872b21565c29fd9f7882dd00803
   WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: 638c46d214e6f99c66a41427560f8efc9d6a66a2
+PODFILE CHECKSUM: e9040e88dce4c0887719bae5af2ac840317a92a9
 
 COCOAPODS: 1.4.0

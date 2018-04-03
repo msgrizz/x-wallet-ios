@@ -230,29 +230,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    
-    func test() throws{
-        let password = "testpass"
-        let p = Profile(index: 0, nickName: "evrins", email: "evrins.hu@gmail.com", introduction: "hello world")
-        let c = Contact(contactAddress: [1,2,3,4,5,6,7,8,9,10], contactProfile: p)
-        let dataDirectory = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("datastore")
-        let fsk = try FileSystemKeystore(dataDirectory:dataDirectory)
-        var contacts = [Contact]()
-        contacts.append(c)
-        let isSucc = fsk.write(dataType: .Contact, password: password, data: contacts)
-        if (isSucc) {
-            print("success")
-        } else {
-            print("failed")
-        }
-        print("hello world")
-        print(fsk.fileMap)
-        let c2: [Contact] = fsk.read(dataType: .Contact, password: password)
-        print(c2)
-    }
-    
-
-
 }
 
