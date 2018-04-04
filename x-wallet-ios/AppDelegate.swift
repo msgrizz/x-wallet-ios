@@ -52,13 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         if version == lastLaunchVersion {
             let isLogin = Defaults[.isLogin]
 
-//            if isLogin {
+            if isLogin {
                 let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 window?.rootViewController = main.instantiateInitialViewController();
-//            }else {
-//                let login: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-//                window?.rootViewController = login.instantiateInitialViewController();
-//            }
+            }else {
+                let login: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+                window?.rootViewController = login.instantiateInitialViewController();
+            }
         }else {
             window?.rootViewController = welcomeViewController
             Defaults[.lastLaunchVersion] = version!
@@ -232,6 +232,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if  Defaults[.isLogin] {
+            SAccountEntityAPI.findOneSAccountUsingGET(id: Int64(Defaults[.userId])) { (account, error) in
+                XWLocalManager.sharedInstance().localUser = account
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

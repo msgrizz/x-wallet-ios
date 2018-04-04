@@ -839,6 +839,18 @@
                                             <segue destination="IDp-nk-eOx" kind="show" id="sFn-Fp-8RB"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identity code:he2298" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRP-fr-JKE">
+                                        <rect key="frame" x="94" y="157" width="207" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="3VP-Hh-ZIA"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="C8d-0w-GFA"/>
+                                            <constraint firstAttribute="width" constant="207" id="gJP-Fu-TCc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="207" id="lPH-kk-Wd6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -853,10 +865,12 @@
                                     <constraint firstItem="Yqn-tK-5DE" firstAttribute="top" secondItem="2xG-J4-leF" secondAttribute="top" constant="19" id="cjC-Kc-oZC"/>
                                     <constraint firstItem="Yqn-tK-5DE" firstAttribute="leading" secondItem="2xG-J4-leF" secondAttribute="leading" constant="25" id="mIg-uv-md7"/>
                                     <constraint firstItem="gDk-tl-kfQ" firstAttribute="top" secondItem="uLP-Xs-Oz3" secondAttribute="bottom" id="qCf-Jo-T51"/>
+                                    <constraint firstItem="cRP-fr-JKE" firstAttribute="top" secondItem="gDk-tl-kfQ" secondAttribute="bottom" id="tOB-ii-9Gb"/>
                                     <constraint firstAttribute="bottom" secondItem="gDk-tl-kfQ" secondAttribute="bottom" constant="22" id="vSi-jF-XQM"/>
                                     <constraint firstItem="va7-4D-XGn" firstAttribute="leading" secondItem="2xG-J4-leF" secondAttribute="leading" constant="25" id="yFB-W3-Ooz"/>
                                     <constraint firstItem="0FX-lj-FcZ" firstAttribute="leading" secondItem="gJk-EI-K7i" secondAttribute="trailing" constant="12" id="yW7-a1-JkR"/>
                                     <constraint firstItem="vqz-5P-C0g" firstAttribute="top" secondItem="2xG-J4-leF" secondAttribute="top" constant="19" id="zBA-X7-LqL"/>
+                                    <constraint firstItem="cRP-fr-JKE" firstAttribute="leading" secondItem="2xG-J4-leF" secondAttribute="leading" constant="94" id="zG3-tl-Bfc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Bj-5O-Wuc">
@@ -973,6 +987,7 @@
                         <outlet property="creditLabel" destination="Yqn-tK-5DE" id="cIB-NB-vPl"/>
                         <outlet property="emailLabel" destination="gDk-tl-kfQ" id="j7q-ec-oZv"/>
                         <outlet property="headImage" destination="gJk-EI-K7i" id="YCS-Sz-FJs"/>
+                        <outlet property="idLabel" destination="cRP-fr-JKE" id="wlp-f8-8Gq"/>
                         <outlet property="nameLabel" destination="0FX-lj-FcZ" id="fZM-AH-4OB"/>
                         <outlet property="pageControl" destination="kS3-DA-ubz" id="UMw-pS-Qid"/>
                         <outlet property="pagerView" destination="T0K-Pv-5dy" id="CNP-5H-L9I"/>

@@ -198,6 +198,7 @@
 		D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2ED205A424A001307E8 /* XWContractView.swift */; };
 		D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EF205A425B001307E8 /* XWContractView.xib */; };
 		D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */; };
+		D5E646802074A3FE00AB6BC5 /* XWLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,6 +413,7 @@
 		D5ADC2ED205A424A001307E8 /* XWContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractView.swift; sourceTree = "<group>"; };
 		D5ADC2EF205A425B001307E8 /* XWContractView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractView.xib; sourceTree = "<group>"; };
 		D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWReceiveCodeViewController.swift; sourceTree = "<group>"; };
+		D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWLocalManager.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -806,6 +808,7 @@
 			children = (
 				D5A489AA204F96FC001031F6 /* AppStyle.swift */,
 				A70EE049206B86170012A4D7 /* Constant.swift */,
+				D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -1132,6 +1135,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/AvatarImageView/AvatarImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -1151,6 +1155,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvatarImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -1228,6 +1233,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/AvatarImageView/AvatarImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -1247,6 +1253,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvatarImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -1373,6 +1380,7 @@
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
 				D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */,
 				A7C15EF12073B17E009C43D8 /* Extensions.swift in Sources */,
+				D5E646802074A3FE00AB6BC5 /* XWLocalManager.swift in Sources */,
 				A7C15EE22073B17E009C43D8 /* SMiniCoinPoolEntityAPI.swift in Sources */,
 				A7C15ED22073B17D009C43D8 /* ResourcesSMiniContract.swift in Sources */,
 				A773E5FF206A0A2D002C5721 /* XWSendCouponViewController.swift in Sources */,

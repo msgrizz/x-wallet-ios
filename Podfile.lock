@@ -3,6 +3,7 @@ PODS:
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
+  - AvatarImageView (2.1.1)
   - DynamicBlurView (2.0.2)
   - IHKeyboardAvoiding (4.2)
   - Kingfisher (4.6.3)
@@ -23,6 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.0)
+  - AvatarImageView (~> 2.1.0)
   - DynamicBlurView
   - IHKeyboardAvoiding
   - Kingfisher (~> 4.6)
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  AvatarImageView: 50618694f9ce37d07fd0250145e733b34197fb5b
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
   IHKeyboardAvoiding: 9fbf816b7c3c84911964802ff110d12caf40ebef
   Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
@@ -55,6 +58,6 @@ SPEC CHECKSUMS:
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: 33fc7f320dcc2f31ffbeaebe9b0f7c18f04eaefe
+PODFILE CHECKSUM: 5a60a8f075a82619e8e3c5a69ac066b65172814c
 
 COCOAPODS: 1.4.0

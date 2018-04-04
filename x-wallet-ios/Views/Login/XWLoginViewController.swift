@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class XWLoginViewController: UIBaseViewController {
     
@@ -50,15 +51,24 @@ class XWLoginViewController: UIBaseViewController {
     func loginRequest() {
         let localAccount = SAccount(about: nil, activated: nil, avatar: nil, createTime: nil, email: nil, id: nil, lastModifyTime: nil, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: nil, nickname: self.nameTextField.text, paymentPass: nil, version: nil)
         SAccountEntityAPI.saveSAccountUsingPOST(body: localAccount) { (account, error) in
-            print(account)
             self.activityIndicatorView.stopAnimating()
+            if account != nil {
+                let userId = account?.id
+                Defaults[.userId] = Double(userId!)
+                Defaults[.isLogin] = true
+                XWLocalManager.sharedInstance().localUser = account
+                self.goToMain()
+            }
+            
         }
     }
     
     func goToMain() {
-        let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
-        myAppdelegate.window?.rootViewController = main.instantiateInitialViewController();
+        DispatchQueue.main.async {
+            let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
+            myAppdelegate.window?.rootViewController = main.instantiateInitialViewController();
+        }
     }
 
 }

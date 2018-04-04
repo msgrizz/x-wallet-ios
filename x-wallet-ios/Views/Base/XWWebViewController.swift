@@ -78,14 +78,14 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
             return (true, nil)
         }
         
-        bridge.registerHandler("Scan.selectPerson") { (args:[Any]) -> (Bool, [Any]?) in
+        bridge.registerHandler("Scan.qr") { (args:[Any]) -> (Bool, [Any]?) in
             DispatchQueue.main.async {
                 let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
                 contact.blockproerty={ (result) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        self.bridge.callJsHandler("Scan.selectPersonCallback", args: [result], callback: nil)
+                        self.bridge.callJsHandler("Scan.qrCallback", args: [result], callback: nil)
                     }
                 }
                 let navi = UIBaseNavigationViewController(rootViewController: contact)
@@ -129,7 +129,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     
     @objc func save(_ : UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
-//        self.bridge.callJsHandler("Person.selectCallback", args: ["123"], callback: nil)
+        self.bridge.callJsHandler("Save.contractCallback", args: [], callback: nil)
 
     }
 

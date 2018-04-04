@@ -15,6 +15,7 @@ class XWMyViewController: UIBaseViewController,FSPagerViewDataSource,FSPagerView
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var codeButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -30,7 +31,7 @@ class XWMyViewController: UIBaseViewController,FSPagerViewDataSource,FSPagerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = NSLocalizedString("My", comment: "")
+        self.title = NSLocalizedString("Me", comment: "")
         
         headImage.layer.borderWidth = 3
         headImage.layer.masksToBounds = false
