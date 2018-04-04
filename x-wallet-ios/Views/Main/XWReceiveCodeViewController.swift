@@ -17,6 +17,9 @@ class XWReceiveCodeViewController: UIBaseViewController {
         self.qrCodeImage.image = UIImage.createQRCode(size: self.qrCodeImage.frame.size.width, dataStr: self.createDataString())
         self.navigationController?.navigationBar.prefersLargeTitles = false
 
+        self.backgroundView.layer.cornerRadius = 10
+        self.backgroundView.clipsToBounds = true
+        
         // Do any additional setup after loading the view.
     }
 

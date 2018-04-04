@@ -47,6 +47,9 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         let code = UITapGestureRecognizer.init(target: self, action: #selector(goToCode(_:)))
         slideView.receiveCode.addGestureRecognizer(code)
         
+        let sacn = UITapGestureRecognizer.init(target: self, action: #selector(goToScan(_:)))
+        slideView.scan.addGestureRecognizer(sacn)
+        
         blurView = DynamicBlurView(frame: slideView.bounds)
         
         stackView = UIStackView()
@@ -211,6 +214,22 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = Main.instantiateViewController(withIdentifier: "XWReceiveCodeViewController") as! XWReceiveCodeViewController
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func goToScan(_ :UITapGestureRecognizer) {
+        dismissSlide(_ :UIButton())
+        AVCaptureSessionManager.checkAuthorizationStatusForCamera(grant: {
+            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "XWScanViewController")
+            self.navigationController?.pushViewController(controller, animated: true)
+        }){
+            let action = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) in
+                let url = URL(string: UIApplicationOpenSettingsURLString)
+                UIApplication.shared.open(url!, options: [String: Any](), completionHandler: nil)
+            })
+            let con = UIAlertController(title: "权限未开启", message: "您未开启相机权限，点击确定跳转至系统设置开启", preferredStyle: UIAlertControllerStyle.alert)
+            con.addAction(action)
+            self.present(con, animated: true, completion: nil)
+        }
     }
 
     // MARK: - Navigation

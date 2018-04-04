@@ -2338,7 +2338,7 @@
         <!--Scan-->
         <scene sceneID="3EN-x4-4do">
             <objects>
-                <viewController storyboardIdentifier="XWScanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Ke-O8-NaS" userLabel="Scan" customClass="XWScanViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWScanViewController" title="Scan" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Ke-O8-NaS" userLabel="Scan" customClass="XWScanViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XRm-bJ-6WD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

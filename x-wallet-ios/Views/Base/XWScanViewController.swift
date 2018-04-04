@@ -13,11 +13,15 @@ class XWScanViewController: UIViewController ,UIImagePickerControllerDelegate, U
     var link: CADisplayLink?
     var torchState = false
     
+    typealias fucBlock = (_ name :String) ->()
+    
     @IBOutlet weak var scanTop: NSLayoutConstraint!
+    var blockproerty:fucBlock!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         // Do any additional setup after loading the view.
         link = CADisplayLink(target: self, selector: #selector(scan))
         
@@ -29,7 +33,7 @@ class XWScanViewController: UIViewController ,UIImagePickerControllerDelegate, U
         sessionManager?.showPreViewLayerIn(view: view)
         sessionManager?.isPlaySound = true
         
-        let item = UIBarButtonItem(title: "相册", style: .plain, target: self, action: #selector(openPhotoLib))
+        let item = UIBarButtonItem(title: NSLocalizedString("Library", comment: ""), style: .plain, target: self, action: #selector(openPhotoLib))
         navigationItem.rightBarButtonItem = item
     }
 
@@ -59,8 +63,10 @@ class XWScanViewController: UIViewController ,UIImagePickerControllerDelegate, U
     
     
     func showResult(result: String) {
-        let alert = UIAlertView(title: "扫描结果", message: result, delegate: nil, cancelButtonTitle: "确定")
-        alert .show()
+        if let _ = blockproerty{
+            blockproerty(result)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func openPhotoLib() {

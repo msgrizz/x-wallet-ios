@@ -17,7 +17,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     
     var bridge:ZHWebViewBridge<WKWebView>!
 
-    
     var isCreate = false {
         didSet {
             if self.isCreate {
@@ -59,7 +58,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 contact.blockproerty={ (name) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        self.bridge.callJsHandler("Person.selectCallback", args: ["123"], callback: nil)
+                        self.bridge.callJsHandler("Person.selectCallback", args: [name], callback: nil)
                         print(name)
                     }
                 }
@@ -77,6 +76,24 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 self.navigationController?.popToViewController(vc, animated: true)
             }
             return (true, nil)
+        }
+        
+        bridge.registerHandler("Scan.selectPerson") { (args:[Any]) -> (Bool, [Any]?) in
+            DispatchQueue.main.async {
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
+                contact.blockproerty={ (result) in
+                    DispatchQueue.main.async {
+                        contact.dismiss(animated: true, completion: nil)
+                        self.bridge.callJsHandler("Scan.selectPersonCallback", args: [result], callback: nil)
+                    }
+                }
+                let navi = UIBaseNavigationViewController(rootViewController: contact)
+                self.navigationController?.present(navi, animated: true, completion: {
+                    
+                })
+            }
+            return (true, [])
         }
         
 
