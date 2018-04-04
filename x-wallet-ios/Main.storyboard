@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,6 +125,7 @@
                         <outlet property="searchBar" destination="L03-EF-hIo" id="vBo-Wd-uwz"/>
                         <segue destination="TaT-nC-o1N" kind="show" identifier="goToCardList" id="p4b-o4-5BU"/>
                         <segue destination="4cR-nF-xwH" kind="show" identifier="goToCoinList" id="q1k-UN-smi"/>
+                        <segue destination="k46-3O-Jpn" kind="show" id="II6-8H-eIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1974,19 +1976,80 @@
             <point key="canvasLocation" x="2526" y="-1882"/>
         </scene>
         <!--Web View Controller-->
-        <scene sceneID="JFh-UV-qP1">
+        <scene sceneID="Hqz-I1-gN1">
             <objects>
-                <viewController storyboardIdentifier="XWWebViewController" hidesBottomBarWhenPushed="YES" id="k46-3O-Jpn" customClass="XWWebViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YLk-4C-bB7">
+                <viewController storyboardIdentifier="XWWebViewController" hidesBottomBarWhenPushed="YES" id="RaP-9D-AMA" customClass="XWWebViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXj-wo-5m7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OI0-V4-Y4g"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nf-Dg-Kp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2713" y="-2553"/>
+        </scene>
+        <!--Receive Code View Controller-->
+        <scene sceneID="JFh-UV-qP1">
+            <objects>
+                <viewController storyboardIdentifier="XWReceiveCodeViewController" hidesBottomBarWhenPushed="YES" id="k46-3O-Jpn" customClass="XWReceiveCodeViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YLk-4C-bB7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8h-BX-0mY">
+                                <rect key="frame" x="30" y="89" width="315" height="315"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive things and show the code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kge-AB-8dE">
+                                        <rect key="frame" x="47" y="8" width="221" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Wn5-j1-7yW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hiv-am-jo0">
+                                        <rect key="frame" x="28" y="33" width="259" height="259"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hiv-am-jo0" secondAttribute="height" multiplier="1:1" id="BLA-RX-QMU"/>
+                                            <constraint firstAttribute="width" constant="259" id="TEU-d1-F1x"/>
+                                            <constraint firstAttribute="height" constant="259" id="bfL-7T-FnJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hiv-am-jo0" secondAttribute="trailing" constant="28" id="BoJ-9T-c5P"/>
+                                    <constraint firstItem="Kge-AB-8dE" firstAttribute="top" secondItem="H8h-BX-0mY" secondAttribute="top" constant="8" id="CKl-ae-8DO"/>
+                                    <constraint firstItem="hiv-am-jo0" firstAttribute="top" secondItem="Kge-AB-8dE" secondAttribute="bottom" constant="8" id="Cwd-4M-RDG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kge-AB-8dE" secondAttribute="trailing" constant="47" id="LLd-GQ-usg"/>
+                                    <constraint firstItem="Kge-AB-8dE" firstAttribute="leading" secondItem="H8h-BX-0mY" secondAttribute="leading" constant="47" id="NPq-aA-m9C"/>
+                                    <constraint firstAttribute="width" secondItem="H8h-BX-0mY" secondAttribute="height" multiplier="1:1" id="UPh-TT-bbQ"/>
+                                    <constraint firstAttribute="height" constant="315" id="ccc-Zv-3Ts"/>
+                                    <constraint firstItem="hiv-am-jo0" firstAttribute="leading" secondItem="H8h-BX-0mY" secondAttribute="leading" constant="28" id="fBa-mB-Fbk"/>
+                                    <constraint firstAttribute="bottom" secondItem="hiv-am-jo0" secondAttribute="bottom" constant="23" id="mPq-xB-3Dk"/>
+                                    <constraint firstAttribute="width" constant="315" id="vLA-41-CU4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="91W-dW-Fqy" firstAttribute="trailing" secondItem="H8h-BX-0mY" secondAttribute="trailing" constant="30" id="ZFr-42-fDx"/>
+                            <constraint firstItem="H8h-BX-0mY" firstAttribute="top" secondItem="91W-dW-Fqy" secondAttribute="top" constant="25" id="eGg-8D-en6"/>
+                            <constraint firstItem="H8h-BX-0mY" firstAttribute="leading" secondItem="91W-dW-Fqy" secondAttribute="leading" constant="30" id="iIK-CF-yqn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="91W-dW-Fqy"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="H8h-BX-0mY" id="5Cc-PX-Bxo"/>
+                        <outlet property="qrCodeImage" destination="hiv-am-jo0" id="uls-Io-P7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFv-QG-6vi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3810" y="-2468"/>
+            <point key="canvasLocation" x="-311.19999999999999" y="-3047.226386806597"/>
         </scene>
         <!--Coin-->
         <scene sceneID="yVj-j2-wGX">

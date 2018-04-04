@@ -44,6 +44,9 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         let token = UITapGestureRecognizer.init(target: self, action: #selector(addCoinAction(_:)))
         slideView.coin.addGestureRecognizer(token)
         
+        let code = UITapGestureRecognizer.init(target: self, action: #selector(goToCode(_:)))
+        slideView.receiveCode.addGestureRecognizer(code)
+        
         blurView = DynamicBlurView(frame: slideView.bounds)
         
         stackView = UIStackView()
@@ -201,6 +204,13 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     @objc func addCardAction(_ :UITapGestureRecognizer) {
         dismissSlide(_ :UIButton())
 
+    }
+    
+    @objc func goToCode(_ :UITapGestureRecognizer) {
+        dismissSlide(_ :UIButton())
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWReceiveCodeViewController") as! XWReceiveCodeViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     // MARK: - Navigation

@@ -10,9 +10,12 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
   - ObjectMapper (3.1.0)
+  - Result (3.2.4)
   - SkeletonView (1.1.1)
   - SnapKit (4.0.0)
   - Spring (1.0.5)
+  - SugarRecord/CoreData (3.1.2):
+    - Result (~> 3.0)
   - SwiftyJSON (4.0.0)
   - SwiftyUserDefaults (3.0.1)
   - Toast-Swift (3.0.1)
@@ -28,6 +31,7 @@ DEPENDENCIES:
   - SkeletonView (~> 1.1)
   - SnapKit (~> 4.0)
   - Spring (~> 1.0)
+  - SugarRecord/CoreData
   - SwiftyJSON (~> 4.0)
   - SwiftyUserDefaults (~> 3.0)
   - Toast-Swift (~> 3.0)
@@ -41,14 +45,16 @@ SPEC CHECKSUMS:
   Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SkeletonView: 041053e904504e7d8db83df166e599be75659fe1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
+  SugarRecord: be6aa5c18b4a4dec0de4c1f49fc61c85eabb5328
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: e9040e88dce4c0887719bae5af2ac840317a92a9
+PODFILE CHECKSUM: 33fc7f320dcc2f31ffbeaebe9b0f7c18f04eaefe
 
 COCOAPODS: 1.4.0

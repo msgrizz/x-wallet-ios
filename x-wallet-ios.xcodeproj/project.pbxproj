@@ -197,6 +197,7 @@
 		D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */; };
 		D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2ED205A424A001307E8 /* XWContractView.swift */; };
 		D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EF205A425B001307E8 /* XWContractView.xib */; };
+		D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -410,6 +411,7 @@
 		D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWBaseCardView.xib; sourceTree = "<group>"; };
 		D5ADC2ED205A424A001307E8 /* XWContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractView.swift; sourceTree = "<group>"; };
 		D5ADC2EF205A425B001307E8 /* XWContractView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractView.xib; sourceTree = "<group>"; };
+		D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWReceiveCodeViewController.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -616,6 +618,7 @@
 				D58FC3F3205236CF008C05AE /* XWMainViewController.swift */,
 				D5ADC2D620591077001307E8 /* XWSlideView.swift */,
 				D5ADC2D820591088001307E8 /* XWSlideView.xib */,
+				D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1134,9 +1137,11 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/SugarRecord/SugarRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -1151,9 +1156,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SugarRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -1226,9 +1233,11 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/SugarRecord/SugarRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -1243,9 +1252,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SugarRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -1293,6 +1304,7 @@
 				D58FC41720564523008C05AE /* FSPageViewLayout.swift in Sources */,
 				D58FC3F4205236CF008C05AE /* XWMainViewController.swift in Sources */,
 				D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */,
+				D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */,
 				D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
 				A7C15EC52073B17D009C43D8 /* ResourcesSMiniCoinPool.swift in Sources */,

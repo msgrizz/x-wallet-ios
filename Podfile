@@ -20,5 +20,6 @@ target 'x-wallet-ios' do
   pod 'IHKeyboardAvoiding'
   pod 'DynamicBlurView'
   pod 'WebViewBridge.Swift'
+  pod 'SugarRecord/CoreData' 
   target 'x-wallet-iosTests'
 end

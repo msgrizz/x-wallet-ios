@@ -59,7 +59,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 contact.blockproerty={ (name) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        self.bridge.callJsHandler("Person.selectCallback", args: [name], callback: nil)
+                        self.bridge.callJsHandler("Person.selectCallback", args: ["123"], callback: nil)
                         print(name)
                     }
                 }
@@ -112,6 +112,8 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     
     @objc func save(_ : UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
+//        self.bridge.callJsHandler("Person.selectCallback", args: ["123"], callback: nil)
+
     }
 
     /*

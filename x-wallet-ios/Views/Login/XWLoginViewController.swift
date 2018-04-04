@@ -30,21 +30,25 @@ class XWLoginViewController: UIBaseViewController {
     }
     
     @IBAction func signInAction(_ button: UIButton) {
-        if self.nameTextField.text != nil && self.passwordTextField.text != nil {
+        if self.nameTextField.text != "" && self.passwordTextField.text != ""{
             self.activityIndicatorView.startAnimating()
             self.loginRequest()
+        } else {
+            self.view.makeToast(NSLocalizedString("No User Name Or Password", comment: ""))
         }
     }
     
     @IBAction func createAction(_ button: UIButton) {
-        if self.nameTextField.text != nil && self.passwordTextField.text != nil {
+        if self.nameTextField.text != "" && self.passwordTextField.text != ""{
             self.activityIndicatorView.startAnimating()
             self.loginRequest()
+        }else {
+            self.view.makeToast(NSLocalizedString("No User Name Or Password", comment: ""))
         }
     }
 
     func loginRequest() {
-        let localAccount = SAccount(about: "", activated: true, avatar: "", createTime: 1, email: "", id: 1, lastModifyTime: 1, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: "", nickname: self.nameTextField.text, paymentPass: "", version: 1)
+        let localAccount = SAccount(about: nil, activated: nil, avatar: nil, createTime: nil, email: nil, id: nil, lastModifyTime: nil, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: nil, nickname: self.nameTextField.text, paymentPass: nil, version: nil)
         SAccountEntityAPI.saveSAccountUsingPOST(body: localAccount) { (account, error) in
             print(account)
             self.activityIndicatorView.stopAnimating()

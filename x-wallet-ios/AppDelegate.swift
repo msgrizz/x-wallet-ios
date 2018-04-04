@@ -50,8 +50,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         let lastLaunchVersion = Defaults[.lastLaunchVersion]
         
         if version == lastLaunchVersion {
-            let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            window?.rootViewController = main.instantiateInitialViewController();
+            let isLogin = Defaults[.isLogin]
+
+//            if isLogin {
+                let main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                window?.rootViewController = main.instantiateInitialViewController();
+//            }else {
+//                let login: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+//                window?.rootViewController = login.instantiateInitialViewController();
+//            }
         }else {
             window?.rootViewController = welcomeViewController
             Defaults[.lastLaunchVersion] = version!
