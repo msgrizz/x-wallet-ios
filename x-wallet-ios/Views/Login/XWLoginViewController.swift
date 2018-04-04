@@ -49,7 +49,7 @@ class XWLoginViewController: UIBaseViewController {
     }
 
     func loginRequest() {
-        let localAccount = SAccount(about: nil, activated: nil, avatar: nil, createTime: nil, email: nil, id: nil, lastModifyTime: nil, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: nil, nickname: self.nameTextField.text, paymentPass: nil, version: nil)
+        let localAccount = SAccount(about: nil, activated: nil, avatar: "http://oss.iclass.cn/image/smallfiles/448_448/1522824152263aiaxp.png", createTime: nil, email: nil, id: nil, lastModifyTime: nil, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: nil, nickname: self.nameTextField.text, paymentPass: nil, version: nil)
         SAccountEntityAPI.saveSAccountUsingPOST(body: localAccount) { (account, error) in
             self.activityIndicatorView.stopAnimating()
             if account != nil {
