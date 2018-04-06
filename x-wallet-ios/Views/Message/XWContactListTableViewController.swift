@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate,UITableViewDataSource {
     var addButton: UIBarButtonItem!
     
@@ -92,7 +92,11 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath) as! XWMyContactTableViewCell
-            cell.headView.image = userData.myself.profilePic
+            if userData.myself.profilePic != nil {
+                cell.headView.image = userData.myself.profilePic
+            }else {
+                cell.headView.kf.setImage(with: URL(string: userData.myself.avatar!))
+            }
             cell.nameLabel.text = userData.myself.name
             cell.numberLabel.text = "My Number:"+userData.myself.id
             // Configure the cell...
@@ -102,6 +106,13 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath) as! XWContactTableViewCell
             let user = userData.users[indexPath.row]
+            if user.profilePic != nil {
+                cell.headView.image = user.profilePic
+            }else {
+                if user.avatar != nil {
+                    cell.headView.kf.setImage(with: URL(string: user.avatar!))
+                }
+            }
             cell.headView.image = user.profilePic
             cell.nameLabel.text = user.name
             // Configure the cell...
@@ -147,6 +158,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
                 let user = XWUser(name: ele.nickname!, email: ele.email, id: "\(String(describing: ele.id))", profilePic:nil, avatar:ele.avatar)
                 self.userData.users.append(user)
             }
+            self.tableView.reloadData()
         }
     }
 }
