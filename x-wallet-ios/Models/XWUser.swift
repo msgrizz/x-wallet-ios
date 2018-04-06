@@ -10,14 +10,16 @@ import UIKit
 
 class XWUser: NSObject {
     var name: String
-    var email: String
+    var email: String?
     var id: String
-    var profilePic: UIImage
+    var profilePic: UIImage?
+    var avatar: String?
     //MARK: Inits
-    init(name: String, email: String, id: String, profilePic: UIImage) {
+    init(name: String, email: String?, id: String, profilePic: UIImage?, avatar: String?) {
         self.name = name
         self.email = email
         self.id = id
         self.profilePic = profilePic
+        self.avatar = avatar
     }
 }

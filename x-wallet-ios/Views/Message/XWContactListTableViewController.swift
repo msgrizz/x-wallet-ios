@@ -42,6 +42,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         )
         addButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = addButton
+        self.getUserData()
     }
     
     @objc func add(_ : UIBarButtonItem) {
@@ -133,13 +134,19 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     
     func fakeData() {
         userData = XWDemoData()
-        userData.myself = XWUser.init(name: "Jane Smith", email: "test@gmail.com", id: "887gcfw23444wq2803", profilePic: UIImage(named: "head1")!)
-        userData.users = [XWUser.init(name: "Bill Anderson", email: "test@gmail.com", id: "887gcfw23444wq1561", profilePic: UIImage(named: "head2")!),
-                          XWUser.init(name: "Pauline Banister", email: "test@gmail.com", id: "887gcfw23444wq1522", profilePic: UIImage(named: "head3")!),
-                          XWUser.init(name: "Michael Barlow", email: "test@gmail.com", id: "887gcfw23444wq1211", profilePic: UIImage(named: "head4")!)]
+        
+        
+        
+        let my = XWUser(name: XWLocalManager.sharedInstance().localUser.nickname!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(String(describing: XWLocalManager.sharedInstance().localUser.id))", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
+        userData.myself = my
     }
     
     func getUserData() {
-        
+        SAccountControllerAPI.getUsingGET1 { (accounts, error) in
+            for ele in accounts! {
+                let user = XWUser(name: ele.nickname!, email: ele.email, id: "\(String(describing: ele.id))", profilePic:nil, avatar:ele.avatar)
+                self.userData.users.append(user)
+            }
+        }
     }
 }

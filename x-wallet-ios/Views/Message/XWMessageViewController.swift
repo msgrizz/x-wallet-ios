@@ -126,7 +126,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.currentUser=XWUser.init(name: "123", email: "linkio.hu@gmail.com", id: "122355", profilePic: UIImage(named: "head1")!)
+        self.currentUser=XWUser.init(name: "123", email: "linkio.hu@gmail.com", id: "122355", profilePic: UIImage(named: "head1")!, avatar: "")
         self.inputBar.backgroundColor = Colors.backGroundColor
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.customization()
