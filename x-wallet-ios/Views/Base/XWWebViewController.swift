@@ -52,6 +52,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
         webView.scrollView.backgroundColor = UIColor.clear
         webView.navigationDelegate = self
         webView.scrollView.bouncesZoom = false
+        
         bridge = ZHWebViewBridge.bridge(webView)
         bridge.registerHandler("Person.select") { (args:[Any]) -> (Bool, [Any]?) in
             DispatchQueue.main.async {
@@ -67,14 +68,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 self.navigationController?.present(navi, animated: true, completion: {
         
                 })
-            }
-            return (true, [])
-        }
-        
-        bridge.registerHandler("Push.transfer") { (args:[Any]) -> (Bool, [Any]?) in
-            DispatchQueue.main.async {
-                let vc = self.navigationController?.viewControllers[1] as! XWCoinListTableViewController
-                self.navigationController?.popToViewController(vc, animated: true)
             }
             return (true, [])
         }
@@ -110,7 +103,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
             return (true, [])
         }
         
-
         self.loadURL()
     }
     

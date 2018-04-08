@@ -160,7 +160,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
             vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
-            let data = XWContract.init(title: "I.O.U", type: .IOU, content: "I.O.U")
+            let data = self.iouArray[indexPath.row]
             vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }
