@@ -20,6 +20,10 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
 
     @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var addButton:UIButton!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,8 +34,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.register(UINib(nibName: "XWContractDemoTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractDemoTableViewCell")
-
-        
+        self.tableView.register(UINib(nibName: "XWIOUTableViewCell", bundle: nil), forCellReuseIdentifier: "XWIOUTableViewCell")
 //        self.tableView.contentInset.bottom = self.bottomBar.frame.size.height
 //        self.tableView.scrollIndicatorInsets.bottom = self.bottomBar.frame.size.height
         

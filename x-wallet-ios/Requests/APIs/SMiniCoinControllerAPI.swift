@@ -65,8 +65,8 @@ open class SMiniCoinControllerAPI {
      - parameter sMiniCoinDTO: (body) sMiniCoinDTO 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func transferUsingPUT(id: Int64, sMiniCoinDTO: SMiniCoinDTO, completion: @escaping ((_ data: SMiniCoin?,_ error: Error?) -> Void)) {
-        transferUsingPUTWithRequestBuilder(id: id, sMiniCoinDTO: sMiniCoinDTO).execute { (response, error) -> Void in
+    open class func transferUsingPOST(id: Int64, sMiniCoinDTO: SMiniCoinDTO, completion: @escaping ((_ data: SMiniCoin?,_ error: Error?) -> Void)) {
+        transferUsingPOSTWithRequestBuilder(id: id, sMiniCoinDTO: sMiniCoinDTO).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -74,7 +74,7 @@ open class SMiniCoinControllerAPI {
 
     /**
      transfer
-     - PUT /transfer/{id}
+     - POST /transfer/{id}
      - examples: [{output=none}]
      
      - parameter id: (path) id 
@@ -82,7 +82,7 @@ open class SMiniCoinControllerAPI {
 
      - returns: RequestBuilder<SMiniCoin> 
      */
-    open class func transferUsingPUTWithRequestBuilder(id: Int64, sMiniCoinDTO: SMiniCoinDTO) -> RequestBuilder<SMiniCoin> {
+    open class func transferUsingPOSTWithRequestBuilder(id: Int64, sMiniCoinDTO: SMiniCoinDTO) -> RequestBuilder<SMiniCoin> {
         var path = "/transfer/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path
@@ -93,7 +93,7 @@ open class SMiniCoinControllerAPI {
 
         let requestBuilder: RequestBuilder<SMiniCoin>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
 }

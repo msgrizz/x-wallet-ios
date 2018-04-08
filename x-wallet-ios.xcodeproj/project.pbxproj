@@ -889,8 +889,6 @@
 			children = (
 				D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */,
 				A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */,
-				D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */,
-				D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */,
 				D5ADC2ED205A424A001307E8 /* XWContractView.swift */,
 				D5ADC2EF205A425B001307E8 /* XWContractView.xib */,
 				A773E60B206A3062002C5721 /* XWContractDemoTableViewCell.swift */,
@@ -899,6 +897,8 @@
 				A773E611206A398F002C5721 /* XWContractHeadView.xib */,
 				A773E615206A3CD3002C5721 /* XWImportantHeadView.swift */,
 				A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */,
+				D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */,
+				D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */,
 				D5E6478F2079F24A00AB6BC5 /* XWIOUTableViewCell.swift */,
 				D5E647902079F24A00AB6BC5 /* XWIOUTableViewCell.xib */,
 			);

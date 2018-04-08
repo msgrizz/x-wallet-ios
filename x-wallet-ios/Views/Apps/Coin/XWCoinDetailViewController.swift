@@ -14,15 +14,7 @@ class XWCoinDetailViewController: UIBaseViewController {
     @IBOutlet weak var headImage: UIButton!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
-    var coinPool: SMiniCoinPool! {
-        didSet {
-            self.coinView.kf.setImage(with: URL(string: coinPool.logo!))
-            self.coinNameLabel.text = coinPool.name!
-            self.countLabel.text = "\(self.coinPool.fixed!)/\(self.coinPool.fixed!)"
-            self.userNameLabel.text = self.coinPool.issuer?.loginName!
-            self.headImage.kf.setImage(with: URL(string: (self.coinPool.issuer?.avatar)!), for: UIControlState.normal)
-        }
-    }
+    var coinPool: SMiniCoinPool!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +27,12 @@ class XWCoinDetailViewController: UIBaseViewController {
         )
         trackButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = trackButton
+        
+        self.coinView.kf.setImage(with: URL(string: coinPool.logo!))
+        self.coinNameLabel.text = coinPool.name!
+        self.countLabel.text = "\(self.coinPool.own!)/\(self.coinPool.fixed!)"
+        self.userNameLabel.text = self.coinPool.issuer?.loginName!
+        self.headImage.kf.setImage(with: URL(string: (self.coinPool.issuer?.avatar)!), for: UIControlState.normal)
     }
     
     @objc func track(_ : UIBarButtonItem) {

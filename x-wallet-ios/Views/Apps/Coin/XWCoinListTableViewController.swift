@@ -122,7 +122,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         let vc = Main.instantiateViewController(withIdentifier: "XWCoinDetailViewController") as! XWCoinDetailViewController
         if indexPath.section == 0 {
             let coinData = holdDataModels[indexPath.row]
-            SMiniCoinPoolControllerAPI.getOneUsingGET1(id: coinData.coinId) { (pool, error) in
+            SMiniCoinPoolControllerAPI.getOneWithAccountIdUsingGET(poolId: coinData.coinId, accountId: Int64(Defaults[.userId])) { (pool, error) in
                 DispatchQueue.main.async {
                     vc.coinPool = pool
                     self.navigationController?.pushViewController(vc, animated: true)
@@ -131,7 +131,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
 
         }else {
             let coinData = issuedDataModels[indexPath.row]
-            SMiniCoinPoolControllerAPI.getOneUsingGET1(id: coinData.coinId) { (pool, error) in
+            SMiniCoinPoolControllerAPI.getOneWithAccountIdUsingGET(poolId: coinData.coinId, accountId: Int64(Defaults[.userId])) { (pool, error) in
                 DispatchQueue.main.async {
                     vc.coinPool = pool
                     self.navigationController?.pushViewController(vc, animated: true)
@@ -182,6 +182,9 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     
     func getPoolData() {
         SMiniCoinPoolControllerAPI.dashboardUsingGET(personId: Int64(Defaults[.userId])) { (data, error) in
+            guard data != nil else {
+                return
+            }
             let hold = data!["hold"]
             let issued = data!["issued"]
             for ele in hold! {

@@ -9,7 +9,11 @@
 import UIKit
 
 class XWIOUTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var tagButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var newMessageButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

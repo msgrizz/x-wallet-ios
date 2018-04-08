@@ -20,12 +20,13 @@ open class SMiniCoinPool: Codable {
     public var lastModifyTime: Int64?
     public var logo: String?
     public var name: String?
+    public var own: Int64?
     public var transferable: Bool?
     public var version: Int64?
 
 
     
-    public init(activated: Bool?, content: String?, createTime: Int64?, fixed: Int64?, id: Int64?, issuer: SAccount?, lastModifyTime: Int64?, logo: String?, name: String?, transferable: Bool?, version: Int64?) {
+    public init(activated: Bool?, content: String?, createTime: Int64?, fixed: Int64?, id: Int64?, issuer: SAccount?, lastModifyTime: Int64?, logo: String?, name: String?, own: Int64?, transferable: Bool?, version: Int64?) {
         self.activated = activated
         self.content = content
         self.createTime = createTime
@@ -35,6 +36,7 @@ open class SMiniCoinPool: Codable {
         self.lastModifyTime = lastModifyTime
         self.logo = logo
         self.name = name
+        self.own = own
         self.transferable = transferable
         self.version = version
     }
@@ -55,6 +57,7 @@ open class SMiniCoinPool: Codable {
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
         try container.encodeIfPresent(logo, forKey: "logo")
         try container.encodeIfPresent(name, forKey: "name")
+        try container.encodeIfPresent(own, forKey: "own")
         try container.encodeIfPresent(transferable, forKey: "transferable")
         try container.encodeIfPresent(version, forKey: "version")
     }
@@ -73,6 +76,7 @@ open class SMiniCoinPool: Codable {
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
         logo = try container.decodeIfPresent(String.self, forKey: "logo")
         name = try container.decodeIfPresent(String.self, forKey: "name")
+        own = try container.decodeIfPresent(Int64.self, forKey: "own")
         transferable = try container.decodeIfPresent(Bool.self, forKey: "transferable")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")
     }

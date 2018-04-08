@@ -121,6 +121,47 @@ open class SMiniCoinPoolControllerAPI {
     }
 
     /**
+     getOneWithAccountId
+     
+     - parameter poolId: (query) poolId 
+     - parameter accountId: (query) accountId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOneWithAccountIdUsingGET(poolId: Int64, accountId: Int64, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
+        getOneWithAccountIdUsingGETWithRequestBuilder(poolId: poolId, accountId: accountId).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     getOneWithAccountId
+     - GET /miniCoinPoolsWithAccountId
+     - examples: [{output=none}]
+     
+     - parameter poolId: (query) poolId 
+     - parameter accountId: (query) accountId 
+
+     - returns: RequestBuilder<SMiniCoinPool> 
+     */
+    open class func getOneWithAccountIdUsingGETWithRequestBuilder(poolId: Int64, accountId: Int64) -> RequestBuilder<SMiniCoinPool> {
+        let path = "/miniCoinPoolsWithAccountId"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
+            "poolId": poolId.encodeToJSON(), 
+            "accountId": accountId.encodeToJSON()
+        ])
+        
+
+        let requestBuilder: RequestBuilder<SMiniCoinPool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      get
      
      - parameter completion: completion handler to receive the data and the error objects
