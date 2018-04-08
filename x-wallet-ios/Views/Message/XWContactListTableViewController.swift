@@ -154,6 +154,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     
     func getUserData() {
         SAccountControllerAPI.getUsingGET { (accounts, error) in
+            self.userData.users.removeAll()
             for ele in accounts! {
                 let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)
                 self.userData.users.append(user)

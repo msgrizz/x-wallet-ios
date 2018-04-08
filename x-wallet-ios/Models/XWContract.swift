@@ -19,11 +19,12 @@ class XWContract: NSObject {
     var title: String
     var type: ContractType
     var content: String
-    
+    var id: Int64?
     //MARK: Inits
-    init(title: String, type: ContractType, content: String) {
+    init(title: String, type: ContractType, content: String , id: Int64 = 1) {
         self.title = title
         self.type = type
         self.content = content
+        self.id = id
     }
 }

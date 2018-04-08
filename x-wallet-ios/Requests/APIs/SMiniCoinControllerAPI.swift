@@ -59,6 +59,41 @@ open class SMiniCoinControllerAPI {
     }
 
     /**
+     transferMany
+     
+     - parameter transferManyDTO: (body) transferManyDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func transferManyUsingPOST(transferManyDTO: TransferManyDTO, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
+        transferManyUsingPOSTWithRequestBuilder(transferManyDTO: transferManyDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     transferMany
+     - POST /transferMany
+     - examples: [{output=none}]
+     
+     - parameter transferManyDTO: (body) transferManyDTO 
+
+     - returns: RequestBuilder<Bool> 
+     */
+    open class func transferManyUsingPOSTWithRequestBuilder(transferManyDTO: TransferManyDTO) -> RequestBuilder<Bool> {
+        let path = "/transferMany"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: transferManyDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Bool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
      transfer
      
      - parameter id: (path) id 

@@ -196,6 +196,7 @@
 		D5E6478E2079EA4B00AB6BC5 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6476B2079EA4A00AB6BC5 /* AlamofireImplementations.swift */; };
 		D5E647912079F24A00AB6BC5 /* XWIOUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6478F2079F24A00AB6BC5 /* XWIOUTableViewCell.swift */; };
 		D5E647922079F24A00AB6BC5 /* XWIOUTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E647902079F24A00AB6BC5 /* XWIOUTableViewCell.xib */; };
+		D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,6 +409,7 @@
 		D5E6476B2079EA4A00AB6BC5 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
 		D5E6478F2079F24A00AB6BC5 /* XWIOUTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWIOUTableViewCell.swift; sourceTree = "<group>"; };
 		D5E647902079F24A00AB6BC5 /* XWIOUTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWIOUTableViewCell.xib; sourceTree = "<group>"; };
+		D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferManyDTO.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -925,6 +927,7 @@
 		D5E647552079EA4A00AB6BC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */,
 				D5E647562079EA4A00AB6BC5 /* Link.swift */,
 				D5E647572079EA4A00AB6BC5 /* MiniCoinPoolDashBoardDTO.swift */,
 				D5E647582079EA4A00AB6BC5 /* PageSMiniCoin.swift */,
@@ -1412,6 +1415,7 @@
 				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
+				D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */,
 				D5E647852079EA4B00AB6BC5 /* SMiniContractDTO.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,
 				D5E6476D2079EA4B00AB6BC5 /* SAccountControllerAPI.swift in Sources */,

@@ -126,7 +126,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.currentUser=XWUser.init(name: "123", email: "linkio.hu@gmail.com", id: "122355", profilePic: UIImage(named: "head1")!, avatar: "")
+        self.currentUser=XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(XWLocalManager.sharedInstance().localUser.id!)", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
         self.inputBar.backgroundColor = Colors.backGroundColor
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.customization()
@@ -311,11 +311,10 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
                     vc.title = "Promise"
                     self.navigationController?.pushViewController(vc, animated: true)
                 }else {
-                    vc.launchURL = kIOUURL
+                    vc.launchURL = kIOUURL+"?id=\(self.contractModel.id!)"
                     vc.title = NSLocalizedString("I.O.U", comment: "")
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
-                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         self.inputTextField.resignFirstResponder()

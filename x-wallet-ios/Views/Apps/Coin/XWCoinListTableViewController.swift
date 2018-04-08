@@ -47,8 +47,13 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-    
         self.getPoolData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.view.addSubview(self.addMoreButton)
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -71,15 +76,6 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.addMoreButton.removeFromSuperview()
         super.viewDidDisappear(animated)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
-        //        self.bottomBar.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 71, width: UIScreen.main.bounds.width, height: 71)
-        //        self.bottomBar.bringSubview(toFront: self.addButton)
-        //        self.navigationController?.view.addSubview(self.bottomBar)
-        self.navigationController?.view.addSubview(self.addMoreButton)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -109,10 +105,8 @@ class XWCoinListTableViewController: UIBaseTableViewController {
             cell.coinData = holdDataModels[indexPath.row]
         }else {
             cell.coinData = issuedDataModels[indexPath.row]
-            if indexPath.row == 0 {
                 cell.transferButton.addTarget(self, action: #selector(transferAction(_:)), for: .touchUpInside)
                 cell.transferButton.tag = indexPath.row
-            }
         }
         return cell
     }
@@ -162,7 +156,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     @objc func transferAction(_ button: UIButton) {
         let coinData = issuedDataModels[button.tag]
         let vc = XWWebViewController()
-        vc.launchURL = "http://192.168.18.137:8081/#/transferCoins?id=\(coinData.coinId)"
+        vc.launchURL = kTransferCoinsURL+"?id=\(coinData.coinId)"
         vc.title = "Transfer Coins"
         self.navigationController?.pushViewController(vc, animated: true)
     }

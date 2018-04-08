@@ -12,6 +12,57 @@ import Alamofire
 
 open class SMiniContractControllerAPI {
     /**
+     * enum for parameter miniContractType
+     */
+    public enum MiniContractType_getByTypeUsingGET: String { 
+        case currency = "Currency"
+        case receipt = "Receipt"
+        case promise = "Promise"
+        case iou = "Iou"
+    }
+
+    /**
+     getByType
+     
+     - parameter miniContractType: (query) miniContractType 
+     - parameter accountId: (query) accountId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getByTypeUsingGET(miniContractType: MiniContractType_getByTypeUsingGET, accountId: Int64, completion: @escaping ((_ data: [SMiniContract]?,_ error: Error?) -> Void)) {
+        getByTypeUsingGETWithRequestBuilder(miniContractType: miniContractType, accountId: accountId).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     getByType
+     - GET /sMiniContractsByType
+     - examples: [{output=none}]
+     
+     - parameter miniContractType: (query) miniContractType 
+     - parameter accountId: (query) accountId 
+
+     - returns: RequestBuilder<[SMiniContract]> 
+     */
+    open class func getByTypeUsingGETWithRequestBuilder(miniContractType: MiniContractType_getByTypeUsingGET, accountId: Int64) -> RequestBuilder<[SMiniContract]> {
+        let path = "/sMiniContractsByType"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
+            "miniContractType": miniContractType.rawValue, 
+            "accountId": accountId.encodeToJSON()
+        ])
+        
+
+        let requestBuilder: RequestBuilder<[SMiniContract]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      getOne
      
      - parameter id: (path) id 

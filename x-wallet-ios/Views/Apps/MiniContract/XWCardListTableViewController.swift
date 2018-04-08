@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyUserDefaults
 class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDelegate {
     
     var lastScrollOffset: CGFloat = 0
@@ -21,7 +21,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var addButton:UIButton!
     
-    
+    var iouArray:  [XWContract] = [XWContract]()
     
     
     override func viewDidLoad() {
@@ -50,7 +50,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-
+        self.getIOUData()
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -79,9 +79,6 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
-//        self.bottomBar.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - 71, width: UIScreen.main.bounds.width, height: 71)
-//        self.bottomBar.bringSubview(toFront: self.addButton)
-//        self.navigationController?.view.addSubview(self.bottomBar)
         self.navigationController?.view.addSubview(self.addMoreButton)
     }
     
@@ -106,30 +103,38 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }else if section == 2{
             return 2
         }else {
-            return 1
+            return self.iouArray.count
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
         if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
             if indexPath.row == 0 {
                 cell.backImageView.image = UIImage(named: "card1")
             }else {
                 cell.backImageView.image = UIImage(named: "card2")
             }
+            return cell
         }else if indexPath.section == 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
             cell.backImageView.image = UIImage(named: "card3")
+            return cell
         }else if indexPath.section == 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
             if indexPath.row == 0 {
                 cell.backImageView.image = UIImage(named: "card4")
             }else {
                 cell.backImageView.image = UIImage(named: "card5")
             }
+            return cell
         }else {
-            cell.backImageView.image = UIImage(named: "card6")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWIOUTableViewCell", for: indexPath) as! XWIOUTableViewCell
+            let iou = self.iouArray[indexPath.row]
+            cell.timeLabel.text = iou.content
+            cell.titleLabel.text = iou.title
+            return cell
         }
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -223,6 +228,31 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         else {
         }
         
+    }
+    
+    func getIOUData() {
+        SMiniContractControllerAPI.getByTypeUsingGET(miniContractType: .iou, accountId: Int64(Defaults[.userId])) { (data, error) in
+            guard data != nil else {
+                return
+            }
+            self.iouArray.removeAll()
+            for ele in data! {
+                let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy" //Specify your format that you want
+                
+                var title = ""
+                if ele.receiver?.id == Int64(Defaults[.userId]) {
+                    title = "From: \(ele.sender!.loginName!)"
+                }else {
+                    title = "To: \(ele.receiver!.loginName!)"
+                }
+                
+                let iou = XWContract(title: title, type: ContractType.IOU, content: dateFormatter.string(from: date), id:ele.id!)
+                self.iouArray.append(iou)
+            }
+            self.tableView.reloadData()
+        }
     }
 
 }

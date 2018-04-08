@@ -87,7 +87,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
         }
         
         bridge.registerHandler("Get.userId") { (args:[Any]) -> (Bool, [Any]?) in
-            return (true, [Defaults[.userId]])
+            return (true, ["\(XWLocalManager.sharedInstance().localUser.loginName!),\(Int64(Defaults[.userId]))"])
         }
         
         bridge.registerHandler("Scan.qr") { (args:[Any]) -> (Bool, [Any]?) in
@@ -142,7 +142,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     }
     
     @objc func save(_ : UIBarButtonItem) {
-        self.bridge.callJsHandler("Send.contractCallback", args: [], callback: nil)
+        self.bridge.callJsHandler("Send.contractCallback", args: [])
     }
     
     func getQueryStringParameter(url: String, param: String) -> String? {
