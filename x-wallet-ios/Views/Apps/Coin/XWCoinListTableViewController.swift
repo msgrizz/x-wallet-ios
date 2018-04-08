@@ -160,12 +160,11 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     }
     
     @objc func transferAction(_ button: UIButton) {
-        if button.tag == 0 {
-            let vc = XWWebViewController()
-            vc.launchURL = kTransferCoinsURL
-            vc.title = "Transfer Coins"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let coinData = issuedDataModels[button.tag]
+        let vc = XWWebViewController()
+        vc.launchURL = "http://192.168.18.137:8081/#/transferCoins?id=\(coinData.coinId)"
+        vc.title = "Transfer Coins"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

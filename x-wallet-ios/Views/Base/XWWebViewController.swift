@@ -60,7 +60,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 contact.blockproerty={ (user) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        self.bridge.callJsHandler("Person.selectCallback", args: [user.name,user.id], callback: nil)
+                        self.bridge.callJsHandler("Person.selectCallback", args: ["\(user.name),\(user.id)"], callback: nil)
                     }
                 }
                 let navi = UIBaseNavigationViewController(rootViewController: contact)
@@ -99,7 +99,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                         contact.dismiss(animated: true, completion: nil)
                         let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
                         let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
-                        self.bridge.callJsHandler("Scan.qrCallback", args: [name!,id!], callback: nil)
+                        self.bridge.callJsHandler("Scan.qrCallback", args: ["\(name!),\(id!)"], callback: nil)
                     }
                 }
                 let navi = UIBaseNavigationViewController(rootViewController: contact)
