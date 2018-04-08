@@ -44,47 +44,6 @@
 		A773E61A206A6E3C002C5721 /* XWContactHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E619206A6E3C002C5721 /* XWContactHeadView.swift */; };
 		A773E61C206A6E47002C5721 /* XWContactHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773E61B206A6E47002C5721 /* XWContactHeadView.xib */; };
 		A773E61E206A7275002C5721 /* XWDemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E61D206A7275002C5721 /* XWDemoData.swift */; };
-		A7C15EC42073B17D009C43D8 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E8E2073B17B009C43D8 /* JSONEncodingHelper.swift */; };
-		A7C15EC52073B17D009C43D8 /* ResourcesSMiniCoinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E902073B17C009C43D8 /* ResourcesSMiniCoinPool.swift */; };
-		A7C15EC62073B17D009C43D8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E912073B17C009C43D8 /* View.swift */; };
-		A7C15EC72073B17D009C43D8 /* ResourceSMiniCoinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E922073B17C009C43D8 /* ResourceSMiniCoinPool.swift */; };
-		A7C15EC82073B17D009C43D8 /* ResourceSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E932073B17C009C43D8 /* ResourceSupport.swift */; };
-		A7C15EC92073B17D009C43D8 /* ResourceSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E942073B17C009C43D8 /* ResourceSNotification.swift */; };
-		A7C15ECA2073B17D009C43D8 /* SAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E952073B17C009C43D8 /* SAccount.swift */; };
-		A7C15ECB2073B17D009C43D8 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E962073B17C009C43D8 /* Link.swift */; };
-		A7C15ECC2073B17D009C43D8 /* SMiniContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E972073B17C009C43D8 /* SMiniContract.swift */; };
-		A7C15ECD2073B17D009C43D8 /* ResourceSMiniCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E982073B17C009C43D8 /* ResourceSMiniCoin.swift */; };
-		A7C15ECE2073B17D009C43D8 /* ResourcesSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E992073B17C009C43D8 /* ResourcesSNotification.swift */; };
-		A7C15ECF2073B17D009C43D8 /* ResourcesSMiniCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E9A2073B17C009C43D8 /* ResourcesSMiniCoin.swift */; };
-		A7C15ED02073B17D009C43D8 /* Resourcenull.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E9B2073B17C009C43D8 /* Resourcenull.swift */; };
-		A7C15ED12073B17D009C43D8 /* SNotificationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E9C2073B17C009C43D8 /* SNotificationDTO.swift */; };
-		A7C15ED22073B17D009C43D8 /* ResourcesSMiniContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E9D2073B17C009C43D8 /* ResourcesSMiniContract.swift */; };
-		A7C15ED42073B17D009C43D8 /* SNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15E9F2073B17C009C43D8 /* SNotification.swift */; };
-		A7C15ED52073B17D009C43D8 /* SMiniCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA02073B17C009C43D8 /* SMiniCoin.swift */; };
-		A7C15ED62073B17D009C43D8 /* ResourcesListSMiniCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA12073B17C009C43D8 /* ResourcesListSMiniCoin.swift */; };
-		A7C15ED72073B17D009C43D8 /* ResourceSMiniContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA22073B17C009C43D8 /* ResourceSMiniContract.swift */; };
-		A7C15ED82073B17D009C43D8 /* SMiniCoinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA32073B17C009C43D8 /* SMiniCoinPool.swift */; };
-		A7C15ED92073B17D009C43D8 /* ResourceSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA42073B17C009C43D8 /* ResourceSAccount.swift */; };
-		A7C15EDA2073B17D009C43D8 /* ResourcesSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA52073B17C009C43D8 /* ResourcesSAccount.swift */; };
-		A7C15EDB2073B17D009C43D8 /* SMiniCoinPoolDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA62073B17C009C43D8 /* SMiniCoinPoolDTO.swift */; };
-		A7C15EDC2073B17D009C43D8 /* ResourcesListSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA72073B17C009C43D8 /* ResourcesListSNotification.swift */; };
-		A7C15EDD2073B17D009C43D8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EA82073B17C009C43D8 /* Models.swift */; };
-		A7C15EDE2073B17D009C43D8 /* SAccountControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EAA2073B17C009C43D8 /* SAccountControllerAPI.swift */; };
-		A7C15EDF2073B17D009C43D8 /* SMiniCoinEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EAB2073B17C009C43D8 /* SMiniCoinEntityAPI.swift */; };
-		A7C15EE02073B17D009C43D8 /* SNotificationEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EAC2073B17C009C43D8 /* SNotificationEntityAPI.swift */; };
-		A7C15EE12073B17E009C43D8 /* SMiniContractEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EAD2073B17C009C43D8 /* SMiniContractEntityAPI.swift */; };
-		A7C15EE22073B17E009C43D8 /* SMiniCoinPoolEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EAE2073B17C009C43D8 /* SMiniCoinPoolEntityAPI.swift */; };
-		A7C15EEA2073B17E009C43D8 /* SMiniCoinPoolControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EB62073B17C009C43D8 /* SMiniCoinPoolControllerAPI.swift */; };
-		A7C15EEB2073B17E009C43D8 /* SAccountEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EB72073B17C009C43D8 /* SAccountEntityAPI.swift */; };
-		A7C15EEC2073B17E009C43D8 /* SMiniContractControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EB82073B17C009C43D8 /* SMiniContractControllerAPI.swift */; };
-		A7C15EEE2073B17E009C43D8 /* SNotificationControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EBA2073B17C009C43D8 /* SNotificationControllerAPI.swift */; };
-		A7C15EF12073B17E009C43D8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EBD2073B17C009C43D8 /* Extensions.swift */; };
-		A7C15EF22073B17E009C43D8 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EBE2073B17C009C43D8 /* APIHelper.swift */; };
-		A7C15EF32073B17E009C43D8 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EBF2073B17D009C43D8 /* Configuration.swift */; };
-		A7C15EF42073B17E009C43D8 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EC02073B17D009C43D8 /* AlamofireImplementations.swift */; };
-		A7C15EF52073B17E009C43D8 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EC12073B17D009C43D8 /* APIs.swift */; };
-		A7C15EF62073B17E009C43D8 /* JSONEncodableEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EC22073B17D009C43D8 /* JSONEncodableEncoding.swift */; };
-		A7C15EF72073B17E009C43D8 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C15EC32073B17D009C43D8 /* CodableHelper.swift */; };
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
@@ -199,6 +158,36 @@
 		D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EF205A425B001307E8 /* XWContractView.xib */; };
 		D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */; };
 		D5E646802074A3FE00AB6BC5 /* XWLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */; };
+		D5E646DF2079B93800AB6BC5 /* ImportantMarkEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C02079B93500AB6BC5 /* ImportantMarkEntityAPI.swift */; };
+		D5E646E02079B93800AB6BC5 /* SAccountControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C12079B93500AB6BC5 /* SAccountControllerAPI.swift */; };
+		D5E646E12079B93800AB6BC5 /* SMiniCoinEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C22079B93500AB6BC5 /* SMiniCoinEntityAPI.swift */; };
+		D5E646E22079B93800AB6BC5 /* SMiniCoinPoolControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C32079B93500AB6BC5 /* SMiniCoinPoolControllerAPI.swift */; };
+		D5E646E32079B93800AB6BC5 /* SMiniCoinPoolEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C42079B93500AB6BC5 /* SMiniCoinPoolEntityAPI.swift */; };
+		D5E646E42079B93800AB6BC5 /* SMiniContractControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C52079B93500AB6BC5 /* SMiniContractControllerAPI.swift */; };
+		D5E646E52079B93800AB6BC5 /* SMiniContractEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C62079B93500AB6BC5 /* SMiniContractEntityAPI.swift */; };
+		D5E646E62079B93800AB6BC5 /* SNotificationControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C72079B93500AB6BC5 /* SNotificationControllerAPI.swift */; };
+		D5E646E72079B93800AB6BC5 /* SNotificationEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C82079B93500AB6BC5 /* SNotificationEntityAPI.swift */; };
+		D5E646E82079B93800AB6BC5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646C92079B93600AB6BC5 /* Extensions.swift */; };
+		D5E646E92079B93800AB6BC5 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646CA2079B93600AB6BC5 /* APIHelper.swift */; };
+		D5E646EA2079B93800AB6BC5 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646CB2079B93600AB6BC5 /* APIs.swift */; };
+		D5E646EB2079B93800AB6BC5 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646CD2079B93600AB6BC5 /* Link.swift */; };
+		D5E646EC2079B93800AB6BC5 /* MiniCoinPoolDashBoardDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646CE2079B93600AB6BC5 /* MiniCoinPoolDashBoardDTO.swift */; };
+		D5E646ED2079B93800AB6BC5 /* ResourceSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646CF2079B93600AB6BC5 /* ResourceSAccount.swift */; };
+		D5E646EE2079B93800AB6BC5 /* ResourceSMiniCoinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D02079B93600AB6BC5 /* ResourceSMiniCoinPool.swift */; };
+		D5E646EF2079B93800AB6BC5 /* SAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D12079B93600AB6BC5 /* SAccount.swift */; };
+		D5E646F02079B93800AB6BC5 /* SAccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D22079B93600AB6BC5 /* SAccountDTO.swift */; };
+		D5E646F12079B93800AB6BC5 /* SMiniCoinPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D32079B93600AB6BC5 /* SMiniCoinPool.swift */; };
+		D5E646F22079B93800AB6BC5 /* SMiniCoinPoolDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D42079B93600AB6BC5 /* SMiniCoinPoolDTO.swift */; };
+		D5E646F32079B93800AB6BC5 /* SMiniContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D52079B93600AB6BC5 /* SMiniContract.swift */; };
+		D5E646F42079B93800AB6BC5 /* SMiniContractDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D62079B93600AB6BC5 /* SMiniContractDTO.swift */; };
+		D5E646F52079B93800AB6BC5 /* SNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D72079B93600AB6BC5 /* SNotification.swift */; };
+		D5E646F62079B93800AB6BC5 /* SNotificationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D82079B93600AB6BC5 /* SNotificationDTO.swift */; };
+		D5E646F72079B93800AB6BC5 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646D92079B93700AB6BC5 /* CodableHelper.swift */; };
+		D5E646F82079B93800AB6BC5 /* JSONEncodableEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DA2079B93700AB6BC5 /* JSONEncodableEncoding.swift */; };
+		D5E646F92079B93800AB6BC5 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DB2079B93800AB6BC5 /* JSONEncodingHelper.swift */; };
+		D5E646FA2079B93800AB6BC5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DC2079B93800AB6BC5 /* Configuration.swift */; };
+		D5E646FB2079B93800AB6BC5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DD2079B93800AB6BC5 /* Models.swift */; };
+		D5E646FC2079B93800AB6BC5 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DE2079B93800AB6BC5 /* AlamofireImplementations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,47 +242,6 @@
 		A773E619206A6E3C002C5721 /* XWContactHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactHeadView.swift; sourceTree = "<group>"; };
 		A773E61B206A6E47002C5721 /* XWContactHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContactHeadView.xib; sourceTree = "<group>"; };
 		A773E61D206A7275002C5721 /* XWDemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDemoData.swift; sourceTree = "<group>"; };
-		A7C15E8E2073B17B009C43D8 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
-		A7C15E902073B17C009C43D8 /* ResourcesSMiniCoinPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesSMiniCoinPool.swift; sourceTree = "<group>"; };
-		A7C15E912073B17C009C43D8 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		A7C15E922073B17C009C43D8 /* ResourceSMiniCoinPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSMiniCoinPool.swift; sourceTree = "<group>"; };
-		A7C15E932073B17C009C43D8 /* ResourceSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSupport.swift; sourceTree = "<group>"; };
-		A7C15E942073B17C009C43D8 /* ResourceSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSNotification.swift; sourceTree = "<group>"; };
-		A7C15E952073B17C009C43D8 /* SAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccount.swift; sourceTree = "<group>"; };
-		A7C15E962073B17C009C43D8 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		A7C15E972073B17C009C43D8 /* SMiniContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContract.swift; sourceTree = "<group>"; };
-		A7C15E982073B17C009C43D8 /* ResourceSMiniCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSMiniCoin.swift; sourceTree = "<group>"; };
-		A7C15E992073B17C009C43D8 /* ResourcesSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesSNotification.swift; sourceTree = "<group>"; };
-		A7C15E9A2073B17C009C43D8 /* ResourcesSMiniCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesSMiniCoin.swift; sourceTree = "<group>"; };
-		A7C15E9B2073B17C009C43D8 /* Resourcenull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resourcenull.swift; sourceTree = "<group>"; };
-		A7C15E9C2073B17C009C43D8 /* SNotificationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotificationDTO.swift; sourceTree = "<group>"; };
-		A7C15E9D2073B17C009C43D8 /* ResourcesSMiniContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesSMiniContract.swift; sourceTree = "<group>"; };
-		A7C15E9F2073B17C009C43D8 /* SNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotification.swift; sourceTree = "<group>"; };
-		A7C15EA02073B17C009C43D8 /* SMiniCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoin.swift; sourceTree = "<group>"; };
-		A7C15EA12073B17C009C43D8 /* ResourcesListSMiniCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesListSMiniCoin.swift; sourceTree = "<group>"; };
-		A7C15EA22073B17C009C43D8 /* ResourceSMiniContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSMiniContract.swift; sourceTree = "<group>"; };
-		A7C15EA32073B17C009C43D8 /* SMiniCoinPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPool.swift; sourceTree = "<group>"; };
-		A7C15EA42073B17C009C43D8 /* ResourceSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSAccount.swift; sourceTree = "<group>"; };
-		A7C15EA52073B17C009C43D8 /* ResourcesSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesSAccount.swift; sourceTree = "<group>"; };
-		A7C15EA62073B17C009C43D8 /* SMiniCoinPoolDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPoolDTO.swift; sourceTree = "<group>"; };
-		A7C15EA72073B17C009C43D8 /* ResourcesListSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesListSNotification.swift; sourceTree = "<group>"; };
-		A7C15EA82073B17C009C43D8 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		A7C15EAA2073B17C009C43D8 /* SAccountControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccountControllerAPI.swift; sourceTree = "<group>"; };
-		A7C15EAB2073B17C009C43D8 /* SMiniCoinEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinEntityAPI.swift; sourceTree = "<group>"; };
-		A7C15EAC2073B17C009C43D8 /* SNotificationEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotificationEntityAPI.swift; sourceTree = "<group>"; };
-		A7C15EAD2073B17C009C43D8 /* SMiniContractEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContractEntityAPI.swift; sourceTree = "<group>"; };
-		A7C15EAE2073B17C009C43D8 /* SMiniCoinPoolEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPoolEntityAPI.swift; sourceTree = "<group>"; };
-		A7C15EB62073B17C009C43D8 /* SMiniCoinPoolControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPoolControllerAPI.swift; sourceTree = "<group>"; };
-		A7C15EB72073B17C009C43D8 /* SAccountEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccountEntityAPI.swift; sourceTree = "<group>"; };
-		A7C15EB82073B17C009C43D8 /* SMiniContractControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContractControllerAPI.swift; sourceTree = "<group>"; };
-		A7C15EBA2073B17C009C43D8 /* SNotificationControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotificationControllerAPI.swift; sourceTree = "<group>"; };
-		A7C15EBD2073B17C009C43D8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A7C15EBE2073B17C009C43D8 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
-		A7C15EBF2073B17D009C43D8 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		A7C15EC02073B17D009C43D8 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
-		A7C15EC12073B17D009C43D8 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		A7C15EC22073B17D009C43D8 /* JSONEncodableEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodableEncoding.swift; sourceTree = "<group>"; };
-		A7C15EC32073B17D009C43D8 /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
 		A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWWebViewController.swift; sourceTree = "<group>"; };
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C80047CA3755F43019EE93A6 /* Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -414,6 +362,36 @@
 		D5ADC2EF205A425B001307E8 /* XWContractView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractView.xib; sourceTree = "<group>"; };
 		D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWReceiveCodeViewController.swift; sourceTree = "<group>"; };
 		D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWLocalManager.swift; sourceTree = "<group>"; };
+		D5E646C02079B93500AB6BC5 /* ImportantMarkEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantMarkEntityAPI.swift; sourceTree = "<group>"; };
+		D5E646C12079B93500AB6BC5 /* SAccountControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccountControllerAPI.swift; sourceTree = "<group>"; };
+		D5E646C22079B93500AB6BC5 /* SMiniCoinEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinEntityAPI.swift; sourceTree = "<group>"; };
+		D5E646C32079B93500AB6BC5 /* SMiniCoinPoolControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPoolControllerAPI.swift; sourceTree = "<group>"; };
+		D5E646C42079B93500AB6BC5 /* SMiniCoinPoolEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPoolEntityAPI.swift; sourceTree = "<group>"; };
+		D5E646C52079B93500AB6BC5 /* SMiniContractControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContractControllerAPI.swift; sourceTree = "<group>"; };
+		D5E646C62079B93500AB6BC5 /* SMiniContractEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContractEntityAPI.swift; sourceTree = "<group>"; };
+		D5E646C72079B93500AB6BC5 /* SNotificationControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotificationControllerAPI.swift; sourceTree = "<group>"; };
+		D5E646C82079B93500AB6BC5 /* SNotificationEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotificationEntityAPI.swift; sourceTree = "<group>"; };
+		D5E646C92079B93600AB6BC5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D5E646CA2079B93600AB6BC5 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		D5E646CB2079B93600AB6BC5 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
+		D5E646CD2079B93600AB6BC5 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		D5E646CE2079B93600AB6BC5 /* MiniCoinPoolDashBoardDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCoinPoolDashBoardDTO.swift; sourceTree = "<group>"; };
+		D5E646CF2079B93600AB6BC5 /* ResourceSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSAccount.swift; sourceTree = "<group>"; };
+		D5E646D02079B93600AB6BC5 /* ResourceSMiniCoinPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSMiniCoinPool.swift; sourceTree = "<group>"; };
+		D5E646D12079B93600AB6BC5 /* SAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccount.swift; sourceTree = "<group>"; };
+		D5E646D22079B93600AB6BC5 /* SAccountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccountDTO.swift; sourceTree = "<group>"; };
+		D5E646D32079B93600AB6BC5 /* SMiniCoinPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPool.swift; sourceTree = "<group>"; };
+		D5E646D42079B93600AB6BC5 /* SMiniCoinPoolDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniCoinPoolDTO.swift; sourceTree = "<group>"; };
+		D5E646D52079B93600AB6BC5 /* SMiniContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContract.swift; sourceTree = "<group>"; };
+		D5E646D62079B93600AB6BC5 /* SMiniContractDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContractDTO.swift; sourceTree = "<group>"; };
+		D5E646D72079B93600AB6BC5 /* SNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotification.swift; sourceTree = "<group>"; };
+		D5E646D82079B93600AB6BC5 /* SNotificationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNotificationDTO.swift; sourceTree = "<group>"; };
+		D5E646D92079B93700AB6BC5 /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
+		D5E646DA2079B93700AB6BC5 /* JSONEncodableEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodableEncoding.swift; sourceTree = "<group>"; };
+		D5E646DB2079B93800AB6BC5 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
+		D5E646DC2079B93800AB6BC5 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		D5E646DD2079B93800AB6BC5 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D5E646DE2079B93800AB6BC5 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -548,66 +526,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A7C15E8F2073B17C009C43D8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A7C15E902073B17C009C43D8 /* ResourcesSMiniCoinPool.swift */,
-				A7C15E912073B17C009C43D8 /* View.swift */,
-				A7C15E922073B17C009C43D8 /* ResourceSMiniCoinPool.swift */,
-				A7C15E932073B17C009C43D8 /* ResourceSupport.swift */,
-				A7C15E942073B17C009C43D8 /* ResourceSNotification.swift */,
-				A7C15E952073B17C009C43D8 /* SAccount.swift */,
-				A7C15E962073B17C009C43D8 /* Link.swift */,
-				A7C15E972073B17C009C43D8 /* SMiniContract.swift */,
-				A7C15E982073B17C009C43D8 /* ResourceSMiniCoin.swift */,
-				A7C15E992073B17C009C43D8 /* ResourcesSNotification.swift */,
-				A7C15E9A2073B17C009C43D8 /* ResourcesSMiniCoin.swift */,
-				A7C15E9B2073B17C009C43D8 /* Resourcenull.swift */,
-				A7C15E9C2073B17C009C43D8 /* SNotificationDTO.swift */,
-				A7C15E9D2073B17C009C43D8 /* ResourcesSMiniContract.swift */,
-				A7C15E9F2073B17C009C43D8 /* SNotification.swift */,
-				A7C15EA02073B17C009C43D8 /* SMiniCoin.swift */,
-				A7C15EA12073B17C009C43D8 /* ResourcesListSMiniCoin.swift */,
-				A7C15EA22073B17C009C43D8 /* ResourceSMiniContract.swift */,
-				A7C15EA32073B17C009C43D8 /* SMiniCoinPool.swift */,
-				A7C15EA42073B17C009C43D8 /* ResourceSAccount.swift */,
-				A7C15EA52073B17C009C43D8 /* ResourcesSAccount.swift */,
-				A7C15EA62073B17C009C43D8 /* SMiniCoinPoolDTO.swift */,
-				A7C15EA72073B17C009C43D8 /* ResourcesListSNotification.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		A7C15EA92073B17C009C43D8 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-				A7C15EAA2073B17C009C43D8 /* SAccountControllerAPI.swift */,
-				A7C15EAB2073B17C009C43D8 /* SMiniCoinEntityAPI.swift */,
-				A7C15EAC2073B17C009C43D8 /* SNotificationEntityAPI.swift */,
-				A7C15EAD2073B17C009C43D8 /* SMiniContractEntityAPI.swift */,
-				A7C15EAE2073B17C009C43D8 /* SMiniCoinPoolEntityAPI.swift */,
-				A7C15EB62073B17C009C43D8 /* SMiniCoinPoolControllerAPI.swift */,
-				A7C15EB72073B17C009C43D8 /* SAccountEntityAPI.swift */,
-				A7C15EB82073B17C009C43D8 /* SMiniContractControllerAPI.swift */,
-				A7C15EBA2073B17C009C43D8 /* SNotificationControllerAPI.swift */,
-			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				A7C15EC02073B17D009C43D8 /* AlamofireImplementations.swift */,
-				A7C15EBE2073B17C009C43D8 /* APIHelper.swift */,
-				A7C15EA92073B17C009C43D8 /* APIs */,
-				A7C15EC12073B17D009C43D8 /* APIs.swift */,
-				A7C15EC32073B17D009C43D8 /* CodableHelper.swift */,
-				A7C15EBF2073B17D009C43D8 /* Configuration.swift */,
-				A7C15EBD2073B17C009C43D8 /* Extensions.swift */,
-				A7C15EC22073B17D009C43D8 /* JSONEncodableEncoding.swift */,
-				A7C15E8E2073B17B009C43D8 /* JSONEncodingHelper.swift */,
-				A7C15E8F2073B17C009C43D8 /* Models */,
-				A7C15EA82073B17C009C43D8 /* Models.swift */,
+				D5E646DE2079B93800AB6BC5 /* AlamofireImplementations.swift */,
+				D5E646CA2079B93600AB6BC5 /* APIHelper.swift */,
+				D5E646BF2079B93500AB6BC5 /* APIs */,
+				D5E646CB2079B93600AB6BC5 /* APIs.swift */,
+				D5E646D92079B93700AB6BC5 /* CodableHelper.swift */,
+				D5E646DC2079B93800AB6BC5 /* Configuration.swift */,
+				D5E646C92079B93600AB6BC5 /* Extensions.swift */,
+				D5E646DA2079B93700AB6BC5 /* JSONEncodableEncoding.swift */,
+				D5E646DB2079B93800AB6BC5 /* JSONEncodingHelper.swift */,
+				D5E646CC2079B93600AB6BC5 /* Models */,
+				D5E646DD2079B93800AB6BC5 /* Models.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -954,6 +886,41 @@
 			path = MiniContract;
 			sourceTree = "<group>";
 		};
+		D5E646BF2079B93500AB6BC5 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				D5E646C02079B93500AB6BC5 /* ImportantMarkEntityAPI.swift */,
+				D5E646C12079B93500AB6BC5 /* SAccountControllerAPI.swift */,
+				D5E646C22079B93500AB6BC5 /* SMiniCoinEntityAPI.swift */,
+				D5E646C32079B93500AB6BC5 /* SMiniCoinPoolControllerAPI.swift */,
+				D5E646C42079B93500AB6BC5 /* SMiniCoinPoolEntityAPI.swift */,
+				D5E646C52079B93500AB6BC5 /* SMiniContractControllerAPI.swift */,
+				D5E646C62079B93500AB6BC5 /* SMiniContractEntityAPI.swift */,
+				D5E646C72079B93500AB6BC5 /* SNotificationControllerAPI.swift */,
+				D5E646C82079B93500AB6BC5 /* SNotificationEntityAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		D5E646CC2079B93600AB6BC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5E646CD2079B93600AB6BC5 /* Link.swift */,
+				D5E646CE2079B93600AB6BC5 /* MiniCoinPoolDashBoardDTO.swift */,
+				D5E646CF2079B93600AB6BC5 /* ResourceSAccount.swift */,
+				D5E646D02079B93600AB6BC5 /* ResourceSMiniCoinPool.swift */,
+				D5E646D12079B93600AB6BC5 /* SAccount.swift */,
+				D5E646D22079B93600AB6BC5 /* SAccountDTO.swift */,
+				D5E646D32079B93600AB6BC5 /* SMiniCoinPool.swift */,
+				D5E646D42079B93600AB6BC5 /* SMiniCoinPoolDTO.swift */,
+				D5E646D52079B93600AB6BC5 /* SMiniContract.swift */,
+				D5E646D62079B93600AB6BC5 /* SMiniContractDTO.swift */,
+				D5E646D72079B93600AB6BC5 /* SNotification.swift */,
+				D5E646D82079B93600AB6BC5 /* SNotificationDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1295,8 +1262,8 @@
 				A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */,
 				D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */,
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
+				D5E646E02079B93800AB6BC5 /* SAccountControllerAPI.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
-				A7C15ED62073B17D009C43D8 /* ResourcesListSMiniCoin.swift in Sources */,
 				D5ADC2A42058C08D001307E8 /* ICanHas.swift in Sources */,
 				D58DB9A120691F0A005ABED8 /* XWCoinTrackViewController.swift in Sources */,
 				D58DB95720649635005ABED8 /* XWMessageViewController.swift in Sources */,
@@ -1313,80 +1280,77 @@
 				D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */,
 				D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */,
 				D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */,
+				D5E646ED2079B93800AB6BC5 /* ResourceSAccount.swift in Sources */,
+				D5E646EC2079B93800AB6BC5 /* MiniCoinPoolDashBoardDTO.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
-				A7C15EC52073B17D009C43D8 /* ResourcesSMiniCoinPool.swift in Sources */,
 				D5ADC2DE205A0961001307E8 /* XWNoCardView.swift in Sources */,
-				A7C15ECE2073B17D009C43D8 /* ResourcesSNotification.swift in Sources */,
-				A7C15EC72073B17D009C43D8 /* ResourceSMiniCoinPool.swift in Sources */,
-				A7C15ED72073B17D009C43D8 /* ResourceSMiniContract.swift in Sources */,
 				D58FC41B20564EED008C05AE /* MyAuthenticationCollectionViewCell.swift in Sources */,
 				D58FC41220564523008C05AE /* FSPageControl.swift in Sources */,
 				A773E5FD206A09DE002C5721 /* XWCreateCouponViewController.swift in Sources */,
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
-				A7C15EF22073B17E009C43D8 /* APIHelper.swift in Sources */,
+				D5E646F42079B93800AB6BC5 /* SMiniContractDTO.swift in Sources */,
+				D5E646E52079B93800AB6BC5 /* SMiniContractEntityAPI.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
-				A7C15EDB2073B17D009C43D8 /* SMiniCoinPoolDTO.swift in Sources */,
-				A7C15ED52073B17D009C43D8 /* SMiniCoin.swift in Sources */,
+				D5E646E32079B93800AB6BC5 /* SMiniCoinPoolEntityAPI.swift in Sources */,
 				A773E61E206A7275002C5721 /* XWDemoData.swift in Sources */,
 				A773E614206A3B6D002C5721 /* XWImportantContractTableViewController.swift in Sources */,
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
-				A7C15ED12073B17D009C43D8 /* SNotificationDTO.swift in Sources */,
 				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
-				A7C15EDA2073B17D009C43D8 /* ResourcesSAccount.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */,
-				A7C15EF32073B17E009C43D8 /* Configuration.swift in Sources */,
-				A7C15EE02073B17D009C43D8 /* SNotificationEntityAPI.swift in Sources */,
+				D5E646E42079B93800AB6BC5 /* SMiniContractControllerAPI.swift in Sources */,
+				D5E646F32079B93800AB6BC5 /* SMiniContract.swift in Sources */,
 				A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */,
-				A7C15EF62073B17E009C43D8 /* JSONEncodableEncoding.swift in Sources */,
 				A70EE04A206B86170012A4D7 /* Constant.swift in Sources */,
 				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,
+				D5E646E22079B93800AB6BC5 /* SMiniCoinPoolControllerAPI.swift in Sources */,
 				D5A48906204E3761001031F6 /* AppDelegate.swift in Sources */,
 				D58FC41E2056576A008C05AE /* MyCardViewController.swift in Sources */,
-				A7C15EDC2073B17D009C43D8 /* ResourcesListSNotification.swift in Sources */,
 				D58FC3FE20523CE9008C05AE /* XWMyViewController.swift in Sources */,
 				D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */,
-				A7C15ECF2073B17D009C43D8 /* ResourcesSMiniCoin.swift in Sources */,
 				D5ADC2162057C60F001307E8 /* XWConversationViewMode.swift in Sources */,
 				D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */,
-				A7C15EDD2073B17D009C43D8 /* Models.swift in Sources */,
+				D5E646F82079B93800AB6BC5 /* JSONEncodableEncoding.swift in Sources */,
+				D5E646EA2079B93800AB6BC5 /* APIs.swift in Sources */,
+				D5E646E62079B93800AB6BC5 /* SNotificationControllerAPI.swift in Sources */,
 				D58FC41820564523008C05AE /* FSPageViewTransformer.swift in Sources */,
 				D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */,
 				D5A48977204E6D54001031F6 /* UIImage.swift in Sources */,
+				D5E646EB2079B93800AB6BC5 /* Link.swift in Sources */,
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
+				D5E646F22079B93800AB6BC5 /* SMiniCoinPoolDTO.swift in Sources */,
+				D5E646F62079B93800AB6BC5 /* SNotificationDTO.swift in Sources */,
 				D5A48968204E6D54001031F6 /* CALayer.swift in Sources */,
 				A773E61A206A6E3C002C5721 /* XWContactHeadView.swift in Sources */,
-				A7C15EC42073B17D009C43D8 /* JSONEncodingHelper.swift in Sources */,
+				D5E646E92079B93800AB6BC5 /* APIHelper.swift in Sources */,
+				D5E646EF2079B93800AB6BC5 /* SAccount.swift in Sources */,
 				D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */,
 				D58DB95A20649D9C005ABED8 /* XWSenderTableViewCell.swift in Sources */,
-				A7C15ECB2073B17D009C43D8 /* Link.swift in Sources */,
+				D5E646FA2079B93800AB6BC5 /* Configuration.swift in Sources */,
 				D58FC41620564523008C05AE /* FSPagerViewLayoutAttributes.swift in Sources */,
-				A7C15EDF2073B17D009C43D8 /* SMiniCoinEntityAPI.swift in Sources */,
 				D5A48967204E6D54001031F6 /* Bundle.swift in Sources */,
 				D5A48979204E6D54001031F6 /* UITextFieldAdditions.swift in Sources */,
 				D5A489ED204FD4B1001031F6 /* XWLoginViewController.swift in Sources */,
-				A7C15ECA2073B17D009C43D8 /* SAccount.swift in Sources */,
+				D5E646F72079B93800AB6BC5 /* CodableHelper.swift in Sources */,
+				D5E646F12079B93800AB6BC5 /* SMiniCoinPool.swift in Sources */,
 				D58FC3F820523B6E008C05AE /* XWMessageListTableViewController.swift in Sources */,
 				A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */,
-				A7C15ED82073B17D009C43D8 /* SMiniCoinPool.swift in Sources */,
-				A7C15ECC2073B17D009C43D8 /* SMiniContract.swift in Sources */,
 				D58DB9912068D8C3005ABED8 /* XWOneCardDemoView.swift in Sources */,
 				D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */,
-				A7C15EDE2073B17D009C43D8 /* SAccountControllerAPI.swift in Sources */,
 				D5ADC2B02058F878001307E8 /* XWSearchTableViewCell.swift in Sources */,
+				D5E646EE2079B93800AB6BC5 /* ResourceSMiniCoinPool.swift in Sources */,
 				A773E5FB2069F784002C5721 /* XWCouponListViewController.swift in Sources */,
+				D5E646FC2079B93800AB6BC5 /* AlamofireImplementations.swift in Sources */,
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
 				D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */,
-				A7C15EF12073B17E009C43D8 /* Extensions.swift in Sources */,
+				D5E646F92079B93800AB6BC5 /* JSONEncodingHelper.swift in Sources */,
 				D5E646802074A3FE00AB6BC5 /* XWLocalManager.swift in Sources */,
-				A7C15EE22073B17E009C43D8 /* SMiniCoinPoolEntityAPI.swift in Sources */,
-				A7C15ED22073B17D009C43D8 /* ResourcesSMiniContract.swift in Sources */,
 				A773E5FF206A0A2D002C5721 /* XWSendCouponViewController.swift in Sources */,
 				D58DB95C20649DAD005ABED8 /* XWRecieverTableViewCell.swift in Sources */,
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
-				A7C15EF42073B17E009C43D8 /* AlamofireImplementations.swift in Sources */,
+				D5E646E82079B93800AB6BC5 /* Extensions.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A4896D204E6D54001031F6 /* Double.swift in Sources */,
@@ -1394,35 +1358,28 @@
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
 				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
-				A7C15EEA2073B17E009C43D8 /* SMiniCoinPoolControllerAPI.swift in Sources */,
+				D5E646E12079B93800AB6BC5 /* SMiniCoinEntityAPI.swift in Sources */,
 				A70EE04C206CB2C60012A4D7 /* XWContract.swift in Sources */,
-				A7C15EC82073B17D009C43D8 /* ResourceSupport.swift in Sources */,
-				A7C15EEC2073B17E009C43D8 /* SMiniContractControllerAPI.swift in Sources */,
-				A7C15ED42073B17D009C43D8 /* SNotification.swift in Sources */,
 				A773E60D206A3062002C5721 /* XWContractDemoTableViewCell.swift in Sources */,
 				A773E616206A3CD3002C5721 /* XWImportantHeadView.swift in Sources */,
-				A7C15ED02073B17D009C43D8 /* Resourcenull.swift in Sources */,
 				D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */,
+				D5E646F52079B93800AB6BC5 /* SNotification.swift in Sources */,
+				D5E646E72079B93800AB6BC5 /* SNotificationEntityAPI.swift in Sources */,
 				D5ADC2AB2058F177001307E8 /* XWSearchViewController.swift in Sources */,
 				A773E5F52069F23A002C5721 /* XWAcademicListViewController.swift in Sources */,
-				A7C15ED92073B17D009C43D8 /* ResourceSAccount.swift in Sources */,
 				D58FC3FA20523BCA008C05AE /* UIBaseNavigationViewController.swift in Sources */,
-				A7C15EF52073B17E009C43D8 /* APIs.swift in Sources */,
 				D5A4896F204E6D54001031F6 /* NSAttributedString.swift in Sources */,
 				D58DB9862064A8CE005ABED8 /* NotificationService.swift in Sources */,
-				A7C15EE12073B17E009C43D8 /* SMiniContractEntityAPI.swift in Sources */,
+				D5E646DF2079B93800AB6BC5 /* ImportantMarkEntityAPI.swift in Sources */,
 				D5A489AE204F96FD001031F6 /* AppStyle.swift in Sources */,
-				A7C15EC62073B17D009C43D8 /* View.swift in Sources */,
 				A773E5F22069F12F002C5721 /* XWTicketListViewController.swift in Sources */,
+				D5E646FB2079B93800AB6BC5 /* Models.swift in Sources */,
 				A773E5EF2069ECEC002C5721 /* XWSendMembershipViewController.swift in Sources */,
 				D5ADC20B2057BAD5001307E8 /* DefaultsKeys.swift in Sources */,
 				D58FC4202056853B008C05AE /* PrivacyViewController.swift in Sources */,
 				A773E60A206A20C9002C5721 /* XWAppsViewController.swift in Sources */,
-				A7C15EEB2073B17E009C43D8 /* SAccountEntityAPI.swift in Sources */,
-				A7C15EEE2073B17E009C43D8 /* SNotificationControllerAPI.swift in Sources */,
 				A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */,
 				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
-				A7C15EC92073B17D009C43D8 /* ResourceSNotification.swift in Sources */,
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,
@@ -1430,8 +1387,7 @@
 				D58FC41520564523008C05AE /* FSPagerViewCell.swift in Sources */,
 				D5A4896A204E6D54001031F6 /* Decimal.swift in Sources */,
 				D5A48974204E6D54001031F6 /* UIButton.swift in Sources */,
-				A7C15EF72073B17E009C43D8 /* CodableHelper.swift in Sources */,
-				A7C15ECD2073B17D009C43D8 /* ResourceSMiniCoin.swift in Sources */,
+				D5E646F02079B93800AB6BC5 /* SAccountDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

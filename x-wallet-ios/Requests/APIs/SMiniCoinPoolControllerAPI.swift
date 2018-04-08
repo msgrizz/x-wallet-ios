@@ -47,12 +47,50 @@ open class SMiniCoinPoolControllerAPI {
     }
 
     /**
+     dashboard
+     
+     - parameter personId: (query) personId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func dashboardUsingGET(personId: Int64, completion: @escaping ((_ data: [String:[MiniCoinPoolDashBoardDTO]]?,_ error: Error?) -> Void)) {
+        dashboardUsingGETWithRequestBuilder(personId: personId).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     dashboard
+     - GET /miniCoinPoolDashBoard
+     - examples: [{output=none}]
+     
+     - parameter personId: (query) personId 
+
+     - returns: RequestBuilder<[String:[MiniCoinPoolDashBoardDTO]]> 
+     */
+    open class func dashboardUsingGETWithRequestBuilder(personId: Int64) -> RequestBuilder<[String:[MiniCoinPoolDashBoardDTO]]> {
+        let path = "/miniCoinPoolDashBoard"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
+            "personId": personId.encodeToJSON()
+        ])
+        
+
+        let requestBuilder: RequestBuilder<[String:[MiniCoinPoolDashBoardDTO]]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      get
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsingGET2(completion: @escaping ((_ data: [SMiniCoinPool]?,_ error: Error?) -> Void)) {
-        getUsingGET2WithRequestBuilder().execute { (response, error) -> Void in
+    open class func getUsingGET1(completion: @escaping ((_ data: [SMiniCoinPool]?,_ error: Error?) -> Void)) {
+        getUsingGET1WithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -65,7 +103,7 @@ open class SMiniCoinPoolControllerAPI {
 
      - returns: RequestBuilder<[SMiniCoinPool]> 
      */
-    open class func getUsingGET2WithRequestBuilder() -> RequestBuilder<[SMiniCoinPool]> {
+    open class func getUsingGET1WithRequestBuilder() -> RequestBuilder<[SMiniCoinPool]> {
         let path = "/miniCoinPools"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -76,6 +114,47 @@ open class SMiniCoinPoolControllerAPI {
         let requestBuilder: RequestBuilder<[SMiniCoinPool]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
+     toggle
+     
+     - parameter accountId: (query) accountId 
+     - parameter miniCoinPoolId: (query) miniCoinPoolId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func toggleUsingPOST(accountId: Int64, miniCoinPoolId: Int64, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
+        toggleUsingPOSTWithRequestBuilder(accountId: accountId, miniCoinPoolId: miniCoinPoolId).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     toggle
+     - POST /toggleImportant
+     - examples: [{output=none}]
+     
+     - parameter accountId: (query) accountId 
+     - parameter miniCoinPoolId: (query) miniCoinPoolId 
+
+     - returns: RequestBuilder<Bool> 
+     */
+    open class func toggleUsingPOSTWithRequestBuilder(accountId: Int64, miniCoinPoolId: Int64) -> RequestBuilder<Bool> {
+        let path = "/toggleImportant"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
+            "accountId": accountId.encodeToJSON(), 
+            "miniCoinPoolId": miniCoinPoolId.encodeToJSON()
+        ])
+        
+
+        let requestBuilder: RequestBuilder<Bool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
 
 }

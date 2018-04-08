@@ -182,4 +182,5 @@ class XWCoinListTableViewController: UIBaseTableViewController {
             self.lastScrollOffset = y;
         }
     }
+    
 }

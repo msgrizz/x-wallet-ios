@@ -16,7 +16,6 @@ open class SMiniCoinPool: Codable {
     public var createTime: Int64?
     public var fixed: Int64?
     public var id: Int64?
-    public var important: Bool?
     public var issuer: SAccount?
     public var lastModifyTime: Int64?
     public var logo: String?
@@ -26,13 +25,12 @@ open class SMiniCoinPool: Codable {
 
 
     
-    public init(activated: Bool?, content: String?, createTime: Int64?, fixed: Int64?, id: Int64?, important: Bool?, issuer: SAccount?, lastModifyTime: Int64?, logo: String?, name: String?, transferable: Bool?, version: Int64?) {
+    public init(activated: Bool?, content: String?, createTime: Int64?, fixed: Int64?, id: Int64?, issuer: SAccount?, lastModifyTime: Int64?, logo: String?, name: String?, transferable: Bool?, version: Int64?) {
         self.activated = activated
         self.content = content
         self.createTime = createTime
         self.fixed = fixed
         self.id = id
-        self.important = important
         self.issuer = issuer
         self.lastModifyTime = lastModifyTime
         self.logo = logo
@@ -53,7 +51,6 @@ open class SMiniCoinPool: Codable {
         try container.encodeIfPresent(createTime, forKey: "createTime")
         try container.encodeIfPresent(fixed, forKey: "fixed")
         try container.encodeIfPresent(id, forKey: "id")
-        try container.encodeIfPresent(important, forKey: "important")
         try container.encodeIfPresent(issuer, forKey: "issuer")
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
         try container.encodeIfPresent(logo, forKey: "logo")
@@ -72,7 +69,6 @@ open class SMiniCoinPool: Codable {
         createTime = try container.decodeIfPresent(Int64.self, forKey: "createTime")
         fixed = try container.decodeIfPresent(Int64.self, forKey: "fixed")
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
-        important = try container.decodeIfPresent(Bool.self, forKey: "important")
         issuer = try container.decodeIfPresent(SAccount.self, forKey: "issuer")
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
         logo = try container.decodeIfPresent(String.self, forKey: "logo")

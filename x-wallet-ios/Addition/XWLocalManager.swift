@@ -10,7 +10,7 @@ import UIKit
 
 class XWLocalManager: NSObject {
     
-    open var localUser :ResourceSAccount!
+    open var localUser :SAccount!
     
     private static var _instance = XWLocalManager()
     class func sharedInstance() -> XWLocalManager {

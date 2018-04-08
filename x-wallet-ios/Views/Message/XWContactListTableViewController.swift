@@ -133,29 +133,29 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         if section == 0 {
             return 0
         }else {
-            return 28
+            return 0
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headView = XWContactHeadView.fromNib()
-        headView.titleLabel.text = "A"
-        return headView
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headView = XWContactHeadView.fromNib()
+//        headView.titleLabel.text = "A"
+//        return headView
+//    }
     
     func fakeData() {
         userData = XWDemoData()
         
         
         
-        let my = XWUser(name: XWLocalManager.sharedInstance().localUser.nickname!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(String(describing: XWLocalManager.sharedInstance().localUser.id))", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
+        let my = XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(String(describing: XWLocalManager.sharedInstance().localUser.id))", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
         userData.myself = my
     }
     
     func getUserData() {
-        SAccountControllerAPI.getUsingGET1 { (accounts, error) in
+        SAccountControllerAPI.getUsingGET { (accounts, error) in
             for ele in accounts! {
-                let user = XWUser(name: ele.nickname!, email: ele.email, id: "\(String(describing: ele.id))", profilePic:nil, avatar:ele.avatar)
+                let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(String(describing: ele.id))", profilePic:nil, avatar:ele.avatar)
                 self.userData.users.append(user)
             }
             self.tableView.reloadData()

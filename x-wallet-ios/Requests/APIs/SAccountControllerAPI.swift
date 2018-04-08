@@ -12,12 +12,48 @@ import Alamofire
 
 open class SAccountControllerAPI {
     /**
+     getOne
+     
+     - parameter id: (path) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOneUsingGET(id: Int64, completion: @escaping ((_ data: SAccount?,_ error: Error?) -> Void)) {
+        getOneUsingGETWithRequestBuilder(id: id).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     getOne
+     - GET /sAccounts/{id}
+     - examples: [{output=none}]
+     
+     - parameter id: (path) id 
+
+     - returns: RequestBuilder<SAccount> 
+     */
+    open class func getOneUsingGETWithRequestBuilder(id: Int64) -> RequestBuilder<SAccount> {
+        var path = "/sAccounts/{id}"
+        path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SAccount>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      get
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsingGET1(completion: @escaping ((_ data: [SAccount]?,_ error: Error?) -> Void)) {
-        getUsingGET1WithRequestBuilder().execute { (response, error) -> Void in
+    open class func getUsingGET(completion: @escaping ((_ data: [SAccount]?,_ error: Error?) -> Void)) {
+        getUsingGETWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -30,7 +66,7 @@ open class SAccountControllerAPI {
 
      - returns: RequestBuilder<[SAccount]> 
      */
-    open class func getUsingGET1WithRequestBuilder() -> RequestBuilder<[SAccount]> {
+    open class func getUsingGETWithRequestBuilder() -> RequestBuilder<[SAccount]> {
         let path = "/sAccounts"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -41,6 +77,41 @@ open class SAccountControllerAPI {
         let requestBuilder: RequestBuilder<[SAccount]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
+     post
+     
+     - parameter sAccountDTO: (body) sAccountDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsingPOST(sAccountDTO: SAccountDTO, completion: @escaping ((_ data: SAccount?,_ error: Error?) -> Void)) {
+        postUsingPOSTWithRequestBuilder(sAccountDTO: sAccountDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     post
+     - POST /sAccounts
+     - examples: [{output=none}]
+     
+     - parameter sAccountDTO: (body) sAccountDTO 
+
+     - returns: RequestBuilder<SAccount> 
+     */
+    open class func postUsingPOSTWithRequestBuilder(sAccountDTO: SAccountDTO) -> RequestBuilder<SAccount> {
+        let path = "/sAccounts"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sAccountDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SAccount>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import IHKeyboardAvoiding
+import Alamofire
 class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     var imagePicker = UIImagePickerController()
     @IBOutlet weak var avoidingView:UITextField!
@@ -15,7 +16,8 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
     
     @IBOutlet weak var limiteButton:UIButton!
     @IBOutlet weak var unlimiteButton:UIButton!
-
+    var imageData: Data!
+    var imageURL: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Create Coin"
@@ -44,16 +46,35 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
         }
     }
     
+    func sendImageDataRequest() {
+        // Add Headers
+        let headers = [
+            "Content-Type":"multipart/form-data; charset=utf-8; boundary=__X_PAW_BOUNDARY__",
+            ]
+        
+        // Fetch Request
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append("udap".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"source")
+            multipartFormData.append("smallfiles".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"bucketName")
+            multipartFormData.append("123".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"Filename")
+            multipartFormData.append(self.imageData, withName: "qqfile", fileName: URL(fileURLWithPath: self.imageURL).lastPathComponent, mimeType: "multipart/form-data")
+        }, usingThreshold: UInt64.init(), to: "https://oss.iclass.cn/formFile", method: .post, headers: headers, encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    debugPrint(response)
+                }
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        })
+    }
+    
+    
+    
     @IBAction func issueAction(_ : UIButton) {
         
-        let vc = XWWebViewController()
-        
-        vc.launchURL = kTransferCoinsURL
-        vc.title = "Transfer Coins"
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-        
-
+        self.sendImageDataRequest()
     }
     
     @IBAction func addImageAction(_ : UIButton) {
@@ -67,6 +88,8 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
         picker.dismiss(animated: true) {
             
         }
+        imageData = UIImageJPEGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage, 0.4)
+        imageURL = (info[UIImagePickerControllerImageURL]as! NSURL).absoluteString
         coinButton.setImage(info[UIImagePickerControllerOriginalImage] as? UIImage, for: .normal)
     }
     

@@ -11,6 +11,8 @@ import WebKit
 import WebViewBridge_Swift
 import SnapKit
 import Toast_Swift
+import SwiftyUserDefaults
+
 class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     var webView: WKWebView!
     open var launchURL: String!
@@ -21,7 +23,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
         didSet {
             if self.isCreate {
                 let trackButton = UIBarButtonItem(
-                    title: "Save",
+                    title: "Send",
                     style: .plain,
                     target: self,
                     action: #selector(save(_:))
@@ -75,7 +77,11 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 let vc = self.navigationController?.viewControllers[1] as! XWCoinListTableViewController
                 self.navigationController?.popToViewController(vc, animated: true)
             }
-            return (true, nil)
+            return (true, [])
+        }
+        
+        bridge.registerHandler("Get.userId") { (args:[Any]) -> (Bool, [Any]?) in
+            return (true, [Defaults[.userId]])
         }
         
         bridge.registerHandler("Scan.qr") { (args:[Any]) -> (Bool, [Any]?) in
@@ -129,8 +135,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     
     @objc func save(_ : UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
-        self.bridge.callJsHandler("Save.contractCallback", args: [], callback: nil)
-
+        self.bridge.callJsHandler("Send.contractCallback", args: [], callback: nil)
     }
 
     /*

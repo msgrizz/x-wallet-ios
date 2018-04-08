@@ -49,8 +49,8 @@ class XWLoginViewController: UIBaseViewController {
     }
 
     func loginRequest() {
-        let localAccount = SAccount(about: nil, activated: nil, avatar: "http://oss.iclass.cn/image/smallfiles/448_448/1522824152263aiaxp.png", createTime: nil, email: nil, id: nil, lastModifyTime: nil, loginName: self.nameTextField.text, loginPass: self.passwordTextField.text, mobile: nil, nickname: self.nameTextField.text, paymentPass: nil, version: nil)
-        SAccountEntityAPI.saveSAccountUsingPOST(body: localAccount) { (account, error) in
+        let localAccount = SAccountDTO(loginName: self.nameTextField.text, nickname: self.nameTextField.text, loginPass: self.passwordTextField.text, paymentPass: nil, mobile: nil, email: nil, about: nil, avatar: "http://oss.iclass.cn/image/smallfiles/448_448/1522824152263aiaxp.png", credit: nil)
+        SAccountControllerAPI.postUsingPOST(sAccountDTO: localAccount) { (account, error) in
             self.activityIndicatorView.stopAnimating()
             if account != nil {
                 let userId = account?.id
@@ -59,7 +59,6 @@ class XWLoginViewController: UIBaseViewController {
                 XWLocalManager.sharedInstance().localUser = account
                 self.goToMain()
             }
-            
         }
     }
     

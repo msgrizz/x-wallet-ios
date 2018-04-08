@@ -15,6 +15,7 @@ open class ResourceSAccount: Codable {
     public var activated: Bool?
     public var avatar: String?
     public var createTime: Int64?
+    public var credit: Int64?
     public var email: String?
     public var id: Int64?
     public var lastModifyTime: Int64?
@@ -28,11 +29,12 @@ open class ResourceSAccount: Codable {
 
 
     
-    public init(about: String?, activated: Bool?, avatar: String?, createTime: Int64?, email: String?, id: Int64?, lastModifyTime: Int64?, links: [Link]?, loginName: String?, loginPass: String?, mobile: String?, nickname: String?, paymentPass: String?, version: Int64?) {
+    public init(about: String?, activated: Bool?, avatar: String?, createTime: Int64?, credit: Int64?, email: String?, id: Int64?, lastModifyTime: Int64?, links: [Link]?, loginName: String?, loginPass: String?, mobile: String?, nickname: String?, paymentPass: String?, version: Int64?) {
         self.about = about
         self.activated = activated
         self.avatar = avatar
         self.createTime = createTime
+        self.credit = credit
         self.email = email
         self.id = id
         self.lastModifyTime = lastModifyTime
@@ -56,6 +58,7 @@ open class ResourceSAccount: Codable {
         try container.encodeIfPresent(activated, forKey: "activated")
         try container.encodeIfPresent(avatar, forKey: "avatar")
         try container.encodeIfPresent(createTime, forKey: "createTime")
+        try container.encodeIfPresent(credit, forKey: "credit")
         try container.encodeIfPresent(email, forKey: "email")
         try container.encodeIfPresent(id, forKey: "id")
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
@@ -77,6 +80,7 @@ open class ResourceSAccount: Codable {
         activated = try container.decodeIfPresent(Bool.self, forKey: "activated")
         avatar = try container.decodeIfPresent(String.self, forKey: "avatar")
         createTime = try container.decodeIfPresent(Int64.self, forKey: "createTime")
+        credit = try container.decodeIfPresent(Int64.self, forKey: "credit")
         email = try container.decodeIfPresent(String.self, forKey: "email")
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
