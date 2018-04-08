@@ -47,7 +47,6 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-        self.getPoolData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,7 +79,9 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.activityIndicatorView.startAnimating()
+        self.getPoolData()
+
     }
     
     // MARK: - Table view data source
@@ -178,6 +179,8 @@ class XWCoinListTableViewController: UIBaseTableViewController {
             guard data != nil else {
                 return
             }
+            self.holdDataModels.removeAll()
+            self.issuedDataModels.removeAll()
             let hold = data!["hold"]
             let issued = data!["issued"]
             for ele in hold! {
@@ -189,6 +192,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
                 let data = CoinsModel(title: olo.miniCoinPoolName!, content: "Transfer/Limited:\(olo.ownNum!)/\(olo.limitNum!)", canTansfer: true, stared: false, newMessage: false,coinId: olo.miniCoinPoolId!)
                 self.issuedDataModels.append(data)
             }
+            self.activityIndicatorView.stopAnimating()
             self.tableView.reloadData()
         }
     }

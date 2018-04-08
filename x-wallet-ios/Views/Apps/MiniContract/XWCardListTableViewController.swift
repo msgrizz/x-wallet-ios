@@ -50,7 +50,6 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-        self.getIOUData()
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -84,6 +83,8 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.activityIndicatorView.startAnimating()
+        self.getIOUData()
 
     }
 
@@ -236,6 +237,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                 return
             }
             self.iouArray.removeAll()
+            self.tableView.reloadData()
             for ele in data! {
                 let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
                 let dateFormatter = DateFormatter()
@@ -251,6 +253,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                 let iou = XWContract(title: title, type: ContractType.IOU, content: dateFormatter.string(from: date), id:ele.id!)
                 self.iouArray.append(iou)
             }
+            self.activityIndicatorView.stopAnimating()
             self.tableView.reloadData()
         }
     }

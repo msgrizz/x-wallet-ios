@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class UIBaseTableViewController: UITableViewController {
+    var activityIndicatorView: NVActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,10 @@ class UIBaseTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 40), type: NVActivityIndicatorType.lineScale)
+        activityIndicatorView.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
+        activityIndicatorView.color = Colors.tintColor
+        self.view.addSubview(activityIndicatorView)
         self.view.backgroundColor =  Colors.backGroundColor
         self.tableView.backgroundColor = Colors.backGroundColor
 
