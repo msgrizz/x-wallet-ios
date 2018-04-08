@@ -21,11 +21,11 @@ let kSuccessURL = kHostURL+"Success"
 let kTogetURL = kHostURL+"Toget"
 
 let kCreateContractURL = kHostURL+"CreateContract"
-let kCreateIOUURL = kHostURL+"CreateLou"
+let kCreateIOUURL = kHostURL+"CreateIou"
 let kCreatePromiseURL = kHostURL+"CreatePromise"
 let kCreatReceiptURL = kHostURL+"CreatReceipt"
 
-let kIOUURL = kHostURL+"Lou"
+let kIOUURL = kHostURL+"iou"
 let kMiniContractURL = kHostURL+"MiniContract"
 let kPromiseURL = kHostURL+"Promise"
 let kReceiptURL = kHostURL+"Receipt"

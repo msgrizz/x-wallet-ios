@@ -9,9 +9,12 @@
 import UIKit
 import IHKeyboardAvoiding
 import Alamofire
+import SwiftyUserDefaults
+import Toast_Swift
 class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     var imagePicker = UIImagePickerController()
     @IBOutlet weak var avoidingView:UITextField!
+    @IBOutlet weak var nameTextField:UITextField!
     @IBOutlet weak var coinButton:UIButton!
     
     @IBOutlet weak var limiteButton:UIButton!
@@ -62,7 +65,14 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
             switch encodingResult {
             case .success(let upload, _, _):
                 upload.responseJSON { response in
-                    debugPrint(response)
+                    let info = response.result.value as? Dictionary<String, AnyObject>
+                    let dto = SMiniCoinPoolDTO(important: false, name: self.nameTextField.text, content: "", logo: info!["html"] as? String, fixed: Int64(self.avoidingView.text!), transferable: true, issuer: Int64(Defaults[.userId]), isImportant: false)
+                    SMiniCoinPoolControllerAPI.addUsingPOST(m: dto, completion: { (pool, error) in
+                        DispatchQueue.main.async {
+                            self.activityIndicatorView.stopAnimating()
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    })
                 }
             case .failure(let encodingError):
                 print(encodingError)
@@ -73,7 +83,7 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
     
     
     @IBAction func issueAction(_ : UIButton) {
-        
+        self.activityIndicatorView.startAnimating()
         self.sendImageDataRequest()
     }
     

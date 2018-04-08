@@ -31,14 +31,10 @@ class XWReceiveCodeViewController: UIBaseViewController {
     
     
     func createDataString() -> String {
-        let code = "asdadaasdadadadadad"
-        let data = "xwallet://00?data=\(code)&timestamp=\(NSDate().timeIntervalSince1970)"
+        let name = XWLocalManager.sharedInstance().localUser.loginName
+        let id = XWLocalManager.sharedInstance().localUser.id
+        let data = "xwallet://00?name=\(name!)&id=\(id!)&timestamp=\(NSDate().timeIntervalSince1970)"
         return data.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)!
-    }
-    
-    func getQueryStringParameter(url: String, param: String) -> String? {
-        guard let url = URLComponents(string: url) else { return nil }
-        return url.queryItems?.first(where: { $0.name == param })?.value
     }
     
 

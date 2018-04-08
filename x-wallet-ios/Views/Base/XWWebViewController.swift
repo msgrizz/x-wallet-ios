@@ -57,11 +57,10 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
             DispatchQueue.main.async {
                 let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
-                contact.blockproerty={ (name) in
+                contact.blockproerty={ (user) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        self.bridge.callJsHandler("Person.selectCallback", args: [name], callback: nil)
-                        print(name)
+                        self.bridge.callJsHandler("Person.selectCallback", args: [user.name,user.id], callback: nil)
                     }
                 }
                 let navi = UIBaseNavigationViewController(rootViewController: contact)
@@ -80,6 +79,13 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
             return (true, [])
         }
         
+        bridge.registerHandler("Push.pop") { (args:[Any]) -> (Bool, [Any]?) in
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+            return (true, [])
+        }
+        
         bridge.registerHandler("Get.userId") { (args:[Any]) -> (Bool, [Any]?) in
             return (true, [Defaults[.userId]])
         }
@@ -91,7 +97,9 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                 contact.blockproerty={ (result) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        self.bridge.callJsHandler("Scan.qrCallback", args: [result], callback: nil)
+                        let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
+                        let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
+                        self.bridge.callJsHandler("Scan.qrCallback", args: [name!,id!], callback: nil)
                     }
                 }
                 let navi = UIBaseNavigationViewController(rootViewController: contact)
@@ -134,8 +142,12 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     }
     
     @objc func save(_ : UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
         self.bridge.callJsHandler("Send.contractCallback", args: [], callback: nil)
+    }
+    
+    func getQueryStringParameter(url: String, param: String) -> String? {
+        guard let url = URLComponents(string: url) else { return nil }
+        return url.queryItems?.first(where: { $0.name == param })?.value
     }
 
     /*

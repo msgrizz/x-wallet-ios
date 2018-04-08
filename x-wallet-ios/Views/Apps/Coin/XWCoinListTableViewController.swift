@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyUserDefaults
 class XWCoinListTableViewController: UIBaseTableViewController {
     var lastScrollOffset: CGFloat = 0
     
@@ -47,13 +47,8 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
-        
-        holdDataModels = [CoinsModel(title: "Chinese Zodiac Coins", content: "Possession：108", canTansfer: false, stared: true, newMessage: false),
-                          CoinsModel(title: "Star Coin", content: "Possession：8292", canTansfer: false, stared: false, newMessage: false),
-                          CoinsModel(title: "Vermicelli", content: "Possession：746", canTansfer: false, stared: false, newMessage: false)]
-        
-        issuedDataModels = [CoinsModel(title: "iClass Coins", content: "Transfer/Limited：2500/3000", canTansfer: true, stared: true, newMessage: false),
-                            CoinsModel(title: "The Dog Coins", content: "Transfer/Limited：7668/None", canTansfer: true, stared: false, newMessage: false)]
+    
+        self.getPoolData()
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -125,21 +120,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = Main.instantiateViewController(withIdentifier: "XWCoinDetailViewController") as! XWCoinDetailViewController
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                vc.coinImage = UIImage(named: "Coin5")
-            }else if indexPath.row == 1{
-                vc.coinImage = UIImage(named: "Coin4")
-            }else {
-                vc.coinImage = UIImage(named: "Coin3")
-            }
-        }else {
-            if indexPath.row == 0 {
-                vc.coinImage = UIImage(named: "Coin1")
-            }else {
-                vc.coinImage = UIImage(named: "Coin2")
-            }
-        }
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -154,8 +135,8 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         headView.clearData()
         if section==0 {
             headView.titleLabel.text = "Hold"
-            headView.numberButton.isHidden = false
-            headView.numberButton.setTitle(" 3", for: .normal)
+//            headView.numberButton.isHidden = false
+//            headView.numberButton.setTitle(" 3", for: .normal)
         }else {
             headView.titleLabel.text = "Issued"
         }
@@ -180,6 +161,23 @@ class XWCoinListTableViewController: UIBaseTableViewController {
                 isScrollDown = false
             }
             self.lastScrollOffset = y;
+        }
+    }
+    
+    func getPoolData() {
+        SMiniCoinPoolControllerAPI.dashboardUsingGET(personId: Int64(Defaults[.userId])) { (data, error) in
+            let hold = data!["hold"]
+            let issued = data!["issued"]
+            for ele in hold! {
+                let data = CoinsModel(title: ele.miniCoinPoolName!, content: "Possession:\(ele.ownNum!)", canTansfer: false, stared: false, newMessage: false)
+                self.holdDataModels.append(data)
+            }
+            
+            for olo in issued! {
+                let data = CoinsModel(title: olo.miniCoinPoolName!, content: "Transfer/Limited:\(olo.ownNum!)/\(olo.limitNum!)", canTansfer: true, stared: false, newMessage: false)
+                self.issuedDataModels.append(data)
+            }
+            self.tableView.reloadData()
         }
     }
     

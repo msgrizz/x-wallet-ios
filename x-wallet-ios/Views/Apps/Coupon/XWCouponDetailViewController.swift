@@ -1,35 +1,38 @@
 //
-//  XWCoinDetailViewController.swift
+//  XWCouponDetailViewController.swift
 //  x-wallet-ios
 //
-//  Created by 胡波 on 2018/3/28.
+//  Created by 爱班 on 2018/4/8.
 //  Copyright © 2018年 linkio. All rights reserved.
 //
 
 import UIKit
 
-class XWCoinDetailViewController: UIBaseViewController {
-    @IBOutlet weak var coinView: UIImageView!
-    @IBOutlet weak var coinNameLabel: UILabel!
-    @IBOutlet weak var headImage: UIButton!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var countLabel: UILabel!
+class XWCouponDetailViewController: UIBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         let trackButton = UIBarButtonItem(
-            title: "Track",
+            title: "Use",
             style: .plain,
             target: self,
-            action: #selector(track(_:))
+            action: #selector(use(_:))
         )
         trackButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = trackButton
     }
     
-    @objc func track(_ : UIBarButtonItem) {
-        self.performSegue(withIdentifier: "goToTrack", sender: nil)
+    @objc func use(_ : UIBarButtonItem) {
+        let alert = UIAlertController(title: "Use", message: "Attention, are you sure you want to use this coupon？", preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "Uncertain", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Determine", style: .default, handler: {action in
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

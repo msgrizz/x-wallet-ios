@@ -15,7 +15,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     @IBOutlet weak var searchBar: UISearchBar!
     
     
-    typealias fucBlock = (_ name :String) ->()
+    typealias fucBlock = (_ user :XWUser) ->()
     
     var blockproerty:fucBlock!
     
@@ -124,7 +124,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         if indexPath.section == 1{
             if let _ = blockproerty{
                 let user = userData.users[indexPath.row]
-                blockproerty(user.name)
+                blockproerty(user)
             }
         }
     }
@@ -148,14 +148,14 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         
         
         
-        let my = XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(String(describing: XWLocalManager.sharedInstance().localUser.id))", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
+        let my = XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(XWLocalManager.sharedInstance().localUser.id!)", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
         userData.myself = my
     }
     
     func getUserData() {
         SAccountControllerAPI.getUsingGET { (accounts, error) in
             for ele in accounts! {
-                let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(String(describing: ele.id))", profilePic:nil, avatar:ele.avatar)
+                let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)
                 self.userData.users.append(user)
             }
             self.tableView.reloadData()

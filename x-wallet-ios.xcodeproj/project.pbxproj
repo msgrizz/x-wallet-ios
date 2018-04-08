@@ -188,6 +188,7 @@
 		D5E646FA2079B93800AB6BC5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DC2079B93800AB6BC5 /* Configuration.swift */; };
 		D5E646FB2079B93800AB6BC5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DD2079B93800AB6BC5 /* Models.swift */; };
 		D5E646FC2079B93800AB6BC5 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646DE2079B93800AB6BC5 /* AlamofireImplementations.swift */; };
+		D5E646FE2079E56300AB6BC5 /* XWCouponDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646FD2079E56300AB6BC5 /* XWCouponDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,6 +393,7 @@
 		D5E646DC2079B93800AB6BC5 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		D5E646DD2079B93800AB6BC5 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D5E646DE2079B93800AB6BC5 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
+		D5E646FD2079E56300AB6BC5 /* XWCouponDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCouponDetailViewController.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -514,6 +516,7 @@
 				A773E5FA2069F784002C5721 /* XWCouponListViewController.swift */,
 				A773E5FC206A09DE002C5721 /* XWCreateCouponViewController.swift */,
 				A773E5FE206A0A2D002C5721 /* XWSendCouponViewController.swift */,
+				D5E646FD2079E56300AB6BC5 /* XWCouponDetailViewController.swift */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 				D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */,
 				D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */,
 				D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */,
+				D5E646FE2079E56300AB6BC5 /* XWCouponDetailViewController.swift in Sources */,
 				D5E646ED2079B93800AB6BC5 /* ResourceSAccount.swift in Sources */,
 				D5E646EC2079B93800AB6BC5 /* MiniCoinPoolDashBoardDTO.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
