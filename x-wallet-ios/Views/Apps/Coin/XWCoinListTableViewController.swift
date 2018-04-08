@@ -120,8 +120,24 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = Main.instantiateViewController(withIdentifier: "XWCoinDetailViewController") as! XWCoinDetailViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+        if indexPath.section == 0 {
+            let coinData = holdDataModels[indexPath.row]
+            SMiniCoinPoolControllerAPI.getOneUsingGET1(id: coinData.coinId) { (pool, error) in
+                DispatchQueue.main.async {
+                    vc.coinPool = pool
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+
+        }else {
+            let coinData = issuedDataModels[indexPath.row]
+            SMiniCoinPoolControllerAPI.getOneUsingGET1(id: coinData.coinId) { (pool, error) in
+                DispatchQueue.main.async {
+                    vc.coinPool = pool
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -169,12 +185,12 @@ class XWCoinListTableViewController: UIBaseTableViewController {
             let hold = data!["hold"]
             let issued = data!["issued"]
             for ele in hold! {
-                let data = CoinsModel(title: ele.miniCoinPoolName!, content: "Possession:\(ele.ownNum!)", canTansfer: false, stared: false, newMessage: false)
+                let data = CoinsModel(title: ele.miniCoinPoolName!, content: "Possession:\(ele.ownNum!)", canTansfer: false, stared: false, newMessage: false, coinId: ele.miniCoinPoolId!)
                 self.holdDataModels.append(data)
             }
             
             for olo in issued! {
-                let data = CoinsModel(title: olo.miniCoinPoolName!, content: "Transfer/Limited:\(olo.ownNum!)/\(olo.limitNum!)", canTansfer: true, stared: false, newMessage: false)
+                let data = CoinsModel(title: olo.miniCoinPoolName!, content: "Transfer/Limited:\(olo.ownNum!)/\(olo.limitNum!)", canTansfer: true, stared: false, newMessage: false,coinId: olo.miniCoinPoolId!)
                 self.issuedDataModels.append(data)
             }
             self.tableView.reloadData()

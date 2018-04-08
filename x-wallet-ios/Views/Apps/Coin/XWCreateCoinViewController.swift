@@ -83,6 +83,14 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
     
     
     @IBAction func issueAction(_ : UIButton) {
+        guard self.imageData != nil else {
+            return
+        }
+        
+        guard self.nameTextField.text != nil else {
+            return
+        }
+
         self.activityIndicatorView.startAnimating()
         self.sendImageDataRequest()
     }

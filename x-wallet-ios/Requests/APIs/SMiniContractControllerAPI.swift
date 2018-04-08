@@ -17,8 +17,8 @@ open class SMiniContractControllerAPI {
      - parameter id: (path) id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOneUsingGET1(id: Int64, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
-        getOneUsingGET1WithRequestBuilder(id: id).execute { (response, error) -> Void in
+    open class func getOneUsingGET2(id: Int64, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
+        getOneUsingGET2WithRequestBuilder(id: id).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -33,7 +33,7 @@ open class SMiniContractControllerAPI {
 
      - returns: RequestBuilder<SMiniContract> 
      */
-    open class func getOneUsingGET1WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniContract> {
+    open class func getOneUsingGET2WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniContract> {
         var path = "/sMiniContracts/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path
@@ -112,6 +112,44 @@ open class SMiniContractControllerAPI {
         let requestBuilder: RequestBuilder<SMiniContract>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
+     update
+     
+     - parameter id: (path) id 
+     - parameter sMiniContractDTO: (body) sMiniContractDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func updateUsingPUT(id: Int64, sMiniContractDTO: SMiniContractDTO, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
+        updateUsingPUTWithRequestBuilder(id: id, sMiniContractDTO: sMiniContractDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     update
+     - PUT /sMiniContracts/{id}
+     - examples: [{output=none}]
+     
+     - parameter id: (path) id 
+     - parameter sMiniContractDTO: (body) sMiniContractDTO 
+
+     - returns: RequestBuilder<SMiniContract> 
+     */
+    open class func updateUsingPUTWithRequestBuilder(id: Int64, sMiniContractDTO: SMiniContractDTO) -> RequestBuilder<SMiniContract> {
+        var path = "/sMiniContracts/{id}"
+        path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sMiniContractDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SMiniContract>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
 }

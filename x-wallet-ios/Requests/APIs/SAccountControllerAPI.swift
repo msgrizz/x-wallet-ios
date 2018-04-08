@@ -12,6 +12,44 @@ import Alamofire
 
 open class SAccountControllerAPI {
     /**
+     getAllExceptMe
+     
+     - parameter id: (query) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAllExceptMeUsingGET(id: Int64, completion: @escaping ((_ data: [SAccount]?,_ error: Error?) -> Void)) {
+        getAllExceptMeUsingGETWithRequestBuilder(id: id).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     getAllExceptMe
+     - GET /sAccountsExceptMe
+     - examples: [{output=none}]
+     
+     - parameter id: (query) id 
+
+     - returns: RequestBuilder<[SAccount]> 
+     */
+    open class func getAllExceptMeUsingGETWithRequestBuilder(id: Int64) -> RequestBuilder<[SAccount]> {
+        let path = "/sAccountsExceptMe"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
+            "id": id.encodeToJSON()
+        ])
+        
+
+        let requestBuilder: RequestBuilder<[SAccount]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      getOne
      
      - parameter id: (path) id 
@@ -112,6 +150,44 @@ open class SAccountControllerAPI {
         let requestBuilder: RequestBuilder<SAccount>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
+     put
+     
+     - parameter sAccountDTO: (body) sAccountDTO 
+     - parameter id: (path) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putUsingPUT(sAccountDTO: SAccountDTO, id: Int64, completion: @escaping ((_ data: SAccount?,_ error: Error?) -> Void)) {
+        putUsingPUTWithRequestBuilder(sAccountDTO: sAccountDTO, id: id).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     put
+     - PUT /sAccounts/{id}
+     - examples: [{output=none}]
+     
+     - parameter sAccountDTO: (body) sAccountDTO 
+     - parameter id: (path) id 
+
+     - returns: RequestBuilder<SAccount> 
+     */
+    open class func putUsingPUTWithRequestBuilder(sAccountDTO: SAccountDTO, id: Int64) -> RequestBuilder<SAccount> {
+        var path = "/sAccounts/{id}"
+        path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sAccountDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SAccount>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
 }

@@ -14,4 +14,5 @@ struct CoinsModel {
     var canTansfer: Bool = true
     var stared: Bool = true
     var newMessage: Bool = true
+    var coinId: Int64 = 1
 }
