@@ -81,64 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wxI-dy-GKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="2778"/>
-        </scene>
-        <!--Base View Controller-->
-        <scene sceneID="NDI-P0-1NA">
-            <objects>
-                <viewController id="wv5-LY-z3Q" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zmd-eQ-oM1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3Y-Fc-JVc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ui4-Aj-3Sw">
-                                        <rect key="frame" x="18.5" y="0.0" width="338" height="710"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="couponCreation2" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-W3-6MG">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="710"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="710" id="0xU-B7-07X"/>
-                                                    <constraint firstAttribute="width" constant="338" id="9iC-Cd-DHV"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="6Zv-W3-6MG" firstAttribute="top" secondItem="ui4-Aj-3Sw" secondAttribute="top" id="8yo-qh-sKX"/>
-                                            <constraint firstAttribute="bottom" secondItem="6Zv-W3-6MG" secondAttribute="bottom" id="ROn-K7-weP"/>
-                                            <constraint firstItem="6Zv-W3-6MG" firstAttribute="centerX" secondItem="ui4-Aj-3Sw" secondAttribute="centerX" id="Xoi-uR-q9s"/>
-                                            <constraint firstAttribute="width" constant="338" id="sMT-dB-4WP"/>
-                                            <constraint firstAttribute="height" constant="710" id="tjF-Oq-ur0"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ui4-Aj-3Sw" firstAttribute="leading" secondItem="h3Y-Fc-JVc" secondAttribute="leading" constant="18.5" id="1cP-6Z-1ME"/>
-                                    <constraint firstItem="ui4-Aj-3Sw" firstAttribute="top" secondItem="h3Y-Fc-JVc" secondAttribute="top" id="Nwg-Eu-4g9"/>
-                                    <constraint firstAttribute="bottom" secondItem="ui4-Aj-3Sw" secondAttribute="bottom" id="aH9-6Z-1db"/>
-                                    <constraint firstItem="ui4-Aj-3Sw" firstAttribute="centerX" secondItem="h3Y-Fc-JVc" secondAttribute="centerX" id="gDx-qt-aVE"/>
-                                    <constraint firstAttribute="trailing" secondItem="ui4-Aj-3Sw" secondAttribute="trailing" constant="18.5" id="nzP-AW-aWR"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="h3Y-Fc-JVc" firstAttribute="bottom" secondItem="8OE-Ky-it5" secondAttribute="bottom" id="Jer-t9-xGJ"/>
-                            <constraint firstItem="h3Y-Fc-JVc" firstAttribute="trailing" secondItem="8OE-Ky-it5" secondAttribute="trailing" id="Z6o-Wf-yZX"/>
-                            <constraint firstItem="h3Y-Fc-JVc" firstAttribute="leading" secondItem="8OE-Ky-it5" secondAttribute="leading" id="c28-qi-qrK"/>
-                            <constraint firstItem="h3Y-Fc-JVc" firstAttribute="top" secondItem="8OE-Ky-it5" secondAttribute="top" id="eyi-qh-Qs9"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8OE-Ky-it5"/>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="900"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C5x-QO-qEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2113" y="2209"/>
+            <point key="canvasLocation" x="90" y="2601"/>
         </scene>
         <!--Coupon-->
         <scene sceneID="1QB-Ag-axE">
@@ -189,111 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msz-ih-1bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="2777"/>
-        </scene>
-        <!--Base View Controller-->
-        <scene sceneID="CqQ-yU-0Zm">
-            <objects>
-                <viewController id="Cr7-pI-bUI" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w4s-R4-0D5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon2" translatesAutoresizingMaskIntoConstraints="NO" id="YaP-zs-2MN">
-                                <rect key="frame" x="5" y="20" width="365" height="451"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="365" id="HmT-Hu-8ku"/>
-                                    <constraint firstAttribute="height" constant="451" id="ta5-gs-1tn"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTJ-ek-1Hw">
-                                <rect key="frame" x="20" y="599" width="335" height="48"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.1764705882" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="BHT-vu-Alv"/>
-                                    <constraint firstAttribute="height" constant="48" id="qCP-f7-HdP"/>
-                                </constraints>
-                                <state key="normal" title="Send">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Ydd-s0-6wh" firstAttribute="bottom" secondItem="eTJ-ek-1Hw" secondAttribute="bottom" constant="20" id="I0B-zS-S21"/>
-                            <constraint firstItem="YaP-zs-2MN" firstAttribute="centerX" secondItem="w4s-R4-0D5" secondAttribute="centerX" id="OQj-R4-jC8"/>
-                            <constraint firstItem="Ydd-s0-6wh" firstAttribute="trailing" secondItem="eTJ-ek-1Hw" secondAttribute="trailing" constant="20" id="cX1-sU-CUh"/>
-                            <constraint firstItem="eTJ-ek-1Hw" firstAttribute="leading" secondItem="Ydd-s0-6wh" secondAttribute="leading" constant="20" id="fMf-RC-4Tj"/>
-                            <constraint firstItem="YaP-zs-2MN" firstAttribute="top" secondItem="Ydd-s0-6wh" secondAttribute="top" id="jYL-pL-ucJ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ydd-s0-6wh"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8dJ-mM-Uej" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1121" y="1990"/>
-        </scene>
-        <!--Base View Controller-->
-        <scene sceneID="TWu-p8-ckH">
-            <objects>
-                <viewController id="tWA-3J-dhK" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iq9-uc-Pdd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sendRecord" translatesAutoresizingMaskIntoConstraints="NO" id="NO0-vf-VIt">
-                                <rect key="frame" x="20" y="20" width="253" height="539"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="539" id="nx4-f3-yyC"/>
-                                    <constraint firstAttribute="width" constant="253" id="owS-l3-WN4"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="NO0-vf-VIt" firstAttribute="top" secondItem="cuU-Ak-nUt" secondAttribute="top" id="3QB-E3-2rg"/>
-                            <constraint firstItem="NO0-vf-VIt" firstAttribute="leading" secondItem="cuU-Ak-nUt" secondAttribute="leading" constant="20" id="Pqo-7x-cvq"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cuU-Ak-nUt"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cNp-la-KJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1666" y="3523"/>
-        </scene>
-        <!--Base View Controller-->
-        <scene sceneID="oJc-ic-csj">
-            <objects>
-                <viewController id="3pG-oO-5cK" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x5Q-VV-XUb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="revokeNoti" translatesAutoresizingMaskIntoConstraints="NO" id="bi6-EN-QKH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="623"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="623" id="QLt-5l-eh1"/>
-                                    <constraint firstAttribute="width" constant="375" id="mcB-1G-7d5"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bi6-EN-QKH" firstAttribute="top" secondItem="fbN-HA-lY7" secondAttribute="top" id="LQq-CY-zmD"/>
-                            <constraint firstItem="bi6-EN-QKH" firstAttribute="centerX" secondItem="x5Q-VV-XUb" secondAttribute="centerX" id="wWw-xD-UDM"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fbN-HA-lY7"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JSw-xn-rrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2935" y="2776"/>
+            <point key="canvasLocation" x="845" y="3296"/>
         </scene>
         <!--Transfer Coupon-->
         <scene sceneID="Pev-6X-wes">
@@ -333,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goI-Fs-AXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="3684.1079460269866"/>
+            <point key="canvasLocation" x="-97" y="3887"/>
         </scene>
         <!--Coupon-->
         <scene sceneID="w3F-mJ-gzD">
@@ -390,92 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj3-9W-mbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-714" y="3931"/>
-        </scene>
-        <!--Base View Controller-->
-        <scene sceneID="PUH-Rp-HJ6">
-            <objects>
-                <viewController id="293-EA-UpS" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="acA-9X-cxk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZx-ZC-VCW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="880"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyJ-Ux-3hM">
-                                        <rect key="frame" x="5" y="0.0" width="365" height="654"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon3" translatesAutoresizingMaskIntoConstraints="NO" id="kji-Ir-NDK">
-                                                <rect key="frame" x="0.0" y="0.0" width="365" height="654"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="365" id="Jkv-bg-GlI"/>
-                                                    <constraint firstAttribute="height" constant="654" id="ePt-vW-fbi"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="kji-Ir-NDK" firstAttribute="top" secondItem="zyJ-Ux-3hM" secondAttribute="top" id="1CG-th-HyW"/>
-                                            <constraint firstAttribute="height" constant="654" id="8t5-nG-HtX"/>
-                                            <constraint firstItem="kji-Ir-NDK" firstAttribute="centerX" secondItem="zyJ-Ux-3hM" secondAttribute="centerX" id="E7u-2M-0wk"/>
-                                            <constraint firstAttribute="bottom" secondItem="kji-Ir-NDK" secondAttribute="bottom" id="dYN-8b-4GN"/>
-                                            <constraint firstAttribute="width" constant="365" id="ugn-y0-UOB"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="zyJ-Ux-3hM" firstAttribute="centerX" secondItem="VZx-ZC-VCW" secondAttribute="centerX" id="73F-8W-ge2"/>
-                                    <constraint firstAttribute="trailing" secondItem="zyJ-Ux-3hM" secondAttribute="trailing" constant="5" id="ImO-7V-lMV"/>
-                                    <constraint firstAttribute="bottom" secondItem="zyJ-Ux-3hM" secondAttribute="bottom" id="aYk-jx-UyE"/>
-                                    <constraint firstItem="zyJ-Ux-3hM" firstAttribute="top" secondItem="VZx-ZC-VCW" secondAttribute="top" id="drV-pm-gMT"/>
-                                    <constraint firstItem="zyJ-Ux-3hM" firstAttribute="leading" secondItem="VZx-ZC-VCW" secondAttribute="leading" constant="5" id="mzW-LW-2nj"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="VZx-ZC-VCW" firstAttribute="top" secondItem="KAe-aT-7pN" secondAttribute="top" id="Sen-DJ-see"/>
-                            <constraint firstItem="VZx-ZC-VCW" firstAttribute="leading" secondItem="KAe-aT-7pN" secondAttribute="leading" id="g6K-g5-DbO"/>
-                            <constraint firstItem="VZx-ZC-VCW" firstAttribute="trailing" secondItem="KAe-aT-7pN" secondAttribute="trailing" id="qXP-9N-2Sb"/>
-                            <constraint firstItem="VZx-ZC-VCW" firstAttribute="bottom" secondItem="KAe-aT-7pN" secondAttribute="bottom" id="w7k-0B-hfV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KAe-aT-7pN"/>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="900"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NmZ-RW-8Rz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2164" y="3171"/>
-        </scene>
-        <!--Base View Controller-->
-        <scene sceneID="mRl-ft-AyG">
-            <objects>
-                <viewController id="tYO-i7-TbR" customClass="UIBaseViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="biA-b6-b28">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sendRecord" translatesAutoresizingMaskIntoConstraints="NO" id="bBl-0S-XHo">
-                                <rect key="frame" x="20" y="20" width="253" height="539"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="253" id="MRB-3V-yCM"/>
-                                    <constraint firstAttribute="height" constant="539" id="rfp-G3-vac"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bBl-0S-XHo" firstAttribute="top" secondItem="bQU-e7-Efc" secondAttribute="top" id="Mye-1j-chd"/>
-                            <constraint firstItem="bBl-0S-XHo" firstAttribute="leading" secondItem="bQU-e7-Efc" secondAttribute="leading" constant="20" id="dt2-B1-s6k"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="bQU-e7-Efc"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T51-aj-GRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1966" y="2778"/>
+            <point key="canvasLocation" x="-613" y="3914"/>
         </scene>
         <!--Coupon List View Controller-->
         <scene sceneID="vW9-IU-NXH">
@@ -544,16 +298,12 @@
     </scenes>
     <resources>
         <image name="coupon1" width="365" height="451"/>
-        <image name="coupon2" width="365" height="451"/>
         <image name="coupon3" width="365" height="736"/>
         <image name="couponCreation" width="335" height="452"/>
-        <image name="couponCreation2" width="338" height="710"/>
         <image name="couponIndex" width="375" height="527"/>
         <image name="issueGoupon" width="335" height="536"/>
-        <image name="revokeNoti" width="375" height="623"/>
-        <image name="sendRecord" width="252" height="538"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="esL-18-3Gu"/>
+        <segue reference="6au-lF-3Gj"/>
     </inferredMetricsTieBreakers>
 </document>

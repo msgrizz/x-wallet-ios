@@ -181,7 +181,7 @@ open class SMiniContractControllerAPI {
 
     /**
      update
-     - POST /sMiniContracts/{id}
+     - POST /updateContract/{id}
      - examples: [{output=none}]
      
      - parameter id: (path) id 
@@ -190,7 +190,7 @@ open class SMiniContractControllerAPI {
      - returns: RequestBuilder<SMiniContract> 
      */
     open class func updateUsingPOSTWithRequestBuilder(id: Int64, sMiniContractDTO: SMiniContractDTO) -> RequestBuilder<SMiniContract> {
-        var path = "/sMiniContracts/{id}"
+        var path = "/updateContract/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sMiniContractDTO)

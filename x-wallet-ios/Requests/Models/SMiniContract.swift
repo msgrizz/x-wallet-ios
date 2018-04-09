@@ -30,8 +30,10 @@ open class SMiniContract: Codable {
     public var miniContractType: MiniContractType?
     public var photoUrl: String?
     public var receiver: SAccount?
+    public var receiverComplete: Bool?
     public var receiverConfirmed: Bool?
     public var sender: SAccount?
+    public var senderComplete: Bool?
     public var senderConfirmed: Bool?
     public var title: String?
     public var version: Int64?
@@ -39,7 +41,7 @@ open class SMiniContract: Codable {
 
 
     
-    public init(abolished: Bool?, activated: Bool?, audioUrl: String?, complete: Bool?, confirmed: Bool?, content: String?, createTime: Int64?, id: Int64?, important: Bool?, lastModifyTime: Int64?, miniContractType: MiniContractType?, photoUrl: String?, receiver: SAccount?, receiverConfirmed: Bool?, sender: SAccount?, senderConfirmed: Bool?, title: String?, version: Int64?, videoUrl: String?) {
+    public init(abolished: Bool?, activated: Bool?, audioUrl: String?, complete: Bool?, confirmed: Bool?, content: String?, createTime: Int64?, id: Int64?, important: Bool?, lastModifyTime: Int64?, miniContractType: MiniContractType?, photoUrl: String?, receiver: SAccount?, receiverComplete: Bool?, receiverConfirmed: Bool?, sender: SAccount?, senderComplete: Bool?, senderConfirmed: Bool?, title: String?, version: Int64?, videoUrl: String?) {
         self.abolished = abolished
         self.activated = activated
         self.audioUrl = audioUrl
@@ -53,8 +55,10 @@ open class SMiniContract: Codable {
         self.miniContractType = miniContractType
         self.photoUrl = photoUrl
         self.receiver = receiver
+        self.receiverComplete = receiverComplete
         self.receiverConfirmed = receiverConfirmed
         self.sender = sender
+        self.senderComplete = senderComplete
         self.senderConfirmed = senderConfirmed
         self.title = title
         self.version = version
@@ -81,8 +85,10 @@ open class SMiniContract: Codable {
         try container.encodeIfPresent(miniContractType, forKey: "miniContractType")
         try container.encodeIfPresent(photoUrl, forKey: "photoUrl")
         try container.encodeIfPresent(receiver, forKey: "receiver")
+        try container.encodeIfPresent(receiverComplete, forKey: "receiverComplete")
         try container.encodeIfPresent(receiverConfirmed, forKey: "receiverConfirmed")
         try container.encodeIfPresent(sender, forKey: "sender")
+        try container.encodeIfPresent(senderComplete, forKey: "senderComplete")
         try container.encodeIfPresent(senderConfirmed, forKey: "senderConfirmed")
         try container.encodeIfPresent(title, forKey: "title")
         try container.encodeIfPresent(version, forKey: "version")
@@ -107,8 +113,10 @@ open class SMiniContract: Codable {
         miniContractType = try container.decodeIfPresent(MiniContractType.self, forKey: "miniContractType")
         photoUrl = try container.decodeIfPresent(String.self, forKey: "photoUrl")
         receiver = try container.decodeIfPresent(SAccount.self, forKey: "receiver")
+        receiverComplete = try container.decodeIfPresent(Bool.self, forKey: "receiverComplete")
         receiverConfirmed = try container.decodeIfPresent(Bool.self, forKey: "receiverConfirmed")
         sender = try container.decodeIfPresent(SAccount.self, forKey: "sender")
+        senderComplete = try container.decodeIfPresent(Bool.self, forKey: "senderComplete")
         senderConfirmed = try container.decodeIfPresent(Bool.self, forKey: "senderConfirmed")
         title = try container.decodeIfPresent(String.self, forKey: "title")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")

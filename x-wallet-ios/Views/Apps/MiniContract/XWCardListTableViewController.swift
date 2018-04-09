@@ -22,7 +22,8 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     @IBOutlet weak var addButton:UIButton!
     
     var iouArray:  [XWContract] = [XWContract]()
-    
+    var iouCompleteArray:  [XWContract] = [XWContract]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +61,36 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     }
     
     @objc func add(_ : UIButton) {
-        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise",NSLocalizedString("I.O.U", comment: ""))
-        alertSheet.show(in: self.view)
+        let vc = XWWebViewController()
+        vc.isCreate = true
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cuAction = UIAlertAction(title: "Currency", style: .default, handler: {action in
+            vc.launchURL = kCreateContractURL
+            vc.title = "Create Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let reAction = UIAlertAction(title: "Receipt", style: .default, handler: {action in
+            vc.launchURL = kCreatReceiptURL
+            vc.title = "Create Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let prAction = UIAlertAction(title: "Promise", style: .default, handler: {action in
+            vc.launchURL = kCreatePromiseURL
+            vc.title = "Create Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let iouAction = UIAlertAction(title: "I.O.U", style: .default, handler: {action in
+            vc.launchURL = kCreateIOUURL
+            vc.title = NSLocalizedString("Create I.O.U",comment: "")
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(cuAction)
+        alert.addAction(reAction)
+        alert.addAction(prAction)
+        alert.addAction(iouAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -172,18 +201,25 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         headView.clearData()
         if section==0 {
             headView.titleLabel.text = "Currency"
-            headView.starButton.isHidden = false
-            headView.checkButton.isHidden = false
-            let tap1 = UITapGestureRecognizer.init(target: self, action: #selector(goToImportant))
-            headView.addGestureRecognizer(tap1)
+            if self.iouCompleteArray.count > 0 {
+                headView.checkButton.isHidden = false
+                headView.checkButton.setTitle(" \(self.iouCompleteArray.count)", for: UIControlState.normal)
+                let tap1 = UITapGestureRecognizer.init(target: self, action: #selector(goToComplete))
+                headView.addGestureRecognizer(tap1)
+            }
         }else if section == 1{
             headView.titleLabel.text = "Receipt"
         }else if section == 2{
             headView.titleLabel.text = "Promise"
         }else{
             headView.titleLabel.text = NSLocalizedString("I.O.U", comment: "")
+
         }
         return headView
+    }
+    
+    @objc func goToComplete() {
+        self.performSegue(withIdentifier: "goToComplete", sender: nil)
     }
     
     @objc func goToImportant() {
@@ -202,42 +238,13 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }
     }
     
-    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
-        let vc = XWWebViewController()
-        vc.isCreate = true
-        if buttonIndex == 1{
-            vc.launchURL = kCreateContractURL
-            vc.title = "Create Currency"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if buttonIndex == 2{
-            vc.launchURL = kCreatReceiptURL
-            vc.title = "Create Receipt"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if buttonIndex == 3{
-            vc.launchURL = kCreatePromiseURL
-            vc.title = "Create Promise"
-            self.navigationController?.pushViewController(vc, animated: true)
-
-        }else if buttonIndex == 4{
-            vc.launchURL = kCreateIOUURL
-            vc.title = NSLocalizedString("Create I.O.U",comment: "")
-            self.navigationController?.pushViewController(vc, animated: true)
-
-        }else if buttonIndex == 5{
-
-
-        }
-        else {
-        }
-        
-    }
-    
     func getIOUData() {
         SMiniContractControllerAPI.getByTypeUsingGET(miniContractType: .iou, accountId: Int64(Defaults[.userId])) { (data, error) in
             guard data != nil else {
                 return
             }
             self.iouArray.removeAll()
+            self.iouCompleteArray.removeAll()
             for ele in data! {
                 let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
                 let dateFormatter = DateFormatter()
@@ -253,13 +260,25 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                         title = "To: \(ele.receiver!.loginName!)"
                     }
                 }
-                
                 let iou = XWContract(title: title, type: ContractType.IOU, content: dateFormatter.string(from: date), id:ele.id!)
                 iou.remoteData = ele
-                self.iouArray.append(iou)
+                if ele.receiverComplete! && ele.senderComplete! {
+                    self.iouCompleteArray.append(iou)
+                }else {
+                    self.iouArray.append(iou)
+                }
             }
             self.activityIndicatorView.stopAnimating()
             self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToComplete" {
+            let vc = segue.destination as! XWCompleteContractTableViewController
+            vc.completeArray = self.iouCompleteArray
+            vc.type = .IOU
+            vc.title = "Completed"
         }
     }
 

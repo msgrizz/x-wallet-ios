@@ -14,7 +14,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="dvc-p1-adZ">
             <objects>
-                <tabBarController useStoryboardIdentifierAsRestorationIdentifier="YES" id="hrf-jo-KgI" customClass="XWTabBarViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="XWTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hrf-jo-KgI" customClass="XWTabBarViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pih-hA-CDi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -125,7 +125,7 @@
                         <outlet property="searchBar" destination="L03-EF-hIo" id="vBo-Wd-uwz"/>
                         <segue destination="TaT-nC-o1N" kind="show" identifier="goToCardList" id="p4b-o4-5BU"/>
                         <segue destination="4cR-nF-xwH" kind="show" identifier="goToCoinList" id="q1k-UN-smi"/>
-                        <segue destination="k46-3O-Jpn" kind="show" id="II6-8H-eIc"/>
+                        <segue destination="k46-3O-Jpn" kind="show" identifier="goToRecieveCode" id="II6-8H-eIc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2013,6 +2013,7 @@
                         <outlet property="addButton" destination="jHz-nG-f2L" id="cwL-hJ-lvL"/>
                         <outlet property="bottomBar" destination="3pQ-Hm-CnD" id="AEW-Tc-kM4"/>
                         <segue destination="eoz-ZL-raP" kind="show" identifier="goToImportant" id="Dhv-O3-hGs"/>
+                        <segue destination="hAH-LV-sEb" kind="show" identifier="goToComplete" id="8im-ZB-iVW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-n9-bqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2600,6 +2601,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpU-7I-92p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3330" y="-1352"/>
+        </scene>
+        <!--Mini Contract-->
+        <scene sceneID="6wb-Ff-Czl">
+            <objects>
+                <tableViewController storyboardIdentifier="XWCompleteContractTableViewController" title="Mini Contract" id="hAH-LV-sEb" customClass="XWCompleteContractTableViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="A5h-U2-NrV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="hAH-LV-sEb" id="JzN-wL-SAI"/>
+                            <outlet property="delegate" destination="hAH-LV-sEb" id="v5D-Pe-8Io"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzB-bA-2TD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-1283"/>
         </scene>
     </scenes>
     <resources>

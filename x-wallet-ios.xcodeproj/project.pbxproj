@@ -199,6 +199,7 @@
 		D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */; };
 		D5ECE305207B14EA00F4EFFC /* ResponseSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */; };
 		D5ECE306207B14EA00F4EFFC /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */; };
+		D5ECE308207B54F500F4EFFC /* XWCompleteContractTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE307207B54F500F4EFFC /* XWCompleteContractTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -414,6 +415,7 @@
 		D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferManyDTO.swift; sourceTree = "<group>"; };
 		D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSAccount.swift; sourceTree = "<group>"; };
 		D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
+		D5ECE307207B54F500F4EFFC /* XWCompleteContractTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCompleteContractTableViewController.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -895,6 +897,7 @@
 			children = (
 				D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */,
 				A773E613206A3B6D002C5721 /* XWImportantContractTableViewController.swift */,
+				D5ECE307207B54F500F4EFFC /* XWCompleteContractTableViewController.swift */,
 				D5ADC2ED205A424A001307E8 /* XWContractView.swift */,
 				D5ADC2EF205A425B001307E8 /* XWContractView.xib */,
 				A773E60B206A3062002C5721 /* XWContractDemoTableViewCell.swift */,
@@ -1321,6 +1324,7 @@
 				D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */,
 				D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */,
 				D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */,
+				D5ECE308207B54F500F4EFFC /* XWCompleteContractTableViewController.swift in Sources */,
 				D5E646FE2079E56300AB6BC5 /* XWCouponDetailViewController.swift in Sources */,
 				D5E6476E2079EA4B00AB6BC5 /* SMiniCoinControllerAPI.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
