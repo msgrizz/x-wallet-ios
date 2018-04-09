@@ -9,6 +9,15 @@
 import UIKit
 
 class XWContractHeadTableViewCell: UITableViewCell {
+    @IBOutlet weak var titleLabel : UILabel!
+    @IBOutlet weak var contentLabel : UILabel!
+    @IBOutlet weak var sender : UIButton!
+    @IBOutlet weak var reciever : UIButton!
+    @IBOutlet weak var senderCheck : UIImageView!
+    @IBOutlet weak var recieverCheck : UIImageView!
+    @IBOutlet weak var signButton : UIButton!
+    @IBOutlet weak var timeLabel : UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()

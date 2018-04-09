@@ -18,6 +18,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
     var contractModel: XWContract!
     @IBOutlet var inputBar: UIView!
     @IBOutlet weak var inputTextField: UITextField!
+
     override var inputAccessoryView: UIView? {
         get {
             self.inputBar.frame.size.height = self.barHeight
