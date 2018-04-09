@@ -245,12 +245,17 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                 
                 var title = ""
                 if ele.receiver?.id == Int64(Defaults[.userId]) {
-                    title = "From: \(ele.sender!.loginName!)"
+                    if ele.sender != nil {
+                        title = "From: \(ele.sender!.loginName!)"
+                    }
                 }else {
-                    title = "To: \(ele.receiver!.loginName!)"
+                    if ele.receiver != nil {
+                        title = "To: \(ele.receiver!.loginName!)"
+                    }
                 }
                 
                 let iou = XWContract(title: title, type: ContractType.IOU, content: dateFormatter.string(from: date), id:ele.id!)
+                iou.remoteData = ele
                 self.iouArray.append(iou)
             }
             self.activityIndicatorView.stopAnimating()

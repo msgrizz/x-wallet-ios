@@ -56,6 +56,22 @@ class MyCardViewController: UIBaseViewController {
         
         
         self.contentLabel.text = content
+        
+        self.accountLabel.text = XWLocalManager.sharedInstance().localUser.mobile
+        self.nameLabel.text = XWLocalManager.sharedInstance().localUser.loginName
+        self.emailLabel.text = XWLocalManager.sharedInstance().localUser.email
+        self.headImage.kf.setImage(with: URL(string: XWLocalManager.sharedInstance().localUser.avatar!))
+        
+        self.codeImage.image = UIImage.createQRCode(size: self.codeImage.frame.size.width, dataStr: self.createDataString())
+        self.codeImage.backgroundColor = UIColor.clear
+
+    }
+    
+    func createDataString() -> String {
+        let name = XWLocalManager.sharedInstance().localUser.loginName
+        let id = XWLocalManager.sharedInstance().localUser.id
+        let data = "xwallet://00?name=\(name!)&id=\(id!)&timestamp=\(NSDate().timeIntervalSince1970)"
+        return data.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)!
     }
     
     @objc func edit(_ : UIBarButtonItem) {

@@ -58,11 +58,12 @@ class XWMyViewController: UIBaseViewController,FSPagerViewDataSource,FSPagerView
     }
     
     func configUser(){
-        headImage.image = UIImage.init(named: "head1")
-        creditLabel.text = "Credit：85"
-        nameLabel.text = "Blanche Reed"
-        contentLabel.text = "123"
-        emailLabel.text = "linkio.hu@gmail.com"
+        headImage.kf.setImage(with: URL(string: XWLocalManager.sharedInstance().localUser.avatar!))
+        creditLabel.text = "Credit："+"\(XWLocalManager.sharedInstance().localUser.credit!)"
+        nameLabel.text = XWLocalManager.sharedInstance().localUser.loginName
+        contentLabel.text = XWLocalManager.sharedInstance().localUser.nickname
+        emailLabel.text = XWLocalManager.sharedInstance().localUser.email
+        idLabel.text = "Identity code: \(XWLocalManager.sharedInstance().localUser.id!)"
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 import CoreLocation
-
+import Kingfisher
 
 class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
@@ -176,6 +176,18 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
         if self.contractModel != nil {
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractHeadTableViewCell", for: indexPath) as! XWContractHeadTableViewCell
+                cell.clearCellData()
+                cell.titleLabel.text = self.contractModel.title
+                if self.contractModel.remoteData?.content != nil {
+                    cell.contentLabel.text = (self.contractModel.remoteData?.content)! + "\n\n"
+                }
+                cell.sender.kf.setImage(with: URL(string: (self.contractModel.remoteData?.sender?.avatar)!), for: UIControlState.normal)
+                cell.reciever.kf.setImage(with: URL(string: (self.contractModel.remoteData?.receiver?.avatar)!), for: UIControlState.normal)
+                cell.senderCheck.isHidden = !(self.contractModel.remoteData?.senderConfirmed)!
+                cell.recieverCheck.isHidden = !(self.contractModel.remoteData?.receiverConfirmed)!
+                cell.signButton.setAttributedTitle(nil, for: UIControlState.normal)
+                cell.signButton.setTitle(" " + (self.contractModel.remoteData?.sender?.loginName)! + " proposed contract and signed it", for: UIControlState.normal)
+                cell.timeLabel.text = self.contractModel.content
                 return cell
             }
             else {
@@ -278,7 +290,7 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
                     //                    cell.messageBackground.image = image
                     //                    cell.message.isHidden = true
                     //                } else {
-                    //                    cell.messageBackground.image = UIImage.init(named: "loading")
+                    //                    cell.messageBackgro und.image = UIImage.init(named: "loading")
                     //                    self.items[indexPath.row].downloadImage(indexpathRow: indexPath.row, completion: { (state, index) in
                     //                        if state == true {
                     //                            DispatchQueue.main.async {

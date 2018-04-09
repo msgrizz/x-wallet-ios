@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyUserDefaults
 class PrivacyViewController: UIBaseViewController {
     var saveButton: UIBarButtonItem!
 
@@ -30,6 +30,14 @@ class PrivacyViewController: UIBaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func logoutAction() {
+        Defaults[.isLogin] = false
+        Defaults[.userId] = 0
+        let login: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
+        myAppdelegate.window?.rootViewController = login.instantiateInitialViewController();
     }
     
 

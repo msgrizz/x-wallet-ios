@@ -20,6 +20,8 @@ class XWContract: NSObject {
     var type: ContractType
     var content: String
     var id: Int64?
+    var remoteData: SMiniContract?
+    
     //MARK: Inits
     init(title: String, type: ContractType, content: String , id: Int64 = 1) {
         self.title = title

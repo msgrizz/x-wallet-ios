@@ -119,6 +119,7 @@ extension XWLoginViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else {
             passwordTextField.resignFirstResponder()
+            self.loginRequest()
         }
         return true
     }

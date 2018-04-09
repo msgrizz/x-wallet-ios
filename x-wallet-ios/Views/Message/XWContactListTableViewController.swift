@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SwiftyUserDefaults
 class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate,UITableViewDataSource {
     var addButton: UIBarButtonItem!
     
@@ -149,7 +150,15 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     }
     
     func getUserData() {
-        SAccountControllerAPI.getUsingGET { (accounts, error) in
+//        SAccountControllerAPI.getUsingGET { (accounts, error) in
+//            self.userData.users.removeAll()
+//            for ele in accounts! {
+//                let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)
+//                self.userData.users.append(user)
+//            }
+//            self.tableView.reloadData()
+//        }
+        SAccountControllerAPI.getAllExceptMeUsingGET(id:Int64(Defaults[.userId])) { (accounts, error) in
             self.userData.users.removeAll()
             for ele in accounts! {
                 let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)

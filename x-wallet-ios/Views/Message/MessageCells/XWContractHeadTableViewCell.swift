@@ -21,6 +21,13 @@ class XWContractHeadTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        sender.layer.masksToBounds = false
+        sender.layer.cornerRadius = sender.frame.height/2
+        sender.clipsToBounds = true
+        
+        reciever.layer.masksToBounds = false
+        reciever.layer.cornerRadius = reciever.frame.height/2
+        reciever.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,5 +35,15 @@ class XWContractHeadTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func clearCellData() {
+        self.titleLabel.text = ""
+        self.contentLabel.text = ""
+        self.senderCheck.isHidden = false
+        self.recieverCheck.isHidden = true
+        self.timeLabel.text = ""
+//        self.signButton.titleLabel?.text = ""
+    }
+
 
 }
