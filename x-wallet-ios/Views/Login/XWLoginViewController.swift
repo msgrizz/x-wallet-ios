@@ -31,6 +31,8 @@ class XWLoginViewController: UIBaseViewController {
     }
     
     @IBAction func signInAction(_ button: UIButton) {
+        nameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         if self.nameTextField.text != "" && self.passwordTextField.text != ""{
             self.activityIndicatorView.startAnimating()
             self.loginRequest()
@@ -40,15 +42,35 @@ class XWLoginViewController: UIBaseViewController {
     }
     
     @IBAction func createAction(_ button: UIButton) {
+        nameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         if self.nameTextField.text != "" && self.passwordTextField.text != ""{
             self.activityIndicatorView.startAnimating()
-            self.loginRequest()
+            self.createRequest()
         }else {
             self.view.makeToast(NSLocalizedString("No User Name Or Password", comment: ""))
         }
     }
-
+    
     func loginRequest() {
+        let localAccount = SignInDTO(loginName: self.nameTextField.text, loginPass: self.passwordTextField.text)
+        SAccountControllerAPI.signInUsingPOST(signInDTO: localAccount) { (account, error) in
+            if (account?.succ)! {
+                self.activityIndicatorView.stopAnimating()
+                if account != nil {
+                    let userId = account?.data?.id
+                    Defaults[.userId] = Double(userId!)
+                    Defaults[.isLogin] = true
+                    XWLocalManager.sharedInstance().localUser = account?.data!
+                    self.goToMain()
+                }
+            }else {
+                self.view.makeToast(account?.msg)
+            }
+        }
+    }
+
+    func createRequest() {
         let localAccount = SAccountDTO(loginName: self.nameTextField.text, nickname: self.nameTextField.text, loginPass: self.passwordTextField.text, paymentPass: nil, mobile: nil, email: nil, about: nil, avatar: "http://oss.iclass.cn/image/smallfiles/448_448/1522824152263aiaxp.png", credit: nil)
         SAccountControllerAPI.postUsingPOST(sAccountDTO: localAccount) { (account, error) in
             self.activityIndicatorView.stopAnimating()

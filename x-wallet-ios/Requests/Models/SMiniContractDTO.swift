@@ -24,6 +24,8 @@ open class SMiniContractDTO: Codable {
     public var sender: Int64?
     public var receiver: Int64?
     public var confirmed: Bool?
+    public var senderConfirmed: Bool?
+    public var receiverConfirmed: Bool?
     public var abolished: Bool?
     public var isImportant: Bool?
     public var isComplete: Bool?
@@ -34,7 +36,7 @@ open class SMiniContractDTO: Codable {
 
 
     
-    public init(complete: Bool?, important: Bool?, title: String?, content: String?, sender: Int64?, receiver: Int64?, confirmed: Bool?, abolished: Bool?, isImportant: Bool?, isComplete: Bool?, photoUrl: String?, videoUrl: String?, audioUrl: String?, miniContractType: MiniContractType?) {
+    public init(complete: Bool?, important: Bool?, title: String?, content: String?, sender: Int64?, receiver: Int64?, confirmed: Bool?, senderConfirmed: Bool?, receiverConfirmed: Bool?, abolished: Bool?, isImportant: Bool?, isComplete: Bool?, photoUrl: String?, videoUrl: String?, audioUrl: String?, miniContractType: MiniContractType?) {
         self.complete = complete
         self.important = important
         self.title = title
@@ -42,6 +44,8 @@ open class SMiniContractDTO: Codable {
         self.sender = sender
         self.receiver = receiver
         self.confirmed = confirmed
+        self.senderConfirmed = senderConfirmed
+        self.receiverConfirmed = receiverConfirmed
         self.abolished = abolished
         self.isImportant = isImportant
         self.isComplete = isComplete
@@ -65,6 +69,8 @@ open class SMiniContractDTO: Codable {
         try container.encodeIfPresent(sender, forKey: "sender")
         try container.encodeIfPresent(receiver, forKey: "receiver")
         try container.encodeIfPresent(confirmed, forKey: "confirmed")
+        try container.encodeIfPresent(senderConfirmed, forKey: "senderConfirmed")
+        try container.encodeIfPresent(receiverConfirmed, forKey: "receiverConfirmed")
         try container.encodeIfPresent(abolished, forKey: "abolished")
         try container.encodeIfPresent(isImportant, forKey: "isImportant")
         try container.encodeIfPresent(isComplete, forKey: "isComplete")
@@ -86,6 +92,8 @@ open class SMiniContractDTO: Codable {
         sender = try container.decodeIfPresent(Int64.self, forKey: "sender")
         receiver = try container.decodeIfPresent(Int64.self, forKey: "receiver")
         confirmed = try container.decodeIfPresent(Bool.self, forKey: "confirmed")
+        senderConfirmed = try container.decodeIfPresent(Bool.self, forKey: "senderConfirmed")
+        receiverConfirmed = try container.decodeIfPresent(Bool.self, forKey: "receiverConfirmed")
         abolished = try container.decodeIfPresent(Bool.self, forKey: "abolished")
         isImportant = try container.decodeIfPresent(Bool.self, forKey: "isImportant")
         isComplete = try container.decodeIfPresent(Bool.self, forKey: "isComplete")

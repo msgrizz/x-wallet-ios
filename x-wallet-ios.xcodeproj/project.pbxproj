@@ -197,6 +197,8 @@
 		D5E647912079F24A00AB6BC5 /* XWIOUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6478F2079F24A00AB6BC5 /* XWIOUTableViewCell.swift */; };
 		D5E647922079F24A00AB6BC5 /* XWIOUTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E647902079F24A00AB6BC5 /* XWIOUTableViewCell.xib */; };
 		D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */; };
+		D5ECE305207B14EA00F4EFFC /* ResponseSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */; };
+		D5ECE306207B14EA00F4EFFC /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -410,6 +412,8 @@
 		D5E6478F2079F24A00AB6BC5 /* XWIOUTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWIOUTableViewCell.swift; sourceTree = "<group>"; };
 		D5E647902079F24A00AB6BC5 /* XWIOUTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWIOUTableViewCell.xib; sourceTree = "<group>"; };
 		D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferManyDTO.swift; sourceTree = "<group>"; };
+		D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSAccount.swift; sourceTree = "<group>"; };
+		D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -927,6 +931,8 @@
 		D5E647552079EA4A00AB6BC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */,
+				D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */,
 				D5E64793207A032400AB6BC5 /* TransferManyDTO.swift */,
 				D5E647562079EA4A00AB6BC5 /* Link.swift */,
 				D5E647572079EA4A00AB6BC5 /* MiniCoinPoolDashBoardDTO.swift */,
@@ -1355,6 +1361,7 @@
 				D58FC41820564523008C05AE /* FSPageViewTransformer.swift in Sources */,
 				D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */,
 				D5A48977204E6D54001031F6 /* UIImage.swift in Sources */,
+				D5ECE306207B14EA00F4EFFC /* SignInDTO.swift in Sources */,
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
 				D5A48968204E6D54001031F6 /* CALayer.swift in Sources */,
 				A773E61A206A6E3C002C5721 /* XWContactHeadView.swift in Sources */,
@@ -1379,6 +1386,7 @@
 				D5E646802074A3FE00AB6BC5 /* XWLocalManager.swift in Sources */,
 				A773E5FF206A0A2D002C5721 /* XWSendCouponViewController.swift in Sources */,
 				D58DB95C20649DAD005ABED8 /* XWRecieverTableViewCell.swift in Sources */,
+				D5ECE305207B14EA00F4EFFC /* ResponseSAccount.swift in Sources */,
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5E647892079EA4B00AB6BC5 /* CodableHelper.swift in Sources */,

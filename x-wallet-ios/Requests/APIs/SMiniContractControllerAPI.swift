@@ -172,8 +172,8 @@ open class SMiniContractControllerAPI {
      - parameter sMiniContractDTO: (body) sMiniContractDTO 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func updateUsingPUT(id: Int64, sMiniContractDTO: SMiniContractDTO, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
-        updateUsingPUTWithRequestBuilder(id: id, sMiniContractDTO: sMiniContractDTO).execute { (response, error) -> Void in
+    open class func updateUsingPOST(id: Int64, sMiniContractDTO: SMiniContractDTO, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
+        updateUsingPOSTWithRequestBuilder(id: id, sMiniContractDTO: sMiniContractDTO).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -181,7 +181,7 @@ open class SMiniContractControllerAPI {
 
     /**
      update
-     - PUT /sMiniContracts/{id}
+     - POST /sMiniContracts/{id}
      - examples: [{output=none}]
      
      - parameter id: (path) id 
@@ -189,7 +189,7 @@ open class SMiniContractControllerAPI {
 
      - returns: RequestBuilder<SMiniContract> 
      */
-    open class func updateUsingPUTWithRequestBuilder(id: Int64, sMiniContractDTO: SMiniContractDTO) -> RequestBuilder<SMiniContract> {
+    open class func updateUsingPOSTWithRequestBuilder(id: Int64, sMiniContractDTO: SMiniContractDTO) -> RequestBuilder<SMiniContract> {
         var path = "/sMiniContracts/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path
@@ -200,7 +200,7 @@ open class SMiniContractControllerAPI {
 
         let requestBuilder: RequestBuilder<SMiniContract>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
 }

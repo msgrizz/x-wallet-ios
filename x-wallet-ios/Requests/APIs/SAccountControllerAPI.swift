@@ -190,4 +190,39 @@ open class SAccountControllerAPI {
         return requestBuilder.init(method: "PUT", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
+    /**
+     signIn
+     
+     - parameter signInDTO: (body) signInDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func signInUsingPOST(signInDTO: SignInDTO, completion: @escaping ((_ data: ResponseSAccount?,_ error: Error?) -> Void)) {
+        signInUsingPOSTWithRequestBuilder(signInDTO: signInDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     signIn
+     - POST /signIn
+     - examples: [{output=none}]
+     
+     - parameter signInDTO: (body) signInDTO 
+
+     - returns: RequestBuilder<ResponseSAccount> 
+     */
+    open class func signInUsingPOSTWithRequestBuilder(signInDTO: SignInDTO) -> RequestBuilder<ResponseSAccount> {
+        let path = "/signIn"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: signInDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<ResponseSAccount>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
 }

@@ -18,7 +18,6 @@ class XWContractHeadTableViewCell: UITableViewCell {
     @IBOutlet weak var signButton : UIButton!
     @IBOutlet weak var timeLabel : UILabel!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
