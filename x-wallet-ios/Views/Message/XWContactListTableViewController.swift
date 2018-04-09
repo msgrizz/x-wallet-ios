@@ -113,7 +113,6 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
                     cell.headView.kf.setImage(with: URL(string: user.avatar!))
                 }
             }
-            cell.headView.image = user.profilePic
             cell.nameLabel.text = user.name
             // Configure the cell...
             return cell
@@ -145,9 +144,6 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     
     func fakeData() {
         userData = XWDemoData()
-        
-        
-        
         let my = XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(XWLocalManager.sharedInstance().localUser.id!)", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
         userData.myself = my
     }

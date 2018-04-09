@@ -15,7 +15,6 @@ class XWMyContactTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        headView.layer.borderWidth = 1
         headView.layer.masksToBounds = false
         headView.layer.borderColor = UIColor.white.cgColor
         headView.layer.cornerRadius = headView.frame.height/2

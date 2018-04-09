@@ -72,6 +72,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.addMoreButton.removeFromSuperview()
+        self.isScrollDown = true
         super.viewDidDisappear(animated)
     }
     
@@ -237,7 +238,6 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                 return
             }
             self.iouArray.removeAll()
-            self.tableView.reloadData()
             for ele in data! {
                 let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
                 let dateFormatter = DateFormatter()
