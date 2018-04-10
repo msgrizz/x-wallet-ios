@@ -58,7 +58,6 @@ open class ICanHas {
     static private var hasLocationClosures: [_AuthStatusClosure<CLAuthorizationStatus>] = []
     static private var hasCaptureClosures: [AVMediaType: [_AuthStatusClosure<AVAuthorizationStatus>]] = [:]
     static private var hasPhotosClosures: [_AuthStatusClosure<PHAuthorizationStatus>] = []
-    static private var hasContactsClosures: [_AuthStatusErrorClosure<ABAuthorizationStatus>] = []
     static private var hasCalendarClosures: [EKEntityType: [_AuthStatusErrorClosure<EKAuthorizationStatus>]] = [:]
     
     open class func calendarAuthorizationStatus(for type: EKEntityType = EKEntityType.event) -> EKAuthorizationStatus {
@@ -87,35 +86,6 @@ open class ICanHas {
                 }
             }
         }
-    }
-    
-    open class func contactsAuthorizationStatus() -> ABAuthorizationStatus {
-        return ABAddressBookGetAuthorizationStatus()
-    }
-    
-    open class func contactsAuthorization() -> Bool {
-        return contactsAuthorizationStatus() == .authorized
-    }
-    
-    open class func contacts(book: ABAddressBook? = ABAddressBookCreateWithOptions(nil, nil)?.takeRetainedValue(), closure: @escaping AuthStatusErrorClosure<ABAuthorizationStatus>) {
-        onMain {
-            hasContactsClosures.append(closure)
-            guard !isHasingContacts else { return }
-            isHasingContacts = true
-            let done: AuthStatusErrorClosure<ABAuthorizationStatus> = { authorized, status, error in
-                complete(&hasContactsClosures, &isHasingContacts, (authorized, status, error))
-            }
-            let status = contactsAuthorizationStatus()
-            switch status {
-            case .denied, .restricted: done(false, status, nil)
-            case .authorized: done(true, status, nil)
-            case .notDetermined:
-                ABAddressBookRequestAccessWithCompletion(book) { authorized, error in
-                    onMain { done(authorized, contactsAuthorizationStatus(), error) }
-                }
-            }
-        }
-        
     }
     
     open class func photosAuthorizationStatus() -> PHAuthorizationStatus {
@@ -177,47 +147,6 @@ open class ICanHas {
     
     open class func pushAuthorization() -> Bool {
         return UIApplication.shared.isRegisteredForRemoteNotifications
-    }
-    
-    open class func push(types: UIUserNotificationType = [.alert, .badge, .sound], closure: @escaping AuthClosure) {
-        onMain {
-            hasPushClosures.append(closure)
-            guard !isHasingPush else { return }
-            isHasingPush = true
-            let done: AuthClosure = { authorized in
-                complete(&hasPushClosures, &isHasingPush, authorized)
-            }
-            let application = UIApplication.shared
-            guard !didTryToRegisterForPush else {
-                done(application.isRegisteredForRemoteNotifications)
-                return
-            }
-            didTryToRegisterForPush = true
-            
-            application.registerUserNotificationSettings(UIUserNotificationSettings(types: types, categories: nil))
-            
-            var hasTimedOut = false
-            var hasGoneToBackground = false
-            var waitingForForeground = false
-            
-            observeOnce(notificationName: .UIApplicationWillResignActive) { _ in
-                hasGoneToBackground = true
-                waitingForForeground = !hasTimedOut || waitingForForeground
-            }
-            
-            observeOnce(notificationName: .UIApplicationDidBecomeActive) { _ in
-                guard waitingForForeground else { return }
-                done(application.isRegisteredForRemoteNotifications)
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-                hasTimedOut = true
-                guard !hasGoneToBackground else { return }
-                done(application.isRegisteredForRemoteNotifications)
-            }
-            
-            application.registerForRemoteNotifications()
-        }
     }
     
     open class func locationAuthorizationStatus() -> CLAuthorizationStatus {
