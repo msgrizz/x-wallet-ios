@@ -64,6 +64,21 @@
             </objects>
             <point key="canvasLocation" x="-76" y="-4399"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rRC-OX-y1m">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="fmJ-Eg-udt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOj-IY-thc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fgo-gO-iR0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nP-Hb-E5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-4166"/>
+        </scene>
         <!--Wallet-->
         <scene sceneID="yKG-D7-NaX">
             <objects>
@@ -126,6 +141,7 @@
                         <segue destination="TaT-nC-o1N" kind="show" identifier="goToCardList" id="p4b-o4-5BU"/>
                         <segue destination="4cR-nF-xwH" kind="show" identifier="goToCoinList" id="q1k-UN-smi"/>
                         <segue destination="k46-3O-Jpn" kind="show" identifier="goToRecieveCode" id="II6-8H-eIc"/>
+                        <segue destination="cTq-oE-yuI" kind="show" identifier="goToMyBag" id="Tlv-nK-zBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2165,6 +2181,78 @@
             </objects>
             <point key="canvasLocation" x="-311.19999999999999" y="-3047.226386806597"/>
         </scene>
+        <!--My Bag-->
+        <scene sceneID="gf9-5T-VUk">
+            <objects>
+                <viewController storyboardIdentifier="XWMyBagViewController" title="My Bag" hidesBottomBarWhenPushed="YES" id="cTq-oE-yuI" customClass="XWMyBagViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SxA-rK-FbA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqh-we-rPo">
+                                <rect key="frame" x="15" y="79" width="165" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aTg-DV-CPx"/>
+                                    <constraint firstAttribute="width" constant="165" id="cOp-2v-Iip"/>
+                                </constraints>
+                                <state key="normal" image="bag1"/>
+                                <connections>
+                                    <action selector="importantAction" destination="cTq-oE-yuI" eventType="touchUpInside" id="dYX-G5-uYa"/>
+                                    <segue destination="fmJ-Eg-udt" kind="show" id="JUM-cE-2Ss"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJ0-5y-T4S">
+                                <rect key="frame" x="15" y="193" width="165" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="3S8-0s-uCe"/>
+                                    <constraint firstAttribute="height" constant="100" id="8UF-Sm-Jmp"/>
+                                </constraints>
+                                <state key="normal" image="bag3"/>
+                                <connections>
+                                    <action selector="certificateAction" destination="cTq-oE-yuI" eventType="touchUpInside" id="f2n-Ce-zTh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvG-FS-Vgi">
+                                <rect key="frame" x="195" y="79" width="165" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="AQG-ng-fot"/>
+                                    <constraint firstAttribute="height" constant="100" id="sHh-1n-8f8"/>
+                                </constraints>
+                                <state key="normal" image="bag2"/>
+                                <connections>
+                                    <action selector="travelAction" destination="cTq-oE-yuI" eventType="touchUpInside" id="i0b-3O-ihK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-Qb-ZuV">
+                                <rect key="frame" x="195" y="193" width="165" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BcX-aj-dTo"/>
+                                    <constraint firstAttribute="width" constant="165" id="Ejy-oW-1xg"/>
+                                </constraints>
+                                <state key="normal" image="bag4"/>
+                                <connections>
+                                    <action selector="custmiseAction" destination="cTq-oE-yuI" eventType="touchUpInside" id="UPT-Sz-m1D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iqh-we-rPo" firstAttribute="centerX" secondItem="SxA-rK-FbA" secondAttribute="centerX" constant="-90" id="70G-C2-dly"/>
+                            <constraint firstItem="yJ0-5y-T4S" firstAttribute="centerX" secondItem="SxA-rK-FbA" secondAttribute="centerX" constant="-90" id="D55-DL-9Jb"/>
+                            <constraint firstItem="F2h-Qb-ZuV" firstAttribute="centerX" secondItem="SxA-rK-FbA" secondAttribute="centerX" constant="90" id="RNr-Cv-2Tn"/>
+                            <constraint firstItem="PvG-FS-Vgi" firstAttribute="top" secondItem="V55-Wd-bLU" secondAttribute="top" constant="15" id="ZHP-uh-sgV"/>
+                            <constraint firstItem="iqh-we-rPo" firstAttribute="top" secondItem="V55-Wd-bLU" secondAttribute="top" constant="15" id="Zyc-f2-kgz"/>
+                            <constraint firstItem="yJ0-5y-T4S" firstAttribute="top" secondItem="iqh-we-rPo" secondAttribute="bottom" constant="14" id="eA7-le-50N"/>
+                            <constraint firstItem="F2h-Qb-ZuV" firstAttribute="top" secondItem="PvG-FS-Vgi" secondAttribute="bottom" constant="14" id="hbZ-Lm-lrX"/>
+                            <constraint firstItem="PvG-FS-Vgi" firstAttribute="centerX" secondItem="SxA-rK-FbA" secondAttribute="centerX" constant="90" id="nRv-qe-nR7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V55-Wd-bLU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0s-Zu-es0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="-3444"/>
+        </scene>
         <!--Coin-->
         <scene sceneID="yVj-j2-wGX">
             <objects>
@@ -2624,6 +2712,10 @@
     <resources>
         <image name="InviteBack" width="315" height="551"/>
         <image name="addCoinImage" width="295" height="295"/>
+        <image name="bag1" width="165" height="100"/>
+        <image name="bag2" width="165" height="100"/>
+        <image name="bag3" width="165" height="100"/>
+        <image name="bag4" width="165" height="100"/>
         <image name="bottomAdd" width="39" height="39"/>
         <image name="buttonApps" width="20" height="20"/>
         <image name="checkGreen" width="15" height="11"/>

@@ -178,16 +178,19 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
                 let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractHeadTableViewCell", for: indexPath) as! XWContractHeadTableViewCell
                 cell.clearCellData()
                 cell.titleLabel.text = self.contractModel.title
-                if self.contractModel.remoteData?.content != nil {
-                    cell.contentLabel.text = (self.contractModel.remoteData?.content)! + "\n\n"
+                if self.contractModel.remoteData != nil {
+                    if self.contractModel.remoteData?.content != nil {
+                        cell.contentLabel.text = (self.contractModel.remoteData?.content)! + "\n\n"
+                    }
+                    cell.signButton.isHidden = false
+                    cell.sender.kf.setImage(with: URL(string: (self.contractModel.remoteData?.sender?.avatar)!), for: UIControlState.normal)
+                    cell.reciever.kf.setImage(with: URL(string: (self.contractModel.remoteData?.receiver?.avatar)!), for: UIControlState.normal)
+                    cell.senderCheck.isHidden = !(self.contractModel.remoteData?.senderConfirmed)!
+                    cell.recieverCheck.isHidden = !(self.contractModel.remoteData?.receiverConfirmed)!
+                    cell.signButton.setAttributedTitle(nil, for: UIControlState.normal)
+                    cell.signButton.setTitle(" " + (self.contractModel.remoteData?.sender?.loginName)! + " proposed contract and signed it", for: UIControlState.normal)
+                    cell.timeLabel.text = self.contractModel.content
                 }
-                cell.sender.kf.setImage(with: URL(string: (self.contractModel.remoteData?.sender?.avatar)!), for: UIControlState.normal)
-                cell.reciever.kf.setImage(with: URL(string: (self.contractModel.remoteData?.receiver?.avatar)!), for: UIControlState.normal)
-                cell.senderCheck.isHidden = !(self.contractModel.remoteData?.senderConfirmed)!
-                cell.recieverCheck.isHidden = !(self.contractModel.remoteData?.receiverConfirmed)!
-                cell.signButton.setAttributedTitle(nil, for: UIControlState.normal)
-                cell.signButton.setTitle(" " + (self.contractModel.remoteData?.sender?.loginName)! + " proposed contract and signed it", for: UIControlState.normal)
-                cell.timeLabel.text = self.contractModel.content
                 return cell
             }
             else {

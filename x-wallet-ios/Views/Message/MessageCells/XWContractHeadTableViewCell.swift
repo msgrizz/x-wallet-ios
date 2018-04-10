@@ -39,8 +39,9 @@ class XWContractHeadTableViewCell: UITableViewCell {
     func clearCellData() {
         self.titleLabel.text = ""
         self.contentLabel.text = ""
-        self.senderCheck.isHidden = false
+        self.senderCheck.isHidden = true
         self.recieverCheck.isHidden = true
+        self.signButton.isHidden = true
         self.timeLabel.text = ""
 //        self.signButton.titleLabel?.text = ""
     }

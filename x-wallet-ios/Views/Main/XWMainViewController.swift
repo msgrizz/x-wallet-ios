@@ -172,6 +172,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     @objc func goToCoupon(_ : UIButton) {
         let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
         self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+//        self.performSegue(withIdentifier: "goToMyBag", sender: nil)
     }
     
     @objc func dismissSlide(_ :UIButton) {

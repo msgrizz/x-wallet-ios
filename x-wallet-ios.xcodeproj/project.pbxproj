@@ -200,6 +200,7 @@
 		D5ECE305207B14EA00F4EFFC /* ResponseSAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */; };
 		D5ECE306207B14EA00F4EFFC /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */; };
 		D5ECE308207B54F500F4EFFC /* XWCompleteContractTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE307207B54F500F4EFFC /* XWCompleteContractTableViewController.swift */; };
+		D5ECE30A207C6A9600F4EFFC /* XWMyBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECE309207C6A9600F4EFFC /* XWMyBagViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -416,6 +417,7 @@
 		D5ECE303207B14EA00F4EFFC /* ResponseSAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSAccount.swift; sourceTree = "<group>"; };
 		D5ECE304207B14EA00F4EFFC /* SignInDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
 		D5ECE307207B54F500F4EFFC /* XWCompleteContractTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCompleteContractTableViewController.swift; sourceTree = "<group>"; };
+		D5ECE309207C6A9600F4EFFC /* XWMyBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyBagViewController.swift; sourceTree = "<group>"; };
 		F44095742BB4CE56E6E0A2B4 /* Pods_x_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_x_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -578,6 +580,7 @@
 				D5ADC2D620591077001307E8 /* XWSlideView.swift */,
 				D5ADC2D820591088001307E8 /* XWSlideView.xib */,
 				D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */,
+				D5ECE309207C6A9600F4EFFC /* XWMyBagViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1295,6 +1298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5ECE30A207C6A9600F4EFFC /* XWMyBagViewController.swift in Sources */,
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
 				A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */,
 				D5E647872079EA4B00AB6BC5 /* SNotificationDTO.swift in Sources */,
