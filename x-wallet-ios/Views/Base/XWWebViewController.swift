@@ -103,6 +103,89 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
             return (true, [])
         }
         
+        bridge.registerHandler("Scan.qr") { (args:[Any]) -> (Bool, [Any]?) in
+            DispatchQueue.main.async {
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
+                contact.blockproerty={ (result) in
+                    DispatchQueue.main.async {
+                        contact.dismiss(animated: true, completion: nil)
+                        let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
+                        let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
+                        self.bridge.callJsHandler("Scan.qrCallback", args: ["\(name!),\(id!)"], callback: nil)
+                    }
+                }
+                let navi = UIBaseNavigationViewController(rootViewController: contact)
+                self.navigationController?.present(navi, animated: true, completion: {
+                    
+                })
+            }
+            return (true, [])
+        }
+        
+        bridge.registerHandler("Push.appStore") { (args:[Any]) -> (Bool, [Any]?) in
+            if let index = args.first as? Int , args.count == 1 {
+                switch index {
+                case 0:
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = Main.instantiateViewController(withIdentifier: "XWCardListTableViewController") as! XWCardListTableViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case 1:
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = Main.instantiateViewController(withIdentifier: "XWCoinListTableViewController") as! XWCoinListTableViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case 2:
+                    let Membership: UIStoryboard = UIStoryboard(name: "Membership", bundle: nil)
+                    self.navigationController?.pushViewController(Membership.instantiateInitialViewController()!, animated: true)
+                    break
+                case 3:
+                    let Ticket: UIStoryboard = UIStoryboard(name: "Ticket", bundle: nil)
+                    self.navigationController?.pushViewController(Ticket.instantiateInitialViewController()!, animated: true)
+                    break
+                case 4:
+                    let Academic: UIStoryboard = UIStoryboard(name: "Academic", bundle: nil)
+                    self.navigationController?.pushViewController(Academic.instantiateInitialViewController()!, animated: true)
+                    break
+                case 5:
+                    let Health: UIStoryboard = UIStoryboard(name: "Health", bundle: nil)
+                    self.navigationController?.pushViewController(Health.instantiateInitialViewController()!, animated: true)
+                    break
+                case 6:
+                    let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
+                    self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+                    break
+                case 7:
+                    let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
+                    self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+                    break
+                default:
+                    break
+                }
+            }
+            
+            
+            DispatchQueue.main.async {
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
+                contact.blockproerty={ (result) in
+                    DispatchQueue.main.async {
+                        contact.dismiss(animated: true, completion: nil)
+                        let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
+                        let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
+                        self.bridge.callJsHandler("Scan.qrCallback", args: ["\(name!),\(id!)"], callback: nil)
+                    }
+                }
+                let navi = UIBaseNavigationViewController(rootViewController: contact)
+                self.navigationController?.present(navi, animated: true, completion: {
+                    
+                })
+            }
+            return (true, [])
+        }
+        
+        
         self.loadURL()
     }
     
