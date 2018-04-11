@@ -15,7 +15,7 @@ let kInviteFriendsURL = kHostURL+"InviteFriends"
 
 let kTransferCoinsURL = kHostURL+"TransferCoins"
 
-let kMarketURL = kHostURL+"Market"
+let kMarketURL = kHostURL+"apps"
 let kPurchaseURL = kHostURL+"Purchase"
 let kSuccessURL = kHostURL+"Success"
 let kTogetURL = kHostURL+"Toget"

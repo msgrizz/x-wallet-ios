@@ -217,26 +217,31 @@
                                     <outlet property="delegate" destination="ia2-KI-AQr" id="4uU-8K-BjP"/>
                                 </connections>
                             </searchBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwV-JS-6xM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-0b-nb9">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
-                            </scrollView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ia2-KI-AQr" id="0fB-ba-ou7"/>
+                                    <outlet property="delegate" destination="ia2-KI-AQr" id="XLW-Fn-bl1"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wwV-JS-6xM" firstAttribute="trailing" secondItem="ybQ-Ta-02T" secondAttribute="trailing" id="B0I-or-Ize"/>
-                            <constraint firstItem="wwV-JS-6xM" firstAttribute="bottom" secondItem="ybQ-Ta-02T" secondAttribute="bottom" id="Bdq-DF-9Qe"/>
                             <constraint firstItem="L03-EF-hIo" firstAttribute="leading" secondItem="ybQ-Ta-02T" secondAttribute="leading" id="FfC-Jh-VjQ"/>
                             <constraint firstItem="L03-EF-hIo" firstAttribute="top" secondItem="ybQ-Ta-02T" secondAttribute="top" id="INw-R5-wIM"/>
-                            <constraint firstItem="wwV-JS-6xM" firstAttribute="top" secondItem="L03-EF-hIo" secondAttribute="bottom" id="Y0e-PA-Kxb"/>
+                            <constraint firstItem="QBz-0b-nb9" firstAttribute="top" secondItem="L03-EF-hIo" secondAttribute="bottom" id="N83-xJ-ufB"/>
+                            <constraint firstItem="QBz-0b-nb9" firstAttribute="leading" secondItem="ybQ-Ta-02T" secondAttribute="leading" id="OHl-dt-rPu"/>
+                            <constraint firstItem="QBz-0b-nb9" firstAttribute="trailing" secondItem="ybQ-Ta-02T" secondAttribute="trailing" id="WCs-IT-uNG"/>
                             <constraint firstItem="L03-EF-hIo" firstAttribute="trailing" secondItem="ybQ-Ta-02T" secondAttribute="trailing" id="iLY-T7-ROi"/>
-                            <constraint firstItem="wwV-JS-6xM" firstAttribute="leading" secondItem="ybQ-Ta-02T" secondAttribute="leading" id="lSf-Gg-RnI"/>
+                            <constraint firstItem="QBz-0b-nb9" firstAttribute="bottom" secondItem="ybQ-Ta-02T" secondAttribute="bottom" id="ikW-j5-rqL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ybQ-Ta-02T"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zrj-IL-cKq"/>
                     <connections>
-                        <outlet property="scrollView" destination="wwV-JS-6xM" id="q2S-ez-4JQ"/>
                         <outlet property="searchBar" destination="L03-EF-hIo" id="vBo-Wd-uwz"/>
+                        <outlet property="tableView" destination="QBz-0b-nb9" id="c1b-IN-nnq"/>
                         <segue destination="TaT-nC-o1N" kind="show" identifier="goToCardList" id="p4b-o4-5BU"/>
                         <segue destination="4cR-nF-xwH" kind="show" identifier="goToCoinList" id="q1k-UN-smi"/>
                         <segue destination="k46-3O-Jpn" kind="show" identifier="goToRecieveCode" id="II6-8H-eIc"/>
@@ -245,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4X-KO-zzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="-2752"/>
+            <point key="canvasLocation" x="1005.6" y="-2752.1739130434785"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="D9c-mC-AbP">

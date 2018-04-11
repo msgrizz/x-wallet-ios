@@ -9,15 +9,19 @@
 import UIKit
 import DynamicBlurView
 import SnapKit
-class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
+class XWMainViewController: UIBaseViewController,UIActionSheetDelegate,UITableViewDelegate {
+    let defaultHeight: CGFloat = 140
+    let defaultHeadHeight: CGFloat = 25
+
     
     var slideView: XWSlideView!
     var blurView: DynamicBlurView!
     var addButton: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var scrollView: UIScrollView!
-
-    var stackView: UIStackView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var dataArray: [XWAppModel] = [XWAppModel]()
+//    var stackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Wallet", comment: "")
@@ -52,74 +56,19 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         
         blurView = DynamicBlurView(frame: slideView.bounds)
         
-        stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        stackView.alignment = .fill
-        
-        self.scrollView.addSubview(stackView)
-        
-        stackView.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(scrollView)
-            make.left.equalTo(scrollView)
-            make.bottom.equalTo(scrollView)
-            make.right.equalTo(scrollView)
-        }
-        
-        let oneCard: XWContractView = XWContractView.fromNib()
-        oneCard.cards = [BaseCardModel(),BaseCardModel.init(title: "Second-hand Car Sale Contract", stared: false, newMessage: false, isClear: false)]
-        oneCard.frame = getAppRect(cardNum: oneCard.cards.count)
-        oneCard.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(getAppRect(cardNum: oneCard.cards.count).height)
-            make.width.equalTo(getAppRect(cardNum: oneCard.cards.count).width)
-        }
-        let tapsss = UITapGestureRecognizer.init(target: self, action: #selector(goToLists))
-        oneCard.addGestureRecognizer(tapsss)
-        oneCard.contractButton.addTarget(self, action: #selector(goToLists), for: UIControlEvents.touchUpInside)
-        self.stackView.addArrangedSubview(oneCard)
+        self.tableView.register(UINib(nibName: "XWCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCardTableViewCell")
+        self.tableView.register(UINib(nibName: "XWMyBagTableViewCell", bundle: nil), forCellReuseIdentifier: "XWMyBagTableViewCell")
 
-        let demoTwoCard1: XWTwoCardDemoView = XWTwoCardDemoView.fromNib()
-        demoTwoCard1.backImageView.image = UIImage(named: "demo1")
-        let tap1 = UITapGestureRecognizer.init(target: self, action: #selector(goToCoin))
-        demoTwoCard1.addGestureRecognizer(tap1)
-        self.stackView.addArrangedSubview(demoTwoCard1)
+        let one = XWAppModel()
+        one.dataModels = [BaseCardModel()]
         
-        let demoThreeCard: XWThreeCardDemoView = XWThreeCardDemoView.fromNib()
-        let tap2 = UITapGestureRecognizer.init(target: self, action: #selector(goToMembership))
-        demoThreeCard.addGestureRecognizer(tap2)
-        self.stackView.addArrangedSubview(demoThreeCard)
+        let two = XWAppModel()
+        two.dataModels = [BaseCardModel(),BaseCardModel()]
         
-        let demoOneCard1: XWOneCardDemoView = XWOneCardDemoView.fromNib()
-        demoOneCard1.backImageView.image = UIImage(named: "demo3")
-        let tap3 = UITapGestureRecognizer.init(target: self, action: #selector(goToTicket))
-        demoOneCard1.addGestureRecognizer(tap3)
-        self.stackView.addArrangedSubview(demoOneCard1)
+        let three = XWAppModel()
+        three.dataModels = [BaseCardModel(),BaseCardModel(),BaseCardModel()]
         
-        let demoOneCard2: XWOneCardDemoView = XWOneCardDemoView.fromNib()
-        demoOneCard2.backImageView.image = UIImage(named: "demo4")
-        let tap4 = UITapGestureRecognizer.init(target: self, action: #selector(goToAcademic))
-        demoOneCard2.addGestureRecognizer(tap4)
-        self.stackView.addArrangedSubview(demoOneCard2)
-        
-        let demoOneCard3: XWOneCardDemoView = XWOneCardDemoView.fromNib()
-        demoOneCard3.backImageView.image = UIImage(named: "demo5")
-        let tap5 = UITapGestureRecognizer.init(target: self, action: #selector(goToHealth(_:)))
-        demoOneCard3.addGestureRecognizer(tap5)
-        self.stackView.addArrangedSubview(demoOneCard3)
-        
-        let demoTwoCard3: XWOneCardDemoView = XWOneCardDemoView.fromNib()
-        demoTwoCard3.backImageView.image = UIImage(named: "demo6")
-        let tap6 = UITapGestureRecognizer.init(target: self, action: #selector(goToCoupon(_:)))
-        demoTwoCard3.addGestureRecognizer(tap6)
-        self.stackView.addArrangedSubview(demoTwoCard3)
-        
-        let noCard: XWNoCardView = XWNoCardView.fromNib()
-        self.stackView.addArrangedSubview(noCard)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: stackView.frame.width, height: stackView.frame.height + 20)
+        dataArray = [one,two,three]
     }
     
     override func didReceiveMemoryWarning() {
@@ -288,5 +237,43 @@ extension XWMainViewController: UISearchBarDelegate {
         
         
         return false
+    }
+}
+
+extension XWMainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 0 {
+            return 47
+        }
+        
+        let model = dataArray[indexPath.row - 1]
+        if model.dataModels.count==1 {
+            return defaultHeight - defaultHeadHeight * 2
+        }else if model.dataModels.count==2 {
+            return defaultHeight - defaultHeadHeight
+        }else {
+            return defaultHeight
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count + 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if  indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyBagTableViewCell", for: indexPath) as! XWMyBagTableViewCell
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWCardTableViewCell", for: indexPath) as! XWCardTableViewCell
+            let model = dataArray[indexPath.row-1]
+            cell.datas = model
+            return cell
+        }
     }
 }

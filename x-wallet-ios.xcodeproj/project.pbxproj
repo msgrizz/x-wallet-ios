@@ -52,12 +52,12 @@
 		D54C586B207CB836001F3B95 /* XWImportantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C586A207CB836001F3B95 /* XWImportantTableViewController.swift */; };
 		D54C586D207CBBB8001F3B95 /* XWImportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C586C207CBBB8001F3B95 /* XWImportTableViewCell.swift */; };
 		D54C5870207D9E3C001F3B95 /* XWCardBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C586F207D9E3C001F3B95 /* XWCardBaseView.swift */; };
-		D54C5872207D9EA0001F3B95 /* XWCardBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C5871207D9EA0001F3B95 /* XWCardBaseView.xib */; };
 		D54C5874207DAA58001F3B95 /* XWCardHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5873207DAA58001F3B95 /* XWCardHeadView.swift */; };
-		D54C5876207DAA69001F3B95 /* XWCardHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C5875207DAA69001F3B95 /* XWCardHeadView.xib */; };
 		D54C5879207DAE3F001F3B95 /* XWCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5877207DAE3F001F3B95 /* XWCardTableViewCell.swift */; };
 		D54C587A207DAE3F001F3B95 /* XWCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C5878207DAE3F001F3B95 /* XWCardTableViewCell.xib */; };
 		D54C587C207DB34F001F3B95 /* XWAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C587B207DB34F001F3B95 /* XWAppModel.swift */; };
+		D54C587F207DE1EA001F3B95 /* XWMyBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C587D207DE1EA001F3B95 /* XWMyBagTableViewCell.swift */; };
+		D54C5880207DE1EA001F3B95 /* XWMyBagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C587E207DE1EA001F3B95 /* XWMyBagTableViewCell.xib */; };
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
 		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
@@ -274,12 +274,12 @@
 		D54C586A207CB836001F3B95 /* XWImportantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewController.swift; sourceTree = "<group>"; };
 		D54C586C207CBBB8001F3B95 /* XWImportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportTableViewCell.swift; sourceTree = "<group>"; };
 		D54C586F207D9E3C001F3B95 /* XWCardBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardBaseView.swift; sourceTree = "<group>"; };
-		D54C5871207D9EA0001F3B95 /* XWCardBaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardBaseView.xib; sourceTree = "<group>"; };
 		D54C5873207DAA58001F3B95 /* XWCardHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardHeadView.swift; sourceTree = "<group>"; };
-		D54C5875207DAA69001F3B95 /* XWCardHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardHeadView.xib; sourceTree = "<group>"; };
 		D54C5877207DAE3F001F3B95 /* XWCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5878207DAE3F001F3B95 /* XWCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardTableViewCell.xib; sourceTree = "<group>"; };
 		D54C587B207DB34F001F3B95 /* XWAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppModel.swift; sourceTree = "<group>"; };
+		D54C587D207DE1EA001F3B95 /* XWMyBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyBagTableViewCell.swift; sourceTree = "<group>"; };
+		D54C587E207DE1EA001F3B95 /* XWMyBagTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWMyBagTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
@@ -612,14 +612,14 @@
 			isa = PBXGroup;
 			children = (
 				D54C586F207D9E3C001F3B95 /* XWCardBaseView.swift */,
-				D54C5871207D9EA0001F3B95 /* XWCardBaseView.xib */,
 				D54C5873207DAA58001F3B95 /* XWCardHeadView.swift */,
-				D54C5875207DAA69001F3B95 /* XWCardHeadView.xib */,
 				D54C5877207DAE3F001F3B95 /* XWCardTableViewCell.swift */,
 				D54C5878207DAE3F001F3B95 /* XWCardTableViewCell.xib */,
 				D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */,
 				D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */,
 				D54C586C207CBBB8001F3B95 /* XWImportTableViewCell.swift */,
+				D54C587D207DE1EA001F3B95 /* XWMyBagTableViewCell.swift */,
+				D54C587E207DE1EA001F3B95 /* XWMyBagTableViewCell.xib */,
 			);
 			path = CardDocument;
 			sourceTree = "<group>";
@@ -1116,6 +1116,7 @@
 				D54C587A207DAE3F001F3B95 /* XWCardTableViewCell.xib in Resources */,
 				D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */,
 				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
+				D54C5880207DE1EA001F3B95 /* XWMyBagTableViewCell.xib in Resources */,
 				A773E618206A3CE1002C5721 /* XWImportantHeadView.xib in Resources */,
 				A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
@@ -1128,7 +1129,6 @@
 				12C5071320690A790080112C /* Health.storyboard in Resources */,
 				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
 				12C5071520690EC40080112C /* Coupon.storyboard in Resources */,
-				D54C5872207D9EA0001F3B95 /* XWCardBaseView.xib in Resources */,
 				D5E647922079F24A00AB6BC5 /* XWIOUTableViewCell.xib in Resources */,
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
@@ -1147,7 +1147,6 @@
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
 				A773E61C206A6E47002C5721 /* XWContactHeadView.xib in Resources */,
-				D54C5876207DAA69001F3B95 /* XWCardHeadView.xib in Resources */,
 				D58DB9552063B3C8005ABED8 /* countries.json in Resources */,
 				D58FC4042052680B008C05AE /* launchImage@3x.png in Resources */,
 			);
@@ -1360,6 +1359,7 @@
 				D58FC42B2057961D008C05AE /* UINavigationBar+Transparent.swift in Sources */,
 				D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */,
 				A773E610206A3984002C5721 /* XWContractHeadView.swift in Sources */,
+				D54C587F207DE1EA001F3B95 /* XWMyBagTableViewCell.swift in Sources */,
 				D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */,
 				D5A48976204E6D54001031F6 /* UIGestureRecognizer+Closure.swift in Sources */,
 				D5A4897B204E6D54001031F6 /* UIViewController.swift in Sources */,

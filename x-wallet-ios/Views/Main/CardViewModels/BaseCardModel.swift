@@ -25,7 +25,7 @@ struct BaseCardModel {
     var stared: Bool = true
     var newMessage: Bool = true
     var backgroundImage: UIImage {
-        return UIImage(named: "cardBack")!
+        return UIImage(named: "baseBackImage")!
     }
     var isClear: Bool = false
 }
