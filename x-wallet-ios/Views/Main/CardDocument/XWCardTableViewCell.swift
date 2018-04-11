@@ -16,7 +16,7 @@ class XWCardTableViewCell: UITableViewCell {
     
     let shadowOpacity:Float = 1
     let shadowColor = UIColor.black.cgColor
-    let shadowRadius:CGFloat = 4
+    let shadowRadius:CGFloat = 3
     var datas: XWAppModel! {
         didSet {
             if datas.dataModels.count == 1 {
@@ -45,7 +45,7 @@ class XWCardTableViewCell: UITableViewCell {
             let show = datas.dataModels.first
             self.showView.titleLabel.text = show?.title
             self.showView.contentLabel.text = show?.content
-            self.showView.detailLabel.text = show?.detail
+            self.showView.detailLabel.text = show?.content
             self.showView.backgroundImage.backgroundColor = UIColor.init(hex: "425061")
 //            self.showView.backgroundImage.image = show?.backgroundImage
         }

@@ -13,6 +13,9 @@ open class MiniCoinPoolDashBoardDTO: Codable {
 
     public var important: Bool?
     public var issuedByMe: Bool?
+    public var issuerAvatar: String?
+    public var issuerId: Int64?
+    public var issuerName: String?
     public var limitNum: Int64?
     public var miniCoinPoolId: Int64?
     public var miniCoinPoolName: String?
@@ -20,9 +23,12 @@ open class MiniCoinPoolDashBoardDTO: Codable {
 
 
     
-    public init(important: Bool?, issuedByMe: Bool?, limitNum: Int64?, miniCoinPoolId: Int64?, miniCoinPoolName: String?, ownNum: Int64?) {
+    public init(important: Bool?, issuedByMe: Bool?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, limitNum: Int64?, miniCoinPoolId: Int64?, miniCoinPoolName: String?, ownNum: Int64?) {
         self.important = important
         self.issuedByMe = issuedByMe
+        self.issuerAvatar = issuerAvatar
+        self.issuerId = issuerId
+        self.issuerName = issuerName
         self.limitNum = limitNum
         self.miniCoinPoolId = miniCoinPoolId
         self.miniCoinPoolName = miniCoinPoolName
@@ -38,6 +44,9 @@ open class MiniCoinPoolDashBoardDTO: Codable {
 
         try container.encodeIfPresent(important, forKey: "important")
         try container.encodeIfPresent(issuedByMe, forKey: "issuedByMe")
+        try container.encodeIfPresent(issuerAvatar, forKey: "issuerAvatar")
+        try container.encodeIfPresent(issuerId, forKey: "issuerId")
+        try container.encodeIfPresent(issuerName, forKey: "issuerName")
         try container.encodeIfPresent(limitNum, forKey: "limitNum")
         try container.encodeIfPresent(miniCoinPoolId, forKey: "miniCoinPoolId")
         try container.encodeIfPresent(miniCoinPoolName, forKey: "miniCoinPoolName")
@@ -51,6 +60,9 @@ open class MiniCoinPoolDashBoardDTO: Codable {
 
         important = try container.decodeIfPresent(Bool.self, forKey: "important")
         issuedByMe = try container.decodeIfPresent(Bool.self, forKey: "issuedByMe")
+        issuerAvatar = try container.decodeIfPresent(String.self, forKey: "issuerAvatar")
+        issuerId = try container.decodeIfPresent(Int64.self, forKey: "issuerId")
+        issuerName = try container.decodeIfPresent(String.self, forKey: "issuerName")
         limitNum = try container.decodeIfPresent(Int64.self, forKey: "limitNum")
         miniCoinPoolId = try container.decodeIfPresent(Int64.self, forKey: "miniCoinPoolId")
         miniCoinPoolName = try container.decodeIfPresent(String.self, forKey: "miniCoinPoolName")

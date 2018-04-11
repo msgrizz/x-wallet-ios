@@ -67,7 +67,7 @@ class XWCreateCoinViewController: UIBaseViewController,UINavigationControllerDel
                 upload.responseJSON { response in
                     let info = response.result.value as? Dictionary<String, AnyObject>
                     let dto = SMiniCoinPoolDTO(important: false, name: self.nameTextField.text, content: "", logo: info!["html"] as? String, fixed: Int64(self.avoidingView.text!), transferable: true, issuer: Int64(Defaults[.userId]), isImportant: false)
-                    SMiniCoinPoolControllerAPI.addUsingPOST(m: dto, completion: { (pool, error) in
+                    SMiniCoinPoolControllerAPI.addUsingPOST3(m: dto, completion: { (pool, error) in
                         DispatchQueue.main.async {
                             self.activityIndicatorView.stopAnimating()
                             self.navigationController?.popViewController(animated: true)

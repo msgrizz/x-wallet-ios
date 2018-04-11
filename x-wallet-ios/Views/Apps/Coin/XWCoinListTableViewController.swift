@@ -175,7 +175,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     }
     
     func getPoolData() {
-        SMiniCoinPoolControllerAPI.dashboardUsingGET(personId: Int64(Defaults[.userId])) { (data, error) in
+        SMiniCoinPoolControllerAPI.dashboardUsingGET1(personId: Int64(Defaults[.userId])) { (data, error) in
             guard data != nil else {
                 return
             }

@@ -17,8 +17,8 @@ open class SMiniCoinPoolControllerAPI {
      - parameter m: (body) m 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func addUsingPOST(m: SMiniCoinPoolDTO, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
-        addUsingPOSTWithRequestBuilder(m: m).execute { (response, error) -> Void in
+    open class func addUsingPOST3(m: SMiniCoinPoolDTO, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
+        addUsingPOST3WithRequestBuilder(m: m).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -33,7 +33,7 @@ open class SMiniCoinPoolControllerAPI {
 
      - returns: RequestBuilder<SMiniCoinPool> 
      */
-    open class func addUsingPOSTWithRequestBuilder(m: SMiniCoinPoolDTO) -> RequestBuilder<SMiniCoinPool> {
+    open class func addUsingPOST3WithRequestBuilder(m: SMiniCoinPoolDTO) -> RequestBuilder<SMiniCoinPool> {
         let path = "/miniCoinPools"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: m)
@@ -52,8 +52,8 @@ open class SMiniCoinPoolControllerAPI {
      - parameter personId: (query) personId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func dashboardUsingGET(personId: Int64, completion: @escaping ((_ data: [String:[MiniCoinPoolDashBoardDTO]]?,_ error: Error?) -> Void)) {
-        dashboardUsingGETWithRequestBuilder(personId: personId).execute { (response, error) -> Void in
+    open class func dashboardUsingGET1(personId: Int64, completion: @escaping ((_ data: [String:[MiniCoinPoolDashBoardDTO]]?,_ error: Error?) -> Void)) {
+        dashboardUsingGET1WithRequestBuilder(personId: personId).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -68,7 +68,7 @@ open class SMiniCoinPoolControllerAPI {
 
      - returns: RequestBuilder<[String:[MiniCoinPoolDashBoardDTO]]> 
      */
-    open class func dashboardUsingGETWithRequestBuilder(personId: Int64) -> RequestBuilder<[String:[MiniCoinPoolDashBoardDTO]]> {
+    open class func dashboardUsingGET1WithRequestBuilder(personId: Int64) -> RequestBuilder<[String:[MiniCoinPoolDashBoardDTO]]> {
         let path = "/miniCoinPoolDashBoard"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -90,8 +90,8 @@ open class SMiniCoinPoolControllerAPI {
      - parameter id: (path) id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOneUsingGET1(id: Int64, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
-        getOneUsingGET1WithRequestBuilder(id: id).execute { (response, error) -> Void in
+    open class func getOneUsingGET2(id: Int64, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
+        getOneUsingGET2WithRequestBuilder(id: id).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -106,7 +106,7 @@ open class SMiniCoinPoolControllerAPI {
 
      - returns: RequestBuilder<SMiniCoinPool> 
      */
-    open class func getOneUsingGET1WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniCoinPool> {
+    open class func getOneUsingGET2WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniCoinPool> {
         var path = "/miniCoinPools/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path

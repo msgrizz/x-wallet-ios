@@ -9,7 +9,8 @@
 import UIKit
 import DynamicBlurView
 import SnapKit
-class XWMainViewController: UIBaseViewController,UIActionSheetDelegate,UITableViewDelegate {
+import SwiftyUserDefaults
+class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     let defaultHeight: CGFloat = 140
     let defaultHeadHeight: CGFloat = 25
 
@@ -58,17 +59,8 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate,UITableVi
         
         self.tableView.register(UINib(nibName: "XWCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCardTableViewCell")
         self.tableView.register(UINib(nibName: "XWMyBagTableViewCell", bundle: nil), forCellReuseIdentifier: "XWMyBagTableViewCell")
-
-        let one = XWAppModel()
-        one.dataModels = [BaseCardModel()]
         
-        let two = XWAppModel()
-        two.dataModels = [BaseCardModel(),BaseCardModel()]
-        
-        let three = XWAppModel()
-        three.dataModels = [BaseCardModel(),BaseCardModel(),BaseCardModel()]
-        
-        dataArray = [one,two,three]
+        self.getAppsData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -119,9 +111,8 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate,UITableVi
     }
     
     @objc func goToCoupon(_ : UIButton) {
-        //let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
-        //self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
-        self.performSegue(withIdentifier: "goToMyBag", sender: nil)
+        let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
+        self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
     }
     
     @objc func dismissSlide(_ :UIButton) {
@@ -191,6 +182,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate,UITableVi
             vc.title = "Mini Contract"
         }
     }
+    
     func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
         let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
@@ -221,7 +213,23 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate,UITableVi
         }
         
     }
-
+    
+    func getAppsData() {
+        self.dataArray.removeAll()
+        HomeControllerAPI.dashboardUsingGET(accountId: 1) { (datas, error) in
+            for ele in datas! {
+                let app = XWAppModel()
+                app.dataModels = ele.data!
+                app.appImage = ele.logo
+                app.type = ele.type!
+                if ele.data?.count != 0 {
+                    self.dataArray.append(app)
+                }
+            }
+            debugPrint(self.dataArray)
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension XWMainViewController: UITabBarDelegate {
@@ -274,6 +282,14 @@ extension XWMainViewController: UITableViewDataSource {
             let model = dataArray[indexPath.row-1]
             cell.datas = model
             return cell
+        }
+    }
+}
+
+extension XWMainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            self.performSegue(withIdentifier: "goToMyBag", sender: nil)
         }
     }
 }
