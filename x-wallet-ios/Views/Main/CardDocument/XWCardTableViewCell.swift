@@ -9,7 +9,12 @@
 import UIKit
 
 class XWCardTableViewCell: UITableViewCell {
+    @IBOutlet weak var headImage: UIButton!
+    @IBOutlet weak var topView: XWCardBaseView!
+    @IBOutlet weak var secondView: XWCardHeadView!
+    @IBOutlet weak var thirdView: XWCardHeadView!
 
+    var datas: XWAppModel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

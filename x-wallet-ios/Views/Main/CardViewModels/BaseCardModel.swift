@@ -10,15 +10,18 @@ import UIKit
 
 enum AppType {
     case MiniContract
-    case Membership
     case Coin
+    case Membership
     case Receipt
     case Ticket
+    case Other
 }
 
 
 struct BaseCardModel {
     var title = "Employment Contract"
+    var content = ""
+    var detail = ""
     var stared: Bool = true
     var newMessage: Bool = true
     var backgroundImage: UIImage {

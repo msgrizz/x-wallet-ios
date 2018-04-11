@@ -57,6 +57,7 @@
 		D54C5876207DAA69001F3B95 /* XWCardHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C5875207DAA69001F3B95 /* XWCardHeadView.xib */; };
 		D54C5879207DAE3F001F3B95 /* XWCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5877207DAE3F001F3B95 /* XWCardTableViewCell.swift */; };
 		D54C587A207DAE3F001F3B95 /* XWCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C5878207DAE3F001F3B95 /* XWCardTableViewCell.xib */; };
+		D54C587C207DB34F001F3B95 /* XWAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C587B207DB34F001F3B95 /* XWAppModel.swift */; };
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
 		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
@@ -278,6 +279,7 @@
 		D54C5875207DAA69001F3B95 /* XWCardHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardHeadView.xib; sourceTree = "<group>"; };
 		D54C5877207DAE3F001F3B95 /* XWCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5878207DAE3F001F3B95 /* XWCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardTableViewCell.xib; sourceTree = "<group>"; };
+		D54C587B207DB34F001F3B95 /* XWAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWAppModel.swift; sourceTree = "<group>"; };
 		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
@@ -911,6 +913,7 @@
 			isa = PBXGroup;
 			children = (
 				D5ADC2E9205A3B34001307E8 /* BaseCardModel.swift */,
+				D54C587B207DB34F001F3B95 /* XWAppModel.swift */,
 			);
 			path = CardViewModels;
 			sourceTree = "<group>";
@@ -1476,6 +1479,7 @@
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
 				D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */,
+				D54C587C207DB34F001F3B95 /* XWAppModel.swift in Sources */,
 				D5E647852079EA4B00AB6BC5 /* SMiniContractDTO.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,
 				D5E6476D2079EA4B00AB6BC5 /* SAccountControllerAPI.swift in Sources */,
