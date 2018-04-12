@@ -7,20 +7,26 @@
 
 import Foundation
 
-
+public enum DashboardType: String, Codable {
+    case miniContract = "MiniContract"
+    case miniCoin = "MiniCoin"
+    case coupon = "Coupon"
+}
 
 open class DashboardDTO: Codable {
 
+
+    
+    public var dashboardType: DashboardType?
     public var data: [DashboardDataDTO]?
     public var logo: String?
-    public var type: String?
 
 
     
-    public init(data: [DashboardDataDTO]?, logo: String?, type: String?) {
+    public init(dashboardType: DashboardType?, data: [DashboardDataDTO]?, logo: String?) {
+        self.dashboardType = dashboardType
         self.data = data
         self.logo = logo
-        self.type = type
     }
     
 
@@ -30,9 +36,9 @@ open class DashboardDTO: Codable {
 
         var container = encoder.container(keyedBy: String.self)
 
+        try container.encodeIfPresent(dashboardType, forKey: "dashboardType")
         try container.encodeIfPresent(data, forKey: "data")
         try container.encodeIfPresent(logo, forKey: "logo")
-        try container.encodeIfPresent(type, forKey: "type")
     }
 
     // Decodable protocol methods
@@ -40,9 +46,9 @@ open class DashboardDTO: Codable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: String.self)
 
+        dashboardType = try container.decodeIfPresent(DashboardType.self, forKey: "dashboardType")
         data = try container.decodeIfPresent([DashboardDataDTO].self, forKey: "data")
         logo = try container.decodeIfPresent(String.self, forKey: "logo")
-        type = try container.decodeIfPresent(String.self, forKey: "type")
     }
 }
 

@@ -126,9 +126,37 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     }
     
     @objc func addContractAction(_ :UITapGestureRecognizer) {
-        dismissSlide(_ :UIButton())
-        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise",NSLocalizedString("I.O.U", comment: ""))
-        alertSheet.show(in: self.view)
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+        vc.isCreate = true
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cuAction = UIAlertAction(title: "Currency", style: .default, handler: {action in
+            vc.launchURL = kCreateContractURL
+            vc.title = "Create Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let reAction = UIAlertAction(title: "Receipt", style: .default, handler: {action in
+            vc.launchURL = kCreatReceiptURL
+            vc.title = "Create Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let prAction = UIAlertAction(title: "Promise", style: .default, handler: {action in
+            vc.launchURL = kCreatePromiseURL
+            vc.title = "Create Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let iouAction = UIAlertAction(title: "I.O.U", style: .default, handler: {action in
+            vc.launchURL = kCreateIOUURL
+            vc.title = NSLocalizedString("Create I.O.U",comment: "")
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(cuAction)
+        alert.addAction(reAction)
+        alert.addAction(prAction)
+        alert.addAction(iouAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func addScanAction(_ :UITapGestureRecognizer) {
@@ -221,7 +249,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
                 let app = XWAppModel()
                 app.dataModels = ele.data!
                 app.appImage = ele.logo
-                app.type = ele.type!
+                app.type = ele.dashboardType!
                 if ele.data?.count != 0 {
                     self.dataArray.append(app)
                 }
@@ -290,6 +318,22 @@ extension XWMainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             self.performSegue(withIdentifier: "goToMyBag", sender: nil)
+        }else {
+            let model = dataArray[indexPath.row-1]
+            switch model.type {
+            case .miniContract?:
+                self.performSegue(withIdentifier: "goToCardList", sender: nil)
+                break
+            case .miniCoin?:
+                self.performSegue(withIdentifier: "goToCoinList", sender: nil)
+                break
+            case .coupon?:
+                let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
+                self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+                break
+            default :
+                break
+            }
         }
     }
 }

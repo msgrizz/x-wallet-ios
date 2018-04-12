@@ -15,6 +15,7 @@ open class DashboardDataDTO: Codable {
     public var content: String?
     public var expiredAt: Int64?
     public var id: Int64?
+    public var important: Bool?
     public var issuerAvatar: String?
     public var issuerId: Int64?
     public var issuerName: String?
@@ -26,11 +27,12 @@ open class DashboardDataDTO: Codable {
 
 
     
-    public init(coinName: String?, content: String?, expiredAt: Int64?, id: Int64?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, receiver: Int64?, receiverName: String?, sender: Int64?, senderName: String?, title: String?) {
+    public init(coinName: String?, content: String?, expiredAt: Int64?, id: Int64?, important: Bool?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, receiver: Int64?, receiverName: String?, sender: Int64?, senderName: String?, title: String?) {
         self.coinName = coinName
         self.content = content
         self.expiredAt = expiredAt
         self.id = id
+        self.important = important
         self.issuerAvatar = issuerAvatar
         self.issuerId = issuerId
         self.issuerName = issuerName
@@ -52,6 +54,7 @@ open class DashboardDataDTO: Codable {
         try container.encodeIfPresent(content, forKey: "content")
         try container.encodeIfPresent(expiredAt, forKey: "expiredAt")
         try container.encodeIfPresent(id, forKey: "id")
+        try container.encodeIfPresent(important, forKey: "important")
         try container.encodeIfPresent(issuerAvatar, forKey: "issuerAvatar")
         try container.encodeIfPresent(issuerId, forKey: "issuerId")
         try container.encodeIfPresent(issuerName, forKey: "issuerName")
@@ -71,6 +74,7 @@ open class DashboardDataDTO: Codable {
         content = try container.decodeIfPresent(String.self, forKey: "content")
         expiredAt = try container.decodeIfPresent(Int64.self, forKey: "expiredAt")
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
+        important = try container.decodeIfPresent(Bool.self, forKey: "important")
         issuerAvatar = try container.decodeIfPresent(String.self, forKey: "issuerAvatar")
         issuerId = try container.decodeIfPresent(Int64.self, forKey: "issuerId")
         issuerName = try container.decodeIfPresent(String.self, forKey: "issuerName")
