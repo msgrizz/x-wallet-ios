@@ -90,10 +90,10 @@
                         </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-BT-wDg" customClass="XWCoinCardView" customModule="x_wallet_ios" customModuleProvider="target">
-                        <rect key="frame" x="60" y="51.5" width="302" height="82"/>
+                        <rect key="frame" x="60" y="52" width="302" height="82"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-3X-Ln6">
-                                <rect key="frame" x="1" y="1" width="302" height="82"/>
+                                <rect key="frame" x="1" y="1" width="300" height="80"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newMessageTag" translatesAutoresizingMaskIntoConstraints="NO" id="LcN-dI-7Uz">
                                 <rect key="frame" x="287" y="0.0" width="15" height="15"/>
@@ -158,7 +158,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LcN-dI-7Uz" firstAttribute="top" secondItem="oyc-BT-wDg" secondAttribute="top" id="0Hb-xC-wD0"/>
-                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="bottom" secondItem="oyc-BT-wDg" secondAttribute="bottom" constant="1" id="2EU-fF-9pJ"/>
+                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="top" secondItem="VFT-GZ-Bdv" secondAttribute="top" constant="1" id="Aqy-ZO-zYJ"/>
                             <constraint firstItem="T1l-fL-iyV" firstAttribute="leading" secondItem="oyc-BT-wDg" secondAttribute="leading" constant="7" id="BL2-bw-e2i"/>
                             <constraint firstAttribute="trailing" secondItem="LcN-dI-7Uz" secondAttribute="trailing" id="DTS-IN-5WZ"/>
                             <constraint firstItem="aQu-rb-VOu" firstAttribute="leading" secondItem="VFT-GZ-Bdv" secondAttribute="leading" constant="21" id="Ej2-wS-lzb"/>
@@ -166,17 +166,21 @@
                             <constraint firstAttribute="height" constant="82" id="F8e-tU-z79"/>
                             <constraint firstItem="hwR-AW-2Cs" firstAttribute="top" secondItem="MWW-Xn-csI" secondAttribute="bottom" constant="6" id="I5u-n6-tjr"/>
                             <constraint firstItem="hwR-AW-2Cs" firstAttribute="leading" secondItem="oyc-BT-wDg" secondAttribute="leading" constant="21" id="N0C-4Q-T0c"/>
-                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="top" secondItem="oyc-BT-wDg" secondAttribute="top" constant="1" id="OK5-Kf-m1X"/>
+                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="centerX" secondItem="oyc-BT-wDg" secondAttribute="centerX" id="QSX-dB-VNk"/>
+                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="centerY" secondItem="oyc-BT-wDg" secondAttribute="centerY" id="RmM-5G-aoL"/>
                             <constraint firstItem="BbT-eE-dSB" firstAttribute="leading" secondItem="oyc-BT-wDg" secondAttribute="leading" constant="21" id="TX4-7L-IV7"/>
-                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="leading" secondItem="oyc-BT-wDg" secondAttribute="leading" constant="1" id="XnM-6d-gI4"/>
+                            <constraint firstItem="VFT-GZ-Bdv" firstAttribute="trailing" secondItem="dcb-3X-Ln6" secondAttribute="trailing" constant="1" id="dvn-Os-qkn"/>
                             <constraint firstAttribute="trailing" secondItem="MWW-Xn-csI" secondAttribute="trailing" constant="26" id="etE-5W-50W"/>
                             <constraint firstItem="MWW-Xn-csI" firstAttribute="leading" secondItem="5yN-bx-CQX" secondAttribute="trailing" constant="7" id="f1r-he-yDm"/>
-                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="trailing" secondItem="oyc-BT-wDg" secondAttribute="trailing" constant="1" id="fch-oV-Qg0"/>
                             <constraint firstItem="T1l-fL-iyV" firstAttribute="top" secondItem="oyc-BT-wDg" secondAttribute="top" constant="14" id="gge-7O-fSe"/>
                             <constraint firstItem="5yN-bx-CQX" firstAttribute="top" secondItem="BbT-eE-dSB" secondAttribute="bottom" constant="4" id="hVb-8g-YsV"/>
                             <constraint firstItem="aQu-rb-VOu" firstAttribute="top" secondItem="BbT-eE-dSB" secondAttribute="bottom" constant="6" id="jpp-zW-4BG"/>
                             <constraint firstAttribute="trailing" secondItem="hwR-AW-2Cs" secondAttribute="trailing" constant="26" id="mrs-2L-pqt"/>
+                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="leading" secondItem="VFT-GZ-Bdv" secondAttribute="leading" constant="1" id="nHL-UN-ZTg"/>
                             <constraint firstItem="LcN-dI-7Uz" firstAttribute="leading" secondItem="BbT-eE-dSB" secondAttribute="trailing" constant="8" id="pg8-W3-a4Z"/>
+                            <constraint firstItem="VFT-GZ-Bdv" firstAttribute="bottom" secondItem="dcb-3X-Ln6" secondAttribute="bottom" constant="1" id="qj4-Ap-3zi"/>
+                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="leading" secondItem="VFT-GZ-Bdv" secondAttribute="leading" constant="1" id="rRX-NO-Ry4"/>
+                            <constraint firstItem="dcb-3X-Ln6" firstAttribute="top" secondItem="VFT-GZ-Bdv" secondAttribute="top" constant="1" id="sVY-Hx-bKm"/>
                             <constraint firstItem="BbT-eE-dSB" firstAttribute="top" secondItem="oyc-BT-wDg" secondAttribute="top" constant="9" id="ver-ik-n8c"/>
                             <constraint firstItem="MWW-Xn-csI" firstAttribute="top" secondItem="BbT-eE-dSB" secondAttribute="bottom" constant="6" id="zam-uf-dtq"/>
                         </constraints>

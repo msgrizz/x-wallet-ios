@@ -20,7 +20,6 @@ extension UIViewController {
 
     func openURL(_ url: URL) {
         let controller = SFSafariViewController(url: url)
-        controller.preferredBarTintColor = Colors.darkBlue
         present(controller, animated: true, completion: nil)
     }
 }

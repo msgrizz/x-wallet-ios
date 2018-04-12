@@ -93,6 +93,10 @@
 		D54C58C3207F3671001F3B95 /* XWCoinCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58C2207F3671001F3B95 /* XWCoinCardView.swift */; };
 		D54C58C5207F368E001F3B95 /* XWCoinCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C58C4207F368E001F3B95 /* XWCoinCardTableViewCell.xib */; };
 		D54C58C7207F36BD001F3B95 /* XWCoinCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58C6207F36BD001F3B95 /* XWCoinCardTableViewCell.swift */; };
+		D54C58CA207F5336001F3B95 /* XWReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58C8207F5336001F3B95 /* XWReceiptTableViewCell.swift */; };
+		D54C58CB207F5336001F3B95 /* XWReceiptTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C58C9207F5336001F3B95 /* XWReceiptTableViewCell.xib */; };
+		D54C58CE207F53E4001F3B95 /* XWPromiseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58CC207F53E4001F3B95 /* XWPromiseTableViewCell.swift */; };
+		D54C58CF207F53E4001F3B95 /* XWPromiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C58CD207F53E4001F3B95 /* XWPromiseTableViewCell.xib */; };
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
 		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
@@ -350,6 +354,10 @@
 		D54C58C2207F3671001F3B95 /* XWCoinCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinCardView.swift; sourceTree = "<group>"; };
 		D54C58C4207F368E001F3B95 /* XWCoinCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCoinCardTableViewCell.xib; sourceTree = "<group>"; };
 		D54C58C6207F36BD001F3B95 /* XWCoinCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinCardTableViewCell.swift; sourceTree = "<group>"; };
+		D54C58C8207F5336001F3B95 /* XWReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWReceiptTableViewCell.swift; sourceTree = "<group>"; };
+		D54C58C9207F5336001F3B95 /* XWReceiptTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWReceiptTableViewCell.xib; sourceTree = "<group>"; };
+		D54C58CC207F53E4001F3B95 /* XWPromiseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWPromiseTableViewCell.swift; sourceTree = "<group>"; };
+		D54C58CD207F53E4001F3B95 /* XWPromiseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWPromiseTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
@@ -1024,6 +1032,10 @@
 				A773E617206A3CE1002C5721 /* XWImportantHeadView.xib */,
 				D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */,
 				D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */,
+				D54C58C8207F5336001F3B95 /* XWReceiptTableViewCell.swift */,
+				D54C58C9207F5336001F3B95 /* XWReceiptTableViewCell.xib */,
+				D54C58CC207F53E4001F3B95 /* XWPromiseTableViewCell.swift */,
+				D54C58CD207F53E4001F3B95 /* XWPromiseTableViewCell.xib */,
 				D5E6478F2079F24A00AB6BC5 /* XWIOUTableViewCell.swift */,
 				D5E647902079F24A00AB6BC5 /* XWIOUTableViewCell.xib */,
 			);
@@ -1233,6 +1245,7 @@
 				D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */,
 				12C5071320690A790080112C /* Health.storyboard in Resources */,
 				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
+				D54C58CB207F5336001F3B95 /* XWReceiptTableViewCell.xib in Resources */,
 				12C5071520690EC40080112C /* Coupon.storyboard in Resources */,
 				D5E647922079F24A00AB6BC5 /* XWIOUTableViewCell.xib in Resources */,
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
@@ -1240,6 +1253,7 @@
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
 				D54C58C5207F368E001F3B95 /* XWCoinCardTableViewCell.xib in Resources */,
 				D5ADC2B12058F878001307E8 /* XWSearchTableViewCell.xib in Resources */,
+				D54C58CF207F53E4001F3B95 /* XWPromiseTableViewCell.xib in Resources */,
 				12C5070F2068DB320080112C /* Membership.storyboard in Resources */,
 				D5A489DC204FB30D001031F6 /* Localizable.strings in Resources */,
 				D5ADC20F2057BF66001307E8 /* XWConversationTableViewCell.xib in Resources */,
@@ -1444,6 +1458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54C58CE207F53E4001F3B95 /* XWPromiseTableViewCell.swift in Sources */,
 				D5ECE30A207C6A9600F4EFFC /* XWMyBagViewController.swift in Sources */,
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
 				A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */,
@@ -1573,6 +1588,7 @@
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5E647892079EA4B00AB6BC5 /* CodableHelper.swift in Sources */,
+				D54C58CA207F5336001F3B95 /* XWReceiptTableViewCell.swift in Sources */,
 				D5E6478B2079EA4B00AB6BC5 /* JSONEncodingHelper.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
@@ -1827,6 +1843,7 @@
 				);
 				INFOPLIST_FILE = "x-wallet-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib/GtSdkDemo-swift-Bridging-Header.h";

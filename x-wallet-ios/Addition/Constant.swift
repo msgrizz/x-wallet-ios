@@ -8,8 +8,13 @@
 
 import Foundation
 
+#if DEBUG // 判断是否在测试环境下
+let kHostURL = "http://192.168.18.138:8081/#/"
+#else
 let kHostURL = "https://udapfront.iclass.cn/#/"
-//let kHostURL = "http://192.168.18.138:8081/#/"
+#endif
+
+
 
 let kMyCardURL = kHostURL+"MyCard"
 let kInviteFriendsURL = kHostURL+"InviteFriends"

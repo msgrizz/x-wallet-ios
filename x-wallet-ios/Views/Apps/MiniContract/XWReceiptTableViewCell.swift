@@ -1,19 +1,18 @@
 //
-//  XWContractTableViewCell.swift
+//  XWReceiptTableViewCell.swift
 //  x-wallet-ios
 //
-//  Created by 爱班 on 2018/3/16.
-//  Copyright © 2018年 linkio. All rights reserved.
+//  Created by 爱班 on 2018/4/12.
+//  Copyright © 2018年 evrins. All rights reserved.
 //
 
 import UIKit
 
-class XWContractTableViewCell: UITableViewCell {
+class XWReceiptTableViewCell: UITableViewCell {
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var partALabel: UILabel!
-    @IBOutlet weak var partBLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var newMessageButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

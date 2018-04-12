@@ -22,6 +22,10 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     @IBOutlet weak var addButton:UIButton!
     
     var iouArray:  [XWContract] = [XWContract]()
+    var contractArray:  [XWContract] = [XWContract]()
+    var recieptArray:  [XWContract] = [XWContract]()
+    var promiseArray:  [XWContract] = [XWContract]()
+    
     var iouCompleteArray:  [XWContract] = [XWContract]()
 
     
@@ -36,6 +40,10 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         
         self.tableView.register(UINib(nibName: "XWContractDemoTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractDemoTableViewCell")
         self.tableView.register(UINib(nibName: "XWIOUTableViewCell", bundle: nil), forCellReuseIdentifier: "XWIOUTableViewCell")
+        self.tableView.register(UINib(nibName: "XWContractTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractTableViewCell")
+        self.tableView.register(UINib(nibName: "XWReceiptTableViewCell", bundle: nil), forCellReuseIdentifier: "XWReceiptTableViewCell")
+        self.tableView.register(UINib(nibName: "XWPromiseTableViewCell", bundle: nil), forCellReuseIdentifier: "XWPromiseTableViewCell")
+
 //        self.tableView.contentInset.bottom = self.bottomBar.frame.size.height
 //        self.tableView.scrollIndicatorInsets.bottom = self.bottomBar.frame.size.height
         
@@ -128,11 +136,11 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
-            return 2
+            return self.contractArray.count
         }else if section == 1{
-            return 1
+            return self.recieptArray.count
         }else if section == 2{
-            return 2
+            return self.promiseArray.count
         }else {
             return self.iouArray.count
         }

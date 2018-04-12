@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,19 +50,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJ2-m2-Q83">
+                                <rect key="frame" x="26" y="28" width="294" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="NyI-R2-noy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-ub-VJG">
+                                <rect key="frame" x="26" y="45" width="294" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="rT4-PE-Vka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gM1-ub-VJG" firstAttribute="leading" secondItem="zag-8l-nUL" secondAttribute="leading" constant="26" id="1Me-6O-hH8"/>
                             <constraint firstItem="umG-lx-xMm" firstAttribute="top" secondItem="zag-8l-nUL" secondAttribute="top" id="1tt-Za-Xbz"/>
                             <constraint firstItem="PS6-f9-uyt" firstAttribute="leading" secondItem="zag-8l-nUL" secondAttribute="leading" constant="9" id="EX0-Wh-a0K"/>
                             <constraint firstItem="7Ql-6I-H2h" firstAttribute="top" secondItem="zag-8l-nUL" secondAttribute="top" constant="-3" id="G7E-zK-UpA"/>
+                            <constraint firstItem="oJ2-m2-Q83" firstAttribute="leading" secondItem="zag-8l-nUL" secondAttribute="leading" constant="26" id="J4g-K3-7qo"/>
                             <constraint firstAttribute="bottom" secondItem="7Ql-6I-H2h" secondAttribute="bottom" constant="-9" id="LMh-nz-9Kj"/>
                             <constraint firstItem="7Ql-6I-H2h" firstAttribute="leading" secondItem="zag-8l-nUL" secondAttribute="leading" id="PLj-8w-cWj"/>
                             <constraint firstItem="8ex-78-tl9" firstAttribute="top" secondItem="zag-8l-nUL" secondAttribute="top" constant="8" id="PRE-Ae-F7U"/>
+                            <constraint firstItem="oJ2-m2-Q83" firstAttribute="top" secondItem="zag-8l-nUL" secondAttribute="top" constant="28" id="Q7H-PG-5DS"/>
+                            <constraint firstAttribute="trailing" secondItem="gM1-ub-VJG" secondAttribute="trailing" constant="27" id="feJ-tA-lbT"/>
+                            <constraint firstItem="gM1-ub-VJG" firstAttribute="top" secondItem="zag-8l-nUL" secondAttribute="top" constant="45" id="kju-ad-gux"/>
                             <constraint firstAttribute="trailing" secondItem="umG-lx-xMm" secondAttribute="trailing" id="luS-1O-KAA"/>
                             <constraint firstItem="PS6-f9-uyt" firstAttribute="top" secondItem="zag-8l-nUL" secondAttribute="top" constant="11" id="nyJ-7f-95Q"/>
                             <constraint firstAttribute="trailing" secondItem="7Ql-6I-H2h" secondAttribute="trailing" id="rcS-RV-jgi"/>
                             <constraint firstAttribute="height" constant="70" id="u5V-gp-NgU"/>
+                            <constraint firstAttribute="trailing" secondItem="oJ2-m2-Q83" secondAttribute="trailing" constant="27" id="wib-KJ-Hcx"/>
                             <constraint firstItem="8ex-78-tl9" firstAttribute="leading" secondItem="PS6-f9-uyt" secondAttribute="trailing" constant="4" id="xqb-QZ-UQJ"/>
                         </constraints>
                     </view>
@@ -79,6 +103,8 @@
             <connections>
                 <outlet property="backImage" destination="7Ql-6I-H2h" id="f1r-wy-MN5"/>
                 <outlet property="newMessageButton" destination="umG-lx-xMm" id="3NK-fF-160"/>
+                <outlet property="partALabel" destination="oJ2-m2-Q83" id="Dxq-LS-3ei"/>
+                <outlet property="partBLabel" destination="gM1-ub-VJG" id="k1Z-Lp-w0k"/>
                 <outlet property="tagButton" destination="PS6-f9-uyt" id="QsA-Ij-19r"/>
                 <outlet property="titleLabel" destination="8ex-78-tl9" id="Ys5-e3-OZB"/>
             </connections>

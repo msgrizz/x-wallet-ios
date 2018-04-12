@@ -20,6 +20,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     var addButton: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
     
     var dataArray: [XWAppModel] = [XWAppModel]()
 //    var stackView: UIStackView!
@@ -60,8 +61,14 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         self.tableView.register(UINib(nibName: "XWCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCardTableViewCell")
         self.tableView.register(UINib(nibName: "XWMyBagTableViewCell", bundle: nil), forCellReuseIdentifier: "XWMyBagTableViewCell")
         self.tableView.register(UINib(nibName: "XWCoinCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCoinCardTableViewCell")
-
-        self.getAppsData()
+        
+        refreshControl.addTarget(self, action: #selector(getAppsData(_ :)),for: .valueChanged)
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing please wait", attributes: attributes)
+        refreshControl.tintColor = UIColor.white
+        self.tableView.addSubview(refreshControl)
+        
+        self.getAppsData(UIRefreshControl())
     }
     
     override func didReceiveMemoryWarning() {
@@ -212,7 +219,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         }
     }
     
-    func getAppsData() {
+    @objc func getAppsData(_ :UIRefreshControl) {
         self.dataArray.removeAll()
         HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error) in
             for ele in datas! {
@@ -225,6 +232,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
                 }
             }
             debugPrint(self.dataArray)
+            self.refreshControl.endRefreshing()
             self.tableView.reloadData()
         }
     }
