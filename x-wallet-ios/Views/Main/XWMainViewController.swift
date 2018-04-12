@@ -214,7 +214,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     
     func getAppsData() {
         self.dataArray.removeAll()
-        HomeControllerAPI.dashboardUsingGET(accountId: 1) { (datas, error) in
+        HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error) in
             for ele in datas! {
                 let app = XWAppModel()
                 app.dataModels = ele.data!
@@ -305,8 +305,11 @@ extension XWMainViewController: UITableViewDelegate {
                 self.performSegue(withIdentifier: "goToCoinList", sender: nil)
                 break
             case .coupon?:
-                let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
-                self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                vc.launchURL = kCouponURL
+                vc.title = NSLocalizedString("Coupon",comment: "")
+                self.navigationController?.pushViewController(vc, animated: true)
                 break
             default :
                 break

@@ -12,7 +12,7 @@ import WebViewBridge_Swift
 import SnapKit
 import Toast_Swift
 import SwiftyUserDefaults
-
+import Alamofire
 class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     var webView: WKWebView!
     open var launchURL: String!
@@ -21,7 +21,8 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     
     let imagePicker = UIImagePickerController()
     var imageData: Data!
-    var imageURL: String!
+    var imageName: String!
+    var imageAddon: String!
 
     var isCreate = false {
         didSet {
@@ -176,7 +177,28 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         }
         
         bridge.registerHandler("Photo.select") { (args:[Any]) -> (Bool, [Any]?) in
-
+            if let index = args.first as? String , args.count == 1 {
+                self.imageAddon = index
+            }
+            
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let cuAction = UIAlertAction(title: "Camera", style: .default, handler: {action in
+                DispatchQueue.main.async {
+                    self.imagePicker.sourceType = .camera
+                    self.present(self.imagePicker, animated: true, completion: nil)
+                }
+            })
+            let reAction = UIAlertAction(title: "Photo Library", style: .default, handler: {action in
+                DispatchQueue.main.async {
+                    self.imagePicker.sourceType = .photoLibrary
+                    self.present(self.imagePicker, animated: true, completion: nil)
+                }
+            })
+            alert.addAction(cancelAction)
+            alert.addAction(cuAction)
+            alert.addAction(reAction)
+            self.present(alert, animated: true, completion: nil)
             return (true, [])
         }
         
@@ -225,7 +247,38 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             
         }
         imageData = UIImageJPEGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage, 0.4)
-        imageURL = (info[UIImagePickerControllerImageURL]as! NSURL).absoluteString
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd-hh-mm-ss" //Specify your format that you want
+        imageName =  "\(dateFormatter.string(from: date))"+"\(arc4random())"+".JPEG"
+        self.sendImageDataRequest()
+    }
+    
+    func sendImageDataRequest() {
+        // Add Headers
+        let headers = [
+            "Content-Type":"multipart/form-data; charset=utf-8; boundary=__X_PAW_BOUNDARY__",
+            ]
+        
+        // Fetch Request
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append("udap".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"source")
+            multipartFormData.append("smallfiles".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"bucketName")
+            multipartFormData.append("123".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"Filename")
+            multipartFormData.append(self.imageData, withName: "qqfile", fileName: self.imageName, mimeType: "multipart/form-data")
+        }, usingThreshold: UInt64.init(), to: "https://oss.iclass.cn/formFile", method: .post, headers: headers, encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    let info = response.result.value as? Dictionary<String, AnyObject>
+                    let url = info!["html"] as? String
+                    self.bridge.callJsHandler("Photo.selectCallback", args: ["\(self.imageAddon!),\(url!)"], callback: nil)
+
+                }
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        })
     }
 
     /*
