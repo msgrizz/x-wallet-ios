@@ -1,19 +1,20 @@
 //
-//  XWCardTableViewCell.swift
+//  XWCoinCardTableViewCell.swift
 //  x-wallet-ios
 //
-//  Created by 爱班 on 2018/4/11.
+//  Created by 爱班 on 2018/4/12.
 //  Copyright © 2018年 evrins. All rights reserved.
 //
 
 import UIKit
 
-class XWCardTableViewCell: UITableViewCell {
+class XWCoinCardTableViewCell: UITableViewCell {
     @IBOutlet weak var headImage: UIButton!
-    @IBOutlet weak var showView: XWCardBaseView!
+    @IBOutlet weak var showView: XWCoinCardView!
     @IBOutlet weak var topiew: XWCardHeadView!
     @IBOutlet weak var secondView: XWCardHeadView!
     
+
     var datas: XWAppModel! {
         didSet {
             if datas.dataModels.count == 1 {
@@ -28,41 +29,24 @@ class XWCardTableViewCell: UITableViewCell {
             }
             if datas.dataModels.count>=2 {
                 let show1 = datas.dataModels[1]
-//                topiew.backgroundImage.image = show1.backgroundImage
+                //                topiew.backgroundImage.image = show1.backgroundImage
                 topiew.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
-                topiew.titleLabel.text = show1.title
+                topiew.titleLabel.text = show1.coinName
             }
             if datas.dataModels.count>=3{
                 let show2 = datas.dataModels[2]
-//                secondView.backgroundImage.image = show2.backgroundImage
+                //                secondView.backgroundImage.image = show2.backgroundImage
                 secondView.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
-                secondView.titleLabel.text = show2.title
+                secondView.titleLabel.text = show2.coinName
             }
             self.headImage.kf.setImage(with: URL(string: datas.appImage), for: UIControlState.normal)
             let show = datas.dataModels.first
-            
-            switch datas.type {
-            case .miniContract?:
-                self.showView.titleLabel.text = show?.title
-                self.showView.contentLabel.text = show?.content
-                self.showView.detailLabel.text = ""
-                break
-            case .miniCoin?:
-
-                break
-            case .coupon?:
-                self.showView.titleLabel.text = show?.title
-                self.showView.contentLabel.text = "No：\((show?.id)!)"
-                let date = Date(timeIntervalSince1970: Double((show?.expiredAt)!)/1000)
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd/MM/yyyy" //Specify your format that you want
-                self.showView.detailLabel.text = "Expires：\(dateFormatter.string(from: date))"
-                break
-            default :
-                break
-            }
+            self.showView.titleLabel.text = show?.coinName
+            self.showView.nameLabel.text = (show?.issuerName)!
+            self.showView.userHead.kf.setImage(with: URL(string: (show?.issuerAvatar)!), for: UIControlState.normal)
+            self.showView.detailLabel.text = "Possession/Limited：500/3000"
             self.showView.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
-//            self.showView.backgroundImage.image = show?.backgroundImage
+            //            self.showView.backgroundImage.image = show?.backgroundImage
         }
     }
     
@@ -77,7 +61,7 @@ class XWCardTableViewCell: UITableViewCell {
         showView.layer.shadowRadius = shadowRadius
         showView.layer.shadowOffset = shadowOffset
         showView.layer.masksToBounds = false
-
+        
         topiew.backgroundImage.layer.cornerRadius = 13
         topiew.backgroundImage.clipsToBounds = true
         topiew.backgroundImage.layer.masksToBounds = true
@@ -94,16 +78,16 @@ class XWCardTableViewCell: UITableViewCell {
         secondView.layer.shadowColor = shadowColor
         secondView.layer.shadowRadius = shadowRadius
         secondView.layer.shadowOffset = shadowOffset
-
+        
         secondView.layer.masksToBounds = false
         
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-    
+
 }

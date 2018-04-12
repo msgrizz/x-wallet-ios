@@ -13,11 +13,15 @@ import SnapKit
 import Toast_Swift
 import SwiftyUserDefaults
 
-class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
+class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     var webView: WKWebView!
     open var launchURL: String!
     
     var bridge:ZHWebViewBridge<WKWebView>!
+    
+    let imagePicker = UIImagePickerController()
+    var imageData: Data!
+    var imageURL: String!
 
     var isCreate = false {
         didSet {
@@ -38,6 +42,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imagePicker.delegate = self
         self.navigationController?.navigationBar.prefersLargeTitles = false
         // Do any additional setup after loading the view.
         webView = WKWebView.init(frame: self.view.bounds)
@@ -153,8 +158,11 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                     self.navigationController?.pushViewController(Health.instantiateInitialViewController()!, animated: true)
                     break
                 case 6:
-                    let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
-                    self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                    vc.launchURL = kCouponURL
+                    vc.title = NSLocalizedString("Coupon",comment: "")
+                    self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case 7:
                     let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
@@ -164,24 +172,11 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
                     break
                 }
             }
-            
-            
-            DispatchQueue.main.async {
-                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
-                contact.blockproerty={ (result) in
-                    DispatchQueue.main.async {
-                        contact.dismiss(animated: true, completion: nil)
-                        let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
-                        let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
-                        self.bridge.callJsHandler("Scan.qrCallback", args: ["\(name!),\(id!)"], callback: nil)
-                    }
-                }
-                let navi = UIBaseNavigationViewController(rootViewController: contact)
-                self.navigationController?.present(navi, animated: true, completion: {
-                    
-                })
-            }
+            return (true, [])
+        }
+        
+        bridge.registerHandler("Photo.select") { (args:[Any]) -> (Bool, [Any]?) in
+
             return (true, [])
         }
         
@@ -223,6 +218,14 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate {
     func getQueryStringParameter(url: String, param: String) -> String? {
         guard let url = URLComponents(string: url) else { return nil }
         return url.queryItems?.first(where: { $0.name == param })?.value
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true) {
+            
+        }
+        imageData = UIImageJPEGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage, 0.4)
+        imageURL = (info[UIImagePickerControllerImageURL]as! NSURL).absoluteString
     }
 
     /*

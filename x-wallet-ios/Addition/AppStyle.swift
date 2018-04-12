@@ -9,6 +9,15 @@
 import Foundation
 import UIKit
 
+let kScreenWidth = UIScreen.main.bounds.width
+let kScreenHeight = UIScreen.main.bounds.height
+
+let shadowOpacity:Float = 1
+let shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+let shadowRadius:CGFloat = 3
+let shadowOffset = CGSize(width: 0, height: -1)
+let colorHex = "425061"
+
 func applyStyle() {
 
     UINavigationBar.appearance().isTranslucent = false

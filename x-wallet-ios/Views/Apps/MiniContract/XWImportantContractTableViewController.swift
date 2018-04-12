@@ -55,8 +55,36 @@ class XWImportantContractTableViewController: UIBaseTableViewController,UIAction
     }
     
     @objc func add(_ : UIButton) {
-        let alertSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle:nil , otherButtonTitles:"Currency","Receipt", "Promise","Lou")
-        alertSheet.show(in: self.view)
+        let vc = XWWebViewController()
+        vc.isCreate = true
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cuAction = UIAlertAction(title: "Currency", style: .default, handler: {action in
+            vc.launchURL = kCreateContractURL
+            vc.title = "Create Currency"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let reAction = UIAlertAction(title: "Receipt", style: .default, handler: {action in
+            vc.launchURL = kCreatReceiptURL
+            vc.title = "Create Receipt"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let prAction = UIAlertAction(title: "Promise", style: .default, handler: {action in
+            vc.launchURL = kCreatePromiseURL
+            vc.title = "Create Promise"
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        let iouAction = UIAlertAction(title: "I.O.U", style: .default, handler: {action in
+            vc.launchURL = kCreateIOUURL
+            vc.title = NSLocalizedString("Create I.O.U",comment: "")
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(cuAction)
+        alert.addAction(reAction)
+        alert.addAction(prAction)
+        alert.addAction(iouAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -145,35 +173,4 @@ class XWImportantContractTableViewController: UIBaseTableViewController,UIAction
             self.lastScrollOffset = y;
         }
     }
-    
-    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
-        let vc = XWWebViewController()
-        vc.isCreate = true
-        if buttonIndex == 1{
-            vc.launchURL = kCreateContractURL
-            vc.title = "Create Currency"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if buttonIndex == 2{
-            vc.launchURL = kCreatReceiptURL
-            vc.title = "Create Receipt"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if buttonIndex == 3{
-            vc.launchURL = kCreatePromiseURL
-            vc.title = "Create Promise"
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }else if buttonIndex == 4{
-            vc.launchURL = kCreateIOUURL
-            vc.title = NSLocalizedString("Create I.O.U", comment: "")
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }else if buttonIndex == 5{
-            
-            
-        }
-        else {
-        }
-        
-    }
-
 }

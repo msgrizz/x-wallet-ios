@@ -9,6 +9,7 @@
 import Foundation
 
 let kHostURL = "https://udapfront.iclass.cn/#/"
+//let kHostURL = "http://192.168.18.138:8081/#/"
 
 let kMyCardURL = kHostURL+"MyCard"
 let kInviteFriendsURL = kHostURL+"InviteFriends"
@@ -29,4 +30,5 @@ let kIOUURL = kHostURL+"iou"
 let kMiniContractURL = kHostURL+"MiniContract"
 let kPromiseURL = kHostURL+"Promise"
 let kReceiptURL = kHostURL+"Receipt"
+let kCouponURL = kHostURL+"coupon"
 

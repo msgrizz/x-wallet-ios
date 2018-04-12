@@ -11,7 +11,7 @@ import DynamicBlurView
 import SnapKit
 import SwiftyUserDefaults
 class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
-    let defaultHeight: CGFloat = 140
+    let defaultHeight: CGFloat = 154
     let defaultHeadHeight: CGFloat = 25
 
     
@@ -59,7 +59,8 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         
         self.tableView.register(UINib(nibName: "XWCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCardTableViewCell")
         self.tableView.register(UINib(nibName: "XWMyBagTableViewCell", bundle: nil), forCellReuseIdentifier: "XWMyBagTableViewCell")
-        
+        self.tableView.register(UINib(nibName: "XWCoinCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCoinCardTableViewCell")
+
         self.getAppsData()
     }
     
@@ -211,37 +212,6 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         }
     }
     
-    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int) {
-        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
-        vc.isCreate = true
-        if buttonIndex == 1{
-            vc.launchURL = kCreateContractURL
-            vc.title = "Create Currency"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if buttonIndex == 2{
-            vc.launchURL = kCreatReceiptURL
-            vc.title = "Create Receipt"
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if buttonIndex == 3{
-            vc.launchURL = kCreatePromiseURL
-            vc.title = "Create Promise"
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }else if buttonIndex == 4{
-            vc.launchURL = kCreateIOUURL
-            vc.title = NSLocalizedString("Create I.O.U",comment: "")
-            self.navigationController?.pushViewController(vc, animated: true)
-            
-        }else if buttonIndex == 5{
-            
-            
-        }
-        else {
-        }
-        
-    }
-    
     func getAppsData() {
         self.dataArray.removeAll()
         HomeControllerAPI.dashboardUsingGET(accountId: 1) { (datas, error) in
@@ -280,7 +250,7 @@ extension XWMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
-            return 47
+            return 60
         }
         
         let model = dataArray[indexPath.row - 1]
@@ -306,10 +276,17 @@ extension XWMainViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyBagTableViewCell", for: indexPath) as! XWMyBagTableViewCell
             return cell
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWCardTableViewCell", for: indexPath) as! XWCardTableViewCell
             let model = dataArray[indexPath.row-1]
-            cell.datas = model
-            return cell
+            if model.type == .miniCoin {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "XWCoinCardTableViewCell", for: indexPath) as! XWCoinCardTableViewCell
+                cell.datas = model
+                return cell
+            }
+            else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "XWCardTableViewCell", for: indexPath) as! XWCardTableViewCell
+                cell.datas = model
+                return cell
+            }
         }
     }
 }

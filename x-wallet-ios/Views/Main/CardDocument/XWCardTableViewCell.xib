@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XWCardTableViewCell" rowHeight="140.5" id="KGk-i7-Jjw" customClass="XWCardTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XWCardTableViewCell" rowHeight="154" id="KGk-i7-Jjw" customClass="XWCardTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-Go-rd1">
@@ -90,12 +90,12 @@
                         </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ1-Xn-ect" customClass="XWCardBaseView" customModule="x_wallet_ios" customModuleProvider="target">
-                        <rect key="frame" x="60" y="50" width="302" height="82"/>
+                        <rect key="frame" x="60" y="51.5" width="302" height="82"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="peC-PO-xhP">
                                 <rect key="frame" x="1" y="1" width="302" height="82"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newMessageTag" translatesAutoresizingMaskIntoConstraints="NO" id="t4p-Y1-pd3">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newMessageTag" translatesAutoresizingMaskIntoConstraints="NO" id="t4p-Y1-pd3">
                                 <rect key="frame" x="287" y="0.0" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Tyr-WQ-6fS"/>
@@ -129,7 +129,7 @@
                                 <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aL-8l-OSX">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aL-8l-OSX">
                                 <rect key="frame" x="7" y="14" width="11" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="11" id="AnW-8I-uEB"/>
@@ -172,7 +172,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="BJ1-Xn-ect" secondAttribute="bottom" constant="7.5" id="0gX-hq-xhJ"/>
+                    <constraint firstAttribute="bottom" secondItem="BJ1-Xn-ect" secondAttribute="bottom" constant="20" id="0gX-hq-xhJ"/>
                     <constraint firstItem="rj4-Go-rd1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3HB-bs-eM1"/>
                     <constraint firstItem="hTK-Zl-MEp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CbA-s7-3B3"/>
                     <constraint firstItem="hTK-Zl-MEp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="DuV-3c-axd"/>
@@ -194,7 +194,7 @@
                 <outlet property="showView" destination="BJ1-Xn-ect" id="69N-J1-zUa"/>
                 <outlet property="topiew" destination="hTK-Zl-MEp" id="M8Y-RV-wgU"/>
             </connections>
-            <point key="canvasLocation" x="-180.5" y="53"/>
+            <point key="canvasLocation" x="-180.5" y="60"/>
         </tableViewCell>
     </objects>
     <resources>

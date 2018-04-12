@@ -88,6 +88,11 @@
 		D54C58BA207E05F3001F3B95 /* SMembershipControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58AF207E05F2001F3B95 /* SMembershipControllerAPI.swift */; };
 		D54C58BB207E05F3001F3B95 /* SChatControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58B0207E05F2001F3B95 /* SChatControllerAPI.swift */; };
 		D54C58BC207E05F3001F3B95 /* SCouponOwnerEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58B1207E05F2001F3B95 /* SCouponOwnerEntityAPI.swift */; };
+		D54C58BE207EF7DC001F3B95 /* UIBasePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58BD207EF7DC001F3B95 /* UIBasePresentationController.swift */; };
+		D54C58C1207F02C8001F3B95 /* XWMorePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58C0207F02C8001F3B95 /* XWMorePresentationController.swift */; };
+		D54C58C3207F3671001F3B95 /* XWCoinCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58C2207F3671001F3B95 /* XWCoinCardView.swift */; };
+		D54C58C5207F368E001F3B95 /* XWCoinCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54C58C4207F368E001F3B95 /* XWCoinCardTableViewCell.xib */; };
+		D54C58C7207F36BD001F3B95 /* XWCoinCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C58C6207F36BD001F3B95 /* XWCoinCardTableViewCell.swift */; };
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
 		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
@@ -340,6 +345,11 @@
 		D54C58AF207E05F2001F3B95 /* SMembershipControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMembershipControllerAPI.swift; sourceTree = "<group>"; };
 		D54C58B0207E05F2001F3B95 /* SChatControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SChatControllerAPI.swift; sourceTree = "<group>"; };
 		D54C58B1207E05F2001F3B95 /* SCouponOwnerEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCouponOwnerEntityAPI.swift; sourceTree = "<group>"; };
+		D54C58BD207EF7DC001F3B95 /* UIBasePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBasePresentationController.swift; sourceTree = "<group>"; };
+		D54C58C0207F02C8001F3B95 /* XWMorePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMorePresentationController.swift; sourceTree = "<group>"; };
+		D54C58C2207F3671001F3B95 /* XWCoinCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinCardView.swift; sourceTree = "<group>"; };
+		D54C58C4207F368E001F3B95 /* XWCoinCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCoinCardTableViewCell.xib; sourceTree = "<group>"; };
+		D54C58C6207F36BD001F3B95 /* XWCoinCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinCardTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
@@ -680,6 +690,9 @@
 				D54C586C207CBBB8001F3B95 /* XWImportTableViewCell.swift */,
 				D54C587D207DE1EA001F3B95 /* XWMyBagTableViewCell.swift */,
 				D54C587E207DE1EA001F3B95 /* XWMyBagTableViewCell.xib */,
+				D54C58C2207F3671001F3B95 /* XWCoinCardView.swift */,
+				D54C58C6207F36BD001F3B95 /* XWCoinCardTableViewCell.swift */,
+				D54C58C4207F368E001F3B95 /* XWCoinCardTableViewCell.xib */,
 			);
 			path = CardDocument;
 			sourceTree = "<group>";
@@ -894,6 +907,7 @@
 				D58FC3F920523BCA008C05AE /* UIBaseNavigationViewController.swift */,
 				A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */,
 				D58DB94B2063A80B005ABED8 /* XWScanViewController.swift */,
+				D54C58BD207EF7DC001F3B95 /* UIBasePresentationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -946,6 +960,7 @@
 				D5ADC2AC2058F1DD001307E8 /* Search.storyboard */,
 				D5ADC2AE2058F878001307E8 /* XWSearchTableViewCell.swift */,
 				D5ADC2AF2058F878001307E8 /* XWSearchTableViewCell.xib */,
+				D54C58C0207F02C8001F3B95 /* XWMorePresentationController.swift */,
 			);
 			path = Present;
 			sourceTree = "<group>";
@@ -1223,6 +1238,7 @@
 				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
+				D54C58C5207F368E001F3B95 /* XWCoinCardTableViewCell.xib in Resources */,
 				D5ADC2B12058F878001307E8 /* XWSearchTableViewCell.xib in Resources */,
 				12C5070F2068DB320080112C /* Membership.storyboard in Resources */,
 				D5A489DC204FB30D001031F6 /* Localizable.strings in Resources */,
@@ -1521,6 +1537,7 @@
 				D5A48975204E6D54001031F6 /* UIColor.swift in Sources */,
 				D54C5896207E05E6001F3B95 /* DashboardDataDTO.swift in Sources */,
 				A773E61A206A6E3C002C5721 /* XWContactHeadView.swift in Sources */,
+				D54C58C3207F3671001F3B95 /* XWCoinCardView.swift in Sources */,
 				D54C5870207D9E3C001F3B95 /* XWCardBaseView.swift in Sources */,
 				D5E647842079EA4B00AB6BC5 /* SMiniContract.swift in Sources */,
 				D54C58B3207E05F3001F3B95 /* SMembershipOwnerEntityAPI.swift in Sources */,
@@ -1552,6 +1569,7 @@
 				D54C5897207E05E6001F3B95 /* SendSMembershipDTO.swift in Sources */,
 				D58DB95C20649DAD005ABED8 /* XWRecieverTableViewCell.swift in Sources */,
 				D5ECE305207B14EA00F4EFFC /* ResponseSAccount.swift in Sources */,
+				D54C58C7207F36BD001F3B95 /* XWCoinCardTableViewCell.swift in Sources */,
 				D5A489EB204FD2DC001031F6 /* UIBaseViewController.swift in Sources */,
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5E647892079EA4B00AB6BC5 /* CodableHelper.swift in Sources */,
@@ -1562,6 +1580,7 @@
 				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5E6477E2079EA4B00AB6BC5 /* SAccount.swift in Sources */,
+				D54C58BE207EF7DC001F3B95 /* UIBasePresentationController.swift in Sources */,
 				D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */,
 				A70EE04C206CB2C60012A4D7 /* XWContract.swift in Sources */,
 				D54C5895207E05E6001F3B95 /* SConversation.swift in Sources */,
@@ -1598,6 +1617,7 @@
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
 				D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */,
 				D54C587C207DB34F001F3B95 /* XWAppModel.swift in Sources */,
+				D54C58C1207F02C8001F3B95 /* XWMorePresentationController.swift in Sources */,
 				D5E647852079EA4B00AB6BC5 /* SMiniContractDTO.swift in Sources */,
 				D54C58A6207E05E6001F3B95 /* SCoupon.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,
