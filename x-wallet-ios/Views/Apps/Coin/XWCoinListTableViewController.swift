@@ -47,6 +47,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,8 +80,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.activityIndicatorView.startAnimating()
-        self.getPoolData()
+        self.getData(UIRefreshControl())
 
     }
     
@@ -174,7 +174,7 @@ class XWCoinListTableViewController: UIBaseTableViewController {
         }
     }
     
-    func getPoolData() {
+    @objc override func getData(_ :UIRefreshControl) {
         SMiniCoinPoolControllerAPI.dashboardUsingGET1(personId: Int64(Defaults[.userId])) { (data, error) in
             guard data != nil else {
                 return
@@ -192,7 +192,8 @@ class XWCoinListTableViewController: UIBaseTableViewController {
                 let data = CoinsModel(title: olo.miniCoinPoolName!, content: "Transfer/Limited:\(olo.ownNum!)/\(olo.limitNum!)", canTansfer: true, stared: false, newMessage: false,coinId: olo.miniCoinPoolId!)
                 self.issuedDataModels.append(data)
             }
-            self.activityIndicatorView.stopAnimating()
+            self.isScrollDown = true
+            self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
     }

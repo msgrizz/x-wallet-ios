@@ -19,8 +19,6 @@ class XWCompleteContractTableViewController: UIBaseTableViewController,UIActionS
     var addMoreButton:UIButton!
     
     var completeArray:  [XWContract] = [XWContract]()
-
-    var type: ContractType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -169,6 +167,10 @@ class XWCompleteContractTableViewController: UIBaseTableViewController,UIActionS
             }
             self.lastScrollOffset = y;
         }
+    }
+    
+    @objc override func getData(_ :UIRefreshControl) {
+        self.refreshControl?.endRefreshing()
     }
 
 }

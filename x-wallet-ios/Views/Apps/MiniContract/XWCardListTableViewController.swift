@@ -26,7 +26,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     var recieptArray:  [XWContract] = [XWContract]()
     var promiseArray:  [XWContract] = [XWContract]()
     
-    var iouCompleteArray:  [XWContract] = [XWContract]()
+    var completeArray:  [XWContract] = [XWContract]()
 
     
     override func viewDidLoad() {
@@ -58,6 +58,8 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         addMoreButton = UIButton.init(frame: CGRect(x: UIScreen.main.bounds.width - 70, y: UIScreen.main.bounds.height - 100, width: 39, height: 39))
         addMoreButton.setImage(UIImage(named: "bottomAdd"), for: .normal)
         addMoreButton.addTarget(self, action: #selector(add(_:)), for: UIControlEvents.touchUpInside)
+        
+        self.getData(UIRefreshControl())
     }
     
     @objc func search(_ : UIBarButtonItem) {
@@ -120,8 +122,6 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.activityIndicatorView.startAnimating()
-        self.getIOUData()
 
     }
 
@@ -221,9 +221,9 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         headView.clearData()
         if section==0 {
             headView.titleLabel.text = "Currency"
-            if self.iouCompleteArray.count > 0 {
+            if self.completeArray.count > 0 {
                 headView.checkButton.isHidden = false
-                headView.checkButton.setTitle(" \(self.iouCompleteArray.count)", for: UIControlState.normal)
+                headView.checkButton.setTitle(" \(self.completeArray.count)", for: UIControlState.normal)
                 let tap1 = UITapGestureRecognizer.init(target: self, action: #selector(goToComplete))
                 headView.addGestureRecognizer(tap1)
             }
@@ -258,7 +258,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }
     }
     
-    func getIOUData() {
+    @objc override func getData(_ :UIRefreshControl) {
         SMiniContractControllerAPI.sMiniContractsByAccountIdUsingGET(accountId: Int64(Defaults[.userId])) { (data, error) in
             guard data != nil else {
                 return
@@ -267,7 +267,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
             self.contractArray.removeAll()
             self.recieptArray.removeAll()
             self.promiseArray.removeAll()
-            self.iouCompleteArray.removeAll()
+            self.completeArray.removeAll()
             for ele in data! {
                 
                 switch ele.miniContractType {
@@ -277,7 +277,11 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                     currency.partBName = ele.receiver?.loginName
                     currency.remoteData = ele
                     currency.isImportant = ele.important!
-                    self.contractArray.append(currency)
+                    if ele.receiverComplete! && ele.senderComplete! {
+                        self.completeArray.append(currency)
+                    }else {
+                        self.contractArray.append(currency)
+                    }
                     break
                 case .receipt?:
                     let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
@@ -296,7 +300,11 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                     }
                     let receipt = XWContract(title: title, type: ContractType.Receipt, content: dateFormatter.string(from: date), id:ele.id!)
                     receipt.remoteData = ele
-                    self.recieptArray.append(receipt)
+                    if ele.receiverComplete! && ele.senderComplete! {
+                        self.completeArray.append(receipt)
+                    }else {
+                        self.recieptArray.append(receipt)
+                    }
                     break
                 case .promise?:
                     let promise = XWContract(title: ele.title!, type: ContractType.Promise, content: ele.content!, id:ele.id!)
@@ -305,7 +313,11 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                     promise.partAHead = ele.sender?.avatar
                     promise.partBHead = ele.sender?.avatar
                     promise.remoteData = ele
-                    self.promiseArray.append(promise)
+                    if ele.receiverComplete! && ele.senderComplete! {
+                        self.completeArray.append(promise)
+                    }else {
+                        self.promiseArray.append(promise)
+                    }
                     break
                 case .iou?:
                     let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
@@ -326,7 +338,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                     iou.remoteData = ele
                     iou.isImportant = ele.important!
                     if ele.receiverComplete! && ele.senderComplete! {
-                        self.iouCompleteArray.append(iou)
+                        self.completeArray.append(iou)
                     }else {
                         self.iouArray.append(iou)
                     }
@@ -337,7 +349,8 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                 
 
             }
-            self.activityIndicatorView.stopAnimating()
+            self.isScrollDown = true
+            self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
     }
@@ -345,8 +358,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToComplete" {
             let vc = segue.destination as! XWCompleteContractTableViewController
-            vc.completeArray = self.iouCompleteArray
-            vc.type = .IOU
+            vc.completeArray = self.completeArray
             vc.title = "Completed"
         }
     }

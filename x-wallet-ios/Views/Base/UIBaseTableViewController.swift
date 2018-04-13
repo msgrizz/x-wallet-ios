@@ -26,7 +26,17 @@ class UIBaseTableViewController: UITableViewController {
         self.view.addSubview(activityIndicatorView)
         self.view.backgroundColor =  Colors.backGroundColor
         self.tableView.backgroundColor = Colors.backGroundColor
+        
+        let rc = UIRefreshControl()
+        rc.addTarget(self, action: #selector(getData(_ :)),for: .valueChanged)
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        rc.attributedTitle = NSAttributedString(string: "Refreshing please wait", attributes: attributes)
+        rc.tintColor = UIColor.white
+        self.refreshControl = rc
 
+    }
+    
+    @objc open func getData(_ :UIRefreshControl) {
     }
 
     override func didReceiveMemoryWarning() {

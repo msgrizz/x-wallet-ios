@@ -316,14 +316,15 @@ class XWMessageViewController: UIBaseTableViewController, UITextFieldDelegate,  
             if indexPath.row == 0 {
                 let vc = XWWebViewController()
                 if self.contractModel.type == .Currency {
-                    vc.launchURL = kMiniContractURL
+                    vc.launchURL = kMiniContractURL+"?id=\(self.contractModel.id!)"
                     vc.title = "Currency"
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }else if self.contractModel.type == .Receipt {
-                    vc.launchURL = kReceiptURL
+                    vc.launchURL = kReceiptURL+"?id=\(self.contractModel.id!)"
                     vc.title = "Receipt"
                     self.navigationController?.pushViewController(vc, animated: true)
                 }else if self.contractModel.type == .Promise {
-                    vc.launchURL = kPromiseURL
+                    vc.launchURL = kPromiseURL+"?id=\(self.contractModel.id!)"
                     vc.title = "Promise"
                     self.navigationController?.pushViewController(vc, animated: true)
                 }else {

@@ -9,7 +9,9 @@
 import Foundation
 
 #if DEBUG // 判断是否在测试环境下
-let kHostURL = "http://192.168.18.138:8081/#/"
+//let kHostURL = "http://192.168.18.138:8081/#/"
+let kHostURL = "https://udapfront.iclass.cn/#/"
+
 #else
 let kHostURL = "https://udapfront.iclass.cn/#/"
 #endif
