@@ -7,16 +7,16 @@
 
 import Foundation
 
-public enum MiniContractType: String, Codable {
-    case currency = "Currency"
-    case receipt = "Receipt"
-    case promise = "Promise"
-    case iou = "Iou"
-}
+
 
 open class SMiniContract: Codable {
 
-
+    public enum MiniContractType: String, Codable { 
+        case currency = "Currency"
+        case receipt = "Receipt"
+        case promise = "Promise"
+        case iou = "Iou"
+    }
     public var abolished: Bool?
     public var activated: Bool?
     public var audioUrl: String?

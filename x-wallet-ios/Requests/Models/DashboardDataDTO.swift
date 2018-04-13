@@ -20,6 +20,8 @@ open class DashboardDataDTO: Codable {
     public var issuerAvatar: String?
     public var issuerId: Int64?
     public var issuerName: String?
+    public var line1: String?
+    public var line2: String?
     public var ownNum: Int64?
     public var receiver: Int64?
     public var receiverName: String?
@@ -29,7 +31,7 @@ open class DashboardDataDTO: Codable {
 
 
     
-    public init(coinName: String?, content: String?, expiredAt: Int64?, id: Int64?, important: Bool?, issuedNum: Int64?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, ownNum: Int64?, receiver: Int64?, receiverName: String?, sender: Int64?, senderName: String?, title: String?) {
+    public init(coinName: String?, content: String?, expiredAt: Int64?, id: Int64?, important: Bool?, issuedNum: Int64?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, line1: String?, line2: String?, ownNum: Int64?, receiver: Int64?, receiverName: String?, sender: Int64?, senderName: String?, title: String?) {
         self.coinName = coinName
         self.content = content
         self.expiredAt = expiredAt
@@ -39,6 +41,8 @@ open class DashboardDataDTO: Codable {
         self.issuerAvatar = issuerAvatar
         self.issuerId = issuerId
         self.issuerName = issuerName
+        self.line1 = line1
+        self.line2 = line2
         self.ownNum = ownNum
         self.receiver = receiver
         self.receiverName = receiverName
@@ -63,6 +67,8 @@ open class DashboardDataDTO: Codable {
         try container.encodeIfPresent(issuerAvatar, forKey: "issuerAvatar")
         try container.encodeIfPresent(issuerId, forKey: "issuerId")
         try container.encodeIfPresent(issuerName, forKey: "issuerName")
+        try container.encodeIfPresent(line1, forKey: "line1")
+        try container.encodeIfPresent(line2, forKey: "line2")
         try container.encodeIfPresent(ownNum, forKey: "ownNum")
         try container.encodeIfPresent(receiver, forKey: "receiver")
         try container.encodeIfPresent(receiverName, forKey: "receiverName")
@@ -85,6 +91,8 @@ open class DashboardDataDTO: Codable {
         issuerAvatar = try container.decodeIfPresent(String.self, forKey: "issuerAvatar")
         issuerId = try container.decodeIfPresent(Int64.self, forKey: "issuerId")
         issuerName = try container.decodeIfPresent(String.self, forKey: "issuerName")
+        line1 = try container.decodeIfPresent(String.self, forKey: "line1")
+        line2 = try container.decodeIfPresent(String.self, forKey: "line2")
         ownNum = try container.decodeIfPresent(Int64.self, forKey: "ownNum")
         receiver = try container.decodeIfPresent(Int64.self, forKey: "receiver")
         receiverName = try container.decodeIfPresent(String.self, forKey: "receiverName")

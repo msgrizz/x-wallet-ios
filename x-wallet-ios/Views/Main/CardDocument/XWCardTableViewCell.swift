@@ -59,6 +59,9 @@ class XWCardTableViewCell: UITableViewCell {
                 self.showView.detailLabel.text = "Expires：\(dateFormatter.string(from: date))"
                 break
             default :
+                self.showView.titleLabel.text = show?.title
+                self.showView.contentLabel.text = show?.line1
+                self.showView.detailLabel.text = show?.line2
                 break
             }
             self.showView.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)

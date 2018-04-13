@@ -11,10 +11,14 @@ public enum DashboardType: String, Codable {
     case miniContract = "MiniContract"
     case miniCoin = "MiniCoin"
     case coupon = "Coupon"
+    case membership = "Membership"
+    case ticket = "Ticket"
+    case academic = "Academic"
+    case health = "Health"
+    case invoice = "Invoice"
 }
 
 open class DashboardDTO: Codable {
-
 
     public var dashboardType: DashboardType?
     public var data: [DashboardDataDTO]?

@@ -117,27 +117,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         vc.title = NSLocalizedString("Invoice",comment: "")
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    @objc func goToMembership(_ : UIButton) {
-        let Membership: UIStoryboard = UIStoryboard(name: "Membership", bundle: nil)
-        self.navigationController?.pushViewController(Membership.instantiateInitialViewController()!, animated: true)
-    }
-    
-    @objc func goToTicket(_ : UIButton) {
-        let Ticket: UIStoryboard = UIStoryboard(name: "Ticket", bundle: nil)
-        self.navigationController?.pushViewController(Ticket.instantiateInitialViewController()!, animated: true)
-    }
-    
-    @objc func goToAcademic(_ : UIButton) {
-        let Academic: UIStoryboard = UIStoryboard(name: "Academic", bundle: nil)
-        self.navigationController?.pushViewController(Academic.instantiateInitialViewController()!, animated: true)
-    }
-    
-    @objc func goToHealth(_ : UIButton) {
-        let Health: UIStoryboard = UIStoryboard(name: "Health", bundle: nil)
-        self.navigationController?.pushViewController(Health.instantiateInitialViewController()!, animated: true)
-    }
-    
+
     @objc func dismissSlide(_ :UIButton) {
         UIView.animate(withDuration: 0.3, animations: {
             self.blurView.blurRadius = 0
@@ -333,6 +313,29 @@ extension XWMainViewController: UITableViewDelegate {
                 let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
                 vc.launchURL = kCouponURL
                 vc.title = NSLocalizedString("Coupon",comment: "")
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case .membership?:
+                let Membership: UIStoryboard = UIStoryboard(name: "Membership", bundle: nil)
+                self.navigationController?.pushViewController(Membership.instantiateInitialViewController()!, animated: true)
+                break
+            case .ticket?:
+                let Ticket: UIStoryboard = UIStoryboard(name: "Ticket", bundle: nil)
+                self.navigationController?.pushViewController(Ticket.instantiateInitialViewController()!, animated: true)
+                break
+            case .academic?:
+                let Academic: UIStoryboard = UIStoryboard(name: "Academic", bundle: nil)
+                self.navigationController?.pushViewController(Academic.instantiateInitialViewController()!, animated: true)
+                break
+            case .health?:
+                let Health: UIStoryboard = UIStoryboard(name: "Health", bundle: nil)
+                self.navigationController?.pushViewController(Health.instantiateInitialViewController()!, animated: true)
+                break
+            case .invoice?:
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                vc.launchURL = kInvoiceURL
+                vc.title = NSLocalizedString("Invoice",comment: "")
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             default :
