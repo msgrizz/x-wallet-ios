@@ -38,4 +38,5 @@ let kMiniContractURL = kHostURL+"MiniContract"
 let kPromiseURL = kHostURL+"Promise"
 let kReceiptURL = kHostURL+"Receipt"
 let kCouponURL = kHostURL+"coupon"
+let kInvoiceURL = kHostURL+"invoice"
 

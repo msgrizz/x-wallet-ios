@@ -23,6 +23,8 @@ class XWSlideView: UIView {
     @IBOutlet var coin: UILabel!
     @IBOutlet var receiveCode: UILabel!
     @IBOutlet var scan: UILabel!
+    @IBOutlet var coupon: UILabel!
+    @IBOutlet var invoice: UILabel!
 
     
     

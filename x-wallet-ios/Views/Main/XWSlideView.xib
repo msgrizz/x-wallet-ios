@@ -65,7 +65,7 @@
                     </constraints>
                     <state key="normal" image="closeButton"/>
                 </button>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKZ-ga-G9i">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invoice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKZ-ga-G9i">
                     <rect key="frame" x="57" y="302" width="226" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="226" id="WnL-PC-Il1"/>
@@ -117,6 +117,8 @@
             <connections>
                 <outlet property="closeButton" destination="HWH-o6-Zfo" id="meG-8Q-Kud"/>
                 <outlet property="coin" destination="xdr-UG-0ZK" id="7Hg-4u-oGx"/>
+                <outlet property="coupon" destination="SiJ-Sk-jB2" id="Jmz-b7-40c"/>
+                <outlet property="invoice" destination="LKZ-ga-G9i" id="ZvD-xw-Yq8"/>
                 <outlet property="miniContract" destination="XlU-r7-MQH" id="DMk-bx-YAS"/>
                 <outlet property="receiveCode" destination="1Ve-bh-sSJ" id="KoS-Mo-kik"/>
                 <outlet property="scan" destination="zFg-IR-A7P" id="5F6-QE-fUz"/>

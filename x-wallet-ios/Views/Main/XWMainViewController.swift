@@ -56,6 +56,12 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         let sacn = UITapGestureRecognizer.init(target: self, action: #selector(goToScan(_:)))
         slideView.scan.addGestureRecognizer(sacn)
         
+        let coupon = UITapGestureRecognizer.init(target: self, action: #selector(goToCoupon(_:)))
+        slideView.coupon.addGestureRecognizer(coupon)
+        
+        let invoice = UITapGestureRecognizer.init(target: self, action: #selector(goToInvoice(_:)))
+        slideView.invoice.addGestureRecognizer(invoice)
+        
         blurView = DynamicBlurView(frame: slideView.bounds)
         
         self.tableView.register(UINib(nibName: "XWCardTableViewCell", bundle: nil), forCellReuseIdentifier: "XWCardTableViewCell")
@@ -76,10 +82,6 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func getAppRect(cardNum: Int) -> CGRect {
-        return CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: CGFloat(52 + 14 + cardNum * 46))
-    }
-    
     @objc func add(_ : UIBarButtonItem) {
         let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
         myAppdelegate.window?.addSubview(self.blurView)
@@ -96,6 +98,24 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     
     @objc func goToCoin(_ : UIButton) {
         self.performSegue(withIdentifier: "goToCoinList", sender: nil)
+    }
+    
+    @objc func goToCoupon(_ : UIButton) {
+        self.dismissSlide(UIButton())
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+        vc.launchURL = kCouponURL
+        vc.title = NSLocalizedString("Coupon",comment: "")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func goToInvoice(_ : UIButton) {
+        self.dismissSlide(UIButton())
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+        vc.launchURL = kInvoiceURL
+        vc.title = NSLocalizedString("Invoice",comment: "")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func goToMembership(_ : UIButton) {
@@ -118,11 +138,6 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
         self.navigationController?.pushViewController(Health.instantiateInitialViewController()!, animated: true)
     }
     
-    @objc func goToCoupon(_ : UIButton) {
-        let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
-        self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
-    }
-    
     @objc func dismissSlide(_ :UIButton) {
         UIView.animate(withDuration: 0.3, animations: {
             self.blurView.blurRadius = 0
@@ -134,6 +149,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     }
     
     @objc func addContractAction(_ :UITapGestureRecognizer) {
+        self.dismissSlide(UIButton())
         let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
         vc.isCreate = true

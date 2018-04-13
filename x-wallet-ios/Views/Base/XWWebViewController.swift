@@ -47,6 +47,13 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         target: self,
         action: #selector(back(_:))
     )
+    
+    lazy var closeButton: UIBarButtonItem = UIBarButtonItem(
+        image: UIImage(named: "closeButtons"),
+        style: .plain,
+        target: self,
+        action: #selector(close(_:))
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,8 +180,11 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case 7:
-                    let Coupon: UIStoryboard = UIStoryboard(name: "Coupon", bundle: nil)
-                    self.navigationController?.pushViewController(Coupon.instantiateInitialViewController()!, animated: true)
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                    vc.launchURL = kInvoiceURL
+                    vc.title = NSLocalizedString("Invoice",comment: "")
+                    self.navigationController?.pushViewController(vc, animated: true)
                     break
                 default:
                     break
@@ -224,8 +234,9 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     }
     
     open func addBackButton() {
-        self.navigationItem.leftBarButtonItem = self.backButton
+        self.navigationItem.leftBarButtonItems = [self.backButton,self.closeButton]
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -254,6 +265,10 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         }else {
             self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    @objc func close(_ : UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func getQueryStringParameter(url: String, param: String) -> String? {
