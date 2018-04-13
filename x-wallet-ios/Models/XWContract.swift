@@ -20,6 +20,14 @@ class XWContract: NSObject {
     var type: ContractType
     var content: String
     var id: Int64?
+    var isImportant: Bool = false
+    var hasNewMessage: Bool = false
+    var partAName: String?
+    var partBName: String?
+    var partAHead: String?
+    var partBHead: String?
+
+    
     var remoteData: SMiniContract?
     
     //MARK: Inits

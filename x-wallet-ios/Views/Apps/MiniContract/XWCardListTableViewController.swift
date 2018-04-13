@@ -38,7 +38,6 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        self.tableView.register(UINib(nibName: "XWContractDemoTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractDemoTableViewCell")
         self.tableView.register(UINib(nibName: "XWIOUTableViewCell", bundle: nil), forCellReuseIdentifier: "XWIOUTableViewCell")
         self.tableView.register(UINib(nibName: "XWContractTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractTableViewCell")
         self.tableView.register(UINib(nibName: "XWReceiptTableViewCell", bundle: nil), forCellReuseIdentifier: "XWReceiptTableViewCell")
@@ -148,24 +147,37 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
-            if indexPath.row == 0 {
-                cell.backImageView.image = UIImage(named: "card1")
-            }else {
-                cell.backImageView.image = UIImage(named: "card2")
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractTableViewCell", for: indexPath) as! XWContractTableViewCell
+            let contract = self.contractArray[indexPath.row]
+            cell.titleLabel.text = contract.title
+            let partAttribute = [NSAttributedStringKey.foregroundColor: UIColor(hex: "8a8a8f")]
+            let nameAttribute = [NSAttributedStringKey.foregroundColor: UIColor(hex: "000000")]
+            
+            let partA = NSMutableAttributedString(string: "PartA:", attributes: partAttribute)
+            partA.append(NSAttributedString(string: contract.partAName!, attributes: nameAttribute))
+            
+            let partB = NSMutableAttributedString(string: "PartB:", attributes: partAttribute)
+            partB.append(NSAttributedString(string: contract.partBName!, attributes: nameAttribute))
+            
+            cell.partALabel.attributedText = partA
+            cell.partBLabel.attributedText = partB
+            
+            cell.tagButton.isHidden = !contract.isImportant
             return cell
         }else if indexPath.section == 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
-            cell.backImageView.image = UIImage(named: "card3")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWReceiptTableViewCell", for: indexPath) as! XWReceiptTableViewCell
+            let reciept = self.recieptArray[indexPath.row]
+            cell.timeLabel.text = reciept.content
+            cell.titleLabel.text = reciept.title
             return cell
         }else if indexPath.section == 2{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractDemoTableViewCell", for: indexPath) as! XWContractDemoTableViewCell
-            if indexPath.row == 0 {
-                cell.backImageView.image = UIImage(named: "card4")
-            }else {
-                cell.backImageView.image = UIImage(named: "card5")
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWPromiseTableViewCell", for: indexPath) as! XWPromiseTableViewCell
+            let promise = self.promiseArray[indexPath.row]
+            cell.detailLabel.text = promise.title
+            cell.partAName.text = promise.partAName
+            cell.partBName.text = promise.partBName
+            cell.partAHead.kf.setImage(with: URL(string: promise.partAHead!), for: UIControlState.normal)
+            cell.partBHead.kf.setImage(with: URL(string: promise.partBHead!), for: UIControlState.normal)
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "XWIOUTableViewCell", for: indexPath) as! XWIOUTableViewCell
@@ -186,15 +198,15 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = Main.instantiateViewController(withIdentifier: "XWMessageViewController") as! XWMessageViewController
         if indexPath.section == 0 {
-            let data = XWContract.init(title: "Currency", type: .Currency, content: "Currency")
+            let data = self.contractArray[indexPath.row]
             vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.section == 1{
-            let data = XWContract.init(title: "Receipt", type: .Receipt, content: "Receipt")
+            let data = self.recieptArray[indexPath.row]
             vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else if indexPath.section == 2{
-            let data = XWContract.init(title: "Promise", type: .Promise, content: "Promise")
+            let data = self.promiseArray[indexPath.row]
             vc.contractModel = data
             self.navigationController?.pushViewController(vc, animated: true)
         }else {
@@ -247,34 +259,83 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
     }
     
     func getIOUData() {
-        SMiniContractControllerAPI.getByTypeUsingGET(miniContractType: .iou, accountId: Int64(Defaults[.userId])) { (data, error) in
+        SMiniContractControllerAPI.sMiniContractsByAccountIdUsingGET(accountId: Int64(Defaults[.userId])) { (data, error) in
             guard data != nil else {
                 return
             }
             self.iouArray.removeAll()
+            self.contractArray.removeAll()
+            self.recieptArray.removeAll()
+            self.promiseArray.removeAll()
             self.iouCompleteArray.removeAll()
             for ele in data! {
-                let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd/MM/yyyy" //Specify your format that you want
                 
-                var title = ""
-                if ele.receiver?.id == Int64(Defaults[.userId]) {
-                    if ele.sender != nil {
-                        title = "From: \(ele.sender!.loginName!)"
+                switch ele.miniContractType {
+                case .currency?:
+                    let currency = XWContract(title: ele.title!, type: ContractType.Currency, content: ele.content!, id:ele.id!)
+                    currency.partAName = ele.sender?.loginName
+                    currency.partBName = ele.receiver?.loginName
+                    currency.remoteData = ele
+                    currency.isImportant = ele.important!
+                    self.contractArray.append(currency)
+                    break
+                case .receipt?:
+                    let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd/MM/yyyy" //Specify your format that you want
+                    
+                    var title = ""
+                    if ele.receiver?.id == Int64(Defaults[.userId]) {
+                        if ele.sender != nil {
+                            title = "From: \(ele.sender!.loginName!)"
+                        }
+                    }else {
+                        if ele.receiver != nil {
+                            title = "To: \(ele.receiver!.loginName!)"
+                        }
                     }
-                }else {
-                    if ele.receiver != nil {
-                        title = "To: \(ele.receiver!.loginName!)"
+                    let receipt = XWContract(title: title, type: ContractType.Receipt, content: dateFormatter.string(from: date), id:ele.id!)
+                    receipt.remoteData = ele
+                    self.recieptArray.append(receipt)
+                    break
+                case .promise?:
+                    let promise = XWContract(title: ele.title!, type: ContractType.Promise, content: ele.content!, id:ele.id!)
+                    promise.partAName = ele.sender?.loginName
+                    promise.partBName = ele.receiver?.loginName
+                    promise.partAHead = ele.sender?.avatar
+                    promise.partBHead = ele.sender?.avatar
+                    promise.remoteData = ele
+                    self.promiseArray.append(promise)
+                    break
+                case .iou?:
+                    let date = Date(timeIntervalSince1970: Double(ele.createTime!)/1000)
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd/MM/yyyy" //Specify your format that you want
+                    
+                    var title = ""
+                    if ele.receiver?.id == Int64(Defaults[.userId]) {
+                        if ele.sender != nil {
+                            title = "From: \(ele.sender!.loginName!)"
+                        }
+                    }else {
+                        if ele.receiver != nil {
+                            title = "To: \(ele.receiver!.loginName!)"
+                        }
                     }
+                    let iou = XWContract(title: title, type: ContractType.IOU, content: dateFormatter.string(from: date), id:ele.id!)
+                    iou.remoteData = ele
+                    iou.isImportant = ele.important!
+                    if ele.receiverComplete! && ele.senderComplete! {
+                        self.iouCompleteArray.append(iou)
+                    }else {
+                        self.iouArray.append(iou)
+                    }
+                    break
+                default:
+                    break
                 }
-                let iou = XWContract(title: title, type: ContractType.IOU, content: dateFormatter.string(from: date), id:ele.id!)
-                iou.remoteData = ele
-                if ele.receiverComplete! && ele.senderComplete! {
-                    self.iouCompleteArray.append(iou)
-                }else {
-                    self.iouArray.append(iou)
-                }
+                
+
             }
             self.activityIndicatorView.stopAnimating()
             self.tableView.reloadData()

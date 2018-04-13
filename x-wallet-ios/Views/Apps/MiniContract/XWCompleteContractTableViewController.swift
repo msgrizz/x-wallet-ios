@@ -32,6 +32,9 @@ class XWCompleteContractTableViewController: UIBaseTableViewController,UIActionS
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.register(UINib(nibName: "XWIOUTableViewCell", bundle: nil), forCellReuseIdentifier: "XWIOUTableViewCell")
+        self.tableView.register(UINib(nibName: "XWContractTableViewCell", bundle: nil), forCellReuseIdentifier: "XWContractTableViewCell")
+        self.tableView.register(UINib(nibName: "XWReceiptTableViewCell", bundle: nil), forCellReuseIdentifier: "XWReceiptTableViewCell")
+        self.tableView.register(UINib(nibName: "XWPromiseTableViewCell", bundle: nil), forCellReuseIdentifier: "XWPromiseTableViewCell")
         
         
         //        self.tableView.contentInset.bottom = self.bottomBar.frame.size.height
@@ -96,11 +99,45 @@ class XWCompleteContractTableViewController: UIBaseTableViewController,UIActionS
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "XWIOUTableViewCell", for: indexPath) as! XWIOUTableViewCell
-        let iou = self.completeArray[indexPath.row]
-        cell.timeLabel.text = iou.content
-        cell.titleLabel.text = iou.title
-        return cell
+        let data = self.completeArray[indexPath.row]
+        switch data.type {
+        case .Currency:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContractTableViewCell", for: indexPath) as! XWContractTableViewCell
+            cell.titleLabel.text = data.title
+            
+            let partAttribute = [NSAttributedStringKey.foregroundColor: UIColor(hex: "8a8a8f")]
+            let nameAttribute = [NSAttributedStringKey.foregroundColor: UIColor(hex: "000000")]
+
+            let partA = NSMutableAttributedString(string: "PartA:", attributes: partAttribute)
+            partA.append(NSAttributedString(string: data.partAName!, attributes: nameAttribute))
+            
+            let partB = NSMutableAttributedString(string: "PartB:", attributes: partAttribute)
+            partB.append(NSAttributedString(string: data.partBName!, attributes: nameAttribute))
+            
+            cell.partALabel.attributedText = partA
+            cell.partBLabel.attributedText = partB
+            cell.tagButton.isHidden = !data.isImportant
+            return cell
+        case .Receipt:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWReceiptTableViewCell", for: indexPath) as! XWReceiptTableViewCell
+            cell.timeLabel.text = data.content
+            cell.titleLabel.text = data.title
+            return cell
+        case .Promise:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWPromiseTableViewCell", for: indexPath) as! XWPromiseTableViewCell
+            cell.detailLabel.text = data.title
+            cell.partAName.text = data.partAName
+            cell.partBName.text = data.partBName
+            cell.partAHead.kf.setImage(with: URL(string: data.partAHead!), for: UIControlState.normal)
+            cell.partBHead.kf.setImage(with: URL(string: data.partBHead!), for: UIControlState.normal)
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "XWIOUTableViewCell", for: indexPath) as! XWIOUTableViewCell
+            let iou = self.completeArray[indexPath.row]
+            cell.timeLabel.text = iou.content
+            cell.titleLabel.text = iou.title
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
