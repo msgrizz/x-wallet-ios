@@ -40,6 +40,13 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             }
         }
     }
+    
+    lazy var backButton: UIBarButtonItem = UIBarButtonItem(
+        image: UIImage(named: "backButton"),
+        style: .plain,
+        target: self,
+        action: #selector(back(_:))
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -202,7 +209,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             return (true, [])
         }
         
-        
+        self.addBackButton()
         self.loadURL()
     }
     
@@ -214,6 +221,10 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         if self.launchURL != nil {
             self.webView.load(URLRequest(url: URL(string: launchURL)!))
         }
+    }
+    
+    open func addBackButton() {
+        self.navigationItem.leftBarButtonItem = self.backButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -235,6 +246,14 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     
     @objc func save(_ : UIBarButtonItem) {
         self.bridge.callJsHandler("Send.contractCallback", args: [])
+    }
+    
+    @objc func back(_ : UIBarButtonItem) {
+        if  self.webView.canGoBack {
+            self.webView.goBack()
+        }else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func getQueryStringParameter(url: String, param: String) -> String? {

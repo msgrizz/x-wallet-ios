@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import WebKit
 class XWAppsViewController: XWWebViewController {
 
     override func viewDidLoad() {
@@ -25,6 +25,17 @@ class XWAppsViewController: XWWebViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func addBackButton() {
+        if self.webView.canGoBack {
+            self.navigationController?.navigationItem.leftBarButtonItem = self.backButton
+        }
+    }
+    
+    override func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        super.webView(webView, didFinish: navigation)
+        self.addBackButton()
+    }
+
 
     /*
     // MARK: - Navigation

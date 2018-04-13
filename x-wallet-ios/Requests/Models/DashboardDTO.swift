@@ -16,7 +16,6 @@ public enum DashboardType: String, Codable {
 open class DashboardDTO: Codable {
 
 
-    
     public var dashboardType: DashboardType?
     public var data: [DashboardDataDTO]?
     public var logo: String?

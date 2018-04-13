@@ -21,6 +21,5 @@ target 'x-wallet-ios' do
   pod 'DynamicBlurView'
   pod 'WebViewBridge.Swift'
   pod 'SugarRecord/CoreData'
-  pod 'AvatarImageView', '~> 2.1.0'
   target 'x-wallet-iosTests'
 end

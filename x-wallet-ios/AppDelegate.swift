@@ -10,7 +10,6 @@ import UIKit
 import SwiftyUserDefaults
 import UserNotifications
 import PushKit
-
 let kGtAppId:String = "iMahVVxurw6BNr7XSn9EF2"
 let kGtAppKey:String = "yIPfqwq6OMAPp6dkqgLpG5"
 let kGtAppSecret:String = "G0aBqAD6t79JfzTB6Z5lo5"
@@ -42,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         self.registerRemoteNotification();
 //         注册VOIP
 //        self.voipRegistration();
+        
+        SHFullscreenPopGesture.configure()
         
         
         window = UIWindow(frame: UIScreen.main.bounds)

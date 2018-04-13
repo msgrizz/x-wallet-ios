@@ -16,9 +16,11 @@ open class DashboardDataDTO: Codable {
     public var expiredAt: Int64?
     public var id: Int64?
     public var important: Bool?
+    public var issuedNum: Int64?
     public var issuerAvatar: String?
     public var issuerId: Int64?
     public var issuerName: String?
+    public var ownNum: Int64?
     public var receiver: Int64?
     public var receiverName: String?
     public var sender: Int64?
@@ -27,15 +29,17 @@ open class DashboardDataDTO: Codable {
 
 
     
-    public init(coinName: String?, content: String?, expiredAt: Int64?, id: Int64?, important: Bool?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, receiver: Int64?, receiverName: String?, sender: Int64?, senderName: String?, title: String?) {
+    public init(coinName: String?, content: String?, expiredAt: Int64?, id: Int64?, important: Bool?, issuedNum: Int64?, issuerAvatar: String?, issuerId: Int64?, issuerName: String?, ownNum: Int64?, receiver: Int64?, receiverName: String?, sender: Int64?, senderName: String?, title: String?) {
         self.coinName = coinName
         self.content = content
         self.expiredAt = expiredAt
         self.id = id
         self.important = important
+        self.issuedNum = issuedNum
         self.issuerAvatar = issuerAvatar
         self.issuerId = issuerId
         self.issuerName = issuerName
+        self.ownNum = ownNum
         self.receiver = receiver
         self.receiverName = receiverName
         self.sender = sender
@@ -55,9 +59,11 @@ open class DashboardDataDTO: Codable {
         try container.encodeIfPresent(expiredAt, forKey: "expiredAt")
         try container.encodeIfPresent(id, forKey: "id")
         try container.encodeIfPresent(important, forKey: "important")
+        try container.encodeIfPresent(issuedNum, forKey: "issuedNum")
         try container.encodeIfPresent(issuerAvatar, forKey: "issuerAvatar")
         try container.encodeIfPresent(issuerId, forKey: "issuerId")
         try container.encodeIfPresent(issuerName, forKey: "issuerName")
+        try container.encodeIfPresent(ownNum, forKey: "ownNum")
         try container.encodeIfPresent(receiver, forKey: "receiver")
         try container.encodeIfPresent(receiverName, forKey: "receiverName")
         try container.encodeIfPresent(sender, forKey: "sender")
@@ -75,9 +81,11 @@ open class DashboardDataDTO: Codable {
         expiredAt = try container.decodeIfPresent(Int64.self, forKey: "expiredAt")
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
         important = try container.decodeIfPresent(Bool.self, forKey: "important")
+        issuedNum = try container.decodeIfPresent(Int64.self, forKey: "issuedNum")
         issuerAvatar = try container.decodeIfPresent(String.self, forKey: "issuerAvatar")
         issuerId = try container.decodeIfPresent(Int64.self, forKey: "issuerId")
         issuerName = try container.decodeIfPresent(String.self, forKey: "issuerName")
+        ownNum = try container.decodeIfPresent(Int64.self, forKey: "ownNum")
         receiver = try container.decodeIfPresent(Int64.self, forKey: "receiver")
         receiverName = try container.decodeIfPresent(String.self, forKey: "receiverName")
         sender = try container.decodeIfPresent(Int64.self, forKey: "sender")
