@@ -67,9 +67,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker.delegate = self
-//        self.navigationItem.rightBarButtonItem = self.moreButton
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        // Do any additional setup after loading the view.
         webView = WKWebView.init(frame: self.view.bounds)
         self.view.addSubview(webView)
         webView.snp.makeConstraints { (make) -> Void in
@@ -404,7 +402,8 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         let alert = UIAlertController(title: "Use", message: "Attention, are you sure you want to use this coupon？", preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "Uncertain", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "Determine", style: .default, handler: {action in
-            SCouponControllerAPI.useSCouponUsingPOST(id: Int64(idString!)! , completion: { (suc, error) in
+            let user = UseSCouponDTO(accountId: Int64(Defaults[.userId]))
+            SCouponControllerAPI.useSCouponUsingPOST(id: Int64(idString!)!, useSCouponDTO: user, completion: { (suc, error) in
                 self.webView.goBack()
             })
         })

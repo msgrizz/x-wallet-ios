@@ -48,11 +48,12 @@ open class ResourceSCoupon: Codable {
     public var remarks: String?
     /** 可否转移 */
     public var transferable: Bool?
+    public var used: Bool?
     public var version: Int64?
 
 
     
-    public init(activated: Bool?, amount: Int64?, couponType: CouponType?, createTime: Int64?, creator: SAccount?, cut: Int64?, discount: Int64?, expiredAt: Int64?, full: Int64?, goodsUrl: String?, id: Int64?, issued: Bool?, issuedNum: Int64?, lastModifyTime: Int64?, links: [Link]?, logo: String?, name: String?, remarks: String?, transferable: Bool?, version: Int64?) {
+    public init(activated: Bool?, amount: Int64?, couponType: CouponType?, createTime: Int64?, creator: SAccount?, cut: Int64?, discount: Int64?, expiredAt: Int64?, full: Int64?, goodsUrl: String?, id: Int64?, issued: Bool?, issuedNum: Int64?, lastModifyTime: Int64?, links: [Link]?, logo: String?, name: String?, remarks: String?, transferable: Bool?, used: Bool?, version: Int64?) {
         self.activated = activated
         self.amount = amount
         self.couponType = couponType
@@ -72,6 +73,7 @@ open class ResourceSCoupon: Codable {
         self.name = name
         self.remarks = remarks
         self.transferable = transferable
+        self.used = used
         self.version = version
     }
     
@@ -101,6 +103,7 @@ open class ResourceSCoupon: Codable {
         try container.encodeIfPresent(name, forKey: "name")
         try container.encodeIfPresent(remarks, forKey: "remarks")
         try container.encodeIfPresent(transferable, forKey: "transferable")
+        try container.encodeIfPresent(used, forKey: "used")
         try container.encodeIfPresent(version, forKey: "version")
     }
 
@@ -128,6 +131,7 @@ open class ResourceSCoupon: Codable {
         name = try container.decodeIfPresent(String.self, forKey: "name")
         remarks = try container.decodeIfPresent(String.self, forKey: "remarks")
         transferable = try container.decodeIfPresent(Bool.self, forKey: "transferable")
+        used = try container.decodeIfPresent(Bool.self, forKey: "used")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")
     }
 }

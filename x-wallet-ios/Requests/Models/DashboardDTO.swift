@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 public enum DashboardType: String, Codable {
     case miniContract = "MiniContract"
     case miniCoin = "MiniCoin"
@@ -17,6 +16,8 @@ public enum DashboardType: String, Codable {
     case health = "Health"
     case invoice = "Invoice"
 }
+
+
 
 open class DashboardDTO: Codable {
 

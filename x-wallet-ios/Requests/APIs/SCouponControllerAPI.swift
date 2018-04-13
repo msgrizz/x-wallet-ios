@@ -348,10 +348,11 @@ open class SCouponControllerAPI {
      useSCoupon
      
      - parameter id: (path) id 
+     - parameter useSCouponDTO: (body) useSCouponDTO 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func useSCouponUsingPOST(id: Int64, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
-        useSCouponUsingPOSTWithRequestBuilder(id: id).execute { (response, error) -> Void in
+    open class func useSCouponUsingPOST(id: Int64, useSCouponDTO: UseSCouponDTO, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
+        useSCouponUsingPOSTWithRequestBuilder(id: id, useSCouponDTO: useSCouponDTO).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -363,21 +364,22 @@ open class SCouponControllerAPI {
      - examples: [{output=none}]
      
      - parameter id: (path) id 
+     - parameter useSCouponDTO: (body) useSCouponDTO 
 
      - returns: RequestBuilder<Bool> 
      */
-    open class func useSCouponUsingPOSTWithRequestBuilder(id: Int64) -> RequestBuilder<Bool> {
+    open class func useSCouponUsingPOSTWithRequestBuilder(id: Int64, useSCouponDTO: UseSCouponDTO) -> RequestBuilder<Bool> {
         var path = "/useSCoupon/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path
-        let parameters: [String:Any]? = nil
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: useSCouponDTO)
 
         let url = NSURLComponents(string: URLString)
 
 
         let requestBuilder: RequestBuilder<Bool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 
 }

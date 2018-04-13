@@ -19,6 +19,7 @@
 		A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE047206B33000012A4D7 /* XWCoinDetailViewController.swift */; };
 		A70EE04A206B86170012A4D7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE049206B86170012A4D7 /* Constant.swift */; };
 		A70EE04C206CB2C60012A4D7 /* XWContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE04B206CB2C60012A4D7 /* XWContract.swift */; };
+		A739C41B2080FDD900B595DD /* UseSCouponDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A739C41A2080FDD800B595DD /* UseSCouponDTO.swift */; };
 		A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766A1502069257300B6525A /* XWThreeCardDemoView.swift */; };
 		A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A766A1522069258400B6525A /* XWThreeCardDemoView.xib */; };
 		A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */; };
@@ -283,6 +284,7 @@
 		A70EE047206B33000012A4D7 /* XWCoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinDetailViewController.swift; sourceTree = "<group>"; };
 		A70EE049206B86170012A4D7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A70EE04B206CB2C60012A4D7 /* XWContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContract.swift; sourceTree = "<group>"; };
+		A739C41A2080FDD800B595DD /* UseSCouponDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseSCouponDTO.swift; sourceTree = "<group>"; };
 		A766A1502069257300B6525A /* XWThreeCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWThreeCardDemoView.swift; sourceTree = "<group>"; };
 		A766A1522069258400B6525A /* XWThreeCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWThreeCardDemoView.xib; sourceTree = "<group>"; };
 		A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMembershipListViewController.swift; sourceTree = "<group>"; };
@@ -1093,6 +1095,7 @@
 		D5E647552079EA4A00AB6BC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A739C41A2080FDD800B595DD /* UseSCouponDTO.swift */,
 				D54C5883207E05E2001F3B95 /* DashboardDataDTO.swift */,
 				D54C588C207E05E4001F3B95 /* DashboardDTO.swift */,
 				D54C588E207E05E5001F3B95 /* ResourceSConversation.swift */,
@@ -1328,7 +1331,6 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SHFullscreenPopGestureSwift/SHFullscreenPopGestureSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
@@ -1348,7 +1350,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHFullscreenPopGestureSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
@@ -1426,7 +1427,6 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SHFullscreenPopGestureSwift/SHFullscreenPopGestureSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
@@ -1446,7 +1446,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SHFullscreenPopGestureSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
@@ -1652,6 +1651,7 @@
 				A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */,
 				D5E647792079EA4B00AB6BC5 /* Link.swift in Sources */,
 				D5E647722079EA4B00AB6BC5 /* SMiniContractControllerAPI.swift in Sources */,
+				A739C41B2080FDD900B595DD /* UseSCouponDTO.swift in Sources */,
 				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
