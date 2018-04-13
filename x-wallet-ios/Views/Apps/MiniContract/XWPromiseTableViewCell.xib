@@ -34,7 +34,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH8-R5-BHT">
                                 <rect key="frame" x="36" y="9" width="30" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="GBp-7S-2he"/>
                                     <constraint firstAttribute="height" constant="30" id="VHF-WX-4ce"/>
@@ -42,7 +42,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3r-hZ-h7I">
                                 <rect key="frame" x="281" y="9" width="30" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="U59-3T-8BU"/>
                                     <constraint firstAttribute="width" constant="30" id="sTo-Lr-efs"/>
@@ -122,7 +122,6 @@
             <connections>
                 <outlet property="backImage" destination="bSz-YL-Ojk" id="JIp-Ek-FaC"/>
                 <outlet property="detailLabel" destination="VgO-Ia-cKN" id="iu5-Vg-3Jc"/>
-                <outlet property="newMessageButton" destination="YIb-uO-yjn" id="A85-Mw-Ryg"/>
                 <outlet property="partAHead" destination="SH8-R5-BHT" id="GwW-lq-cjH"/>
                 <outlet property="partAName" destination="srR-QX-eZr" id="N7d-hn-gSC"/>
                 <outlet property="partBHead" destination="r3r-hZ-h7I" id="RgZ-35-teM"/>

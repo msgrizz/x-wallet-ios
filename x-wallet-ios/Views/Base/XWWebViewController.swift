@@ -41,6 +41,8 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         }
     }
     
+    var shareType: String! = ""
+    
     lazy var backButton: UIBarButtonItem = UIBarButtonItem(
         image: UIImage(named: "backButton"),
         style: .plain,
@@ -54,10 +56,18 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         target: self,
         action: #selector(close(_:))
     )
+    
+    lazy var moreButton: UIBarButtonItem = UIBarButtonItem(
+        image: UIImage(named: "moreNavibutton"),
+        style: .plain,
+        target: self,
+        action: #selector(shareAction(_:))
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker.delegate = self
+//        self.navigationItem.rightBarButtonItem = self.moreButton
         self.navigationController?.navigationBar.prefersLargeTitles = false
         // Do any additional setup after loading the view.
         webView = WKWebView.init(frame: self.view.bounds)
@@ -88,6 +98,26 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
                 self.navigationController?.present(navi, animated: true, completion: {
         
                 })
+            }
+            return (true, [])
+        }
+        
+        bridge.registerHandler("Person.selectMutable") { (args:[Any]) -> (Bool, [Any]?) in
+            if let index = args.first as? String , args.count == 1 {
+                DispatchQueue.main.async {
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
+                    contact.blockproerty={ (user) in
+                        DispatchQueue.main.async {
+                            contact.dismiss(animated: true, completion: nil)
+                            self.bridge.callJsHandler("Person.selectMutableCallback", args: ["\(index),\(user.name),\(user.id)"], callback: nil)
+                        }
+                    }
+                    let navi = UIBaseNavigationViewController(rootViewController: contact)
+                    self.navigationController?.present(navi, animated: true, completion: {
+                        
+                    })
+                }
             }
             return (true, [])
         }
@@ -219,6 +249,16 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             return (true, [])
         }
         
+        bridge.registerHandler("More.getActionType") { (args:[Any]) -> (Bool, [Any]?) in
+            if let index = args.first as? String , args.count == 1 {
+                self.shareType = index
+                if !self.isCreate {
+                    self.navigationItem.rightBarButtonItem = self.moreButton
+                }
+            }
+            return (true, [])
+        }
+        
         self.addBackButton()
         self.loadURL()
     }
@@ -249,6 +289,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityIndicatorView.stopAnimating()
+        
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -314,6 +355,70 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             }
         })
     }
+    
+    @objc func shareAction(_: UIBarButtonItem) {
+        var arrayButton = [[String:String]]()
+        if self.shareType.count > 0 {
+            if self.shareType.range(of: "Use") != nil {
+                arrayButton.append(useDic)
+            }
+            if self.shareType.range(of: "Delete") != nil {
+                arrayButton.append(deleteDic)
+            }
+            if self.shareType.range(of: "Modify") != nil {
+                arrayButton.append(modifyDic)
+            }
+            if self.shareType.range(of: "Track") != nil {
+                arrayButton.append(trackDic)
+            }
+        }
+        
+        
+        let cards = [
+            arrayButton
+        ]
+        
+        let cancelBtn = [
+            "title": "Cancel",
+            "type": "danger"
+        ]
+        let mmShareSheet = MMShareSheet.init(title: nil, cards: cards, duration: nil, cancelBtn: cancelBtn)
+        mmShareSheet.callBack = { (handler) ->() in
+            switch handler {
+            case "Use":
+                self.shareUse()
+                break
+            default:
+                self.shareDefault()
+            }
+        }
+        mmShareSheet.present()
+    }
+    
+    func shareUse() {
+        var url = self.webView.url?.absoluteString
+        if url?.range(of: "#") != nil  {
+            url = url?.replacingOccurrences(of: "#", with: "")
+        }
+        let idString = self.getQueryStringParameter(url: url!, param: "id")
+        let alert = UIAlertController(title: "Use", message: "Attention, are you sure you want to use this coupon？", preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "Uncertain", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "Determine", style: .default, handler: {action in
+            SCouponControllerAPI.useSCouponUsingPOST(id: Int64(idString!)! , completion: { (suc, error) in
+                self.webView.goBack()
+            })
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func shareDefault() {
+//        let alert = UIAlertController(title: "Attention", message: "Not Open", preferredStyle: UIAlertControllerStyle.alert)
+//        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//        alert.addAction(cancelAction)
+//        self.present(alert, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
@@ -324,5 +429,4 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         // Pass the selected object to the new view controller.
     }
     */
-
 }

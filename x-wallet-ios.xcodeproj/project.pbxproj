@@ -47,6 +47,9 @@
 		A7DDC5172060F14B00417FA7 /* XWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDC5162060F14B00417FA7 /* XWWebViewController.swift */; };
 		C32E417D5173291E76380B4D /* Pods_x_wallet_ios_x_wallet_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC4D475BFF8293560461456 /* Pods_x_wallet_ios_x_wallet_iosTests.framework */; };
 		D5228D0A20804554007CE433 /* SHFullscreenPopGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D0920804554007CE433 /* SHFullscreenPopGesture.swift */; };
+		D5228D0E2080A157007CE433 /* MMCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D0C2080A155007CE433 /* MMCardItem.swift */; };
+		D5228D0F2080A157007CE433 /* MMShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D0D2080A155007CE433 /* MMShareSheet.swift */; };
+		D5228D112080A5A1007CE433 /* ShareSheetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D102080A5A1007CE433 /* ShareSheetData.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -309,6 +312,9 @@
 		B4AF8C7A4B61DA7A8DFD90CB /* Pods-x-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		C80047CA3755F43019EE93A6 /* Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5228D0920804554007CE433 /* SHFullscreenPopGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHFullscreenPopGesture.swift; sourceTree = "<group>"; };
+		D5228D0C2080A155007CE433 /* MMCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMCardItem.swift; sourceTree = "<group>"; };
+		D5228D0D2080A155007CE433 /* MMShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMShareSheet.swift; sourceTree = "<group>"; };
+		D5228D102080A5A1007CE433 /* ShareSheetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetData.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -653,6 +659,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D5228D0B2080A155007CE433 /* MMShareSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D5228D0C2080A155007CE433 /* MMCardItem.swift */,
+				D5228D0D2080A155007CE433 /* MMShareSheet.swift */,
+			);
+			path = MMShareSheet;
+			sourceTree = "<group>";
+		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +904,7 @@
 				D5A489AA204F96FC001031F6 /* AppStyle.swift */,
 				A70EE049206B86170012A4D7 /* Constant.swift */,
 				D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */,
+				D5228D102080A5A1007CE433 /* ShareSheetData.swift */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -934,6 +950,7 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D0B2080A155007CE433 /* MMShareSheet */,
 				D58DB96B2064A7FF005ABED8 /* GtSdkLib */,
 				D58DB9542063B3C7005ABED8 /* countries.json */,
 				D58DB94D2063A991005ABED8 /* ZZYQRCodeSwift */,
@@ -1520,6 +1537,8 @@
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
+				D5228D112080A5A1007CE433 /* ShareSheetData.swift in Sources */,
+				D5228D0F2080A157007CE433 /* MMShareSheet.swift in Sources */,
 				A773E61E206A7275002C5721 /* XWDemoData.swift in Sources */,
 				D5E647832079EA4B00AB6BC5 /* SMiniCoinPoolDTO.swift in Sources */,
 				D5E647862079EA4B00AB6BC5 /* SNotification.swift in Sources */,
@@ -1531,6 +1550,7 @@
 				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
+				D5228D0E2080A157007CE433 /* MMCardItem.swift in Sources */,
 				A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */,
 				D5E647712079EA4B00AB6BC5 /* SMiniCoinPoolEntityAPI.swift in Sources */,
 				D54C589D207E05E6001F3B95 /* SCouponOwner.swift in Sources */,

@@ -311,7 +311,7 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
                     promise.partAName = ele.sender?.loginName
                     promise.partBName = ele.receiver?.loginName
                     promise.partAHead = ele.sender?.avatar
-                    promise.partBHead = ele.sender?.avatar
+                    promise.partBHead = ele.receiver?.avatar
                     promise.remoteData = ele
                     if ele.receiverComplete! && ele.senderComplete! {
                         self.completeArray.append(promise)
