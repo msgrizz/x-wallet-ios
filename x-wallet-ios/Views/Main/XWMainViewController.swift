@@ -216,6 +216,11 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     }
     
     @objc func getAppsData(_ :UIRefreshControl) {
+        
+        if self.refreshControl.isRefreshing {
+            return
+        }
+        
         self.dataArray.removeAll()
         HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error) in
             for ele in datas! {

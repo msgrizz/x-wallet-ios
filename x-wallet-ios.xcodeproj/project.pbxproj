@@ -20,8 +20,6 @@
 		A70EE04A206B86170012A4D7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE049206B86170012A4D7 /* Constant.swift */; };
 		A70EE04C206CB2C60012A4D7 /* XWContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70EE04B206CB2C60012A4D7 /* XWContract.swift */; };
 		A739C41B2080FDD900B595DD /* UseSCouponDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A739C41A2080FDD800B595DD /* UseSCouponDTO.swift */; };
-		A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766A1502069257300B6525A /* XWThreeCardDemoView.swift */; };
-		A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A766A1522069258400B6525A /* XWThreeCardDemoView.xib */; };
 		A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */; };
 		A773E5EF2069ECEC002C5721 /* XWSendMembershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5EE2069ECEC002C5721 /* XWSendMembershipViewController.swift */; };
 		A773E5F22069F12F002C5721 /* XWTicketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A773E5F12069F12F002C5721 /* XWTicketListViewController.swift */; };
@@ -51,6 +49,10 @@
 		D5228D0E2080A157007CE433 /* MMCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D0C2080A155007CE433 /* MMCardItem.swift */; };
 		D5228D0F2080A157007CE433 /* MMShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D0D2080A155007CE433 /* MMShareSheet.swift */; };
 		D5228D112080A5A1007CE433 /* ShareSheetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D102080A5A1007CE433 /* ShareSheetData.swift */; };
+		D5228D1520843780007CE433 /* XWCardListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1320843780007CE433 /* XWCardListHeaderView.swift */; };
+		D5228D1620843780007CE433 /* XWCardListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5228D1420843780007CE433 /* XWCardListHeaderView.xib */; };
+		D5228D192084380A007CE433 /* XWBaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D172084380A007CE433 /* XWBaseCardView.swift */; };
+		D5228D1A2084380A007CE433 /* XWBaseCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5228D182084380A007CE433 /* XWBaseCardView.xib */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -105,8 +107,6 @@
 		D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */; };
 		D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */; };
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
-		D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */; };
-		D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */; };
 		D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94320635B33005ABED8 /* XWProtectViewController.swift */; };
 		D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */; };
 		D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */; };
@@ -135,10 +135,6 @@
 		D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9892068998C005ABED8 /* MessageViewModel.swift */; };
 		D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98C2068A223005ABED8 /* XWUser.swift */; };
 		D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */; };
-		D58DB9912068D8C3005ABED8 /* XWOneCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */; };
-		D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */; };
-		D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */; };
-		D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */; };
 		D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */; };
 		D58DB9A120691F0A005ABED8 /* XWCoinTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9A020691F0A005ABED8 /* XWCoinTrackViewController.swift */; };
 		D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */; };
@@ -203,11 +199,7 @@
 		D5ADC2B12058F878001307E8 /* XWSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2AF2058F878001307E8 /* XWSearchTableViewCell.xib */; };
 		D5ADC2D720591077001307E8 /* XWSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2D620591077001307E8 /* XWSlideView.swift */; };
 		D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2D820591088001307E8 /* XWSlideView.xib */; };
-		D5ADC2DE205A0961001307E8 /* XWNoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */; };
-		D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */; };
-		D5ADC2E7205A3AF5001307E8 /* XWBaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2E6205A3AF5001307E8 /* XWBaseCardView.swift */; };
 		D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2E9205A3B34001307E8 /* BaseCardModel.swift */; };
-		D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */; };
 		D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2ED205A424A001307E8 /* XWContractView.swift */; };
 		D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EF205A425B001307E8 /* XWContractView.xib */; };
 		D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */; };
@@ -285,8 +277,6 @@
 		A70EE049206B86170012A4D7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A70EE04B206CB2C60012A4D7 /* XWContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContract.swift; sourceTree = "<group>"; };
 		A739C41A2080FDD800B595DD /* UseSCouponDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseSCouponDTO.swift; sourceTree = "<group>"; };
-		A766A1502069257300B6525A /* XWThreeCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWThreeCardDemoView.swift; sourceTree = "<group>"; };
-		A766A1522069258400B6525A /* XWThreeCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWThreeCardDemoView.xib; sourceTree = "<group>"; };
 		A773E5EC2069EBCA002C5721 /* XWMembershipListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMembershipListViewController.swift; sourceTree = "<group>"; };
 		A773E5EE2069ECEC002C5721 /* XWSendMembershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSendMembershipViewController.swift; sourceTree = "<group>"; };
 		A773E5F12069F12F002C5721 /* XWTicketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTicketListViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +307,10 @@
 		D5228D0C2080A155007CE433 /* MMCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMCardItem.swift; sourceTree = "<group>"; };
 		D5228D0D2080A155007CE433 /* MMShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMShareSheet.swift; sourceTree = "<group>"; };
 		D5228D102080A5A1007CE433 /* ShareSheetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetData.swift; sourceTree = "<group>"; };
+		D5228D1320843780007CE433 /* XWCardListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListHeaderView.swift; sourceTree = "<group>"; };
+		D5228D1420843780007CE433 /* XWCardListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWCardListHeaderView.xib; sourceTree = "<group>"; };
+		D5228D172084380A007CE433 /* XWBaseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWBaseCardView.swift; sourceTree = "<group>"; };
+		D5228D182084380A007CE433 /* XWBaseCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWBaseCardView.xib; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -371,8 +365,6 @@
 		D58DB93920634CC6005ABED8 /* XWContractTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWContractTableViewCell.xib; sourceTree = "<group>"; };
 		D58DB93A20634CC6005ABED8 /* XWContractTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWContractTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
-		D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCardListHeaderView.swift; sourceTree = "<group>"; };
-		D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWCardListHeaderView.xib; sourceTree = "<group>"; };
 		D58DB94320635B33005ABED8 /* XWProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWProtectViewController.swift; sourceTree = "<group>"; };
 		D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyContactTableViewCell.swift; sourceTree = "<group>"; };
@@ -402,10 +394,6 @@
 		D58DB9892068998C005ABED8 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		D58DB98C2068A223005ABED8 /* XWUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWUser.swift; sourceTree = "<group>"; };
 		D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractHeadTableViewCell.swift; sourceTree = "<group>"; };
-		D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWOneCardDemoView.swift; sourceTree = "<group>"; };
-		D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTwoCardDemoView.swift; sourceTree = "<group>"; };
-		D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWOneCardDemoView.xib; sourceTree = "<group>"; };
-		D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWTwoCardDemoView.xib; sourceTree = "<group>"; };
 		D58DB99C2068F97C005ABED8 /* XWCreateCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCreateCoinViewController.swift; sourceTree = "<group>"; };
 		D58DB9A020691F0A005ABED8 /* XWCoinTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCoinTrackViewController.swift; sourceTree = "<group>"; };
 		D58FC3EF205234DF008C05AE /* XWTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWTabBarViewController.swift; sourceTree = "<group>"; };
@@ -474,11 +462,7 @@
 		D5ADC2AF2058F878001307E8 /* XWSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWSearchTableViewCell.xib; sourceTree = "<group>"; };
 		D5ADC2D620591077001307E8 /* XWSlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWSlideView.swift; sourceTree = "<group>"; };
 		D5ADC2D820591088001307E8 /* XWSlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWSlideView.xib; sourceTree = "<group>"; };
-		D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNoCardView.swift; sourceTree = "<group>"; };
-		D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWNoCardView.xib; sourceTree = "<group>"; };
-		D5ADC2E6205A3AF5001307E8 /* XWBaseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWBaseCardView.swift; sourceTree = "<group>"; };
 		D5ADC2E9205A3B34001307E8 /* BaseCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardModel.swift; sourceTree = "<group>"; };
-		D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWBaseCardView.xib; sourceTree = "<group>"; };
 		D5ADC2ED205A424A001307E8 /* XWContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractView.swift; sourceTree = "<group>"; };
 		D5ADC2EF205A425B001307E8 /* XWContractView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractView.xib; sourceTree = "<group>"; };
 		D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWReceiveCodeViewController.swift; sourceTree = "<group>"; };
@@ -670,6 +654,17 @@
 			path = MMShareSheet;
 			sourceTree = "<group>";
 		};
+		D5228D1220843780007CE433 /* CardViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5228D172084380A007CE433 /* XWBaseCardView.swift */,
+				D5228D182084380A007CE433 /* XWBaseCardView.xib */,
+				D5228D1320843780007CE433 /* XWCardListHeaderView.swift */,
+				D5228D1420843780007CE433 /* XWCardListHeaderView.xib */,
+			);
+			path = CardViews;
+			sourceTree = "<group>";
+		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,9 +686,9 @@
 		D545A14A205111A500F9B4BB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D1220843780007CE433 /* CardViews */,
 				D54C586E207D9DA1001F3B95 /* CardDocument */,
 				D5ADC2E8205A3B21001307E8 /* CardViewModels */,
-				D5ADC2E5205A3ADB001307E8 /* CardViews */,
 				D58FC3F3205236CF008C05AE /* XWMainViewController.swift */,
 				D5ADC2D620591077001307E8 /* XWSlideView.swift */,
 				D5ADC2D820591088001307E8 /* XWSlideView.xib */,
@@ -995,25 +990,6 @@
 			path = Present;
 			sourceTree = "<group>";
 		};
-		D5ADC2E5205A3ADB001307E8 /* CardViews */ = {
-			isa = PBXGroup;
-			children = (
-				D5ADC2DD205A0961001307E8 /* XWNoCardView.swift */,
-				D5ADC2DF205A096D001307E8 /* XWNoCardView.xib */,
-				D58DB93F20635248005ABED8 /* XWCardListHeaderView.swift */,
-				D58DB94120635259005ABED8 /* XWCardListHeaderView.xib */,
-				D5ADC2E6205A3AF5001307E8 /* XWBaseCardView.swift */,
-				D5ADC2EB205A3DF7001307E8 /* XWBaseCardView.xib */,
-				D58DB9902068D8C3005ABED8 /* XWOneCardDemoView.swift */,
-				D58DB9962068D8FA005ABED8 /* XWOneCardDemoView.xib */,
-				D58DB9922068D8DA005ABED8 /* XWTwoCardDemoView.swift */,
-				D58DB9982068DA8F005ABED8 /* XWTwoCardDemoView.xib */,
-				A766A1502069257300B6525A /* XWThreeCardDemoView.swift */,
-				A766A1522069258400B6525A /* XWThreeCardDemoView.xib */,
-			);
-			path = CardViews;
-			sourceTree = "<group>";
-		};
 		D5ADC2E8205A3B21001307E8 /* CardViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -1255,23 +1231,19 @@
 			files = (
 				D54C587A207DAE3F001F3B95 /* XWCardTableViewCell.xib in Resources */,
 				D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */,
-				D5ADC2EC205A3DF7001307E8 /* XWBaseCardView.xib in Resources */,
 				D54C5880207DE1EA001F3B95 /* XWMyBagTableViewCell.xib in Resources */,
 				A773E618206A3CE1002C5721 /* XWImportantHeadView.xib in Resources */,
-				A766A1532069258400B6525A /* XWThreeCardDemoView.xib in Resources */,
+				D5228D1620843780007CE433 /* XWCardListHeaderView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
 				12C50717206926440080112C /* Academic.storyboard in Resources */,
 				D58DB93B20634CC7005ABED8 /* XWContractTableViewCell.xib in Resources */,
 				A773E612206A398F002C5721 /* XWContractHeadView.xib in Resources */,
 				12C50711206908050080112C /* Ticket.storyboard in Resources */,
 				A773E60E206A3062002C5721 /* XWContractDemoTableViewCell.xib in Resources */,
-				D58DB9972068D8FA005ABED8 /* XWOneCardDemoView.xib in Resources */,
 				12C5071320690A790080112C /* Health.storyboard in Resources */,
-				D58DB94220635259005ABED8 /* XWCardListHeaderView.xib in Resources */,
 				D54C58CB207F5336001F3B95 /* XWReceiptTableViewCell.xib in Resources */,
 				12C5071520690EC40080112C /* Coupon.storyboard in Resources */,
 				D5E647922079F24A00AB6BC5 /* XWIOUTableViewCell.xib in Resources */,
-				D5ADC2E0205A096D001307E8 /* XWNoCardView.xib in Resources */,
 				D5ADC2D920591088001307E8 /* XWSlideView.xib in Resources */,
 				D5A489EF204FD4D5001031F6 /* Login.storyboard in Resources */,
 				D54C58C5207F368E001F3B95 /* XWCoinCardTableViewCell.xib in Resources */,
@@ -1286,9 +1258,9 @@
 				D58FC400205267B4008C05AE /* Assets.xcassets in Resources */,
 				D58DB9532063A991005ABED8 /* ZZYQRCode.bundle in Resources */,
 				A773E603206A1435002C5721 /* XWCoinTableViewCell.xib in Resources */,
-				D58DB9992068DA8F005ABED8 /* XWTwoCardDemoView.xib in Resources */,
 				D58FC41C20564EED008C05AE /* MyAuthenticationCollectionViewCell.xib in Resources */,
 				D5ADC2AD2058F1DD001307E8 /* Search.storyboard in Resources */,
+				D5228D1A2084380A007CE433 /* XWBaseCardView.xib in Resources */,
 				A773E61C206A6E47002C5721 /* XWContactHeadView.xib in Resources */,
 				D58DB9552063B3C8005ABED8 /* countries.json in Resources */,
 				D58FC4042052680B008C05AE /* launchImage@3x.png in Resources */,
@@ -1482,7 +1454,6 @@
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
 				A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */,
 				D5E647872079EA4B00AB6BC5 /* SNotificationDTO.swift in Sources */,
-				D58DB9932068D8DA005ABED8 /* XWTwoCardDemoView.swift in Sources */,
 				D54C58BB207E05F3001F3B95 /* SChatControllerAPI.swift in Sources */,
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				D5E6477A2079EA4B00AB6BC5 /* MiniCoinPoolDashBoardDTO.swift in Sources */,
@@ -1508,7 +1479,6 @@
 				D5A48976204E6D54001031F6 /* UIGestureRecognizer+Closure.swift in Sources */,
 				D5A4897B204E6D54001031F6 /* UIViewController.swift in Sources */,
 				D54C58B7207E05F3001F3B95 /* SMembershipEntityAPI.swift in Sources */,
-				D5ADC2E7205A3AF5001307E8 /* XWBaseCardView.swift in Sources */,
 				D54C58A5207E05E6001F3B95 /* SMessageDTO.swift in Sources */,
 				D5E6477F2079EA4B00AB6BC5 /* SAccountDTO.swift in Sources */,
 				D58FC41720564523008C05AE /* FSPageViewLayout.swift in Sources */,
@@ -1526,7 +1496,6 @@
 				D54C589A207E05E6001F3B95 /* SMessage.swift in Sources */,
 				D5E6476E2079EA4B00AB6BC5 /* SMiniCoinControllerAPI.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
-				D5ADC2DE205A0961001307E8 /* XWNoCardView.swift in Sources */,
 				D58FC41B20564EED008C05AE /* MyAuthenticationCollectionViewCell.swift in Sources */,
 				D5E647762079EA4B00AB6BC5 /* Extensions.swift in Sources */,
 				D54C589B207E05E6001F3B95 /* SCouponOwnerDTO.swift in Sources */,
@@ -1550,12 +1519,12 @@
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				D5228D0E2080A157007CE433 /* MMCardItem.swift in Sources */,
-				A766A1512069257300B6525A /* XWThreeCardDemoView.swift in Sources */,
 				D5E647712079EA4B00AB6BC5 /* SMiniCoinPoolEntityAPI.swift in Sources */,
 				D54C589D207E05E6001F3B95 /* SCouponOwner.swift in Sources */,
 				A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */,
 				A70EE04A206B86170012A4D7 /* Constant.swift in Sources */,
 				D5E647812079EA4B00AB6BC5 /* SMiniCoinDTO.swift in Sources */,
+				D5228D192084380A007CE433 /* XWBaseCardView.swift in Sources */,
 				D5E647732079EA4B00AB6BC5 /* SMiniContractEntityAPI.swift in Sources */,
 				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,
 				D5A48906204E3761001031F6 /* AppDelegate.swift in Sources */,
@@ -1589,7 +1558,6 @@
 				D58FC3F820523B6E008C05AE /* XWMessageListTableViewController.swift in Sources */,
 				A773E5ED2069EBCA002C5721 /* XWMembershipListViewController.swift in Sources */,
 				D54C586D207CBBB8001F3B95 /* XWImportTableViewCell.swift in Sources */,
-				D58DB9912068D8C3005ABED8 /* XWOneCardDemoView.swift in Sources */,
 				D5E647772079EA4B00AB6BC5 /* APIHelper.swift in Sources */,
 				D5E6478E2079EA4B00AB6BC5 /* AlamofireImplementations.swift in Sources */,
 				D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */,
@@ -1616,7 +1584,6 @@
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
-				D58DB94020635248005ABED8 /* XWCardListHeaderView.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5E6477E2079EA4B00AB6BC5 /* SAccount.swift in Sources */,
 				D54C58BE207EF7DC001F3B95 /* UIBasePresentationController.swift in Sources */,
@@ -1645,6 +1612,7 @@
 				D54C589E207E05E6001F3B95 /* ResourceSCoupon.swift in Sources */,
 				D5ADC20B2057BAD5001307E8 /* DefaultsKeys.swift in Sources */,
 				D5E647782079EA4B00AB6BC5 /* APIs.swift in Sources */,
+				D5228D1520843780007CE433 /* XWCardListHeaderView.swift in Sources */,
 				D58FC4202056853B008C05AE /* PrivacyViewController.swift in Sources */,
 				D54C589F207E05E6001F3B95 /* DashboardDTO.swift in Sources */,
 				A773E60A206A20C9002C5721 /* XWAppsViewController.swift in Sources */,
