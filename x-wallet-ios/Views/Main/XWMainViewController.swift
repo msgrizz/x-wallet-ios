@@ -232,7 +232,6 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
                     self.dataArray.append(app)
                 }
             }
-            debugPrint(self.dataArray)
             self.refreshControl.endRefreshing()
             self.tableView.reloadData()
         }

@@ -258,7 +258,10 @@ class XWCardListTableViewController: UIBaseTableViewController,UIActionSheetDele
         }
     }
     
-    @objc override func getData(_ :UIRefreshControl) {
+    @objc override func getData(_ rc:UIRefreshControl) {
+        if rc.isRefreshing  {
+            return
+        }
         SMiniContractControllerAPI.sMiniContractsByAccountIdUsingGET(accountId: Int64(Defaults[.userId])) { (data, error) in
             guard data != nil else {
                 return
