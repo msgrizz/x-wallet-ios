@@ -216,7 +216,7 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     }
     
     @objc func getAppsData(_ :UIRefreshControl) {
-        HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error)
+        HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error) in
             self.dataArray.removeAll()
             for ele in datas! {
                 let app = XWAppModel()
