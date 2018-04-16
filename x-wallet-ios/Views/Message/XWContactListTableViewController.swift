@@ -44,6 +44,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         addButton.tintColor = Colors.tintColor
         self.navigationItem.rightBarButtonItem = addButton
         self.getUserData()
+        self.tableView.index
     }
     
     @objc func add(_ : UIBarButtonItem) {
