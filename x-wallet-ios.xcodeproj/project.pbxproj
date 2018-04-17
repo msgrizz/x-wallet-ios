@@ -53,6 +53,8 @@
 		D5228D1620843780007CE433 /* XWCardListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5228D1420843780007CE433 /* XWCardListHeaderView.xib */; };
 		D5228D192084380A007CE433 /* XWBaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D172084380A007CE433 /* XWBaseCardView.swift */; };
 		D5228D1A2084380A007CE433 /* XWBaseCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5228D182084380A007CE433 /* XWBaseCardView.xib */; };
+		D5228D1C20849851007CE433 /* ScanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1B20849851007CE433 /* ScanType.swift */; };
+		D5228D1E208589A6007CE433 /* XWNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1D208589A6007CE433 /* XWNotificationModel.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -311,6 +313,8 @@
 		D5228D1420843780007CE433 /* XWCardListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWCardListHeaderView.xib; sourceTree = "<group>"; };
 		D5228D172084380A007CE433 /* XWBaseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWBaseCardView.swift; sourceTree = "<group>"; };
 		D5228D182084380A007CE433 /* XWBaseCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWBaseCardView.xib; sourceTree = "<group>"; };
+		D5228D1B20849851007CE433 /* ScanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanType.swift; sourceTree = "<group>"; };
+		D5228D1D208589A6007CE433 /* XWNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationModel.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -755,6 +759,7 @@
 			children = (
 				D58DB98C2068A223005ABED8 /* XWUser.swift */,
 				A70EE04B206CB2C60012A4D7 /* XWContract.swift */,
+				D5228D1D208589A6007CE433 /* XWNotificationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -902,6 +907,7 @@
 				A70EE049206B86170012A4D7 /* Constant.swift */,
 				D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */,
 				D5228D102080A5A1007CE433 /* ShareSheetData.swift */,
+				D5228D1B20849851007CE433 /* ScanType.swift */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -1453,6 +1459,7 @@
 				D5ECE30A207C6A9600F4EFFC /* XWMyBagViewController.swift in Sources */,
 				D58FC4282057952E008C05AE /* XWInviteViewController.swift in Sources */,
 				A773E605206A16A9002C5721 /* XWCoinListTableViewController.swift in Sources */,
+				D5228D1C20849851007CE433 /* ScanType.swift in Sources */,
 				D5E647872079EA4B00AB6BC5 /* SNotificationDTO.swift in Sources */,
 				D54C58BB207E05F3001F3B95 /* SChatControllerAPI.swift in Sources */,
 				D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
@@ -1599,6 +1606,7 @@
 				D5E647882079EA4B00AB6BC5 /* Sort.swift in Sources */,
 				D5E647742079EA4B00AB6BC5 /* SNotificationControllerAPI.swift in Sources */,
 				D54C58A2207E05E6001F3B95 /* SMembershipDTO.swift in Sources */,
+				D5228D1E208589A6007CE433 /* XWNotificationModel.swift in Sources */,
 				A773E5F52069F23A002C5721 /* XWAcademicListViewController.swift in Sources */,
 				D58FC3FA20523BCA008C05AE /* UIBaseNavigationViewController.swift in Sources */,
 				D5A4896F204E6D54001031F6 /* NSAttributedString.swift in Sources */,

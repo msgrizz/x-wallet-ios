@@ -10,6 +10,9 @@ import UIKit
 import SwiftyUserDefaults
 import UserNotifications
 import PushKit
+import SwiftyJSON
+
+
 let kGtAppId:String = "iMahVVxurw6BNr7XSn9EF2"
 let kGtAppKey:String = "yIPfqwq6OMAPp6dkqgLpG5"
 let kGtAppSecret:String = "G0aBqAD6t79JfzTB6Z5lo5"
@@ -132,7 +135,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         
         // [ GTSdk ]：将收到的APNs信息传给个推统计
         GeTuiSdk.handleRemoteNotification(userInfo);
-        
+        let json = userInfo["data"] as? String
+        if let data = json?.data(using: .utf8) {
+            let noti = try? JSONDecoder().decode(XWNotificationModel.self, from: data)
+            if let nt = noti {
+                self.processNotification(noti: nt)
+            }
+        }
         NSLog("\n>>>[Receive RemoteNotification]:%@\n\n",userInfo);
         completionHandler(UIBackgroundFetchResult.newData);
     }
@@ -243,6 +252,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func processNotification(noti: XWNotificationModel) {
+        switch noti.type {
+        case "MiniCoin":
+            break
+        case "":
+            break
+        default:
+            break
+        }
     }
 }
 

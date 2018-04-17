@@ -18,6 +18,8 @@ let shadowRadius:CGFloat = 6
 let shadowOffset = CGSize(width: 1, height: 1)
 let colorHex = "425061"
 
+let appScheme = "xwallet"
+
 func applyStyle() {
 
     UINavigationBar.appearance().isTranslucent = false
