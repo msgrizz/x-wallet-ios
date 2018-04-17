@@ -17,19 +17,17 @@ open class SConversation: Codable {
     public var id: Int64?
     public var lastModifyTime: Int64?
     public var name: String?
-    public var partner: SAccount?
     public var version: Int64?
 
 
     
-    public init(activated: Bool?, createTime: Int64?, creator: SAccount?, id: Int64?, lastModifyTime: Int64?, name: String?, partner: SAccount?, version: Int64?) {
+    public init(activated: Bool?, createTime: Int64?, creator: SAccount?, id: Int64?, lastModifyTime: Int64?, name: String?, version: Int64?) {
         self.activated = activated
         self.createTime = createTime
         self.creator = creator
         self.id = id
         self.lastModifyTime = lastModifyTime
         self.name = name
-        self.partner = partner
         self.version = version
     }
     
@@ -46,7 +44,6 @@ open class SConversation: Codable {
         try container.encodeIfPresent(id, forKey: "id")
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
         try container.encodeIfPresent(name, forKey: "name")
-        try container.encodeIfPresent(partner, forKey: "partner")
         try container.encodeIfPresent(version, forKey: "version")
     }
 
@@ -61,7 +58,6 @@ open class SConversation: Codable {
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
         name = try container.decodeIfPresent(String.self, forKey: "name")
-        partner = try container.decodeIfPresent(SAccount.self, forKey: "partner")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")
     }
 }

@@ -12,11 +12,13 @@ import Foundation
 open class SendSMembershipDTO: Codable {
 
     public var accountIds: [Int64]?
+    public var expiredAt: Int64?
 
 
     
-    public init(accountIds: [Int64]?) {
+    public init(accountIds: [Int64]?, expiredAt: Int64?) {
         self.accountIds = accountIds
+        self.expiredAt = expiredAt
     }
     
 
@@ -27,6 +29,7 @@ open class SendSMembershipDTO: Codable {
         var container = encoder.container(keyedBy: String.self)
 
         try container.encodeIfPresent(accountIds, forKey: "accountIds")
+        try container.encodeIfPresent(expiredAt, forKey: "expiredAt")
     }
 
     // Decodable protocol methods
@@ -35,6 +38,7 @@ open class SendSMembershipDTO: Codable {
         let container = try decoder.container(keyedBy: String.self)
 
         accountIds = try container.decodeIfPresent([Int64].self, forKey: "accountIds")
+        expiredAt = try container.decodeIfPresent(Int64.self, forKey: "expiredAt")
     }
 }
 

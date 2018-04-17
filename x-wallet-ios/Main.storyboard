@@ -518,6 +518,9 @@
                                             <constraint firstAttribute="height" constant="48" id="JAh-Nl-0er"/>
                                         </constraints>
                                         <state key="normal" title="Add friends" backgroundImage="logoutButton"/>
+                                        <connections>
+                                            <action selector="addFriendAction" destination="g1c-qa-fcn" eventType="touchUpInside" id="HgM-3r-LQ4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -557,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3T9-us-SIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773.5999999999999" y="-220.83958020989508"/>
+            <point key="canvasLocation" x="3010" y="-278"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="y5H-rc-dsE">

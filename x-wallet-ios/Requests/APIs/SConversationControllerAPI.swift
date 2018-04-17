@@ -12,6 +12,41 @@ import Alamofire
 
 open class SConversationControllerAPI {
     /**
+     addSMiniContractConversation
+     
+     - parameter sMiniContractConversationDTO: (body) sMiniContractConversationDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func addSMiniContractConversationUsingPOST(sMiniContractConversationDTO: SMiniContractConversationDTO, completion: @escaping ((_ data: SConversation?,_ error: Error?) -> Void)) {
+        addSMiniContractConversationUsingPOSTWithRequestBuilder(sMiniContractConversationDTO: sMiniContractConversationDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     addSMiniContractConversation
+     - POST /sMiniContractConversation
+     - examples: [{output=none}]
+     
+     - parameter sMiniContractConversationDTO: (body) sMiniContractConversationDTO 
+
+     - returns: RequestBuilder<SConversation> 
+     */
+    open class func addSMiniContractConversationUsingPOSTWithRequestBuilder(sMiniContractConversationDTO: SMiniContractConversationDTO) -> RequestBuilder<SConversation> {
+        let path = "/sMiniContractConversation"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sMiniContractConversationDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SConversation>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
      add
      
      - parameter sConversationDTO: (body) sConversationDTO 
@@ -116,6 +151,80 @@ open class SConversationControllerAPI {
         
 
         let requestBuilder: RequestBuilder<[SConversation]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
+     sConversationByMiniContractId
+     
+     - parameter miniContractId: (query) miniContractId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func sConversationByMiniContractIdUsingGET(miniContractId: Int64, completion: @escaping ((_ data: SConversation?,_ error: Error?) -> Void)) {
+        sConversationByMiniContractIdUsingGETWithRequestBuilder(miniContractId: miniContractId).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     sConversationByMiniContractId
+     - GET /sConversationByMiniContractId
+     - examples: [{output=none}]
+     
+     - parameter miniContractId: (query) miniContractId 
+
+     - returns: RequestBuilder<SConversation> 
+     */
+    open class func sConversationByMiniContractIdUsingGETWithRequestBuilder(miniContractId: Int64) -> RequestBuilder<SConversation> {
+        let path = "/sConversationByMiniContractId"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems(values:[
+            "miniContractId": miniContractId.encodeToJSON()
+        ])
+        
+
+        let requestBuilder: RequestBuilder<SConversation>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
+     sConversationMembers
+     
+     - parameter id: (path) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func sConversationMembersUsingGET(id: Int64, completion: @escaping ((_ data: [SAccount]?,_ error: Error?) -> Void)) {
+        sConversationMembersUsingGETWithRequestBuilder(id: id).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     sConversationMembers
+     - GET /sConversationMembers/{id}
+     - examples: [{output=none}]
+     
+     - parameter id: (path) id 
+
+     - returns: RequestBuilder<[SAccount]> 
+     */
+    open class func sConversationMembersUsingGETWithRequestBuilder(id: Int64) -> RequestBuilder<[SAccount]> {
+        var path = "/sConversationMembers/{id}"
+        path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[SAccount]>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

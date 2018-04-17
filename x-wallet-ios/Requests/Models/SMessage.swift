@@ -14,7 +14,7 @@ open class SMessage: Codable {
     public enum MessageType: String, Codable { 
         case text = "Text"
         case image = "Image"
-        case url = "Url"
+        case audio = "Audio"
     }
     public var activated: Bool?
     public var content: String?

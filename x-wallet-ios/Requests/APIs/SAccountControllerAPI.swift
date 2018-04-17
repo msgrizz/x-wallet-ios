@@ -12,6 +12,40 @@ import Alamofire
 
 open class SAccountControllerAPI {
     /**
+     clearCount
+     
+     - parameter clearCountDTO: (body) clearCountDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func clearCountUsingPOST(clearCountDTO: ClearCountDTO, completion: @escaping ((_ error: Error?) -> Void)) {
+        clearCountUsingPOSTWithRequestBuilder(clearCountDTO: clearCountDTO).execute { (response, error) -> Void in
+            completion(error);
+        }
+    }
+
+
+    /**
+     clearCount
+     - POST /clearCount
+     
+     - parameter clearCountDTO: (body) clearCountDTO 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func clearCountUsingPOSTWithRequestBuilder(clearCountDTO: ClearCountDTO) -> RequestBuilder<Void> {
+        let path = "/clearCount"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: clearCountDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = SwaggerClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
      getAllExceptMe
      
      - parameter id: (query) id 
@@ -191,6 +225,41 @@ open class SAccountControllerAPI {
     }
 
     /**
+     registerPushToken
+     
+     - parameter sPushTokenDTO: (body) sPushTokenDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func registerPushTokenUsingPOST(sPushTokenDTO: SPushTokenDTO, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
+        registerPushTokenUsingPOSTWithRequestBuilder(sPushTokenDTO: sPushTokenDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     registerPushToken
+     - POST /registerPushToken
+     - examples: [{output=none}]
+     
+     - parameter sPushTokenDTO: (body) sPushTokenDTO 
+
+     - returns: RequestBuilder<Bool> 
+     */
+    open class func registerPushTokenUsingPOSTWithRequestBuilder(sPushTokenDTO: SPushTokenDTO) -> RequestBuilder<Bool> {
+        let path = "/registerPushToken"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sPushTokenDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Bool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
      signIn
      
      - parameter signInDTO: (body) signInDTO 
@@ -221,6 +290,41 @@ open class SAccountControllerAPI {
 
 
         let requestBuilder: RequestBuilder<ResponseSAccount>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+
+    /**
+     unregisterPushToken
+     
+     - parameter sPushTokenDTO: (body) sPushTokenDTO 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func unregisterPushTokenUsingPOST(sPushTokenDTO: SPushTokenDTO, completion: @escaping ((_ data: Bool?,_ error: Error?) -> Void)) {
+        unregisterPushTokenUsingPOSTWithRequestBuilder(sPushTokenDTO: sPushTokenDTO).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     unregisterPushToken
+     - POST /unregisterPushToken
+     - examples: [{output=none}]
+     
+     - parameter sPushTokenDTO: (body) sPushTokenDTO 
+
+     - returns: RequestBuilder<Bool> 
+     */
+    open class func unregisterPushTokenUsingPOSTWithRequestBuilder(sPushTokenDTO: SPushTokenDTO) -> RequestBuilder<Bool> {
+        let path = "/unregisterPushToken"
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: sPushTokenDTO)
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Bool>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

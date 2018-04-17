@@ -14,7 +14,7 @@ open class SMessageDTO: Codable {
     public enum MessageType: String, Codable { 
         case text = "Text"
         case image = "Image"
-        case url = "Url"
+        case audio = "Audio"
     }
     public var sConversation: Int64?
     public var sconversation: Int64?

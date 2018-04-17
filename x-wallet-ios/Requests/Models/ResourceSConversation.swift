@@ -18,12 +18,11 @@ open class ResourceSConversation: Codable {
     public var lastModifyTime: Int64?
     public var links: [Link]?
     public var name: String?
-    public var partner: SAccount?
     public var version: Int64?
 
 
     
-    public init(activated: Bool?, createTime: Int64?, creator: SAccount?, id: Int64?, lastModifyTime: Int64?, links: [Link]?, name: String?, partner: SAccount?, version: Int64?) {
+    public init(activated: Bool?, createTime: Int64?, creator: SAccount?, id: Int64?, lastModifyTime: Int64?, links: [Link]?, name: String?, version: Int64?) {
         self.activated = activated
         self.createTime = createTime
         self.creator = creator
@@ -31,7 +30,6 @@ open class ResourceSConversation: Codable {
         self.lastModifyTime = lastModifyTime
         self.links = links
         self.name = name
-        self.partner = partner
         self.version = version
     }
     
@@ -49,7 +47,6 @@ open class ResourceSConversation: Codable {
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
         try container.encodeIfPresent(links, forKey: "links")
         try container.encodeIfPresent(name, forKey: "name")
-        try container.encodeIfPresent(partner, forKey: "partner")
         try container.encodeIfPresent(version, forKey: "version")
     }
 
@@ -65,7 +62,6 @@ open class ResourceSConversation: Codable {
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
         links = try container.decodeIfPresent([Link].self, forKey: "links")
         name = try container.decodeIfPresent(String.self, forKey: "name")
-        partner = try container.decodeIfPresent(SAccount.self, forKey: "partner")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")
     }
 }

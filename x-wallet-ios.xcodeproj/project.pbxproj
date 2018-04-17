@@ -56,6 +56,11 @@
 		D5228D1C20849851007CE433 /* ScanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1B20849851007CE433 /* ScanType.swift */; };
 		D5228D1E208589A6007CE433 /* XWNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1D208589A6007CE433 /* XWNotificationModel.swift */; };
 		D5228D202085BF3B007CE433 /* XWFriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1F2085BF3B007CE433 /* XWFriendDetailViewController.swift */; };
+		D5228D222085F580007CE433 /* FriendshipControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D212085F580007CE433 /* FriendshipControllerAPI.swift */; };
+		D5228D272085F592007CE433 /* SMiniContractConversationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D232085F590007CE433 /* SMiniContractConversationDTO.swift */; };
+		D5228D282085F592007CE433 /* ClearCountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D242085F590007CE433 /* ClearCountDTO.swift */; };
+		D5228D292085F592007CE433 /* AddFriendDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D252085F591007CE433 /* AddFriendDTO.swift */; };
+		D5228D2A2085F592007CE433 /* SPushTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D262085F591007CE433 /* SPushTokenDTO.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -317,6 +322,11 @@
 		D5228D1B20849851007CE433 /* ScanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanType.swift; sourceTree = "<group>"; };
 		D5228D1D208589A6007CE433 /* XWNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationModel.swift; sourceTree = "<group>"; };
 		D5228D1F2085BF3B007CE433 /* XWFriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWFriendDetailViewController.swift; sourceTree = "<group>"; };
+		D5228D212085F580007CE433 /* FriendshipControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendshipControllerAPI.swift; sourceTree = "<group>"; };
+		D5228D232085F590007CE433 /* SMiniContractConversationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMiniContractConversationDTO.swift; sourceTree = "<group>"; };
+		D5228D242085F590007CE433 /* ClearCountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearCountDTO.swift; sourceTree = "<group>"; };
+		D5228D252085F591007CE433 /* AddFriendDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendDTO.swift; sourceTree = "<group>"; };
+		D5228D262085F591007CE433 /* SPushTokenDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPushTokenDTO.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -1052,6 +1062,7 @@
 		D5E647472079EA4900AB6BC5 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D212085F580007CE433 /* FriendshipControllerAPI.swift */,
 				D54C58AA207E05F0001F3B95 /* HomeControllerAPI.swift */,
 				D54C58B0207E05F2001F3B95 /* SChatControllerAPI.swift */,
 				D54C58AD207E05F1001F3B95 /* SConversationControllerAPI.swift */,
@@ -1080,6 +1091,10 @@
 		D5E647552079EA4A00AB6BC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D252085F591007CE433 /* AddFriendDTO.swift */,
+				D5228D242085F590007CE433 /* ClearCountDTO.swift */,
+				D5228D232085F590007CE433 /* SMiniContractConversationDTO.swift */,
+				D5228D262085F591007CE433 /* SPushTokenDTO.swift */,
 				A739C41A2080FDD800B595DD /* UseSCouponDTO.swift */,
 				D54C5883207E05E2001F3B95 /* DashboardDataDTO.swift */,
 				D54C588C207E05E4001F3B95 /* DashboardDTO.swift */,
@@ -1503,6 +1518,8 @@
 				D54C58A1207E05E6001F3B95 /* ResourceSConversation.swift in Sources */,
 				D5E646FE2079E56300AB6BC5 /* XWCouponDetailViewController.swift in Sources */,
 				D54C5874207DAA58001F3B95 /* XWCardHeadView.swift in Sources */,
+				D5228D222085F580007CE433 /* FriendshipControllerAPI.swift in Sources */,
+				D5228D282085F592007CE433 /* ClearCountDTO.swift in Sources */,
 				D54C589A207E05E6001F3B95 /* SMessage.swift in Sources */,
 				D5E6476E2079EA4B00AB6BC5 /* SMiniCoinControllerAPI.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
@@ -1527,6 +1544,7 @@
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
 				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
+				D5228D2A2085F592007CE433 /* SPushTokenDTO.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				D5228D0E2080A157007CE433 /* MMCardItem.swift in Sources */,
 				D5E647712079EA4B00AB6BC5 /* SMiniCoinPoolEntityAPI.swift in Sources */,
@@ -1570,6 +1588,7 @@
 				D54C586D207CBBB8001F3B95 /* XWImportTableViewCell.swift in Sources */,
 				D5E647772079EA4B00AB6BC5 /* APIHelper.swift in Sources */,
 				D5E6478E2079EA4B00AB6BC5 /* AlamofireImplementations.swift in Sources */,
+				D5228D272085F592007CE433 /* SMiniContractConversationDTO.swift in Sources */,
 				D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */,
 				D5ADC2B02058F878001307E8 /* XWSearchTableViewCell.swift in Sources */,
 				A773E5FB2069F784002C5721 /* XWCouponListViewController.swift in Sources */,
@@ -1632,6 +1651,7 @@
 				D5E647792079EA4B00AB6BC5 /* Link.swift in Sources */,
 				D5E647722079EA4B00AB6BC5 /* SMiniContractControllerAPI.swift in Sources */,
 				A739C41B2080FDD900B595DD /* UseSCouponDTO.swift in Sources */,
+				D5228D292085F592007CE433 /* AddFriendDTO.swift in Sources */,
 				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
