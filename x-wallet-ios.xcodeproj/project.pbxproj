@@ -55,6 +55,7 @@
 		D5228D1A2084380A007CE433 /* XWBaseCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5228D182084380A007CE433 /* XWBaseCardView.xib */; };
 		D5228D1C20849851007CE433 /* ScanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1B20849851007CE433 /* ScanType.swift */; };
 		D5228D1E208589A6007CE433 /* XWNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1D208589A6007CE433 /* XWNotificationModel.swift */; };
+		D5228D202085BF3B007CE433 /* XWFriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D1F2085BF3B007CE433 /* XWFriendDetailViewController.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -315,6 +316,7 @@
 		D5228D182084380A007CE433 /* XWBaseCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWBaseCardView.xib; sourceTree = "<group>"; };
 		D5228D1B20849851007CE433 /* ScanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanType.swift; sourceTree = "<group>"; };
 		D5228D1D208589A6007CE433 /* XWNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationModel.swift; sourceTree = "<group>"; };
+		D5228D1F2085BF3B007CE433 /* XWFriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWFriendDetailViewController.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 				D58DB95620649635005ABED8 /* XWMessageViewController.swift */,
 				A773E619206A6E3C002C5721 /* XWContactHeadView.swift */,
 				A773E61B206A6E47002C5721 /* XWContactHeadView.xib */,
+				D5228D1F2085BF3B007CE433 /* XWFriendDetailViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -1615,6 +1618,7 @@
 				A773E5F22069F12F002C5721 /* XWTicketListViewController.swift in Sources */,
 				D54C589C207E05E6001F3B95 /* ResourceSMembership.swift in Sources */,
 				A773E5EF2069ECEC002C5721 /* XWSendMembershipViewController.swift in Sources */,
+				D5228D202085BF3B007CE433 /* XWFriendDetailViewController.swift in Sources */,
 				D54C5899207E05E6001F3B95 /* SendSCouponDTO.swift in Sources */,
 				D54C58B4207E05F3001F3B95 /* SCouponEntityAPI.swift in Sources */,
 				D54C589E207E05E6001F3B95 /* ResourceSCoupon.swift in Sources */,
