@@ -11,7 +11,8 @@ import SwiftyUserDefaults
 import UserNotifications
 import PushKit
 import SwiftyJSON
-
+import CoreData
+import SugarRecord
 
 let kGtAppId:String = "iMahVVxurw6BNr7XSn9EF2"
 let kGtAppKey:String = "yIPfqwq6OMAPp6dkqgLpG5"
@@ -263,6 +264,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         default:
             break
         }
+    }
+    
+    func coreDataStorage() -> CoreDataDefaultStorage {
+        let store = CoreDataStore.named("LocalModel")
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
+        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
+        return defaultStorage
     }
 }
 

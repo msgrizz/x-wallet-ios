@@ -61,6 +61,8 @@
 		D5228D282085F592007CE433 /* ClearCountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D242085F590007CE433 /* ClearCountDTO.swift */; };
 		D5228D292085F592007CE433 /* AddFriendDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D252085F591007CE433 /* AddFriendDTO.swift */; };
 		D5228D2A2085F592007CE433 /* SPushTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D262085F591007CE433 /* SPushTokenDTO.swift */; };
+		D5228D2D2086E7C4007CE433 /* LocalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */; };
+		D5228D2F2086E88D007CE433 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5228D2E2086E88D007CE433 /* CoreData.framework */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -327,6 +329,8 @@
 		D5228D242085F590007CE433 /* ClearCountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearCountDTO.swift; sourceTree = "<group>"; };
 		D5228D252085F591007CE433 /* AddFriendDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendDTO.swift; sourceTree = "<group>"; };
 		D5228D262085F591007CE433 /* SPushTokenDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPushTokenDTO.swift; sourceTree = "<group>"; };
+		D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalModel.xcdatamodel; sourceTree = "<group>"; };
+		D5228D2E2086E88D007CE433 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -542,6 +546,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5228D2F2086E88D007CE433 /* CoreData.framework in Frameworks */,
 				D58DB9832064A8B1005ABED8 /* PushKit.framework in Frameworks */,
 				D58DB9812064A8A6005ABED8 /* libz.tbd in Frameworks */,
 				D58DB97F2064A89C005ABED8 /* libc++.tbd in Frameworks */,
@@ -576,6 +581,7 @@
 		305D19097D96ADDB535A2360 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D2E2086E88D007CE433 /* CoreData.framework */,
 				D58DB9822064A8B1005ABED8 /* PushKit.framework */,
 				D58DB9802064A8A6005ABED8 /* libz.tbd */,
 				D58DB97E2064A89C005ABED8 /* libc++.tbd */,
@@ -879,6 +885,7 @@
 				D5A4894F204E6D54001031F6 /* Extensions */,
 				D5A48905204E3761001031F6 /* AppDelegate.swift */,
 				D5A4891D204E3BE6001031F6 /* x-wallet-ios.entitlements */,
+				D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */,
 				D58FC3FF205267B4008C05AE /* Assets.xcassets */,
 				D5A48913204E3761001031F6 /* Info.plist */,
 				D5A489E2204FBC82001031F6 /* Main.storyboard */,
@@ -1612,6 +1619,7 @@
 				D5E6478B2079EA4B00AB6BC5 /* JSONEncodingHelper.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
+				D5228D2D2086E7C4007CE433 /* LocalModel.xcdatamodeld in Sources */,
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5E6477E2079EA4B00AB6BC5 /* SAccount.swift in Sources */,
@@ -1935,6 +1943,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */,
+			);
+			currentVersion = D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */;
+			path = LocalModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D5A488FA204E3761001031F6 /* Project object */;
 }

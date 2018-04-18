@@ -10,7 +10,7 @@ import UIKit
 import DynamicBlurView
 import SnapKit
 import SwiftyUserDefaults
-class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
+class XWMainViewController: UIBaseViewController {
     let defaultHeight: CGFloat = 154
     let defaultHeadHeight: CGFloat = 25
 
@@ -23,7 +23,6 @@ class XWMainViewController: UIBaseViewController,UIActionSheetDelegate {
     var refreshControl = UIRefreshControl()
     
     var dataArray: [XWAppModel] = [XWAppModel]()
-//    var stackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Wallet", comment: "")

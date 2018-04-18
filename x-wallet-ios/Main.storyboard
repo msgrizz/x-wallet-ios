@@ -408,12 +408,12 @@
                     <connections>
                         <outlet property="searchBar" destination="Hjy-gn-y1e" id="1tJ-Dz-FSv"/>
                         <outlet property="tableView" destination="p1j-5c-fOY" id="tsw-Ne-NSW"/>
-                        <segue destination="g1c-qa-fcn" kind="show" id="CK7-8Z-18f"/>
+                        <segue destination="g1c-qa-fcn" kind="show" identifier="goToFriendDetail" id="CK7-8Z-18f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PS-sV-WGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2109.5999999999999" y="-790.25487256371821"/>
+            <point key="canvasLocation" x="2222" y="-774"/>
         </scene>
         <!--Friend Detail View Controller-->
         <scene sceneID="dAt-RS-aAt">
