@@ -49,8 +49,26 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     
     @objc func add(_ : UIBarButtonItem) {
         AVCaptureSessionManager.checkAuthorizationStatusForCamera(grant: {
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "XWScanViewController")
-            self.navigationController?.pushViewController(controller, animated: true)
+            let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
+            contact.blockproerty={ (result) in
+                DispatchQueue.main.async {
+                    contact.dismiss(animated: true, completion: nil)
+                    let action = result.removingPercentEncoding!.getHostStringParameter()
+                    if action == ScanType.infoCode.rawValue {
+                        let userId = result.removingPercentEncoding!.getQueryStringParameter(param: "id")
+                        if userId != nil {
+                            let detail = Main.instantiateViewController(withIdentifier: "XWFriendDetailViewController") as! XWFriendDetailViewController
+                            detail.userId = Int64(userId!)
+                            self.navigationController?.pushViewController(detail, animated: true)
+                        }
+                    }
+                }
+            }
+            let navi = UIBaseNavigationViewController(rootViewController: contact)
+            self.navigationController?.present(navi, animated: true, completion: {
+                
+            })
         }){
             let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: { (action) in
                 let url = URL(string: UIApplicationOpenSettingsURLString)
@@ -151,15 +169,7 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     }
     
     func getUserData() {
-//        SAccountControllerAPI.getUsingGET { (accounts, error) in
-//            self.userData.users.removeAll()
-//            for ele in accounts! {
-//                let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)
-//                self.userData.users.append(user)
-//            }
-//            self.tableView.reloadData()
-//        }
-        SAccountControllerAPI.getAllExceptMeUsingGET(id:Int64(Defaults[.userId])) { (accounts, error) in
+        FriendshipControllerAPI.myFriendsUsingGET(accountId:Int64(Defaults[.userId])) { (accounts, error) in
             self.userData.users.removeAll()
             for ele in accounts! {
                 let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)

@@ -76,4 +76,26 @@ extension String {
         let endIndex = index(from: r.upperBound)
         return String(self[startIndex..<endIndex])
     }
+    
+    func getQueryStringParameter(param: String) -> String? {
+        guard let url = URLComponents(string: self) else {
+            return nil
+        }
+        
+        guard url.scheme != appScheme else {
+            return nil
+        }
+        
+        return url.queryItems?.first(where: { $0.name == param })?.value
+    }
+    
+    func getHostStringParameter() -> String? {
+        guard let url = URLComponents(string: self) else {
+            return nil
+        }
+        guard url.scheme != appScheme else {
+            return nil
+        }
+        return url.host
+    }
 }

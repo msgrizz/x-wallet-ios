@@ -56,7 +56,7 @@ class XWScanViewController: UIViewController ,UIImagePickerControllerDelegate, U
     
     @IBAction func changeState(_ sender: UIButton) {
         torchState = !torchState
-        let str = torchState ? "关闭闪光灯" : "开启闪光灯"
+        let str = torchState ? "Close Flash" : "Open Flash"
         sessionManager?.turnTorch(state: torchState)
         sender.setTitle(str, for: .normal)
     }

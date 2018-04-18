@@ -138,10 +138,10 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
                 contact.blockproerty={ (result) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
-                        let action = self.getHostStringParameter(url: result.removingPercentEncoding!)
+                        let action = result.removingPercentEncoding!.getHostStringParameter()
                         if action == ScanType.payQRCode.rawValue {
-                            let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
-                            let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
+                            let name = result.removingPercentEncoding!.getQueryStringParameter(param: "name")
+                            let id = result.removingPercentEncoding!.getQueryStringParameter(param: "id")
                             self.bridge.callJsHandler("Scan.qrCallback", args: ["\(name!),\(id!)"], callback: nil)
                         }else if action == ScanType.infoCode.rawValue {
                             
@@ -313,28 +313,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     
     @objc func close(_ : UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func getQueryStringParameter(url: String, param: String) -> String? {
-        guard let url = URLComponents(string: url) else {
-            return nil
-        }
-        
-        guard url.scheme != appScheme else {
-            return nil
-        }
-        
-        return url.queryItems?.first(where: { $0.name == param })?.value
-    }
-    
-    func getHostStringParameter(url: String) -> String? {
-        guard let url = URLComponents(string: url) else {
-            return nil
-        }
-        guard url.scheme != appScheme else {
-            return nil
-        }
-        return url.host
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

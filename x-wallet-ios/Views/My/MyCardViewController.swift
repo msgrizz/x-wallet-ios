@@ -70,7 +70,7 @@ class MyCardViewController: UIBaseViewController {
     func createDataString() -> String {
         let name = XWLocalManager.sharedInstance().localUser.loginName
         let id = XWLocalManager.sharedInstance().localUser.id
-        let data = "xwallet://00?name=\(name!)&id=\(id!)&timestamp=\(NSDate().timeIntervalSince1970)"
+        let data = "xwallet://01?name=\(name!)&id=\(id!)&timestamp=\(NSDate().timeIntervalSince1970)"
         return data.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)!
     }
     
