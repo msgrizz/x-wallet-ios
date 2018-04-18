@@ -40,6 +40,8 @@ class XWFriendDetailViewController: UIBaseViewController {
         backgroundView.layer.borderColor = UIColor.clear.cgColor
         backgroundView.layer.cornerRadius = 8
         backgroundView.clipsToBounds = true
+        
+        self.getUserData()z
     }
     
     func configUser() {

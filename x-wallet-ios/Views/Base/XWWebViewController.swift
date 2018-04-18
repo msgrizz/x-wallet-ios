@@ -156,26 +156,6 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             return (true, [])
         }
         
-        bridge.registerHandler("Scan.qr") { (args:[Any]) -> (Bool, [Any]?) in
-            DispatchQueue.main.async {
-                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
-                contact.blockproerty={ (result) in
-                    DispatchQueue.main.async {
-                        contact.dismiss(animated: true, completion: nil)
-                        let name = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "name")
-                        let id = self.getQueryStringParameter(url: result.removingPercentEncoding!, param: "id")
-                        self.bridge.callJsHandler("Scan.qrCallback", args: ["\(name!),\(id!)"], callback: nil)
-                    }
-                }
-                let navi = UIBaseNavigationViewController(rootViewController: contact)
-                self.navigationController?.present(navi, animated: true, completion: {
-                    
-                })
-            }
-            return (true, [])
-        }
-        
         bridge.registerHandler("Push.appStore") { (args:[Any]) -> (Bool, [Any]?) in
             if let index = args.first as? Int , args.count == 1 {
                 switch index {
@@ -398,7 +378,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
         if url?.range(of: "#") != nil  {
             url = url?.replacingOccurrences(of: "#", with: "")
         }
-        let idString = self.getQueryStringParameter(url: url!, param: "id")
+        let idString = url!.getQueryStringParameter(param: "id")
         let alert = UIAlertController(title: "Use", message: "Attention, are you sure you want to use this coupon？", preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "Uncertain", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "Determine", style: .default, handler: {action in
