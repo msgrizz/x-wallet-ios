@@ -7,14 +7,14 @@
 
 import Foundation
 
-
+public enum DeviceType: String, Codable {
+    case android = "Android"
+    case ios = "iOS"
+}
 
 open class SPushTokenDTO: Codable {
 
-    public enum DeviceType: String, Codable { 
-        case android = "Android"
-        case ios = "iOS"
-    }
+
     public var deviceType: DeviceType?
     /** Android 端为 个推 clientID iOS 端为 deviceType */
     public var pushToken: String?

@@ -40,7 +40,7 @@ class PrivacyViewController: UIBaseViewController,UINavigationControllerDelegate
         self.navigationItem.title = "Pravicy"
         saveButton = UIBarButtonItem.init(title: "Save", style: .plain, target: self, action: #selector(save(_:)))
         saveButton.tintColor = Colors.tintColor
-        self.navigationItem.rightBarButtonItem = saveButton
+//        self.navigationItem.rightBarButtonItem = saveButton
         self.configData()
     }
     
@@ -86,6 +86,13 @@ class PrivacyViewController: UIBaseViewController,UINavigationControllerDelegate
     @IBAction func logoutAction() {
         Defaults[.isLogin] = false
         Defaults[.userId] = 0
+        
+        let push = SPushTokenDTO(deviceType: .ios, pushToken: Defaults[.pushToken], accountId: Int64(Defaults[.userId]))
+        SAccountControllerAPI.unregisterPushTokenUsingPOST(sPushTokenDTO: push) { (suc, error) in
+            
+        }
+        
+        
         let login: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let myAppdelegate = UIApplication.shared.delegate as! AppDelegate
         myAppdelegate.window?.rootViewController = login.instantiateInitialViewController();
@@ -132,7 +139,7 @@ class PrivacyViewController: UIBaseViewController,UINavigationControllerDelegate
                 upload.responseJSON { response in
                     let info = response.result.value as? Dictionary<String, AnyObject>
                     let url = info!["html"] as? String
-                    let account = UpdateSAccountDTO(loginName: (XWLocalManager.sharedInstance().localUser.loginName)!, nickname: XWLocalManager.sharedInstance().localUser.nickname ?? (XWLocalManager.sharedInstance().localUser.loginName)!, mobile: self.numberLabel.text ?? "", email: self.mailLabel.text ?? "", about: self.aboutTextView.text ?? "", avatar: url!)
+                    let account = UpdateSAccountDTO(loginName: (XWLocalManager.sharedInstance().localUser.loginName)!, nickname: XWLocalManager.sharedInstance().localUser.nickname ?? (XWLocalManager.sharedInstance().localUser.loginName)!, mobile: ((XWLocalManager.sharedInstance().localUser.mobile) ?? ""), email: ((XWLocalManager.sharedInstance().localUser.email) ?? ""), about: self.aboutTextView.text ?? "", avatar: url!)
                     SAccountControllerAPI.putUsingPUT(sAccountDTO: account, id:Int64(Defaults[.userId]), completion: { (acc, err) in
                         XWLocalManager.sharedInstance().localUser = acc
                     })

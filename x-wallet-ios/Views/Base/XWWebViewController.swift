@@ -232,6 +232,16 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             return (true, [])
         }
         
+        bridge.registerHandler("Photo.selectAndClip") { (args:[Any]) -> (Bool, [Any]?) in
+            if let string = args.first as? String , args.count == 1 {
+                let array = string.components(separatedBy: ",")
+                if array.count == 3{
+                    self.clipImage(CGSize(width: Int(array[1]) ?? 100, height: Int(array[2]) ?? 100), addon: array[0])
+                }
+            }
+            return (true, [])
+        }
+        
         bridge.registerHandler("More.getActionType") { (args:[Any]) -> (Bool, [Any]?) in
             if let index = args.first as? String , args.count == 1 {
                 self.shareType = index
@@ -241,6 +251,8 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             }
             return (true, [])
         }
+        
+        
         
         self.addBackButton()
         self.loadURL()
@@ -335,42 +347,44 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
     }
     
     @objc func shareAction(_: UIBarButtonItem) {
-        var arrayButton = [[String:String]]()
-        if self.shareType.count > 0 {
-            if self.shareType.range(of: "Use") != nil {
-                arrayButton.append(useDic)
-            }
-            if self.shareType.range(of: "Delete") != nil {
-                arrayButton.append(deleteDic)
-            }
-            if self.shareType.range(of: "Modify") != nil {
-                arrayButton.append(modifyDic)
-            }
-            if self.shareType.range(of: "Track") != nil {
-                arrayButton.append(trackDic)
-            }
-        }
-        
-        
-        let cards = [
-            arrayButton
-        ]
-        
-        let cancelBtn = [
-            "title": "Cancel",
-            "type": "danger"
-        ]
-        let mmShareSheet = MMShareSheet.init(title: nil, cards: cards, duration: nil, cancelBtn: cancelBtn)
-        mmShareSheet.callBack = { (handler) ->() in
-            switch handler {
-            case "Use":
-                self.shareUse()
-                break
-            default:
-                self.shareDefault()
-            }
-        }
-        mmShareSheet.present()
+//        var arrayButton = [[String:String]]()
+//        if self.shareType.count > 0 {
+//            if self.shareType.range(of: "Use") != nil {
+//                arrayButton.append(useDic)
+//            }
+//            if self.shareType.range(of: "Delete") != nil {
+//                arrayButton.append(deleteDic)
+//            }
+//            if self.shareType.range(of: "Modify") != nil {
+//                arrayButton.append(modifyDic)
+//            }
+//            if self.shareType.range(of: "Track") != nil {
+//                arrayButton.append(trackDic)
+//            }
+//        }
+//
+//
+//        let cards = [
+//            arrayButton
+//        ]
+//
+//        let cancelBtn = [
+//            "title": "Cancel",
+//            "type": "danger"
+//        ]
+//        let mmShareSheet = MMShareSheet.init(title: nil, cards: cards, duration: nil, cancelBtn: cancelBtn)
+//        mmShareSheet.callBack = { (handler) ->() in
+//            switch handler {
+//            case "Use":
+//                self.shareUse()
+//                break
+//            default:
+//                self.shareDefault()
+//            }
+//        }
+//        mmShareSheet.present()
+        self.bridge.callJsHandler("More.pressCallback", args: [], callback: nil)
+
     }
     
     func shareUse() {
@@ -397,6 +411,40 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
 //        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
 //        alert.addAction(cancelAction)
 //        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func clipImage(_ size :CGSize, addon: String ) {
+        self.imageAddon = addon
+        KiClipperHelper.sharedInstance.nav = navigationController
+        KiClipperHelper.sharedInstance.clippedImgSize = size
+        KiClipperHelper.sharedInstance.clippedImageHandler = {[weak self]img in
+            self?.imageData = UIImageJPEGRepresentation(img, 0.4)
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd-hh-mm-ss" //Specify your format that you want
+            self?.imageName =  "\(dateFormatter.string(from: date))"+"\(arc4random())"+".JPEG"
+            self?.sendImageDataRequest()
+        }
+        KiClipperHelper.sharedInstance.clipperType = .Move
+        KiClipperHelper.sharedInstance.systemEditing = false
+        KiClipperHelper.sharedInstance.isSystemType = false
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cuAction = UIAlertAction(title: "Camera", style: .default, handler: {action in
+            DispatchQueue.main.async {
+                KiClipperHelper.sharedInstance.photoWithSourceType(type: .camera)
+            }
+        })
+        let reAction = UIAlertAction(title: "Photo Library", style: .default, handler: {action in
+            DispatchQueue.main.async {
+                KiClipperHelper.sharedInstance.photoWithSourceType(type: .photoLibrary)
+            }
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(cuAction)
+        alert.addAction(reAction)
+        self.present(alert, animated: true, completion: nil)
     }
 
     /*

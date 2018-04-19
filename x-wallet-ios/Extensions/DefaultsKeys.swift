@@ -16,5 +16,6 @@ extension DefaultsKeys {
     static let isOpenProtect = DefaultsKey<Bool>("isOpenProtect")
     static let isLogin = DefaultsKey<Bool>("isLogin")
     static let userId = DefaultsKey<Double>("userId")
+    static let pushToken = DefaultsKey<String>("pushToken")
 
 }

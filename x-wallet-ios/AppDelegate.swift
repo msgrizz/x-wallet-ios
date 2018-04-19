@@ -111,10 +111,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         let deviceToken_ns = NSData.init(data: deviceToken);    // 转换成NSData类型
         var token = deviceToken_ns.description.trimmingCharacters(in: CharacterSet(charactersIn: "<>"));
         token = token.replacingOccurrences(of: " ", with: "")
-        
+        Defaults[.pushToken] = token
         // [ GTSdk ]：向个推服务器注册deviceToken
         GeTuiSdk.registerDeviceToken(token);
-        
         NSLog("\n>>>[DeviceToken Success]:%@\n\n",token);
     }
     
@@ -243,10 +242,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        
+        application.applicationIconBadgeNumber = 0
         if  Defaults[.isLogin] {
             SAccountControllerAPI.getOneUsingGET(id: Int64(Defaults[.userId])) {  (account, error) in
                 XWLocalManager.sharedInstance().localUser = account
+            }
+            let clear = ClearCountDTO(accountId: Int64(Defaults[.userId]))
+            SAccountControllerAPI.clearCountUsingPOST(clearCountDTO: clear) { (error) in
+                
             }
         }
     }

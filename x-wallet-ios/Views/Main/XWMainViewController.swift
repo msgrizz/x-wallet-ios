@@ -75,6 +75,8 @@ class XWMainViewController: UIBaseViewController {
         self.tableView.addSubview(refreshControl)
         
         self.getAppsData(UIRefreshControl())
+
+        SAccountControllerAPI.registerPushTokenUsingPOST(sPushTokenDTO: SPushTokenDTO(deviceType: .ios, pushToken: Defaults[.pushToken], accountId: Int64(Defaults[.userId]))) { (suc, error) in}
     }
     
     override func didReceiveMemoryWarning() {
