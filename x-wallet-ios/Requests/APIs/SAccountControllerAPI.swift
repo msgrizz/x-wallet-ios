@@ -193,7 +193,7 @@ open class SAccountControllerAPI {
      - parameter id: (path) id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putUsingPUT(sAccountDTO: SAccountDTO, id: Int64, completion: @escaping ((_ data: SAccount?,_ error: Error?) -> Void)) {
+    open class func putUsingPUT(sAccountDTO: UpdateSAccountDTO, id: Int64, completion: @escaping ((_ data: SAccount?,_ error: Error?) -> Void)) {
         putUsingPUTWithRequestBuilder(sAccountDTO: sAccountDTO, id: id).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
@@ -210,7 +210,7 @@ open class SAccountControllerAPI {
 
      - returns: RequestBuilder<SAccount> 
      */
-    open class func putUsingPUTWithRequestBuilder(sAccountDTO: SAccountDTO, id: Int64) -> RequestBuilder<SAccount> {
+    open class func putUsingPUTWithRequestBuilder(sAccountDTO: UpdateSAccountDTO, id: Int64) -> RequestBuilder<SAccount> {
         var path = "/sAccounts/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path

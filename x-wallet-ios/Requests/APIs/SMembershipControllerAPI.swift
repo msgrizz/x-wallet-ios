@@ -191,6 +191,42 @@ open class SMembershipControllerAPI {
     }
 
     /**
+     sMembership
+     
+     - parameter id: (path) id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func sMembershipUsingGET(id: Int64, completion: @escaping ((_ data: SMembership?,_ error: Error?) -> Void)) {
+        sMembershipUsingGETWithRequestBuilder(id: id).execute { (response, error) -> Void in
+            completion(response?.body, error);
+        }
+    }
+
+
+    /**
+     sMembership
+     - GET /sMembership/{id}
+     - examples: [{output=none}]
+     
+     - parameter id: (path) id 
+
+     - returns: RequestBuilder<SMembership> 
+     */
+    open class func sMembershipUsingGETWithRequestBuilder(id: Int64) -> RequestBuilder<SMembership> {
+        var path = "/sMembership/{id}"
+        path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
+        let URLString = SwaggerClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+
+        let url = NSURLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<SMembership>.Type = SwaggerClientAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+
+    /**
      sendSMembership
      
      - parameter id: (path) id 

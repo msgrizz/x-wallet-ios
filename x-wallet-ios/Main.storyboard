@@ -561,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3T9-us-SIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3010" y="-278"/>
+            <point key="canvasLocation" x="3036" y="-616"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="y5H-rc-dsE">
@@ -1493,7 +1493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hg8-N8-O4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2166" y="690"/>
+            <point key="canvasLocation" x="1813" y="690"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="B8j-kL-rFy">
@@ -2087,6 +2087,9 @@
                                                     <constraint firstAttribute="height" constant="65" id="ptB-my-fjj"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="defaultHead"/>
+                                                <connections>
+                                                    <action selector="changeHead" destination="lfD-sT-8Xr" eventType="touchUpInside" id="l6q-q1-H7Z"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-nY-lfV">
                                                 <rect key="frame" x="43" y="139" width="288" height="21"/>
@@ -2239,6 +2242,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cEX-TV-krU"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutTextView" destination="tKm-Tb-68Q" id="FU7-RJ-dhA"/>
+                        <outlet property="headView" destination="FZd-kz-um0" id="EXK-RZ-seP"/>
+                        <outlet property="idLabel" destination="YM0-nY-lfV" id="dVh-8I-Xmr"/>
+                        <outlet property="mailLabel" destination="hzk-X1-7PL" id="6xZ-dI-sJP"/>
+                        <outlet property="nameLabel" destination="dYS-dD-8Lu" id="nQM-SL-clZ"/>
+                        <outlet property="numberLabel" destination="vKZ-Dj-jd9" id="h2q-GW-vk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oav-nN-IHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

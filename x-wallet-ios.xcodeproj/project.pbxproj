@@ -63,6 +63,7 @@
 		D5228D2A2085F592007CE433 /* SPushTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D262085F591007CE433 /* SPushTokenDTO.swift */; };
 		D5228D2D2086E7C4007CE433 /* LocalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */; };
 		D5228D2F2086E88D007CE433 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5228D2E2086E88D007CE433 /* CoreData.framework */; };
+		D5228D3120884699007CE433 /* UpdateSAccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D3020884698007CE433 /* UpdateSAccountDTO.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -331,6 +332,7 @@
 		D5228D262085F591007CE433 /* SPushTokenDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPushTokenDTO.swift; sourceTree = "<group>"; };
 		D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalModel.xcdatamodel; sourceTree = "<group>"; };
 		D5228D2E2086E88D007CE433 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D5228D3020884698007CE433 /* UpdateSAccountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSAccountDTO.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -1098,6 +1100,7 @@
 		D5E647552079EA4A00AB6BC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D3020884698007CE433 /* UpdateSAccountDTO.swift */,
 				D5228D252085F591007CE433 /* AddFriendDTO.swift */,
 				D5228D242085F590007CE433 /* ClearCountDTO.swift */,
 				D5228D232085F590007CE433 /* SMiniContractConversationDTO.swift */,
@@ -1326,6 +1329,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-x-wallet-ios/Pods-x-wallet-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AAPhotoCircleCrop/AAPhotoCircleCrop.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
@@ -1345,6 +1349,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AAPhotoCircleCrop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
@@ -1422,6 +1427,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-x-wallet-ios-x-wallet-iosTests/Pods-x-wallet-ios-x-wallet-iosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AAPhotoCircleCrop/AAPhotoCircleCrop.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
@@ -1441,6 +1447,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AAPhotoCircleCrop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
@@ -1666,6 +1673,7 @@
 				D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */,
 				D54C587C207DB34F001F3B95 /* XWAppModel.swift in Sources */,
 				D54C58C1207F02C8001F3B95 /* XWMorePresentationController.swift in Sources */,
+				D5228D3120884699007CE433 /* UpdateSAccountDTO.swift in Sources */,
 				D5E647852079EA4B00AB6BC5 /* SMiniContractDTO.swift in Sources */,
 				D54C58A6207E05E6001F3B95 /* SCoupon.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,

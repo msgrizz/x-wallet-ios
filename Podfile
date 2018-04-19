@@ -21,5 +21,6 @@ target 'x-wallet-ios' do
   pod 'DynamicBlurView'
   pod 'WebViewBridge.Swift'
   pod 'SugarRecord/CoreData'
+  pod 'AAPhotoCircleCrop'
   target 'x-wallet-iosTests'
 end

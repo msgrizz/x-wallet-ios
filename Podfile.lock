@@ -1,4 +1,5 @@
 PODS:
+  - AAPhotoCircleCrop (1.3.0)
   - Alamofire (4.7.0)
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
@@ -22,6 +23,7 @@ PODS:
   - WebViewBridge.Swift (2.2)
 
 DEPENDENCIES:
+  - AAPhotoCircleCrop
   - AlamofireObjectMapper (~> 5.0)
   - DynamicBlurView
   - IHKeyboardAvoiding
@@ -38,6 +40,7 @@ DEPENDENCIES:
   - WebViewBridge.Swift
 
 SPEC CHECKSUMS:
+  AAPhotoCircleCrop: 9ad008dbe3f86c61032b0888f01a95055c346c20
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
@@ -55,6 +58,6 @@ SPEC CHECKSUMS:
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   WebViewBridge.Swift: dadfcad1f75b8895ae67d9614a6ab775b7f0688f
 
-PODFILE CHECKSUM: 8305154c7b5db066e4c267fc9881aaca0a5be236
+PODFILE CHECKSUM: b6b8a4726b7b7d04a79ef3b260d388c4b9df35ff
 
 COCOAPODS: 1.4.0
