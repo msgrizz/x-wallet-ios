@@ -45,16 +45,12 @@ class XWMyViewController: UIBaseViewController,FSPagerViewDataSource,FSPagerView
         layout.itemSize = CGSize.init(width: (self.view.frame.size.width-70)/3, height:((self.view.frame.size.width-70)/3) * 117/102)
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: "MyAuthenticationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MyAuthenticationCollectionViewCell")
-        
-        configUser()
-//        collectionView.register(UINib?"MyAuthenticationCollectionViewCell", forCellWithReuseIdentifier: "MyAuthenticationCollectionViewCell")
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-
+        self.configUser()
     }
     
     func configUser(){
