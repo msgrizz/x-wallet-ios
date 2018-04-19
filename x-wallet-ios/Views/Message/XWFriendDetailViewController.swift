@@ -21,6 +21,7 @@ class XWFriendDetailViewController: UIBaseViewController {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var headImage: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var addButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,7 +42,7 @@ class XWFriendDetailViewController: UIBaseViewController {
         backgroundView.layer.cornerRadius = 8
         backgroundView.clipsToBounds = true
         
-        self.getUserData()z
+        self.getUserData()
     }
     
     func configUser() {
@@ -51,6 +52,9 @@ class XWFriendDetailViewController: UIBaseViewController {
         self.headImage.kf.setImage(with: URL(string: (user?.avatar)!))
         self.idLabel.text = "Identity code:"+"\((user?.id)!)"
         self.contentLabel.text = user?.about
+        if (self.user?.friend)! {
+            self.addButton.isHidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,9 +70,6 @@ class XWFriendDetailViewController: UIBaseViewController {
             self.activityIndicatorView.startAnimating()
             FriendshipControllerAPI.addFriendsUsingPOST(addFriendDTO: addDTO, completion: { (suc, error) in
                 self.activityIndicatorView.stopAnimating()
-                guard !suc! else {
-                    return
-                }
                 DispatchQueue.main.async {
                     self.navigationController?.popViewController(animated: true)
                 }
@@ -82,7 +83,7 @@ class XWFriendDetailViewController: UIBaseViewController {
     
     func getUserData() {
         self.activityIndicatorView.startAnimating()
-        SAccountControllerAPI.getOneUsingGET(id: userId) { (account, error) in
+        FriendshipControllerAPI.friendsUsingGET(id: userId, accountId: Int64(Defaults[.userId])) { (account, error) in
             if error != nil {
                 DispatchQueue.main.async {
                     self.navigationController?.popViewController(animated: true)

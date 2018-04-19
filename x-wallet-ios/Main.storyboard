@@ -549,6 +549,7 @@
                     </view>
                     <connections>
                         <outlet property="accountLabel" destination="wKy-8K-591" id="lfa-j2-0TX"/>
+                        <outlet property="addButton" destination="9b9-Fj-bR9" id="e8G-oB-fpt"/>
                         <outlet property="backgroundView" destination="RCf-BF-hkM" id="TRk-NM-OSC"/>
                         <outlet property="contentLabel" destination="rYo-5v-wVp" id="2O6-9J-6rr"/>
                         <outlet property="emailLabel" destination="bDg-E2-c5E" id="afm-Kq-gYn"/>

@@ -17,6 +17,7 @@ open class SAccount: Codable {
     public var createTime: Int64?
     public var credit: Int64?
     public var email: String?
+    public var friend: Bool?
     public var id: Int64?
     public var lastModifyTime: Int64?
     public var loginName: String?
@@ -28,13 +29,14 @@ open class SAccount: Codable {
 
 
     
-    public init(about: String?, activated: Bool?, avatar: String?, createTime: Int64?, credit: Int64?, email: String?, id: Int64?, lastModifyTime: Int64?, loginName: String?, loginPass: String?, mobile: String?, nickname: String?, paymentPass: String?, version: Int64?) {
+    public init(about: String?, activated: Bool?, avatar: String?, createTime: Int64?, credit: Int64?, email: String?, friend: Bool?, id: Int64?, lastModifyTime: Int64?, loginName: String?, loginPass: String?, mobile: String?, nickname: String?, paymentPass: String?, version: Int64?) {
         self.about = about
         self.activated = activated
         self.avatar = avatar
         self.createTime = createTime
         self.credit = credit
         self.email = email
+        self.friend = friend
         self.id = id
         self.lastModifyTime = lastModifyTime
         self.loginName = loginName
@@ -58,6 +60,7 @@ open class SAccount: Codable {
         try container.encodeIfPresent(createTime, forKey: "createTime")
         try container.encodeIfPresent(credit, forKey: "credit")
         try container.encodeIfPresent(email, forKey: "email")
+        try container.encodeIfPresent(friend, forKey: "friend")
         try container.encodeIfPresent(id, forKey: "id")
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
         try container.encodeIfPresent(loginName, forKey: "loginName")
@@ -79,6 +82,7 @@ open class SAccount: Codable {
         createTime = try container.decodeIfPresent(Int64.self, forKey: "createTime")
         credit = try container.decodeIfPresent(Int64.self, forKey: "credit")
         email = try container.decodeIfPresent(String.self, forKey: "email")
+        friend = try container.decodeIfPresent(Bool.self, forKey: "friend")
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
         loginName = try container.decodeIfPresent(String.self, forKey: "loginName")

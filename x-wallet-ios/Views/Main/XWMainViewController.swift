@@ -10,6 +10,7 @@ import UIKit
 import DynamicBlurView
 import SnapKit
 import SwiftyUserDefaults
+
 class XWMainViewController: UIBaseViewController {
     let defaultHeight: CGFloat = 154
     let defaultHeadHeight: CGFloat = 25
@@ -191,10 +192,28 @@ class XWMainViewController: UIBaseViewController {
     @objc func goToScan(_ :UITapGestureRecognizer) {
         dismissSlide(_ :UIButton())
         AVCaptureSessionManager.checkAuthorizationStatusForCamera(grant: {
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "XWScanViewController")
-            self.navigationController?.pushViewController(controller, animated: true)
+            let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
+            contact.blockproerty={ (result) in
+                DispatchQueue.main.async {
+                    contact.dismiss(animated: true, completion: nil)
+                    let action = result.removingPercentEncoding!.getHostStringParameter()
+                    if action == ScanType.infoCode.rawValue {
+                        let userId = result.removingPercentEncoding!.getQueryStringParameter(param: "id")
+                        if userId != nil {
+                            let detail = Main.instantiateViewController(withIdentifier: "XWFriendDetailViewController") as! XWFriendDetailViewController
+                            detail.userId = Int64(userId!)
+                            self.navigationController?.pushViewController(detail, animated: true)
+                        }
+                    }
+                }
+            }
+            let navi = UIBaseNavigationViewController(rootViewController: contact)
+            self.navigationController?.present(navi, animated: true, completion: {
+                
+            })
         }){
-            let action = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) in
+            let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: { (action) in
                 let url = URL(string: UIApplicationOpenSettingsURLString)
                 UIApplication.shared.open(url!, options: [String: Any](), completionHandler: nil)
             })
@@ -217,6 +236,9 @@ class XWMainViewController: UIBaseViewController {
     @objc func getAppsData(_ :UIRefreshControl) {
         HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error) in
             self.dataArray.removeAll()
+            guard datas != nil else {
+                return
+            }
             for ele in datas! {
                 let app = XWAppModel()
                 app.dataModels = ele.data!
