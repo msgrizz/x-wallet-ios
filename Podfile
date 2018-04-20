@@ -15,12 +15,12 @@ target 'x-wallet-ios' do
   pod 'SnapKit', '~> 4.0'
   pod 'SkeletonView', '~> 1.1'
   pod 'Toast-Swift', '~> 3.0'
-  pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'NVActivityIndicatorView'
   pod 'IHKeyboardAvoiding'
   pod 'DynamicBlurView'
   pod 'WebViewBridge.Swift'
   pod 'SugarRecord/CoreData'
   pod 'AAPhotoCircleCrop'
+  pod 'Proposer'
   target 'x-wallet-iosTests'
 end
