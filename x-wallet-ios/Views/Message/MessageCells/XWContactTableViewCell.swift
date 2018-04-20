@@ -1,5 +1,5 @@
 //
-//  XWMyContactTableViewCell.swift
+//  XWContactTableViewCell.swift
 //  x-wallet-ios
 //
 //  Created by 爱班 on 2018/3/22.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class XWMyContactTableViewCell: UITableViewCell {
+class XWContactTableViewCell: UITableViewCell {
     @IBOutlet weak var headView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var mobileLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var authTag: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

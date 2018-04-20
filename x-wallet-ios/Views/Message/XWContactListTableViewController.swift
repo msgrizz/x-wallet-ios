@@ -20,11 +20,10 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     
     var blockproerty:fucBlock!
     
-    var userData: XWDemoData!
+    var users: [XWUser] = [XWUser]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fakeData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -88,61 +87,38 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 80
-        }else {
-            return 44
-        }
+        return 90
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0 {
-            return 1
-        }else {
-            return userData.users.count
-        }
+            return users.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWMyContactTableViewCell", for: indexPath) as! XWMyContactTableViewCell
-            if userData.myself.profilePic != nil {
-                cell.headView.image = userData.myself.profilePic
-            }else {
-                cell.headView.kf.setImage(with: URL(string: userData.myself.avatar!))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath) as! XWContactTableViewCell
+        let user = users[indexPath.row]
+        if user.profilePic != nil {
+            cell.headView.image = user.profilePic
+        }else {
+            if user.avatar != nil {
+                cell.headView.kf.setImage(with: URL(string: user.avatar!))
             }
-            cell.nameLabel.text = userData.myself.name
-            cell.numberLabel.text = "My Number:"+userData.myself.id
-            // Configure the cell...
-
-            return cell
         }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "XWContactTableViewCell", for: indexPath) as! XWContactTableViewCell
-            let user = userData.users[indexPath.row]
-            if user.profilePic != nil {
-                cell.headView.image = user.profilePic
-            }else {
-                if user.avatar != nil {
-                    cell.headView.kf.setImage(with: URL(string: user.avatar!))
-                }
-            }
-            cell.nameLabel.text = user.name
-            // Configure the cell...
-            return cell
-        }
+        cell.nameLabel.text = user.name
+        // Configure the cell...
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1{
+        if indexPath.row >= 1{
             if let _ = blockproerty{
-                let user = userData.users[indexPath.row]
+                let user = users[indexPath.row]
                 blockproerty(user)
             }
         }
@@ -162,18 +138,14 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
 //        return headView
 //    }
     
-    func fakeData() {
-        userData = XWDemoData()
-        let my = XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(XWLocalManager.sharedInstance().localUser.id!)", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
-        userData.myself = my
-    }
-    
     func getUserData() {
         FriendshipControllerAPI.myFriendsUsingGET(accountId:Int64(Defaults[.userId])) { (accounts, error) in
-            self.userData.users.removeAll()
+            self.users.removeAll()
+            let my = XWUser(name: XWLocalManager.sharedInstance().localUser.loginName!, email: XWLocalManager.sharedInstance().localUser.email, id: "\(XWLocalManager.sharedInstance().localUser.id!)", profilePic:nil, avatar:XWLocalManager.sharedInstance().localUser.avatar)
+            self.users.append(my)
             for ele in accounts! {
                 let user = XWUser(name: ele.loginName!, email: ele.email, id: "\(ele.id!)", profilePic:nil, avatar:ele.avatar)
-                self.userData.users.append(user)
+                self.users.append(user)
             }
             self.tableView.reloadData()
         }

@@ -123,7 +123,6 @@
 		D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */; };
 		D58DB94420635B33005ABED8 /* XWProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94320635B33005ABED8 /* XWProtectViewController.swift */; };
 		D58DB94820639938005ABED8 /* XWContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */; };
-		D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */; };
 		D58DB94C2063A80B005ABED8 /* XWScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94B2063A80B005ABED8 /* XWScanViewController.swift */; };
 		D58DB9512063A991005ABED8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */; };
 		D58DB9522063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */; };
@@ -395,7 +394,6 @@
 		D58DB93D20634CCD005ABED8 /* XWCardListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWCardListTableViewController.swift; sourceTree = "<group>"; };
 		D58DB94320635B33005ABED8 /* XWProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWProtectViewController.swift; sourceTree = "<group>"; };
 		D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContactTableViewCell.swift; sourceTree = "<group>"; };
-		D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMyContactTableViewCell.swift; sourceTree = "<group>"; };
 		D58DB94B2063A80B005ABED8 /* XWScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWScanViewController.swift; sourceTree = "<group>"; };
 		D58DB94E2063A991005ABED8 /* AVCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionManager.swift; sourceTree = "<group>"; };
 		D58DB94F2063A991005ABED8 /* UIImage+ZZYQRCodeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ZZYQRCodeImage.swift"; sourceTree = "<group>"; };
@@ -775,6 +773,13 @@
 				D58DB95920649D9C005ABED8 /* XWSenderTableViewCell.swift */,
 				D58DB95B20649DAD005ABED8 /* XWRecieverTableViewCell.swift */,
 				D58DB98E2068C139005ABED8 /* XWContractHeadTableViewCell.swift */,
+				D5ADC20C2057BF66001307E8 /* XWConversationTableViewCell.swift */,
+				D5ADC20D2057BF66001307E8 /* XWConversationTableViewCell.xib */,
+				D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */,
+				D5ADC2182058B7FA001307E8 /* XWNewConversationTableViewCell.xib */,
+				A773E619206A6E3C002C5721 /* XWContactHeadView.swift */,
+				A773E61B206A6E47002C5721 /* XWContactHeadView.xib */,
+				D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */,
 			);
 			path = MessageCells;
 			sourceTree = "<group>";
@@ -821,15 +826,7 @@
 				D5ADC2102057C568001307E8 /* ViewModels */,
 				D58FC3F720523B6E008C05AE /* XWMessageListTableViewController.swift */,
 				D5ADC2A52058C620001307E8 /* XWContactListTableViewController.swift */,
-				D58DB94720639938005ABED8 /* XWContactTableViewCell.swift */,
-				D58DB9492063A0C6005ABED8 /* XWMyContactTableViewCell.swift */,
-				D5ADC20C2057BF66001307E8 /* XWConversationTableViewCell.swift */,
-				D5ADC20D2057BF66001307E8 /* XWConversationTableViewCell.xib */,
-				D5ADC2172058B7FA001307E8 /* XWNewConversationTableViewCell.swift */,
-				D5ADC2182058B7FA001307E8 /* XWNewConversationTableViewCell.xib */,
 				D58DB95620649635005ABED8 /* XWMessageViewController.swift */,
-				A773E619206A6E3C002C5721 /* XWContactHeadView.swift */,
-				A773E61B206A6E47002C5721 /* XWContactHeadView.xib */,
 				D5228D1F2085BF3B007CE433 /* XWFriendDetailViewController.swift */,
 			);
 			path = Message;
@@ -1526,7 +1523,6 @@
 				D5ADC2A42058C08D001307E8 /* ICanHas.swift in Sources */,
 				D58DB9A120691F0A005ABED8 /* XWCoinTrackViewController.swift in Sources */,
 				D58DB95720649635005ABED8 /* XWMessageViewController.swift in Sources */,
-				D58DB94A2063A0C6005ABED8 /* XWMyContactTableViewCell.swift in Sources */,
 				D5A4896C204E6D54001031F6 /* Dictionary.swift in Sources */,
 				D5E6477C2079EA4B00AB6BC5 /* ResourceSAccount.swift in Sources */,
 				D54C5879207DAE3F001F3B95 /* XWCardTableViewCell.swift in Sources */,
