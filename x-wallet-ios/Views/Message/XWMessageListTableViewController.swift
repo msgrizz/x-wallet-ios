@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
+import CoreData
+import SugarRecord
 
 class XWMessageListTableViewController: UIBaseTableViewController {
+    lazy var db: CoreDataDefaultStorage = {
+        let store = CoreDataStore.named(dataName)
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
+        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
+        return defaultStorage
+    }()
     
     var addContactButton: UIBarButtonItem!
     var dataModels: [XWConversationViewModel] = [XWConversationViewModel]()
@@ -31,15 +41,10 @@ class XWMessageListTableViewController: UIBaseTableViewController {
         self.tableView.register(UINib(nibName: "XWConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWConversationTableViewCell")
         self.tableView.register(UINib(nibName: "XWNewConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWNewConversationTableViewCell")
 
-        dataModels = fakeData()
     }
     
     @objc func addAction(_ : UIBarButtonItem) {
         self.performSegue(withIdentifier: "goToMyList", sender: nil)
-    }
-    
-    func fakeData() -> [XWConversationViewModel] {
-        return [XWConversationViewModel()]
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +80,34 @@ class XWMessageListTableViewController: UIBaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row != 0{
             self.performSegue(withIdentifier: "goToMessageView", sender: nil)
+        }else {
+            let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
+            contact.blockproerty={ (user) in
+                DispatchQueue.main.async {
+                    contact.dismiss(animated: true, completion: nil)
+                    let dto = SConversationDTO(name: user.name, creator:Int64(Defaults[.userId]), partner:Int64(user.id))
+                    SConversationControllerAPI.addUsingPOST(sConversationDTO: dto, completion: { (conversion, error) in
+                        do {
+                            try self.db.operation { (context, save) throws in
+                                // Do your operations here
+                                let entity: ConversationEntity = try context.new()
+                                entity.name = conversion?.name
+//                                entity.id = conversion?.id
+//                                entity.creator =
+                                try context.insert(entity)
+                                try save()
+                            }
+                        } catch {
+                            // There was an error in the operation
+                        }
+                    })
+                }
+            }
+            let navi = UIBaseNavigationViewController(rootViewController: contact)
+            self.navigationController?.present(navi, animated: true, completion: {
+                
+            })
         }
     }
 

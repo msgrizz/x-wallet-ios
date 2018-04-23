@@ -68,6 +68,7 @@
 		D5228D38208881FD007CE433 /* KiImageClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D35208881FD007CE433 /* KiImageClipperViewController.swift */; };
 		D5228D3A208D6E92007CE433 /* XWMessageMannger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D39208D6E92007CE433 /* XWMessageMannger.swift */; };
 		D5228D43208D909B007CE433 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5228D41208D909B007CE433 /* DataModel.xcdatamodeld */; };
+		D5228D45208DAF67007CE433 /* XWConvertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D44208DAF67007CE433 /* XWConvertManager.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -340,6 +341,7 @@
 		D5228D35208881FD007CE433 /* KiImageClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiImageClipperViewController.swift; sourceTree = "<group>"; };
 		D5228D39208D6E92007CE433 /* XWMessageMannger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMessageMannger.swift; sourceTree = "<group>"; };
 		D5228D42208D909B007CE433 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		D5228D44208DAF67007CE433 /* XWConvertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWConvertManager.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -946,6 +948,7 @@
 				D5228D102080A5A1007CE433 /* ShareSheetData.swift */,
 				D5228D1B20849851007CE433 /* ScanType.swift */,
 				D5228D39208D6E92007CE433 /* XWMessageMannger.swift */,
+				D5228D44208DAF67007CE433 /* XWConvertManager.swift */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -1519,6 +1522,7 @@
 				D5E6477A2079EA4B00AB6BC5 /* MiniCoinPoolDashBoardDTO.swift in Sources */,
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D54C58A0207E05E6001F3B95 /* SCouponReceiverDTO.swift in Sources */,
+				D5228D45208DAF67007CE433 /* XWConvertManager.swift in Sources */,
 				D54C58B2207E05F3001F3B95 /* SMessageEntityAPI.swift in Sources */,
 				D5E6477D2079EA4B00AB6BC5 /* ResourceSMiniCoinPool.swift in Sources */,
 				D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */,

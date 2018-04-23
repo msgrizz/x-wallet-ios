@@ -11,7 +11,18 @@ import SwiftyUserDefaults
 import AAPhotoCircleCrop
 import SwiftyUserDefaults
 import Alamofire
+import CoreData
+import SugarRecord
 class PrivacyViewController: UIBaseViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate,AACircleCropViewControllerDelegate {
+    
+    lazy var db: CoreDataDefaultStorage = {
+        let store = CoreDataStore.named(dataName)
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
+        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
+        return defaultStorage
+    }()
+    
     var saveButton: UIBarButtonItem!
     
     @IBOutlet weak var idLabel: UILabel!
@@ -89,7 +100,18 @@ class PrivacyViewController: UIBaseViewController,UINavigationControllerDelegate
         
         let push = SPushTokenDTO(deviceType: .ios, pushToken: Defaults[.pushToken], accountId: Int64(Defaults[.userId]))
         SAccountControllerAPI.unregisterPushTokenUsingPOST(sPushTokenDTO: push) { (suc, error) in
-            
+            do {
+                try self.db.operation { (context, save) throws in
+                    let predicate: NSPredicate = NSPredicate(format: "id == %@", String(Defaults[.userId]))
+                    let me: UserEntity? = try! self.db.fetch(FetchRequest<UserEntity>().filtered(with: predicate)).first
+                    if let me = me {
+                        try context.remove([me])
+                        save()
+                    }
+                }
+            } catch {
+                // There was an error in the operation
+            }
         }
         
         

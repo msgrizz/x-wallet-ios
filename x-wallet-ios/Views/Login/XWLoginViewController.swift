@@ -8,8 +8,17 @@
 
 import UIKit
 import SwiftyUserDefaults
+import CoreData
+import SugarRecord
 
 class XWLoginViewController: UIBaseViewController {
+    lazy var db: CoreDataDefaultStorage = {
+        let store = CoreDataStore.named(dataName)
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
+        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
+        return defaultStorage
+    }()
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
@@ -58,10 +67,7 @@ class XWLoginViewController: UIBaseViewController {
             if (account?.succ)! {
                 self.activityIndicatorView.stopAnimating()
                 if account != nil {
-                    let userId = account?.data?.id
-                    Defaults[.userId] = Double(userId!)
-                    Defaults[.isLogin] = true
-                    XWLocalManager.sharedInstance().localUser = account?.data!
+                    self.afterLogin(account: (account?.data)!)
                     self.goToMain()
                 }
             }else {
@@ -75,12 +81,25 @@ class XWLoginViewController: UIBaseViewController {
         SAccountControllerAPI.postUsingPOST(sAccountDTO: localAccount) { (account, error) in
             self.activityIndicatorView.stopAnimating()
             if account != nil {
-                let userId = account?.id
-                Defaults[.userId] = Double(userId!)
-                Defaults[.isLogin] = true
-                XWLocalManager.sharedInstance().localUser = account
+                self.afterLogin(account: account!)
                 self.goToMain()
             }
+        }
+    }
+    
+    func afterLogin(account: SAccount) {
+        let userId = account.id
+        Defaults[.userId] = Double(userId!)
+        Defaults[.isLogin] = true
+        do {
+            try self.db.operation { (context, save) throws -> Void in
+                let user: UserEntity = try! context.create()
+                XWConvertManager.sharedInstance().convertUser(user: account, entity: user)
+                save()
+            }
+        }
+        catch {
+            // There was an error in the operation
         }
     }
     

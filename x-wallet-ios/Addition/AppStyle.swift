@@ -19,6 +19,7 @@ let shadowOffset = CGSize(width: 1, height: 1)
 let colorHex = "425061"
 
 let appScheme = "xwallet"
+let dataName = "DataModel"
 
 func applyStyle() {
 

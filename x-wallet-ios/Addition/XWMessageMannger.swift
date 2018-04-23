@@ -15,7 +15,7 @@ class XWMessageMannger: NSObject {
     let delayTime = 2
     var messageTimer: DispatchSourceTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "messageQueue"))
     lazy var db: CoreDataDefaultStorage = {
-        let store = CoreDataStore.named("LocalModel")
+        let store = CoreDataStore.named(dataName)
         let bundle = Bundle(for: self.classForCoder)
         let model = CoreDataObjectModel.merged([bundle])
         let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
