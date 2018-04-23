@@ -37,6 +37,7 @@ class UIBaseTableViewController: UITableViewController {
     }
     
     @objc open func getData(_ :UIRefreshControl) {
+        self.refreshControl?.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

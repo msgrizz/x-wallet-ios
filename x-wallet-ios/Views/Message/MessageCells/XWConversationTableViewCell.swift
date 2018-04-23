@@ -19,7 +19,12 @@ class XWConversationTableViewCell: UITableViewCell {
             headImage.kf.setImage(with: URL(string: dataModel.headURL), for: .normal)
             nameLabel.text = dataModel.name
             contentLabel.text = dataModel.content
-            timeLabel.text = dataModel.time
+            
+            let timeInterval = Double(dataModel.time!)/1000
+            let date = Date(timeIntervalSince1970: timeInterval)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM-dd hh:mm" //Specify your format that you want
+            timeLabel.text = dateFormatter.string(from: date)
         }
     }
     override func awakeFromNib() {

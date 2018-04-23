@@ -24,4 +24,12 @@ class XWConvertManager: NSObject {
         entity.mobile = user.mobile
         entity.id = user.id!
     }
+    
+    func convertConversation(conversation: SConversation, entity: ConversationEntity){
+        entity.name = conversation.name
+        entity.id = conversation.id!
+        entity.lastModifyTime = conversation.lastModifyTime!
+        entity.createTime = conversation.createTime!
+        entity.creator = (conversation.creator?.id)!
+    }
 }

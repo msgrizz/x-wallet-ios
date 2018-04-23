@@ -11,7 +11,7 @@ import SwiftyUserDefaults
 import CoreData
 import SugarRecord
 
-class XWMessageListTableViewController: UIBaseTableViewController {
+class XWMessageListTableViewController: UIBaseTableViewController,NSFetchedResultsControllerDelegate {
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreDataStore.named(dataName)
         let bundle = Bundle(for: self.classForCoder)
@@ -20,9 +20,41 @@ class XWMessageListTableViewController: UIBaseTableViewController {
         return defaultStorage
     }()
     
+    var observable: RequestObservable<ConversationEntity>!
+    
+    func setup() {
+        let request: FetchRequest<ConversationEntity> = FetchRequest<ConversationEntity>().sorted(with: "lastModifyTime", ascending: false)
+        self.observable = self.db.observable(request: request)
+        self.observable.observe { changes in
+            switch changes {
+            case .initial(let objects):
+            print("\(objects.count) objects in the database")
+                break
+            case .update(let deletions, let insertions, let modifications):
+                if insertions.count > 0 {
+                    for ele in insertions {
+                        self.entityArrays.insert(ele.element, at: 0)
+                    }
+                    self.convertData()
+                }
+                if modifications.count > 0 {
+                    debugPrint(insertions)
+                }
+            print("\(deletions.count) deleted | \(insertions.count) inserted | \(modifications.count) modified")
+                break
+//            case .error(let error):
+//            print("Something went wrong")
+//                break
+            default:
+                print("Something went wrong")
+                break
+            }
+        }
+    }
+
     var addContactButton: UIBarButtonItem!
     var dataModels: [XWConversationViewModel] = [XWConversationViewModel]()
-    
+    var entityArrays: [ConversationEntity] = [ConversationEntity]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Message", comment: "")
@@ -41,6 +73,23 @@ class XWMessageListTableViewController: UIBaseTableViewController {
         self.tableView.register(UINib(nibName: "XWConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWConversationTableViewCell")
         self.tableView.register(UINib(nibName: "XWNewConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWNewConversationTableViewCell")
 
+        
+        entityArrays = try! db.fetch(FetchRequest<ConversationEntity>().sorted(with: "lastModifyTime", ascending: false))
+        self.convertData()
+        self.setup()
+    }
+    
+    func convertData() {
+        dataModels.removeAll()
+        for ele in entityArrays {
+            var model = XWConversationViewModel()
+            model.name = ele.name!
+            model.content = ele.name!
+            model.headURL = ele.avatar ?? ""
+            model.time = ele.lastModifyTime
+            dataModels.append(model)
+        }
+        self.tableView.reloadData()
     }
     
     @objc func addAction(_ : UIBarButtonItem) {
@@ -92,11 +141,9 @@ class XWMessageListTableViewController: UIBaseTableViewController {
                             try self.db.operation { (context, save) throws in
                                 // Do your operations here
                                 let entity: ConversationEntity = try context.new()
-                                entity.name = conversion?.name
-//                                entity.id = conversion?.id
-//                                entity.creator =
+                                XWConvertManager.sharedInstance().convertConversation(conversation: conversion!, entity: entity)
                                 try context.insert(entity)
-                                try save()
+                                save()
                             }
                         } catch {
                             // There was an error in the operation

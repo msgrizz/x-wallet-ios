@@ -91,6 +91,7 @@ class XWLoginViewController: UIBaseViewController {
         let userId = account.id
         Defaults[.userId] = Double(userId!)
         Defaults[.isLogin] = true
+        XWLocalManager.sharedInstance().localUser = account
         do {
             try self.db.operation { (context, save) throws -> Void in
                 let user: UserEntity = try! context.create()

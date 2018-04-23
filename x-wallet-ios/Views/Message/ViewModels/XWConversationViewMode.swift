@@ -9,8 +9,8 @@
 import Foundation
 
 struct XWConversationViewModel {
-    let name = "123"
-    let content = "234"
-    let time = "Yesterday"
-    let headURL = "https://assets-cdn.github.com/images/modules/site/integrators/zenhubio.png"
+    var name = "123"
+    var content = "234"
+    var time : Int64?
+    var headURL = "https://assets-cdn.github.com/images/modules/site/integrators/zenhubio.png"
 }
