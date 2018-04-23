@@ -61,12 +61,13 @@
 		D5228D282085F592007CE433 /* ClearCountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D242085F590007CE433 /* ClearCountDTO.swift */; };
 		D5228D292085F592007CE433 /* AddFriendDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D252085F591007CE433 /* AddFriendDTO.swift */; };
 		D5228D2A2085F592007CE433 /* SPushTokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D262085F591007CE433 /* SPushTokenDTO.swift */; };
-		D5228D2D2086E7C4007CE433 /* LocalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */; };
 		D5228D2F2086E88D007CE433 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5228D2E2086E88D007CE433 /* CoreData.framework */; };
 		D5228D3120884699007CE433 /* UpdateSAccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D3020884698007CE433 /* UpdateSAccountDTO.swift */; };
 		D5228D36208881FD007CE433 /* KiClipperHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D33208881FD007CE433 /* KiClipperHelper.swift */; };
 		D5228D37208881FD007CE433 /* KiClipperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D34208881FD007CE433 /* KiClipperView.swift */; };
 		D5228D38208881FD007CE433 /* KiImageClipperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D35208881FD007CE433 /* KiImageClipperViewController.swift */; };
+		D5228D3A208D6E92007CE433 /* XWMessageMannger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D39208D6E92007CE433 /* XWMessageMannger.swift */; };
+		D5228D43208D909B007CE433 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5228D41208D909B007CE433 /* DataModel.xcdatamodeld */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -332,12 +333,13 @@
 		D5228D242085F590007CE433 /* ClearCountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearCountDTO.swift; sourceTree = "<group>"; };
 		D5228D252085F591007CE433 /* AddFriendDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendDTO.swift; sourceTree = "<group>"; };
 		D5228D262085F591007CE433 /* SPushTokenDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPushTokenDTO.swift; sourceTree = "<group>"; };
-		D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalModel.xcdatamodel; sourceTree = "<group>"; };
 		D5228D2E2086E88D007CE433 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5228D3020884698007CE433 /* UpdateSAccountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSAccountDTO.swift; sourceTree = "<group>"; };
 		D5228D33208881FD007CE433 /* KiClipperHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiClipperHelper.swift; sourceTree = "<group>"; };
 		D5228D34208881FD007CE433 /* KiClipperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiClipperView.swift; sourceTree = "<group>"; };
 		D5228D35208881FD007CE433 /* KiImageClipperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KiImageClipperViewController.swift; sourceTree = "<group>"; };
+		D5228D39208D6E92007CE433 /* XWMessageMannger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMessageMannger.swift; sourceTree = "<group>"; };
+		D5228D42208D909B007CE433 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -798,6 +800,7 @@
 		D58DB98B2068A20D005ABED8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D41208D909B007CE433 /* DataModel.xcdatamodeld */,
 				D58DB98C2068A223005ABED8 /* XWUser.swift */,
 				A70EE04B206CB2C60012A4D7 /* XWContract.swift */,
 				D5228D1D208589A6007CE433 /* XWNotificationModel.swift */,
@@ -900,7 +903,6 @@
 				D5A4894F204E6D54001031F6 /* Extensions */,
 				D5A48905204E3761001031F6 /* AppDelegate.swift */,
 				D5A4891D204E3BE6001031F6 /* x-wallet-ios.entitlements */,
-				D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */,
 				D58FC3FF205267B4008C05AE /* Assets.xcassets */,
 				D5A48913204E3761001031F6 /* Info.plist */,
 				D5A489E2204FBC82001031F6 /* Main.storyboard */,
@@ -943,6 +945,7 @@
 				D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */,
 				D5228D102080A5A1007CE433 /* ShareSheetData.swift */,
 				D5228D1B20849851007CE433 /* ScanType.swift */,
+				D5228D39208D6E92007CE433 /* XWMessageMannger.swift */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -1566,6 +1569,7 @@
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
 				D5228D112080A5A1007CE433 /* ShareSheetData.swift in Sources */,
 				D5228D0F2080A157007CE433 /* MMShareSheet.swift in Sources */,
+				D5228D3A208D6E92007CE433 /* XWMessageMannger.swift in Sources */,
 				A773E61E206A7275002C5721 /* XWDemoData.swift in Sources */,
 				D5E647832079EA4B00AB6BC5 /* SMiniCoinPoolDTO.swift in Sources */,
 				D5E647862079EA4B00AB6BC5 /* SNotification.swift in Sources */,
@@ -1625,6 +1629,7 @@
 				D5228D272085F592007CE433 /* SMiniContractConversationDTO.swift in Sources */,
 				D58DB9882064D88B005ABED8 /* PaddingTextField.swift in Sources */,
 				D5ADC2B02058F878001307E8 /* XWSearchTableViewCell.swift in Sources */,
+				D5228D43208D909B007CE433 /* DataModel.xcdatamodeld in Sources */,
 				A773E5FB2069F784002C5721 /* XWCouponListViewController.swift in Sources */,
 				D58FC41320564523008C05AE /* FSPagerCollectionView.swift in Sources */,
 				D54C58B8207E05F3001F3B95 /* SConversationControllerAPI.swift in Sources */,
@@ -1646,7 +1651,6 @@
 				D5E6478B2079EA4B00AB6BC5 /* JSONEncodingHelper.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
-				D5228D2D2086E7C4007CE433 /* LocalModel.xcdatamodeld in Sources */,
 				D5ADC20E2057BF66001307E8 /* XWConversationTableViewCell.swift in Sources */,
 				D5ADC2A62058C620001307E8 /* XWContactListTableViewController.swift in Sources */,
 				D5E6477E2079EA4B00AB6BC5 /* SAccount.swift in Sources */,
@@ -1973,13 +1977,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D5228D2B2086E7C4007CE433 /* LocalModel.xcdatamodeld */ = {
+		D5228D41208D909B007CE433 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */,
+				D5228D42208D909B007CE433 /* DataModel.xcdatamodel */,
 			);
-			currentVersion = D5228D2C2086E7C4007CE433 /* LocalModel.xcdatamodel */;
-			path = LocalModel.xcdatamodeld;
+			currentVersion = D5228D42208D909B007CE433 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
