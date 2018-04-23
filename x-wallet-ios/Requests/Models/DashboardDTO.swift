@@ -18,6 +18,7 @@ public enum DashboardType: String, Codable {
     case invoice = "Invoice"
     case conversation = "Conversation"
     case message = "Message"
+    case music = "Music"
     case systemNotification = "SystemNotification"
 }
 

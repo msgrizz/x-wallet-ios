@@ -39,4 +39,5 @@ let kPromiseURL = kHostURL+"Promise"
 let kReceiptURL = kHostURL+"Receipt"
 let kCouponURL = kHostURL+"coupon"
 let kInvoiceURL = kHostURL+"invoice"
+let kMusicURL = kHostURL+"music"
 

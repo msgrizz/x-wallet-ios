@@ -239,6 +239,7 @@ class XWMainViewController: UIBaseViewController {
         HomeControllerAPI.dashboardUsingGET(accountId:Int64(Defaults[.userId])) { (datas, error) in
             self.dataArray.removeAll()
             guard datas != nil else {
+                self.refreshControl.endRefreshing()
                 return
             }
             for ele in datas! {
@@ -358,6 +359,13 @@ extension XWMainViewController: UITableViewDelegate {
                 let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
                 vc.launchURL = kInvoiceURL
                 vc.title = NSLocalizedString("Invoice",comment: "")
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case .music?:
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                vc.launchURL = kMusicURL
+                vc.title = NSLocalizedString("Music",comment: "")
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             default :
