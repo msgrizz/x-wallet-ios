@@ -207,18 +207,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="L03-EF-hIo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="WfY-OR-7VP"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ia2-KI-AQr" id="4uU-8K-BjP"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-0b-nb9">
-                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ia2-KI-AQr" id="0fB-ba-ou7"/>
@@ -228,19 +218,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="L03-EF-hIo" firstAttribute="leading" secondItem="ybQ-Ta-02T" secondAttribute="leading" id="FfC-Jh-VjQ"/>
-                            <constraint firstItem="L03-EF-hIo" firstAttribute="top" secondItem="ybQ-Ta-02T" secondAttribute="top" id="INw-R5-wIM"/>
-                            <constraint firstItem="QBz-0b-nb9" firstAttribute="top" secondItem="L03-EF-hIo" secondAttribute="bottom" id="N83-xJ-ufB"/>
                             <constraint firstItem="QBz-0b-nb9" firstAttribute="leading" secondItem="ybQ-Ta-02T" secondAttribute="leading" id="OHl-dt-rPu"/>
+                            <constraint firstItem="QBz-0b-nb9" firstAttribute="top" secondItem="ybQ-Ta-02T" secondAttribute="top" id="U15-J9-kAq"/>
                             <constraint firstItem="QBz-0b-nb9" firstAttribute="trailing" secondItem="ybQ-Ta-02T" secondAttribute="trailing" id="WCs-IT-uNG"/>
-                            <constraint firstItem="L03-EF-hIo" firstAttribute="trailing" secondItem="ybQ-Ta-02T" secondAttribute="trailing" id="iLY-T7-ROi"/>
                             <constraint firstItem="QBz-0b-nb9" firstAttribute="bottom" secondItem="ybQ-Ta-02T" secondAttribute="bottom" id="ikW-j5-rqL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ybQ-Ta-02T"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zrj-IL-cKq"/>
                     <connections>
-                        <outlet property="searchBar" destination="L03-EF-hIo" id="vBo-Wd-uwz"/>
                         <outlet property="tableView" destination="QBz-0b-nb9" id="c1b-IN-nnq"/>
                         <segue destination="TaT-nC-o1N" kind="show" identifier="goToCardList" id="p4b-o4-5BU"/>
                         <segue destination="4cR-nF-xwH" kind="show" identifier="goToCoinList" id="q1k-UN-smi"/>

@@ -13,7 +13,8 @@ class XWCoinCardTableViewCell: UITableViewCell {
     @IBOutlet weak var showView: XWCoinCardView!
     @IBOutlet weak var topiew: XWCardHeadView!
     @IBOutlet weak var secondView: XWCardHeadView!
-    
+    @IBOutlet weak var logoLabel: UILabel!
+
 
     var datas: XWAppModel! {
         didSet {
@@ -40,6 +41,7 @@ class XWCoinCardTableViewCell: UITableViewCell {
                 secondView.titleLabel.text = show2.coinName
             }
             self.headImage.kf.setImage(with: URL(string: datas.appImage), for: UIControlState.normal)
+            self.logoLabel.text = (datas.type)!.rawValue
             let show = datas.dataModels.first
             self.showView.titleLabel.text = show?.coinName
             self.showView.nameLabel.text = (show?.issuerName)!

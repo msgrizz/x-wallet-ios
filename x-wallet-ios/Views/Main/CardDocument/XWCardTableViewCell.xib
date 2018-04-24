@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XWCardTableViewCell" rowHeight="154" id="KGk-i7-Jjw" customClass="XWCardTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XWCardTableViewCell" rowHeight="210" id="KGk-i7-Jjw" customClass="XWCardTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-Go-rd1">
@@ -26,13 +26,13 @@
                         </constraints>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTK-Zl-MEp" customClass="XWCardHeadView" customModule="x_wallet_ios" customModuleProvider="target">
-                        <rect key="frame" x="60" y="0.0" width="302" height="82"/>
+                        <rect key="frame" x="13" y="40" width="349" height="82"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nxy-Sh-NP6">
-                                <rect key="frame" x="1" y="1" width="300" height="80"/>
+                                <rect key="frame" x="1" y="1" width="347" height="80"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eN-Ub-xUF">
-                                <rect key="frame" x="21" y="5" width="265" height="20"/>
+                                <rect key="frame" x="21" y="5" width="312" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="iFK-9y-mjn"/>
                                 </constraints>
@@ -58,13 +58,13 @@
                         </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wiw-xP-M4s" customClass="XWCardHeadView" customModule="x_wallet_ios" customModuleProvider="target">
-                        <rect key="frame" x="60" y="25" width="302" height="82"/>
+                        <rect key="frame" x="13" y="65" width="349" height="82"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iZw-xh-e0w">
-                                <rect key="frame" x="1" y="1" width="300" height="80"/>
+                                <rect key="frame" x="1" y="1" width="347" height="80"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JT-6x-zoV">
-                                <rect key="frame" x="21" y="5" width="265" height="20"/>
+                                <rect key="frame" x="21" y="5" width="312" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="XdO-YQ-g6o"/>
                                 </constraints>
@@ -90,20 +90,20 @@
                         </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ1-Xn-ect" customClass="XWCardBaseView" customModule="x_wallet_ios" customModuleProvider="target">
-                        <rect key="frame" x="60" y="51.5" width="302" height="82"/>
+                        <rect key="frame" x="13" y="87.5" width="349" height="82"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="peC-PO-xhP">
-                                <rect key="frame" x="1" y="1" width="300" height="80"/>
+                                <rect key="frame" x="1" y="1" width="347" height="80"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newMessageTag" translatesAutoresizingMaskIntoConstraints="NO" id="t4p-Y1-pd3">
-                                <rect key="frame" x="287" y="0.0" width="15" height="15"/>
+                                <rect key="frame" x="334" y="0.0" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Tyr-WQ-6fS"/>
                                     <constraint firstAttribute="width" constant="15" id="aww-mA-Nq4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhe-hc-sri">
-                                <rect key="frame" x="21" y="9" width="258" height="22"/>
+                                <rect key="frame" x="21" y="9" width="305" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="s58-Cr-gwD"/>
                                 </constraints>
@@ -112,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qM-ap-YvZ">
-                                <rect key="frame" x="21" y="37" width="255" height="15"/>
+                                <rect key="frame" x="21" y="37" width="302" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="23Y-SY-a7r"/>
                                 </constraints>
@@ -121,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAt-i3-bva">
-                                <rect key="frame" x="21" y="58" width="255" height="15"/>
+                                <rect key="frame" x="21" y="58" width="302" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="O8E-1Y-tj9"/>
                                 </constraints>
@@ -169,20 +169,31 @@
                             <outlet property="titleLabel" destination="jhe-hc-sri" id="JTU-FF-j4Y"/>
                         </connections>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg5-EQ-wnH">
+                        <rect key="frame" x="53" y="5" width="35.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="5K3-su-K9J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="BJ1-Xn-ect" secondAttribute="bottom" constant="20" id="0gX-hq-xhJ"/>
+                    <constraint firstAttribute="bottom" secondItem="BJ1-Xn-ect" secondAttribute="bottom" constant="30" id="0gX-hq-xhJ"/>
                     <constraint firstItem="rj4-Go-rd1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3HB-bs-eM1"/>
-                    <constraint firstItem="hTK-Zl-MEp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CbA-s7-3B3"/>
-                    <constraint firstItem="hTK-Zl-MEp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="DuV-3c-axd"/>
-                    <constraint firstItem="BJ1-Xn-ect" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" priority="250" constant="50" id="HG9-cE-54j"/>
-                    <constraint firstItem="wiw-xP-M4s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="Mrg-pL-4py"/>
+                    <constraint firstItem="hTK-Zl-MEp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="CbA-s7-3B3"/>
+                    <constraint firstItem="hTK-Zl-MEp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="DuV-3c-axd"/>
+                    <constraint firstItem="BJ1-Xn-ect" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" priority="250" constant="90" id="HG9-cE-54j"/>
+                    <constraint firstItem="wiw-xP-M4s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="65" id="Mrg-pL-4py"/>
                     <constraint firstItem="rj4-Go-rd1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Sz1-Xh-bpn"/>
-                    <constraint firstItem="wiw-xP-M4s" firstAttribute="leading" secondItem="rj4-Go-rd1" secondAttribute="trailing" constant="15" id="Tw8-t7-fE9"/>
+                    <constraint firstItem="Xg5-EQ-wnH" firstAttribute="leading" secondItem="rj4-Go-rd1" secondAttribute="trailing" constant="8" id="acX-pj-gkI"/>
                     <constraint firstAttribute="trailing" secondItem="hTK-Zl-MEp" secondAttribute="trailing" constant="13" id="eJP-Af-b3p"/>
+                    <constraint firstItem="wiw-xP-M4s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="tOk-Q3-4E9"/>
                     <constraint firstAttribute="trailing" secondItem="wiw-xP-M4s" secondAttribute="trailing" constant="13" id="vmC-Q0-6aJ"/>
-                    <constraint firstItem="BJ1-Xn-ect" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="wKz-lZ-8pG"/>
+                    <constraint firstItem="Xg5-EQ-wnH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vtU-tE-jIC"/>
+                    <constraint firstItem="BJ1-Xn-ect" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="wKz-lZ-8pG"/>
                     <constraint firstAttribute="trailing" secondItem="BJ1-Xn-ect" secondAttribute="trailing" constant="13" id="zaB-0q-TYM"/>
                 </constraints>
             </tableViewCellContentView>
@@ -190,11 +201,12 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="headImage" destination="rj4-Go-rd1" id="K4C-NB-zqj"/>
+                <outlet property="logoLabel" destination="Xg5-EQ-wnH" id="IVK-dS-7yz"/>
                 <outlet property="secondView" destination="wiw-xP-M4s" id="CE7-Dk-dNf"/>
                 <outlet property="showView" destination="BJ1-Xn-ect" id="69N-J1-zUa"/>
                 <outlet property="topiew" destination="hTK-Zl-MEp" id="M8Y-RV-wgU"/>
             </connections>
-            <point key="canvasLocation" x="-180.5" y="60"/>
+            <point key="canvasLocation" x="-180.5" y="83"/>
         </tableViewCell>
     </objects>
     <resources>

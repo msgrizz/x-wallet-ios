@@ -10,6 +10,7 @@ import UIKit
 
 class XWCardTableViewCell: UITableViewCell {
     @IBOutlet weak var headImage: UIButton!
+    @IBOutlet weak var logoLabel: UILabel!
     @IBOutlet weak var showView: XWCardBaseView!
     @IBOutlet weak var topiew: XWCardHeadView!
     @IBOutlet weak var secondView: XWCardHeadView!
@@ -39,6 +40,7 @@ class XWCardTableViewCell: UITableViewCell {
                 secondView.titleLabel.text = show2.title
             }
             self.headImage.kf.setImage(with: URL(string: datas.appImage), for: UIControlState.normal)
+            self.logoLabel.text = (datas.type)!.rawValue
             let show = datas.dataModels.first
             
             switch datas.type {
@@ -64,7 +66,16 @@ class XWCardTableViewCell: UITableViewCell {
                 self.showView.detailLabel.text = show?.line2
                 break
             }
-            self.showView.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
+            if datas.type == .music{
+                self.showView.backgroundImage.backgroundColor = UIColor.init(hex: colorMusicHex)
+                self.topiew.backgroundImage.backgroundColor = UIColor.init(hex: colorMusicHex)
+                self.secondView.backgroundImage.backgroundColor = UIColor.init(hex: colorMusicHex)
+
+            }else {
+                self.showView.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
+                self.topiew.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
+                self.secondView.backgroundImage.backgroundColor = UIColor.init(hex: colorHex)
+            }
 //            self.showView.backgroundImage.image = show?.backgroundImage
         }
     }

@@ -12,82 +12,86 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XWMyBagTableViewCell" rowHeight="47" id="KGk-i7-Jjw" customClass="XWMyBagTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuy-nn-gWb">
-                        <rect key="frame" x="15" y="5" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="Q7r-l1-BMQ"/>
-                            <constraint firstAttribute="width" constant="30" id="pvB-tZ-msU"/>
-                        </constraints>
-                        <state key="normal" image="myBagHead"/>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoG-KI-PgN">
-                        <rect key="frame" x="60" y="0.0" width="302" height="40"/>
+                        <rect key="frame" x="15" y="0.0" width="345" height="40"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5V-IR-tVg">
-                                <rect key="frame" x="0.0" y="0.0" width="302" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
                                 <color key="backgroundColor" red="0.54117647058823526" green="0.63137254901960782" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-n2-Lrh">
-                                <rect key="frame" x="16" y="10" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7df-N2-zq0">
-                                <rect key="frame" x="268" y="15" width="14" height="11"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuy-nn-gWb">
+                                <rect key="frame" x="8" y="5" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="11" id="gYx-5r-Ijv"/>
-                                    <constraint firstAttribute="width" constant="14" id="pWu-l0-vqv"/>
+                                    <constraint firstAttribute="height" constant="30" id="3j2-yU-HvN"/>
+                                    <constraint firstAttribute="width" constant="30" id="iXT-m0-jse"/>
+                                </constraints>
+                                <state key="normal" image="myBagHead"/>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7df-N2-zq0">
+                                <rect key="frame" x="323" y="15" width="14" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="MCy-hJ-Dzc"/>
+                                    <constraint firstAttribute="height" constant="11" id="RDe-G2-lZl"/>
                                 </constraints>
                                 <state key="normal" image="myBagCertificate"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-K7-vZb">
-                                <rect key="frame" x="244" y="13" width="14" height="15"/>
+                                <rect key="frame" x="299" y="13" width="14" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="14" id="VTZ-8F-BQe"/>
-                                    <constraint firstAttribute="height" constant="15" id="WuH-CK-swA"/>
+                                    <constraint firstAttribute="height" constant="15" id="Wte-bV-PBP"/>
+                                    <constraint firstAttribute="width" constant="14" id="s9v-S1-hWe"/>
                                 </constraints>
                                 <state key="normal" image="myBagTravel"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aak-X2-qbI">
-                                <rect key="frame" x="223" y="15" width="11" height="11"/>
+                                <rect key="frame" x="278" y="15" width="11" height="11"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="11" id="PyB-vt-U0J"/>
-                                    <constraint firstAttribute="height" constant="11" id="kAY-ms-sjt"/>
+                                    <constraint firstAttribute="width" constant="11" id="fsX-Ty-60b"/>
+                                    <constraint firstAttribute="height" constant="11" id="jA6-v9-IwX"/>
                                 </constraints>
                                 <state key="normal" image="myBagImportant"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Folder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-n2-Lrh">
+                                <rect key="frame" x="42" y="9" width="64.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FzV-h5-m1C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Jcm-K7-vZb" firstAttribute="leading" secondItem="Aak-X2-qbI" secondAttribute="trailing" constant="10" id="13U-CG-dNo"/>
-                            <constraint firstItem="z5V-IR-tVg" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" id="82F-Yr-mW5"/>
-                            <constraint firstAttribute="trailing" secondItem="z5V-IR-tVg" secondAttribute="trailing" id="97s-uc-cEd"/>
-                            <constraint firstAttribute="trailing" secondItem="7df-N2-zq0" secondAttribute="trailing" constant="20" id="Mrf-nT-HWN"/>
-                            <constraint firstItem="Jcm-K7-vZb" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="13" id="OGj-Rr-QX9"/>
-                            <constraint firstItem="Aak-X2-qbI" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="15" id="TPw-61-P3p"/>
-                            <constraint firstAttribute="bottom" secondItem="z5V-IR-tVg" secondAttribute="bottom" id="UgN-pf-vGQ"/>
-                            <constraint firstItem="7df-N2-zq0" firstAttribute="leading" secondItem="Jcm-K7-vZb" secondAttribute="trailing" constant="10" id="ZwL-fK-ryc"/>
-                            <constraint firstItem="7df-N2-zq0" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="15" id="jjQ-cs-3c2"/>
-                            <constraint firstAttribute="height" constant="40" id="kwu-hZ-aY3"/>
-                            <constraint firstItem="z5V-IR-tVg" firstAttribute="leading" secondItem="OoG-KI-PgN" secondAttribute="leading" id="toW-eM-9GV"/>
+                            <constraint firstItem="Aak-X2-qbI" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="15" id="5jW-C5-G4u"/>
+                            <constraint firstItem="7df-N2-zq0" firstAttribute="leading" secondItem="Jcm-K7-vZb" secondAttribute="trailing" constant="10" id="6P2-tm-clI"/>
+                            <constraint firstAttribute="trailing" secondItem="7df-N2-zq0" secondAttribute="trailing" constant="8" id="8x1-dz-En4"/>
+                            <constraint firstItem="z5V-IR-tVg" firstAttribute="leading" secondItem="OoG-KI-PgN" secondAttribute="leading" id="B0Z-6S-aJQ"/>
+                            <constraint firstItem="X9E-n2-Lrh" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="9" id="HEf-3O-GBr"/>
+                            <constraint firstItem="vuy-nn-gWb" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="5" id="I0y-Bn-wv0"/>
+                            <constraint firstAttribute="trailing" secondItem="z5V-IR-tVg" secondAttribute="trailing" id="Iva-8p-Org"/>
+                            <constraint firstItem="vuy-nn-gWb" firstAttribute="leading" secondItem="OoG-KI-PgN" secondAttribute="leading" constant="8" id="LBQ-fz-2DK"/>
+                            <constraint firstAttribute="height" constant="40" id="QYc-5H-eIn"/>
+                            <constraint firstItem="Jcm-K7-vZb" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="13" id="Uyi-Py-8mo"/>
+                            <constraint firstItem="z5V-IR-tVg" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" id="fam-jW-syt"/>
+                            <constraint firstItem="7df-N2-zq0" firstAttribute="top" secondItem="OoG-KI-PgN" secondAttribute="top" constant="15" id="l67-Gk-e3b"/>
+                            <constraint firstAttribute="bottom" secondItem="z5V-IR-tVg" secondAttribute="bottom" id="oMU-d8-rAL"/>
+                            <constraint firstItem="Jcm-K7-vZb" firstAttribute="leading" secondItem="Aak-X2-qbI" secondAttribute="trailing" constant="10" id="xjO-Es-v4M"/>
+                            <constraint firstItem="X9E-n2-Lrh" firstAttribute="leading" secondItem="vuy-nn-gWb" secondAttribute="trailing" constant="4" id="y7p-gC-hKO"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="vuy-nn-gWb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2NU-70-opL"/>
-                    <constraint firstItem="OoG-KI-PgN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Vr-Xa-4SW"/>
-                    <constraint firstItem="OoG-KI-PgN" firstAttribute="leading" secondItem="vuy-nn-gWb" secondAttribute="trailing" constant="15" id="cWl-Ai-hlP"/>
-                    <constraint firstAttribute="trailing" secondItem="OoG-KI-PgN" secondAttribute="trailing" constant="13" id="h3s-aH-3eY"/>
-                    <constraint firstItem="vuy-nn-gWb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="vs2-eM-MI6"/>
+                    <constraint firstItem="OoG-KI-PgN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="dCS-8H-HJa"/>
+                    <constraint firstAttribute="trailing" secondItem="OoG-KI-PgN" secondAttribute="trailing" constant="15" id="n9y-it-GoW"/>
+                    <constraint firstItem="OoG-KI-PgN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wLd-7N-ICn"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,12 +99,12 @@
             <connections>
                 <outlet property="myBagView" destination="z5V-IR-tVg" id="xHU-6d-cFC"/>
             </connections>
-            <point key="canvasLocation" x="62.5" y="55.5"/>
+            <point key="canvasLocation" x="62.5" y="55"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="myBagCertificate" width="20" height="15"/>
-        <image name="myBagHead" width="30" height="30"/>
+        <image name="myBagHead" width="16" height="16"/>
         <image name="myBagImportant" width="19" height="19"/>
         <image name="myBagTravel" width="20" height="21"/>
     </resources>

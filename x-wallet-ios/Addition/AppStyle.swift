@@ -17,6 +17,7 @@ let shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
 let shadowRadius:CGFloat = 6
 let shadowOffset = CGSize(width: 1, height: 1)
 let colorHex = "425061"
+let colorMusicHex = "D63574"
 
 let appScheme = "xwallet"
 let dataName = "DataModel"

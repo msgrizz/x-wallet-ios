@@ -12,14 +12,15 @@ import SnapKit
 import SwiftyUserDefaults
 
 class XWMainViewController: UIBaseViewController {
-    let defaultHeight: CGFloat = 154
+    let defaultHeight: CGFloat = 204
     let defaultHeadHeight: CGFloat = 25
 
     
     var slideView: XWSlideView!
     var blurView: DynamicBlurView!
     var addButton: UIBarButtonItem!
-    @IBOutlet weak var searchBar: UISearchBar!
+    var naviSearch: UIBarButtonItem!
+
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
     
@@ -27,17 +28,23 @@ class XWMainViewController: UIBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Wallet", comment: "")
-        searchBar.backgroundColor=UIColor.clear
-        searchBar.placeholder = NSLocalizedString("Search", comment: "")
         
         addButton = UIBarButtonItem(
-            image: UIImage.init(named: "newMessage"),
+            image: UIImage.init(named: "addButton"),
             style: .plain,
             target: self,
             action: #selector(add(_:))
         )
         addButton.tintColor = Colors.tintColor
-        self.navigationItem.rightBarButtonItem = addButton
+        
+        naviSearch = UIBarButtonItem(
+            image: UIImage.init(named: "naviSearch"),
+            style: .plain,
+            target: self,
+            action: #selector(searchAction(_:))
+        )
+        naviSearch.tintColor = Colors.tintColor
+        self.navigationItem.rightBarButtonItems = [addButton,naviSearch]
         
         slideView = XWSlideView.fromNib()
         slideView.frame = UIScreen.main.bounds
@@ -79,6 +86,11 @@ class XWMainViewController: UIBaseViewController {
         SAccountControllerAPI.registerPushTokenUsingPOST(sPushTokenDTO: SPushTokenDTO(deviceType: .ios, pushToken: Defaults[.pushToken], accountId: Int64(Defaults[.userId]))) { (suc, error) in}
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,6 +103,13 @@ class XWMainViewController: UIBaseViewController {
         UIView.animate(withDuration: 0.5) {
             self.blurView.blurRadius = 30
             self.slideView.alpha = 1
+        }
+    }
+    
+    @objc func searchAction(_ : UIBarButtonItem) {
+        let search: UIStoryboard = UIStoryboard(name: "Search", bundle: nil)
+        self.present(search.instantiateInitialViewController() as! UINavigationController, animated: true) {
+            
         }
     }
  
@@ -261,23 +280,11 @@ extension XWMainViewController: UITabBarDelegate {
     
 }
 
-extension XWMainViewController: UISearchBarDelegate {
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        let search: UIStoryboard = UIStoryboard(name: "Search", bundle: nil)
-        self.present(search.instantiateInitialViewController() as! UINavigationController, animated: true) {
-            
-        }
-        
-        
-        return false
-    }
-}
-
 extension XWMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
-            return 60
+            return 70
         }
         
         let model = dataArray[indexPath.row - 1]
