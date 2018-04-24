@@ -69,6 +69,8 @@
 		D5228D3A208D6E92007CE433 /* XWMessageMannger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D39208D6E92007CE433 /* XWMessageMannger.swift */; };
 		D5228D43208D909B007CE433 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5228D41208D909B007CE433 /* DataModel.xcdatamodeld */; };
 		D5228D45208DAF67007CE433 /* XWConvertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D44208DAF67007CE433 /* XWConvertManager.swift */; };
+		D5228D48208F1BBC007CE433 /* XWInputBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D47208F1BBC007CE433 /* XWInputBarView.swift */; };
+		D5228D4A208F1BE7007CE433 /* XWInputMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D49208F1BE7007CE433 /* XWInputMoreView.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -342,6 +344,8 @@
 		D5228D39208D6E92007CE433 /* XWMessageMannger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMessageMannger.swift; sourceTree = "<group>"; };
 		D5228D42208D909B007CE433 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		D5228D44208DAF67007CE433 /* XWConvertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWConvertManager.swift; sourceTree = "<group>"; };
+		D5228D47208F1BBC007CE433 /* XWInputBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWInputBarView.swift; sourceTree = "<group>"; };
+		D5228D49208F1BE7007CE433 /* XWInputMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWInputMoreView.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -707,6 +711,15 @@
 			path = KiClipperHelper;
 			sourceTree = "<group>";
 		};
+		D5228D46208F1B9C007CE433 /* InputBar */ = {
+			isa = PBXGroup;
+			children = (
+				D5228D47208F1BBC007CE433 /* XWInputBarView.swift */,
+				D5228D49208F1BE7007CE433 /* XWInputMoreView.swift */,
+			);
+			path = InputBar;
+			sourceTree = "<group>";
+		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +840,7 @@
 		D58FC3F520523AC4008C05AE /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D46208F1B9C007CE433 /* InputBar */,
 				D58DB95820649D88005ABED8 /* MessageCells */,
 				D5ADC2102057C568001307E8 /* ViewModels */,
 				D58FC3F720523B6E008C05AE /* XWMessageListTableViewController.swift */,
@@ -1539,6 +1553,7 @@
 				A773E610206A3984002C5721 /* XWContractHeadView.swift in Sources */,
 				D54C587F207DE1EA001F3B95 /* XWMyBagTableViewCell.swift in Sources */,
 				D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */,
+				D5228D4A208F1BE7007CE433 /* XWInputMoreView.swift in Sources */,
 				D5A48976204E6D54001031F6 /* UIGestureRecognizer+Closure.swift in Sources */,
 				D5A4897B204E6D54001031F6 /* UIViewController.swift in Sources */,
 				D54C58B7207E05F3001F3B95 /* SMembershipEntityAPI.swift in Sources */,
@@ -1677,6 +1692,7 @@
 				D5A4896F204E6D54001031F6 /* NSAttributedString.swift in Sources */,
 				D58DB9862064A8CE005ABED8 /* NotificationService.swift in Sources */,
 				D5A489AE204F96FD001031F6 /* AppStyle.swift in Sources */,
+				D5228D48208F1BBC007CE433 /* XWInputBarView.swift in Sources */,
 				A773E5F22069F12F002C5721 /* XWTicketListViewController.swift in Sources */,
 				D54C589C207E05E6001F3B95 /* ResourceSMembership.swift in Sources */,
 				A773E5EF2069ECEC002C5721 /* XWSendMembershipViewController.swift in Sources */,

@@ -12,8 +12,14 @@ import CoreData
 import SugarRecord
 
 class XWMessageMannger: NSObject {
+    
+    private static var _instance = XWMessageMannger()
+    class func sharedInstance() -> XWMessageMannger {
+        return _instance
+    }
+    
     let delayTime = 2
-    var messageTimer: DispatchSourceTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "messageQueue"))
+    var messageTimer: DispatchSourceTimer?
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreDataStore.named(dataName)
         let bundle = Bundle(for: self.classForCoder)
@@ -22,10 +28,12 @@ class XWMessageMannger: NSObject {
         return defaultStorage
     }()
     
-    func startPulling() {
-        messageTimer.schedule(deadline: DispatchTime.now(), repeating: .seconds(delayTime), leeway: DispatchTimeInterval.milliseconds(10))
-        messageTimer.setEventHandler(handler: {
+    func initPulling() {
+        messageTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "messageQueue"))
+        messageTimer?.schedule(deadline: DispatchTime.now(), repeating: .seconds(delayTime), leeway: DispatchTimeInterval.milliseconds(10))
+        messageTimer?.setEventHandler(handler: {
             SChatControllerAPI.pullUsingGET(conversationId: 1, lastMsgId: 0, completion: { (messageArray, error) in
+                debugPrint("pulling")
                 guard messageArray != nil else {
                     return
                 }
@@ -38,10 +46,23 @@ class XWMessageMannger: NSObject {
                 }
             })
         })
-        messageTimer.resume()
+        messageTimer?.resume()
     }
-//
-//    func stopPulling() {
-//        self.messageTimer.resume()()
-//    }
+
+    func suspendPulling() {
+        self.messageTimer?.suspend()
+    }
+    
+    func stopPulling() {
+        self.messageTimer?.cancel()
+        self.messageTimer = nil
+    }
+    
+    func startPulling() {
+        if self.messageTimer != nil {
+            self.messageTimer?.resume()
+        }else {
+            self.initPulling()
+        }
+    }
 }

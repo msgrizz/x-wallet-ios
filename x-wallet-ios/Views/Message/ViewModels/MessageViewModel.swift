@@ -12,6 +12,8 @@ import UIKit
 enum MessageType {
     case photo
     case text
+    case card
+    case voice
     case location
 }
 
@@ -26,5 +28,6 @@ struct MessageViewModel {
     var name = "123"
     var content = "234"
     var timestamp: Int?
-    var headImage: UIImage?
+    var headImageURL: String?
+    var imageURL :String?
 }
