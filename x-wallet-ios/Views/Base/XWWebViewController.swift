@@ -170,8 +170,11 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case 2:
-                    let Membership: UIStoryboard = UIStoryboard(name: "Membership", bundle: nil)
-                    self.navigationController?.pushViewController(Membership.instantiateInitialViewController()!, animated: true)
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                    vc.launchURL = kMembershipURL
+                    vc.title = NSLocalizedString("Membership",comment: "")
+                    self.navigationController?.pushViewController(vc, animated: true)
                     break
                 case 3:
                     let Ticket: UIStoryboard = UIStoryboard(name: "Ticket", bundle: nil)
@@ -197,6 +200,13 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
                     let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
                     vc.launchURL = kInvoiceURL
                     vc.title = NSLocalizedString("Invoice",comment: "")
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    break
+                case 8:
+                    let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                    vc.launchURL = kMusicURL
+                    vc.title = NSLocalizedString("Music",comment: "")
                     self.navigationController?.pushViewController(vc, animated: true)
                     break
                 default:

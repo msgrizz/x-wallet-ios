@@ -339,8 +339,11 @@ extension XWMainViewController: UITableViewDelegate {
                 self.navigationController?.pushViewController(vc, animated: true)
                 break
             case .membership?:
-                let Membership: UIStoryboard = UIStoryboard(name: "Membership", bundle: nil)
-                self.navigationController?.pushViewController(Membership.instantiateInitialViewController()!, animated: true)
+                let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = Main.instantiateViewController(withIdentifier: "XWWebViewController") as! XWWebViewController
+                vc.launchURL = kMembershipURL
+                vc.title = NSLocalizedString("Membership",comment: "")
+                self.navigationController?.pushViewController(vc, animated: true)
                 break
             case .ticket?:
                 let Ticket: UIStoryboard = UIStoryboard(name: "Ticket", bundle: nil)
