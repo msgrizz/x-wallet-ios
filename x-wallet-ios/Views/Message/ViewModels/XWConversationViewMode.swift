@@ -7,10 +7,12 @@
 //
 
 import Foundation
-
+import CoreData
 struct XWConversationViewModel {
     var name = "123"
     var content = "234"
     var time : Int64?
     var headURL = "https://assets-cdn.github.com/images/modules/site/integrators/zenhubio.png"
+    var id : Int64?
+    var objID : NSManagedObjectID?
 }

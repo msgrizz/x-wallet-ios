@@ -87,6 +87,7 @@ class XWMessageListTableViewController: UIBaseTableViewController,NSFetchedResul
             model.content = ele.name!
             model.headURL = ele.avatar ?? ""
             model.time = ele.lastModifyTime
+            model.id = ele.id
             dataModels.append(model)
         }
         self.tableView.reloadData()
@@ -155,6 +156,35 @@ class XWMessageListTableViewController: UIBaseTableViewController,NSFetchedResul
             self.navigationController?.present(navi, animated: true, completion: {
                 
             })
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.row > 0{
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            let data = dataModels[indexPath.row - 1]
+            do {
+                try self.db.operation { (context, save) throws in
+                    let predicate: NSPredicate = NSPredicate(format: "id == %@", String(data.id!))
+                    let me: ConversationEntity? = try! context.request(ConversationEntity.self).filtered(with: predicate).fetch().first
+                    if let me = me {
+                        try context.remove([me])
+                        save()
+                    }
+                }
+            } catch {
+                // There was an error in the operation
+            }
+            dataModels.remove(at: indexPath.row - 1)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 
