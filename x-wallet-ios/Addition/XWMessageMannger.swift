@@ -72,7 +72,9 @@ class XWMessageMannger: NSObject {
         conversationTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "conversationQueue"))
         conversationTimer?.schedule(deadline: DispatchTime.now(), repeating: .seconds(delayTime), leeway: DispatchTimeInterval.milliseconds(10))
         conversationTimer?.setEventHandler(handler: {
-
+            SConversation2ControllerAPI.mySConversation2UsingGET1(accountId: Int64(Defaults[.userId]), lastCId: 0, completion: { (conversations, error) in
+                
+            })
         })
         conversationTimer?.resume()
     }
