@@ -131,6 +131,19 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             return (true, ["\(XWLocalManager.sharedInstance().localUser.loginName!),\(Int64(Defaults[.userId]))"])
         }
         
+        bridge.registerHandler("Get.resource") { (args:[Any]) -> (Bool, [Any]?) in
+            if let name = args.first as? String , args.count == 1 {
+                let path = Bundle.main.path(forResource: name, ofType: nil)
+                if let returnPath = path {
+                    return (true, ["\(returnPath)"])
+                }else {
+                    return (true, [])
+                }
+            }else {
+                return (true, [])
+            }
+        }
+        
         bridge.registerHandler("Scan.qr") { (args:[Any]) -> (Bool, [Any]?) in
             DispatchQueue.main.async {
                 let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
