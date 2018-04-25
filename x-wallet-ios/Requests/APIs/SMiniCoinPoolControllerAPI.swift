@@ -90,8 +90,8 @@ open class SMiniCoinPoolControllerAPI {
      - parameter id: (path) id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOneUsingGET2(id: Int64, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
-        getOneUsingGET2WithRequestBuilder(id: id).execute { (response, error) -> Void in
+    open class func getOneUsingGET3(id: Int64, completion: @escaping ((_ data: SMiniCoinPool?,_ error: Error?) -> Void)) {
+        getOneUsingGET3WithRequestBuilder(id: id).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -106,7 +106,7 @@ open class SMiniCoinPoolControllerAPI {
 
      - returns: RequestBuilder<SMiniCoinPool> 
      */
-    open class func getOneUsingGET2WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniCoinPool> {
+    open class func getOneUsingGET3WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniCoinPool> {
         var path = "/miniCoinPools/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path

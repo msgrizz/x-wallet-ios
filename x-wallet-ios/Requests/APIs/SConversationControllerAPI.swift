@@ -87,8 +87,8 @@ open class SConversationControllerAPI {
      - parameter id: (path) id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOneUsingGET1(id: Int64, completion: @escaping ((_ data: SConversation?,_ error: Error?) -> Void)) {
-        getOneUsingGET1WithRequestBuilder(id: id).execute { (response, error) -> Void in
+    open class func getOneUsingGET2(id: Int64, completion: @escaping ((_ data: SConversation?,_ error: Error?) -> Void)) {
+        getOneUsingGET2WithRequestBuilder(id: id).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -103,7 +103,7 @@ open class SConversationControllerAPI {
 
      - returns: RequestBuilder<SConversation> 
      */
-    open class func getOneUsingGET1WithRequestBuilder(id: Int64) -> RequestBuilder<SConversation> {
+    open class func getOneUsingGET2WithRequestBuilder(id: Int64) -> RequestBuilder<SConversation> {
         var path = "/sConversation/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path

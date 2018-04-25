@@ -18,8 +18,8 @@ open class SNotificationControllerAPI {
      - parameter receiverId: (query) receiverId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func pullUsingGET1(lastQueryTime: Int64, receiverId: Int64, completion: @escaping ((_ data: [SNotification]?,_ error: Error?) -> Void)) {
-        pullUsingGET1WithRequestBuilder(lastQueryTime: lastQueryTime, receiverId: receiverId).execute { (response, error) -> Void in
+    open class func pullUsingGET2(lastQueryTime: Int64, receiverId: Int64, completion: @escaping ((_ data: [SNotification]?,_ error: Error?) -> Void)) {
+        pullUsingGET2WithRequestBuilder(lastQueryTime: lastQueryTime, receiverId: receiverId).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -35,7 +35,7 @@ open class SNotificationControllerAPI {
 
      - returns: RequestBuilder<[SNotification]> 
      */
-    open class func pullUsingGET1WithRequestBuilder(lastQueryTime: Int64, receiverId: Int64) -> RequestBuilder<[SNotification]> {
+    open class func pullUsingGET2WithRequestBuilder(lastQueryTime: Int64, receiverId: Int64) -> RequestBuilder<[SNotification]> {
         let path = "/notifications"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -58,8 +58,8 @@ open class SNotificationControllerAPI {
      - parameter n: (body) n 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func pushUsingPOST1(n: SNotificationDTO, completion: @escaping ((_ data: SNotification?,_ error: Error?) -> Void)) {
-        pushUsingPOST1WithRequestBuilder(n: n).execute { (response, error) -> Void in
+    open class func pushUsingPOST2(n: SNotificationDTO, completion: @escaping ((_ data: SNotification?,_ error: Error?) -> Void)) {
+        pushUsingPOST2WithRequestBuilder(n: n).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -74,7 +74,7 @@ open class SNotificationControllerAPI {
 
      - returns: RequestBuilder<SNotification> 
      */
-    open class func pushUsingPOST1WithRequestBuilder(n: SNotificationDTO) -> RequestBuilder<SNotification> {
+    open class func pushUsingPOST2WithRequestBuilder(n: SNotificationDTO) -> RequestBuilder<SNotification> {
         let path = "/notifications"
         let URLString = SwaggerClientAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: n)

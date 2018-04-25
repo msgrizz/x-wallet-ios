@@ -275,7 +275,9 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             return (true, [])
         }
         
-        
+        if !self.isCreate {
+            self.navigationItem.rightBarButtonItem = self.moreButton
+        }
         
         self.addBackButton()
         self.loadURL()

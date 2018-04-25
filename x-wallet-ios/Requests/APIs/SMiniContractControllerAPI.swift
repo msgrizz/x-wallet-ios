@@ -68,8 +68,8 @@ open class SMiniContractControllerAPI {
      - parameter id: (path) id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOneUsingGET3(id: Int64, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
-        getOneUsingGET3WithRequestBuilder(id: id).execute { (response, error) -> Void in
+    open class func getOneUsingGET4(id: Int64, completion: @escaping ((_ data: SMiniContract?,_ error: Error?) -> Void)) {
+        getOneUsingGET4WithRequestBuilder(id: id).execute { (response, error) -> Void in
             completion(response?.body, error);
         }
     }
@@ -84,7 +84,7 @@ open class SMiniContractControllerAPI {
 
      - returns: RequestBuilder<SMiniContract> 
      */
-    open class func getOneUsingGET3WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniContract> {
+    open class func getOneUsingGET4WithRequestBuilder(id: Int64) -> RequestBuilder<SMiniContract> {
         var path = "/sMiniContracts/{id}"
         path = path.replacingOccurrences(of: "{id}", with: "\(id)", options: .literal, range: nil)
         let URLString = SwaggerClientAPI.basePath + path

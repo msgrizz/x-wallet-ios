@@ -144,7 +144,7 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
         return true
     }
     
-    func composeMessage(type: MessageType,content: String)  {
+    func composeMessage(type: LocalMessageType,content: String)  {
         let message = MessageViewModel.init(owner: .receiver,type: type,name:(self.currentUser?.name)!,content: content ,  timestamp: Int(Date().timeIntervalSince1970),headImageURL: self.currentUser?.avatar, imageURL: "http://img4.imgtn.bdimg.com/it/u=1972873509,2904368741&fm=27&gp=0.jpg")
         self.items.append(message)
         self.tableView.insertRows(at: [IndexPath.init(row: self.items.count - 1, section: 0)], with: UITableViewRowAnimation.bottom)

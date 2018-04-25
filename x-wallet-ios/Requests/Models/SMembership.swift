@@ -11,16 +11,13 @@ import Foundation
 
 open class SMembership: Codable {
 
-    public enum MembershipType: String, Codable { 
-        case vip = "VIP"
-        case work = "Work"
-        case studentID = "StudentID"
-    }
+
     public var activated: Bool?
     public var createTime: Int64?
     public var creator: SAccount?
     public var expireAt: Int64?
     public var id: Int64?
+    public var issued: Bool?
     public var issuedNum: Int64?
     public var lastModifyTime: Int64?
     public var logo: String?
@@ -31,12 +28,13 @@ open class SMembership: Codable {
 
 
     
-    public init(activated: Bool?, createTime: Int64?, creator: SAccount?, expireAt: Int64?, id: Int64?, issuedNum: Int64?, lastModifyTime: Int64?, logo: String?, membershipType: MembershipType?, name: String?, remarks: String?, version: Int64?) {
+    public init(activated: Bool?, createTime: Int64?, creator: SAccount?, expireAt: Int64?, id: Int64?, issued: Bool?, issuedNum: Int64?, lastModifyTime: Int64?, logo: String?, membershipType: MembershipType?, name: String?, remarks: String?, version: Int64?) {
         self.activated = activated
         self.createTime = createTime
         self.creator = creator
         self.expireAt = expireAt
         self.id = id
+        self.issued = issued
         self.issuedNum = issuedNum
         self.lastModifyTime = lastModifyTime
         self.logo = logo
@@ -58,6 +56,7 @@ open class SMembership: Codable {
         try container.encodeIfPresent(creator, forKey: "creator")
         try container.encodeIfPresent(expireAt, forKey: "expireAt")
         try container.encodeIfPresent(id, forKey: "id")
+        try container.encodeIfPresent(issued, forKey: "issued")
         try container.encodeIfPresent(issuedNum, forKey: "issuedNum")
         try container.encodeIfPresent(lastModifyTime, forKey: "lastModifyTime")
         try container.encodeIfPresent(logo, forKey: "logo")
@@ -77,6 +76,7 @@ open class SMembership: Codable {
         creator = try container.decodeIfPresent(SAccount.self, forKey: "creator")
         expireAt = try container.decodeIfPresent(Int64.self, forKey: "expireAt")
         id = try container.decodeIfPresent(Int64.self, forKey: "id")
+        issued = try container.decodeIfPresent(Bool.self, forKey: "issued")
         issuedNum = try container.decodeIfPresent(Int64.self, forKey: "issuedNum")
         lastModifyTime = try container.decodeIfPresent(Int64.self, forKey: "lastModifyTime")
         logo = try container.decodeIfPresent(String.self, forKey: "logo")

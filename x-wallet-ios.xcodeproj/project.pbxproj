@@ -78,6 +78,21 @@
 		D5228D572090426E007CE433 /* Seals.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5228D542090426C007CE433 /* Seals.mp3 */; };
 		D5228D582090426E007CE433 /* Loggins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D5228D552090426D007CE433 /* Loggins.mp3 */; };
 		D5228D592090426E007CE433 /* Papilon5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D5228D562090426D007CE433 /* Papilon5.mp4 */; };
+		D5228D62209069A5007CE433 /* SProfileEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D5A209069A3007CE433 /* SProfileEntityAPI.swift */; };
+		D5228D63209069A5007CE433 /* SConversation2EntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D5B209069A3007CE433 /* SConversation2EntityAPI.swift */; };
+		D5228D64209069A5007CE433 /* SChat2ControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D5C209069A4007CE433 /* SChat2ControllerAPI.swift */; };
+		D5228D65209069A5007CE433 /* SProfileControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D5D209069A4007CE433 /* SProfileControllerAPI.swift */; };
+		D5228D66209069A5007CE433 /* SMessage2EntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D5E209069A4007CE433 /* SMessage2EntityAPI.swift */; };
+		D5228D67209069A5007CE433 /* SAccountSMiniCoinPoolEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D5F209069A4007CE433 /* SAccountSMiniCoinPoolEntityAPI.swift */; };
+		D5228D68209069A5007CE433 /* SAccountSMiniContractEntityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D60209069A5007CE433 /* SAccountSMiniContractEntityAPI.swift */; };
+		D5228D69209069A5007CE433 /* SConversation2ControllerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D61209069A5007CE433 /* SConversation2ControllerAPI.swift */; };
+		D5228D71209069CA007CE433 /* SProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D6A209069C7007CE433 /* SProfileDTO.swift */; };
+		D5228D72209069CA007CE433 /* SProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D6B209069C8007CE433 /* SProfile.swift */; };
+		D5228D73209069CA007CE433 /* SConversation2DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D6C209069C8007CE433 /* SConversation2DTO.swift */; };
+		D5228D74209069CA007CE433 /* UpdateSProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D6D209069C9007CE433 /* UpdateSProfileDTO.swift */; };
+		D5228D75209069CA007CE433 /* ResourceSMiniContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D6E209069C9007CE433 /* ResourceSMiniContract.swift */; };
+		D5228D76209069CA007CE433 /* SMessage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D6F209069C9007CE433 /* SMessage2.swift */; };
+		D5228D77209069CA007CE433 /* SConversation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D70209069C9007CE433 /* SConversation2.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -360,6 +375,21 @@
 		D5228D542090426C007CE433 /* Seals.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Seals.mp3; sourceTree = "<group>"; };
 		D5228D552090426D007CE433 /* Loggins.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Loggins.mp3; sourceTree = "<group>"; };
 		D5228D562090426D007CE433 /* Papilon5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Papilon5.mp4; sourceTree = "<group>"; };
+		D5228D5A209069A3007CE433 /* SProfileEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SProfileEntityAPI.swift; sourceTree = "<group>"; };
+		D5228D5B209069A3007CE433 /* SConversation2EntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SConversation2EntityAPI.swift; sourceTree = "<group>"; };
+		D5228D5C209069A4007CE433 /* SChat2ControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SChat2ControllerAPI.swift; sourceTree = "<group>"; };
+		D5228D5D209069A4007CE433 /* SProfileControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SProfileControllerAPI.swift; sourceTree = "<group>"; };
+		D5228D5E209069A4007CE433 /* SMessage2EntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMessage2EntityAPI.swift; sourceTree = "<group>"; };
+		D5228D5F209069A4007CE433 /* SAccountSMiniCoinPoolEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccountSMiniCoinPoolEntityAPI.swift; sourceTree = "<group>"; };
+		D5228D60209069A5007CE433 /* SAccountSMiniContractEntityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAccountSMiniContractEntityAPI.swift; sourceTree = "<group>"; };
+		D5228D61209069A5007CE433 /* SConversation2ControllerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SConversation2ControllerAPI.swift; sourceTree = "<group>"; };
+		D5228D6A209069C7007CE433 /* SProfileDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SProfileDTO.swift; sourceTree = "<group>"; };
+		D5228D6B209069C8007CE433 /* SProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SProfile.swift; sourceTree = "<group>"; };
+		D5228D6C209069C8007CE433 /* SConversation2DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SConversation2DTO.swift; sourceTree = "<group>"; };
+		D5228D6D209069C9007CE433 /* UpdateSProfileDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSProfileDTO.swift; sourceTree = "<group>"; };
+		D5228D6E209069C9007CE433 /* ResourceSMiniContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceSMiniContract.swift; sourceTree = "<group>"; };
+		D5228D6F209069C9007CE433 /* SMessage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMessage2.swift; sourceTree = "<group>"; };
+		D5228D70209069C9007CE433 /* SConversation2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SConversation2.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -1134,6 +1164,14 @@
 		D5E647472079EA4900AB6BC5 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D5F209069A4007CE433 /* SAccountSMiniCoinPoolEntityAPI.swift */,
+				D5228D60209069A5007CE433 /* SAccountSMiniContractEntityAPI.swift */,
+				D5228D5C209069A4007CE433 /* SChat2ControllerAPI.swift */,
+				D5228D61209069A5007CE433 /* SConversation2ControllerAPI.swift */,
+				D5228D5B209069A3007CE433 /* SConversation2EntityAPI.swift */,
+				D5228D5E209069A4007CE433 /* SMessage2EntityAPI.swift */,
+				D5228D5D209069A4007CE433 /* SProfileControllerAPI.swift */,
+				D5228D5A209069A3007CE433 /* SProfileEntityAPI.swift */,
 				D5228D212085F580007CE433 /* FriendshipControllerAPI.swift */,
 				D54C58AA207E05F0001F3B95 /* HomeControllerAPI.swift */,
 				D54C58B0207E05F2001F3B95 /* SChatControllerAPI.swift */,
@@ -1163,6 +1201,13 @@
 		D5E647552079EA4A00AB6BC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D6E209069C9007CE433 /* ResourceSMiniContract.swift */,
+				D5228D70209069C9007CE433 /* SConversation2.swift */,
+				D5228D6C209069C8007CE433 /* SConversation2DTO.swift */,
+				D5228D6F209069C9007CE433 /* SMessage2.swift */,
+				D5228D6B209069C8007CE433 /* SProfile.swift */,
+				D5228D6A209069C7007CE433 /* SProfileDTO.swift */,
+				D5228D6D209069C9007CE433 /* UpdateSProfileDTO.swift */,
 				D5228D3020884698007CE433 /* UpdateSAccountDTO.swift */,
 				D5228D252085F591007CE433 /* AddFriendDTO.swift */,
 				D5228D242085F590007CE433 /* ClearCountDTO.swift */,
@@ -1569,6 +1614,8 @@
 				D5A48969204E6D54001031F6 /* Data.swift in Sources */,
 				D54C58A0207E05E6001F3B95 /* SCouponReceiverDTO.swift in Sources */,
 				D5228D45208DAF67007CE433 /* XWConvertManager.swift in Sources */,
+				D5228D72209069CA007CE433 /* SProfile.swift in Sources */,
+				D5228D66209069A5007CE433 /* SMessage2EntityAPI.swift in Sources */,
 				D54C58B2207E05F3001F3B95 /* SMessageEntityAPI.swift in Sources */,
 				D5E6477D2079EA4B00AB6BC5 /* ResourceSMiniCoinPool.swift in Sources */,
 				D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */,
@@ -1609,15 +1656,19 @@
 				D5228D36208881FD007CE433 /* KiClipperHelper.swift in Sources */,
 				D54C589A207E05E6001F3B95 /* SMessage.swift in Sources */,
 				D5E6476E2079EA4B00AB6BC5 /* SMiniCoinControllerAPI.swift in Sources */,
+				D5228D76209069CA007CE433 /* SMessage2.swift in Sources */,
 				D58FC41420564523008C05AE /* FSPagerView.swift in Sources */,
+				D5228D68209069A5007CE433 /* SAccountSMiniContractEntityAPI.swift in Sources */,
 				D58FC41B20564EED008C05AE /* MyAuthenticationCollectionViewCell.swift in Sources */,
 				D5E647762079EA4B00AB6BC5 /* Extensions.swift in Sources */,
 				D54C589B207E05E6001F3B95 /* SCouponOwnerDTO.swift in Sources */,
 				D58FC41220564523008C05AE /* FSPageControl.swift in Sources */,
+				D5228D77209069CA007CE433 /* SConversation2.swift in Sources */,
 				D5228D502090329D007CE433 /* HUDMarco.swift in Sources */,
 				D5E647752079EA4B00AB6BC5 /* SNotificationEntityAPI.swift in Sources */,
 				D5228D522090329D007CE433 /* MCRecordHUD.swift in Sources */,
 				A773E5FD206A09DE002C5721 /* XWCreateCouponViewController.swift in Sources */,
+				D5228D71209069CA007CE433 /* SProfileDTO.swift in Sources */,
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
 				D58FC424205777DC008C05AE /* XWChangePasswordViewController.swift in Sources */,
@@ -1634,9 +1685,11 @@
 				D5ADC2192058B7FA001307E8 /* XWNewConversationTableViewCell.swift in Sources */,
 				A773E602206A1435002C5721 /* XWCoinTableViewCell.swift in Sources */,
 				D58DB98D2068A223005ABED8 /* XWUser.swift in Sources */,
+				D5228D62209069A5007CE433 /* SProfileEntityAPI.swift in Sources */,
 				D5228D2A2085F592007CE433 /* SPushTokenDTO.swift in Sources */,
 				D58FC3F220523598008C05AE /* UIBaseTableViewController.swift in Sources */,
 				D5228D0E2080A157007CE433 /* MMCardItem.swift in Sources */,
+				D5228D69209069A5007CE433 /* SConversation2ControllerAPI.swift in Sources */,
 				D5E647712079EA4B00AB6BC5 /* SMiniCoinPoolEntityAPI.swift in Sources */,
 				D54C589D207E05E6001F3B95 /* SCouponOwner.swift in Sources */,
 				A773E608206A19BC002C5721 /* CoinsModel.swift in Sources */,
@@ -1646,6 +1699,8 @@
 				D5E647732079EA4B00AB6BC5 /* SMiniContractEntityAPI.swift in Sources */,
 				D58DB93C20634CC7005ABED8 /* XWContractTableViewCell.swift in Sources */,
 				D5A48906204E3761001031F6 /* AppDelegate.swift in Sources */,
+				D5228D65209069A5007CE433 /* SProfileControllerAPI.swift in Sources */,
+				D5228D75209069CA007CE433 /* ResourceSMiniContract.swift in Sources */,
 				D58FC41E2056576A008C05AE /* MyCardViewController.swift in Sources */,
 				D58FC3FE20523CE9008C05AE /* XWMyViewController.swift in Sources */,
 				D5E647912079F24A00AB6BC5 /* XWIOUTableViewCell.swift in Sources */,
@@ -1653,6 +1708,7 @@
 				D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */,
 				D5ADC2162057C60F001307E8 /* XWConversationViewMode.swift in Sources */,
 				D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */,
+				D5228D64209069A5007CE433 /* SChat2ControllerAPI.swift in Sources */,
 				D5228D37208881FD007CE433 /* KiClipperView.swift in Sources */,
 				D58FC41820564523008C05AE /* FSPageViewTransformer.swift in Sources */,
 				D58DB93E20634CCD005ABED8 /* XWCardListTableViewController.swift in Sources */,
@@ -1703,6 +1759,7 @@
 				D5A48978204E6D54001031F6 /* UINavigationController.swift in Sources */,
 				D5E647892079EA4B00AB6BC5 /* CodableHelper.swift in Sources */,
 				D54C58CA207F5336001F3B95 /* XWReceiptTableViewCell.swift in Sources */,
+				D5228D63209069A5007CE433 /* SConversation2EntityAPI.swift in Sources */,
 				D5E6478B2079EA4B00AB6BC5 /* JSONEncodingHelper.swift in Sources */,
 				D5A4897A204E6D54001031F6 /* UIView.swift in Sources */,
 				D5A489BC204F9737001031F6 /* XWWelcomeViewController.swift in Sources */,
@@ -1739,6 +1796,7 @@
 				D5ADC20B2057BAD5001307E8 /* DefaultsKeys.swift in Sources */,
 				D5E647782079EA4B00AB6BC5 /* APIs.swift in Sources */,
 				D5228D1520843780007CE433 /* XWCardListHeaderView.swift in Sources */,
+				D5228D67209069A5007CE433 /* SAccountSMiniCoinPoolEntityAPI.swift in Sources */,
 				D58FC4202056853B008C05AE /* PrivacyViewController.swift in Sources */,
 				D54C589F207E05E6001F3B95 /* DashboardDTO.swift in Sources */,
 				A773E60A206A20C9002C5721 /* XWAppsViewController.swift in Sources */,
@@ -1749,6 +1807,7 @@
 				D5228D292085F592007CE433 /* AddFriendDTO.swift in Sources */,
 				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
+				D5228D74209069CA007CE433 /* UpdateSProfileDTO.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,
 				D5E64794207A032500AB6BC5 /* TransferManyDTO.swift in Sources */,
 				D54C587C207DB34F001F3B95 /* XWAppModel.swift in Sources */,
@@ -1758,6 +1817,7 @@
 				D54C58A6207E05E6001F3B95 /* SCoupon.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,
 				D5E6476D2079EA4B00AB6BC5 /* SAccountControllerAPI.swift in Sources */,
+				D5228D73209069CA007CE433 /* SConversation2DTO.swift in Sources */,
 				A773E5F82069F43A002C5721 /* XWHealthViewController.swift in Sources */,
 				D58FC41520564523008C05AE /* FSPagerViewCell.swift in Sources */,
 				D5E647802079EA4B00AB6BC5 /* SMiniCoin.swift in Sources */,

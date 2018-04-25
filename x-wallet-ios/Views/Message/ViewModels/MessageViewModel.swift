@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum MessageType {
+enum LocalMessageType {
     case photo
     case text
     case card
@@ -24,7 +24,7 @@ enum MessageOwner {
 
 struct MessageViewModel {
     var owner: MessageOwner
-    var type: MessageType
+    var type: LocalMessageType
     var name = "123"
     var content = "234"
     var timestamp: Int?

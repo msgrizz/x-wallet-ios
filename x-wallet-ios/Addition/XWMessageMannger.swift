@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import CoreData
 import SugarRecord
-
+import SwiftyUserDefaults
 class XWMessageMannger: NSObject {
     
     private static var _instance = XWMessageMannger()
@@ -20,6 +20,7 @@ class XWMessageMannger: NSObject {
     
     let delayTime = 2
     var messageTimer: DispatchSourceTimer?
+    var conversationTimer: DispatchSourceTimer?
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreDataStore.named(dataName)
         let bundle = Bundle(for: self.classForCoder)
@@ -28,41 +29,68 @@ class XWMessageMannger: NSObject {
         return defaultStorage
     }()
     
-    func initPulling() {
+    func initPullingMessage() {
         messageTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "messageQueue"))
         messageTimer?.schedule(deadline: DispatchTime.now(), repeating: .seconds(delayTime), leeway: DispatchTimeInterval.milliseconds(10))
         messageTimer?.setEventHandler(handler: {
-            SChatControllerAPI.pullUsingGET(conversationId: 1, lastMsgId: 0, completion: { (messageArray, error) in
-                debugPrint("pulling")
-                guard messageArray != nil else {
-                    return
-                }
-                guard (messageArray?.count)!>0 else {
-                    return
-                }
-                
-                for messgae in messageArray! {
-                    debugPrint(messgae)
-                }
-            })
+//            SChatControllerAPI.pullUsingGET(conversationId: 1, lastMsgId: 0, completion: { (messageArray, error) in
+//                debugPrint("pulling")
+//                guard messageArray != nil else {
+//                    return
+//                }
+//                guard (messageArray?.count)!>0 else {
+//                    return
+//                }
+//                
+//                for messgae in messageArray! {
+//                    debugPrint(messgae)
+//                }
+//            })
+            
         })
         messageTimer?.resume()
     }
 
-    func suspendPulling() {
+    func suspendPullingMessage() {
         self.messageTimer?.suspend()
     }
     
-    func stopPulling() {
+    func stopPullingMessage() {
         self.messageTimer?.cancel()
         self.messageTimer = nil
     }
     
-    func startPulling() {
+    func startPullingMessage() {
         if self.messageTimer != nil {
             self.messageTimer?.resume()
         }else {
-            self.initPulling()
+            self.initPullingMessage()
+        }
+    }
+    
+    func initPullingConversation() {
+        conversationTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "conversationQueue"))
+        conversationTimer?.schedule(deadline: DispatchTime.now(), repeating: .seconds(delayTime), leeway: DispatchTimeInterval.milliseconds(10))
+        conversationTimer?.setEventHandler(handler: {
+
+        })
+        conversationTimer?.resume()
+    }
+    
+    func suspendPullingConversation() {
+        self.conversationTimer?.suspend()
+    }
+    
+    func stopPullingConversation() {
+        self.conversationTimer?.cancel()
+        self.conversationTimer = nil
+    }
+    
+    func startPullingConversation() {
+        if self.conversationTimer != nil {
+            self.conversationTimer?.resume()
+        }else {
+            self.initPullingMessage()
         }
     }
 }

@@ -7,31 +7,33 @@
 
 import Foundation
 
-
+public enum MembershipType: String, Codable {
+    case vip = "VIP"
+    case work = "Work"
+    case studentID = "StudentID"
+}
 
 open class SMembershipDTO: Codable {
 
-    public enum MembershipType: String, Codable { 
-        case vip = "VIP"
-        case work = "Work"
-        case studentID = "StudentID"
-    }
+
     public var name: String?
     public var expireAt: Int64?
     public var logo: String?
     public var remarks: String?
     public var creator: Int64?
     public var membershipType: MembershipType?
+    public var issued: Bool?
 
 
     
-    public init(name: String?, expireAt: Int64?, logo: String?, remarks: String?, creator: Int64?, membershipType: MembershipType?) {
+    public init(name: String?, expireAt: Int64?, logo: String?, remarks: String?, creator: Int64?, membershipType: MembershipType?, issued: Bool?) {
         self.name = name
         self.expireAt = expireAt
         self.logo = logo
         self.remarks = remarks
         self.creator = creator
         self.membershipType = membershipType
+        self.issued = issued
     }
     
 
@@ -47,6 +49,7 @@ open class SMembershipDTO: Codable {
         try container.encodeIfPresent(remarks, forKey: "remarks")
         try container.encodeIfPresent(creator, forKey: "creator")
         try container.encodeIfPresent(membershipType, forKey: "membershipType")
+        try container.encodeIfPresent(issued, forKey: "issued")
     }
 
     // Decodable protocol methods
@@ -60,6 +63,7 @@ open class SMembershipDTO: Codable {
         remarks = try container.decodeIfPresent(String.self, forKey: "remarks")
         creator = try container.decodeIfPresent(Int64.self, forKey: "creator")
         membershipType = try container.decodeIfPresent(MembershipType.self, forKey: "membershipType")
+        issued = try container.decodeIfPresent(Bool.self, forKey: "issued")
     }
 }
 

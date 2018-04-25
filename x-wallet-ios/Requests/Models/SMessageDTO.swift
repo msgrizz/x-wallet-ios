@@ -15,6 +15,8 @@ open class SMessageDTO: Codable {
         case text = "Text"
         case image = "Image"
         case audio = "Audio"
+        case notification = "Notification"
+        case profile = "Profile"
     }
     public var sConversation: Int64?
     public var sconversation: Int64?
