@@ -10,7 +10,35 @@ import UIKit
 import Photos
 import Kingfisher
 import SnapKit
+import Alamofire
 class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableViewDataSource, UITextFieldDelegate,  UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    
+    /// 录音框
+    private var chatHUD: MCRecordHUD!
+    /// HUD类型
+    public var HUDType: HUDType = .bar
+    /// 录音器
+    private var recorder: AVAudioRecorder!
+    /// 录音器设置
+    private let recorderSetting = [AVSampleRateKey : NSNumber(value: Float(44100.0)),//声音采样率
+        AVFormatIDKey : NSNumber(value: Int32(kAudioFormatMPEG4AAC)),//编码格式
+        AVNumberOfChannelsKey : NSNumber(value: 1),//采集音轨
+        AVEncoderAudioQualityKey : NSNumber(value: Int32(AVAudioQuality.medium.rawValue))]//声音质量
+    /// 录音计时器
+    private var timer: Timer?
+    /// 波形更新间隔
+    private let updateFequency = 0.05
+    /// 声音数据数组
+    private var soundMeters: [Float]!
+    /// 声音数据数组容量
+    private let soundMeterCount = 10
+    /// 录音时间
+    private var recordTime = 0.00
+    
+    @IBOutlet weak var voiceInputButton: UIButton!
+    @IBOutlet weak var voiceButton: UIButton!
+    
     
     let barHeight: CGFloat = 50
     let moreViewHeight: CGFloat = 110
@@ -24,15 +52,21 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
     
     @IBOutlet weak var moreActionView: XWInputMoreView!
     
+
+
+    
     override var canBecomeFirstResponder: Bool{
         return true
     }
-    let imagePicker = UIImagePickerController()
     var items = [MessageViewModel]()
     var canSendLocation = true
     var currentUser: XWUser?
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let imagePicker = UIImagePickerController()
+    var imageData: Data!
+    var imageName: String!
 
     //MARK: Methods
     func customization() {
@@ -54,6 +88,10 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
             make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
             make.height.equalTo(barHeight)
         }
+        
+        chatHUD = MCRecordHUD(type: HUDType)
+        configRecord()
+        setupButtonEvent() 
     }
     //MARK: NotificationCenter handlers
     @objc func showKeyboard(notification: Notification) {
@@ -115,16 +153,6 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-//            self.composeMessage(type: .photo, content: "pickedImage")
-//        } else {
-//            let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-//            self.composeMessage(type: .photo, content: "pickedImage")
-//        }
-//        picker.dismiss(animated: true, completion: nil)
-    }
-    
     //MARK: ViewController lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -159,6 +187,20 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
     
     @objc func naviMoreAction(_ : UIBarButtonItem) {
 
+    }
+    
+    @IBAction func inputBarVoice() {
+        self.inputTextField.resignFirstResponder()
+        
+        if self.voiceButton.isSelected {
+            self.voiceButton.isSelected = false
+            self.inputTextField.isHidden = false
+            self.voiceInputButton.isHidden = true
+        }else {
+            self.voiceButton.isSelected = true
+            self.inputTextField.isHidden = true
+            self.voiceInputButton.isHidden = false
+        }
     }
     
     @IBAction func inputBarMore() {
@@ -207,7 +249,102 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
             })
         })
     }
+    
+    @IBAction func chooseContract() {
+        
+    }
+    
+    @IBAction func chooseCard() {
+        let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
+        contact.blockproerty={ (user) in
+            DispatchQueue.main.async {
+                contact.dismiss(animated: true, completion: nil)
+            }
+        }
+        let navi = UIBaseNavigationViewController(rootViewController: contact)
+        self.navigationController?.present(navi, animated: true, completion: {
+            
+        })
+    }
 
+    func didSendCard(cardURL: String) {
+        let message = MessageViewModel.init(owner: .receiver,type: .card,name:(self.currentUser?.name)!,content: "" ,  timestamp: Int(Date().timeIntervalSince1970),headImageURL: self.currentUser?.avatar, imageURL: cardURL)
+        self.items.append(message)
+        self.tableView.insertRows(at: [IndexPath.init(row: self.items.count - 1, section: 0)], with: UITableViewRowAnimation.bottom)
+        if self.items.count > 0 {
+            self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
+        }
+    }
+    
+    @IBAction func chooseImage() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cuAction = UIAlertAction(title: "Camera", style: .default, handler: {action in
+            DispatchQueue.main.async {
+                self.imagePicker.sourceType = .camera
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+        })
+        let reAction = UIAlertAction(title: "Photo Library", style: .default, handler: {action in
+            DispatchQueue.main.async {
+                self.imagePicker.sourceType = .photoLibrary
+                self.present(self.imagePicker, animated: true, completion: nil)
+            }
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(cuAction)
+        alert.addAction(reAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true) {
+            
+        }
+        imageData = UIImageJPEGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage, 0.4)
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd-hh-mm-ss" //Specify your format that you want
+        imageName =  "\(dateFormatter.string(from: date))"+"\(arc4random())"+".JPEG"
+        self.sendImageDataRequest()
+    }
+    
+    func sendImageDataRequest() {
+        // Add Headers
+        let headers = [
+            "Content-Type":"multipart/form-data; charset=utf-8; boundary=__X_PAW_BOUNDARY__",
+            ]
+        
+        // Fetch Request
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append("udap".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"source")
+            multipartFormData.append("smallfiles".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"bucketName")
+            multipartFormData.append("123".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName :"Filename")
+            multipartFormData.append(self.imageData, withName: "qqfile", fileName: self.imageName, mimeType: "multipart/form-data")
+        }, usingThreshold: UInt64.init(), to: "https://oss.iclass.cn/formFile", method: .post, headers: headers, encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    let info = response.result.value as? Dictionary<String, AnyObject>
+                    let url = info!["html"] as? String
+                    self.didSendPhoto(imageURL: url!)
+                }
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        })
+    }
+    
+    func didSendPhoto(imageURL: String) {
+        let message = MessageViewModel.init(owner: .receiver,type: .photo,name:(self.currentUser?.name)!,content: "" ,  timestamp: Int(Date().timeIntervalSince1970),headImageURL: self.currentUser?.avatar, imageURL: imageURL)
+        self.items.append(message)
+        self.tableView.insertRows(at: [IndexPath.init(row: self.items.count - 1, section: 0)], with: UITableViewRowAnimation.bottom)
+        if self.items.count > 0 {
+            self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -354,5 +491,146 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
             }
         }
         self.inputTextField.resignFirstResponder()
+    }
+}
+
+// MARK: - Record handlers
+extension XWMessageViewController: AVAudioRecorderDelegate {
+    
+    /// 开始录音
+    @objc private func beginRecordVoice() {
+        if recorder == nil {
+            return
+        }
+        view.addSubview(chatHUD)
+        view.isUserInteractionEnabled = false  //录音时候禁止点击其他地方
+        chatHUD.startCounting()
+        soundMeters = [Float]()
+        recorder.record()
+        timer = Timer.scheduledTimer(timeInterval: updateFequency, target: self, selector: #selector(updateMeters), userInfo: nil, repeats: true)
+    }
+    
+    /// 停止录音
+    @objc private func endRecordVoice() {
+        recorder.stop()
+        timer?.invalidate()
+        chatHUD.removeFromSuperview()
+        view.isUserInteractionEnabled = true  //录音完了才能点击其他地方
+        chatHUD.stopCounting()
+        soundMeters.removeAll()
+    }
+    
+    /// 取消录音
+    @objc private func cancelRecordVoice() {
+        endRecordVoice()
+        recorder.deleteRecording()
+    }
+    
+    /// 上划取消录音
+    @objc private func remindDragExit() {
+        chatHUD.titleLabel.text = "Release to cancel"
+    }
+    
+    /// 下滑继续录音
+    @objc private func remindDragEnter() {
+        chatHUD.titleLabel.text = "Slide up to cancel"
+    }
+    
+    @objc private func updateMeters() {
+        recorder.updateMeters()
+        recordTime += updateFequency
+        addSoundMeter(item: recorder.averagePower(forChannel: 0))
+        if recordTime >= 60.0 {
+            endRecordVoice()
+        }
+    }
+    
+    private func addSoundMeter(item: Float) {
+        if soundMeters.count < soundMeterCount {
+            soundMeters.append(item)
+        } else {
+            for (index, _) in soundMeters.enumerated() {
+                if index < soundMeterCount - 1 {
+                    soundMeters[index] = soundMeters[index + 1]
+                }
+            }
+            // 插入新数据
+            soundMeters[soundMeterCount - 1] = item
+            NotificationCenter.default.post(name: NSNotification.Name.init("updateMeters"), object: soundMeters)
+        }
+    }
+}
+
+//MARK: - AVAudioRecorderDelegate
+extension XWMessageViewController {
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if recordTime > 1.0 {
+            if flag {
+                do {
+                    let exists = try recorder.url.checkResourceIsReachable()
+                    if exists {
+                        print("finish record")
+                    }
+                }
+                catch { print("fail to load record")}
+            } else {
+                print("record failed")
+            }
+        }
+        recordTime = 0
+    }
+}
+
+// MARK: - Setup
+extension XWMessageViewController {
+    
+    private func setupButtonEvent() {
+        voiceInputButton.addTarget(self, action: #selector(beginRecordVoice), for: .touchDown)
+        voiceInputButton.addTarget(self, action: #selector(endRecordVoice), for: .touchUpInside)
+        voiceInputButton.addTarget(self, action: #selector(cancelRecordVoice), for: .touchUpOutside)
+        voiceInputButton.addTarget(self, action: #selector(cancelRecordVoice), for: .touchCancel)
+        voiceInputButton.addTarget(self, action: #selector(remindDragExit), for: .touchDragExit)
+        voiceInputButton.addTarget(self, action: #selector(remindDragEnter), for: .touchDragEnter)
+    }
+    
+    private func configAVAudioSession() {
+        let session = AVAudioSession.sharedInstance()
+        do { try session.setCategory(AVAudioSessionCategoryRecord, with: .defaultToSpeaker) }
+        catch { print("session config failed") }
+    }
+    
+    private func configRecord() {
+        AVAudioSession.sharedInstance().requestRecordPermission { (allowed) in
+            if !allowed {
+                return
+            }
+        }
+        let session = AVAudioSession.sharedInstance()
+        do { try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with: .defaultToSpeaker) }
+        catch { print("session config failed") }
+        do {
+            self.recorder = try AVAudioRecorder(url: self.directoryURL()!, settings: self.recorderSetting)
+            self.recorder.delegate = self
+            self.recorder.prepareToRecord()
+            self.recorder.isMeteringEnabled = true
+        } catch {
+            print(error.localizedDescription)
+        }
+        do { try AVAudioSession.sharedInstance().setActive(true) }
+        catch { print("session active failed") }
+    }
+    
+    private func directoryURL() -> URL? {
+        //定义并构建一个url来保存音频，音频文件名为recording-yyyy-MM-dd-HH-mm-ss.m4a
+        //根据时间来设置存储文件名
+        let format = DateFormatter()
+        format.dateFormat="yyyy-MM-dd-HH-mm-ss"
+        let currentFileName = "recording-\(format.string(from: Date())).m4a"
+        print(currentFileName)
+        
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let soundFileURL = documentsDirectory.appendingPathComponent(currentFileName)
+        return soundFileURL
     }
 }

@@ -71,6 +71,10 @@
 		D5228D45208DAF67007CE433 /* XWConvertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D44208DAF67007CE433 /* XWConvertManager.swift */; };
 		D5228D48208F1BBC007CE433 /* XWInputBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D47208F1BBC007CE433 /* XWInputBarView.swift */; };
 		D5228D4A208F1BE7007CE433 /* XWInputMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D49208F1BE7007CE433 /* XWInputMoreView.swift */; };
+		D5228D502090329D007CE433 /* HUDMarco.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D4C2090329C007CE433 /* HUDMarco.swift */; };
+		D5228D512090329D007CE433 /* MCProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D4D2090329C007CE433 /* MCProgressView.swift */; };
+		D5228D522090329D007CE433 /* MCRecordHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D4E2090329C007CE433 /* MCRecordHUD.swift */; };
+		D5228D532090329D007CE433 /* MCVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D4F2090329C007CE433 /* MCVolumeView.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -346,6 +350,10 @@
 		D5228D44208DAF67007CE433 /* XWConvertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWConvertManager.swift; sourceTree = "<group>"; };
 		D5228D47208F1BBC007CE433 /* XWInputBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWInputBarView.swift; sourceTree = "<group>"; };
 		D5228D49208F1BE7007CE433 /* XWInputMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWInputMoreView.swift; sourceTree = "<group>"; };
+		D5228D4C2090329C007CE433 /* HUDMarco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDMarco.swift; sourceTree = "<group>"; };
+		D5228D4D2090329C007CE433 /* MCProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCProgressView.swift; sourceTree = "<group>"; };
+		D5228D4E2090329C007CE433 /* MCRecordHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCRecordHUD.swift; sourceTree = "<group>"; };
+		D5228D4F2090329C007CE433 /* MCVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCVolumeView.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -720,6 +728,17 @@
 			path = InputBar;
 			sourceTree = "<group>";
 		};
+		D5228D4B2090329C007CE433 /* MCRecordHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D5228D4C2090329C007CE433 /* HUDMarco.swift */,
+				D5228D4D2090329C007CE433 /* MCProgressView.swift */,
+				D5228D4E2090329C007CE433 /* MCRecordHUD.swift */,
+				D5228D4F2090329C007CE433 /* MCVolumeView.swift */,
+			);
+			path = MCRecordHUD;
+			sourceTree = "<group>";
+		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,6 +1027,7 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D4B2090329C007CE433 /* MCRecordHUD */,
 				D5228D32208881FD007CE433 /* KiClipperHelper */,
 				D5228D0B2080A155007CE433 /* MMShareSheet */,
 				D58DB96B2064A7FF005ABED8 /* GtSdkLib */,
@@ -1547,6 +1567,7 @@
 				D5A4896C204E6D54001031F6 /* Dictionary.swift in Sources */,
 				D5E6477C2079EA4B00AB6BC5 /* ResourceSAccount.swift in Sources */,
 				D54C5879207DAE3F001F3B95 /* XWCardTableViewCell.swift in Sources */,
+				D5228D532090329D007CE433 /* MCVolumeView.swift in Sources */,
 				D5E647702079EA4B00AB6BC5 /* SMiniCoinPoolControllerAPI.swift in Sources */,
 				D58FC42B2057961D008C05AE /* UINavigationBar+Transparent.swift in Sources */,
 				D58DB99D2068F97C005ABED8 /* XWCreateCoinViewController.swift in Sources */,
@@ -1581,7 +1602,9 @@
 				D5E647762079EA4B00AB6BC5 /* Extensions.swift in Sources */,
 				D54C589B207E05E6001F3B95 /* SCouponOwnerDTO.swift in Sources */,
 				D58FC41220564523008C05AE /* FSPageControl.swift in Sources */,
+				D5228D502090329D007CE433 /* HUDMarco.swift in Sources */,
 				D5E647752079EA4B00AB6BC5 /* SNotificationEntityAPI.swift in Sources */,
+				D5228D522090329D007CE433 /* MCRecordHUD.swift in Sources */,
 				A773E5FD206A09DE002C5721 /* XWCreateCouponViewController.swift in Sources */,
 				D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */,
 				D5A48970204E6D54001031F6 /* NSObject.swift in Sources */,
@@ -1614,6 +1637,7 @@
 				D58FC41E2056576A008C05AE /* MyCardViewController.swift in Sources */,
 				D58FC3FE20523CE9008C05AE /* XWMyViewController.swift in Sources */,
 				D5E647912079F24A00AB6BC5 /* XWIOUTableViewCell.swift in Sources */,
+				D5228D512090329D007CE433 /* MCProgressView.swift in Sources */,
 				D58DB98F2068C139005ABED8 /* XWContractHeadTableViewCell.swift in Sources */,
 				D5ADC2162057C60F001307E8 /* XWConversationViewMode.swift in Sources */,
 				D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */,

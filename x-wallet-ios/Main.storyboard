@@ -877,6 +877,8 @@
                         <outlet property="inputTextField" destination="aFF-Ie-mmX" id="3Pg-c5-gb6"/>
                         <outlet property="moreActionView" destination="u96-5J-SfL" id="Hwv-RB-cfC"/>
                         <outlet property="tableView" destination="jsi-Ly-pi9" id="lo5-ja-GAO"/>
+                        <outlet property="voiceButton" destination="dIX-gO-kIa" id="9Dv-L7-tC4"/>
+                        <outlet property="voiceInputButton" destination="bzh-2X-SYS" id="qPW-bQ-79m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wg-4s-Vcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -893,6 +895,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myp-B5-oJy">
                                             <rect key="frame" x="12" y="8" width="70" height="94"/>
                                             <state key="normal" image="inputCard"/>
+                                            <connections>
+                                                <action selector="chooseCard" destination="ESj-p9-VyZ" eventType="touchUpInside" id="aPn-By-sqF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -907,6 +912,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyF-yg-Xes">
                                             <rect key="frame" x="11" y="7" width="70" height="96"/>
                                             <state key="normal" image="inputImage"/>
+                                            <connections>
+                                                <action selector="chooseImage" destination="ESj-p9-VyZ" eventType="touchUpInside" id="AyR-7i-Fr9"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -921,6 +929,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbD-gu-N3r">
                                             <rect key="frame" x="12" y="8" width="70" height="94"/>
                                             <state key="normal" image="inputContract"/>
+                                            <connections>
+                                                <action selector="chooseContract" destination="ESj-p9-VyZ" eventType="touchUpInside" id="kTB-UC-E6F"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1000,6 +1011,14 @@
                                         <constraint firstAttribute="height" constant="33" id="Tnx-qr-hmz"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="voiceButton"/>
+                                    <state key="selected" backgroundImage="inputKeyboard"/>
+                                    <connections>
+                                        <action selector="inputBarVoice" destination="ESj-p9-VyZ" eventType="touchUpInside" id="4DV-At-BeT"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzh-2X-SYS">
+                                    <rect key="frame" x="57" y="5" width="261" height="40"/>
+                                    <state key="normal" image="recoderButton"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1011,8 +1030,12 @@
                                 <constraint firstItem="dIX-gO-kIa" firstAttribute="leading" secondItem="4nJ-7g-2V9" secondAttribute="leading" constant="12" id="Y3J-en-hT5"/>
                                 <constraint firstItem="aFF-Ie-mmX" firstAttribute="height" secondItem="4nJ-7g-2V9" secondAttribute="height" multiplier="0.8" id="fJO-b7-Xz2"/>
                                 <constraint firstItem="aFF-Ie-mmX" firstAttribute="centerY" secondItem="4nJ-7g-2V9" secondAttribute="centerY" id="l82-V5-ZJ8"/>
+                                <constraint firstItem="bzh-2X-SYS" firstAttribute="top" secondItem="4nJ-7g-2V9" secondAttribute="top" constant="5" id="l8W-37-ki9"/>
                                 <constraint firstItem="qtA-Xg-KDn" firstAttribute="centerY" secondItem="4nJ-7g-2V9" secondAttribute="centerY" id="mOZ-Ws-XO4"/>
+                                <constraint firstItem="bzh-2X-SYS" firstAttribute="leading" secondItem="dIX-gO-kIa" secondAttribute="trailing" constant="12" id="mwE-Hf-Q54"/>
                                 <constraint firstItem="qtA-Xg-KDn" firstAttribute="leading" secondItem="aFF-Ie-mmX" secondAttribute="trailing" constant="12" id="spj-wk-SEa"/>
+                                <constraint firstAttribute="bottom" secondItem="bzh-2X-SYS" secondAttribute="bottom" constant="5" id="vBI-Rz-8Or"/>
+                                <constraint firstItem="qtA-Xg-KDn" firstAttribute="leading" secondItem="bzh-2X-SYS" secondAttribute="trailing" constant="12" id="zbf-ZO-ohd"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -8261,6 +8284,7 @@ hwACpooAAqaPAAAAAAAABAEAAAAAAAAAWQAAAAAAAAAAAAAAAAACppE
         <image name="inputCard" width="70" height="94"/>
         <image name="inputContract" width="70" height="94"/>
         <image name="inputImage" width="70" height="96"/>
+        <image name="inputKeyboard" width="33" height="33"/>
         <image name="inviteLine" width="286" height="1"/>
         <image name="issueButton" width="335" height="48"/>
         <image name="logoutButton" width="340" height="48"/>
@@ -8282,6 +8306,7 @@ hwACpooAAqaPAAAAAAAABAEAAAAAAAAAWQAAAAAAAAAAAAAAAAACppE
         <image name="pravicyBackground" width="335" height="592"/>
         <image name="qrcode_border" width="51" height="50"/>
         <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+        <image name="recoderButton" width="276" height="43"/>
         <image name="ringBlue" width="15" height="17"/>
         <image name="seperateLine" width="375" height="2"/>
         <image name="settings" width="20" height="21"/>

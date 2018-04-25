@@ -254,7 +254,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
             SAccountControllerAPI.clearCountUsingPOST(clearCountDTO: clear) { (error) in
                 
             }
-            XWMessageMannger.sharedInstance().startPulling()
+//            XWMessageMannger.sharedInstance().startPulling()
         }
     }
 
