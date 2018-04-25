@@ -96,6 +96,7 @@
 		D5228D79209073EB007CE433 /* XWNotifacationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D78209073EB007CE433 /* XWNotifacationViewController.swift */; };
 		D5228D7B20907AAB007CE433 /* XWNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D7A20907AAB007CE433 /* XWNotificationTableViewCell.swift */; };
 		D5228D7D20907AC9007CE433 /* XWNotificationMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D7C20907AC9007CE433 /* XWNotificationMoreTableViewCell.swift */; };
+		D5228D7F20908381007CE433 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D7E20908381007CE433 /* NotificationModel.swift */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -396,6 +397,7 @@
 		D5228D78209073EB007CE433 /* XWNotifacationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotifacationViewController.swift; sourceTree = "<group>"; };
 		D5228D7A20907AAB007CE433 /* XWNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		D5228D7C20907AC9007CE433 /* XWNotificationMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationMoreTableViewCell.swift; sourceTree = "<group>"; };
+		D5228D7E20908381007CE433 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -1104,6 +1106,7 @@
 			children = (
 				D5ADC2152057C60F001307E8 /* XWConversationViewMode.swift */,
 				D58DB9892068998C005ABED8 /* MessageViewModel.swift */,
+				D5228D7E20908381007CE433 /* NotificationModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1829,6 +1832,7 @@
 				D54C58A6207E05E6001F3B95 /* SCoupon.swift in Sources */,
 				D58FC3F0205234DF008C05AE /* XWTabBarViewController.swift in Sources */,
 				D5E6476D2079EA4B00AB6BC5 /* SAccountControllerAPI.swift in Sources */,
+				D5228D7F20908381007CE433 /* NotificationModel.swift in Sources */,
 				D5228D73209069CA007CE433 /* SConversation2DTO.swift in Sources */,
 				A773E5F82069F43A002C5721 /* XWHealthViewController.swift in Sources */,
 				D58FC41520564523008C05AE /* FSPagerViewCell.swift in Sources */,

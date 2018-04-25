@@ -17,6 +17,7 @@ class XWScanViewController: UIViewController ,UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var scanTop: NSLayoutConstraint!
     var blockproerty:fucBlock!
+    var isPresent: Bool?
 
 
     override func viewDidLoad() {
@@ -35,6 +36,21 @@ class XWScanViewController: UIViewController ,UIImagePickerControllerDelegate, U
         
         let item = UIBarButtonItem(title: NSLocalizedString("Library", comment: ""), style: .plain, target: self, action: #selector(openPhotoLib))
         navigationItem.rightBarButtonItem = item
+        
+        if self.isPresent! {
+            let back = UIBarButtonItem(
+                image: UIImage.init(named: "closeButton"),
+                style: .plain,
+                target: self,
+                action: #selector(goBack(_:))
+            )
+            back.tintColor = Colors.tintColor
+            self.navigationItem.leftBarButtonItem = back
+        }
+    }
+    
+    @objc func goBack(_ : UIBarButtonItem) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {

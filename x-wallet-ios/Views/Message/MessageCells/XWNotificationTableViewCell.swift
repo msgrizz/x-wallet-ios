@@ -10,6 +10,12 @@
 import UIKit
 
 class XWNotificationTableViewCell: UITableViewCell {
+    @IBOutlet weak var timeLable: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var senderLabel: UILabel!
+    @IBOutlet weak var recieverLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

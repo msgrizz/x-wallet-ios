@@ -683,6 +683,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="IKZ-qu-6hk" id="PDT-Uh-FMP"/>
+                                            <outlet property="dateLabel" destination="blc-XW-xpc" id="JKW-PF-urj"/>
+                                            <outlet property="numberLabel" destination="hIn-Fl-SJ5" id="CnI-ih-hao"/>
+                                            <outlet property="timeLable" destination="gH2-Qe-Dqz" id="ZsV-PR-d7x"/>
+                                            <outlet property="titleLabel" destination="FZ7-Fc-Z5W" id="Pxd-la-rcQ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="224" id="Yg5-F7-XGk" customClass="XWNotificationTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="323" width="375" height="224"/>
@@ -789,6 +796,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="9Yc-bF-wyP" id="nbR-cA-kma"/>
+                                            <outlet property="dateLabel" destination="qbl-Jb-S5P" id="d4s-Sw-kdb"/>
+                                            <outlet property="recieverLabel" destination="kTo-HL-73I" id="fUm-CB-axy"/>
+                                            <outlet property="senderLabel" destination="NxS-0h-0Hj" id="VsG-9t-IGX"/>
+                                            <outlet property="timeLable" destination="Fzk-wo-kka" id="Iig-95-eqd"/>
+                                            <outlet property="titleLabel" destination="ZQp-TZ-Yka" id="HcL-T6-ywz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

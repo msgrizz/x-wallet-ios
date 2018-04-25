@@ -86,6 +86,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             DispatchQueue.main.async {
                 let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
+                contact.isPresent = true
                 contact.blockproerty={ (user) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)
@@ -105,6 +106,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
                 DispatchQueue.main.async {
                     let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let contact = Main.instantiateViewController(withIdentifier: "XWContactListTableViewController") as! XWContactListTableViewController
+                    contact.isPresent = true
                     contact.blockproerty={ (user) in
                         DispatchQueue.main.async {
                             contact.dismiss(animated: true, completion: nil)
@@ -148,6 +150,7 @@ class XWWebViewController: UIBaseViewController,WKNavigationDelegate, UINavigati
             DispatchQueue.main.async {
                 let Main: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let contact = Main.instantiateViewController(withIdentifier: "XWScanViewController") as! XWScanViewController
+                contact.isPresent = true
                 contact.blockproerty={ (result) in
                     DispatchQueue.main.async {
                         contact.dismiss(animated: true, completion: nil)

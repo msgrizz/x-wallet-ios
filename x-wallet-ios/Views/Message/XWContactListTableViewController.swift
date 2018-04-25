@@ -21,6 +21,8 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
     var blockproerty:fucBlock!
     
     var users: [XWUser] = [XWUser]()
+    
+    var isPresent: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,21 @@ class XWContactListTableViewController: UIBaseViewController,UITableViewDelegate
         self.navigationItem.rightBarButtonItem = addButton
         self.getUserData()
         self.tableView.index
+        
+        if self.isPresent! {
+            let back = UIBarButtonItem(
+                image: UIImage.init(named: "closeButton"),
+                style: .plain,
+                target: self,
+                action: #selector(goBack(_:))
+            )
+            back.tintColor = Colors.tintColor
+            self.navigationItem.leftBarButtonItem = back
+        }
+    }
+    
+    @objc func goBack(_ : UIBarButtonItem) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func add(_ : UIBarButtonItem) {
