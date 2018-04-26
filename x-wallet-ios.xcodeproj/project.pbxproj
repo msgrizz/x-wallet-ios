@@ -97,6 +97,9 @@
 		D5228D7B20907AAB007CE433 /* XWNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D7A20907AAB007CE433 /* XWNotificationTableViewCell.swift */; };
 		D5228D7D20907AC9007CE433 /* XWNotificationMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D7C20907AC9007CE433 /* XWNotificationMoreTableViewCell.swift */; };
 		D5228D7F20908381007CE433 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5228D7E20908381007CE433 /* NotificationModel.swift */; };
+		D5228D8420919D66007CE433 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5228D8120919D65007CE433 /* libopencore-amrnb.a */; };
+		D5228D8520919D66007CE433 /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5228D8220919D65007CE433 /* RCConfig.plist */; };
+		D5228D8620919D66007CE433 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5228D8320919D65007CE433 /* RongIMLib.framework */; };
 		D54C5865207CB1FE001F3B95 /* XWImportantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */; };
 		D54C5867207CB215001F3B95 /* XWDocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */; };
 		D54C5869207CB25E001F3B95 /* XWDocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */; };
@@ -398,6 +401,9 @@
 		D5228D7A20907AAB007CE433 /* XWNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		D5228D7C20907AC9007CE433 /* XWNotificationMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWNotificationMoreTableViewCell.swift; sourceTree = "<group>"; };
 		D5228D7E20908381007CE433 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		D5228D8120919D65007CE433 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		D5228D8220919D65007CE433 /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
+		D5228D8320919D65007CE433 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		D54C5864207CB1FE001F3B95 /* XWImportantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWImportantTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5866207CB215001F3B95 /* XWDocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewCell.swift; sourceTree = "<group>"; };
 		D54C5868207CB25E001F3B95 /* XWDocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWDocumentTableViewController.swift; sourceTree = "<group>"; };
@@ -613,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5228D2F2086E88D007CE433 /* CoreData.framework in Frameworks */,
+				D5228D8420919D66007CE433 /* libopencore-amrnb.a in Frameworks */,
 				D58DB9832064A8B1005ABED8 /* PushKit.framework in Frameworks */,
 				D58DB9812064A8A6005ABED8 /* libz.tbd in Frameworks */,
 				D58DB97F2064A89C005ABED8 /* libc++.tbd in Frameworks */,
@@ -621,6 +628,7 @@
 				D58DB9792064A857005ABED8 /* CoreTelephony.framework in Frameworks */,
 				D58DB9772064A846005ABED8 /* MobileCoreServices.framework in Frameworks */,
 				D58DB9752064A83F005ABED8 /* AVFoundation.framework in Frameworks */,
+				D5228D8620919D66007CE433 /* RongIMLib.framework in Frameworks */,
 				D58DB9732064A82D005ABED8 /* CoreLocation.framework in Frameworks */,
 				D58DB9712064A81F005ABED8 /* UserNotifications.framework in Frameworks */,
 				D58DB96F2064A7FF005ABED8 /* GTSDK.framework in Frameworks */,
@@ -781,6 +789,16 @@
 				D5228D4F2090329C007CE433 /* MCVolumeView.swift */,
 			);
 			path = MCRecordHUD;
+			sourceTree = "<group>";
+		};
+		D5228D8020919D65007CE433 /* RongIMLib */ = {
+			isa = PBXGroup;
+			children = (
+				D5228D8120919D65007CE433 /* libopencore-amrnb.a */,
+				D5228D8220919D65007CE433 /* RCConfig.plist */,
+				D5228D8320919D65007CE433 /* RongIMLib.framework */,
+			);
+			path = RongIMLib;
 			sourceTree = "<group>";
 		};
 		D545A1492050D92D00F9B4BB /* Requests */ = {
@@ -1074,6 +1092,7 @@
 		D5A489E4204FBD8E001031F6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				D5228D8020919D65007CE433 /* RongIMLib */,
 				D5228D552090426D007CE433 /* Loggins.mp3 */,
 				D5228D562090426D007CE433 /* Papilon5.mp4 */,
 				D5228D542090426C007CE433 /* Seals.mp3 */,
@@ -1386,6 +1405,7 @@
 				D54C587A207DAE3F001F3B95 /* XWCardTableViewCell.xib in Resources */,
 				D5ADC21A2058B7FA001307E8 /* XWNewConversationTableViewCell.xib in Resources */,
 				D54C5880207DE1EA001F3B95 /* XWMyBagTableViewCell.xib in Resources */,
+				D5228D8520919D66007CE433 /* RCConfig.plist in Resources */,
 				A773E618206A3CE1002C5721 /* XWImportantHeadView.xib in Resources */,
 				D5228D1620843780007CE433 /* XWCardListHeaderView.xib in Resources */,
 				D58FC40520562C85008C05AE /* Welcome.storyboard in Resources */,
@@ -2036,9 +2056,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/RongIMLib",
 				);
 				INFOPLIST_FILE = "x-wallet-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/RongIMLib",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2063,9 +2088,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/RongIMLib",
 				);
 				INFOPLIST_FILE = "x-wallet-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/x-wallet-ios/Others/RongIMLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib/GtSdkDemo-swift-Bridging-Header.h";

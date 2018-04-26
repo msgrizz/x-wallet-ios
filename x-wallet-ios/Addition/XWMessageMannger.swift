@@ -110,17 +110,17 @@ class XWMessageMannger: NSObject {
     }
     
     func startPullingConversation() {
-        self.stopPullingMessage()
-        self.lastCid = try! db.fetch(FetchRequest<ConversationEntity>().sorted(with: "id", ascending: false)).first?.id ?? 0
-        
-        if self.conversationTimer != nil {
-            if  (self.conversationTimer?.isCancelled)! {
-                self.initPullingConversation()
-            }else {
-                self.conversationTimer?.resume()
-            }
-        }else {
-            self.initPullingConversation()
-        }
+//        self.stopPullingMessage()
+//        self.lastCid = try! db.fetch(FetchRequest<ConversationEntity>().sorted(with: "id", ascending: false)).first?.id ?? 0
+//        
+//        if self.conversationTimer != nil {
+//            if  (self.conversationTimer?.isCancelled)! {
+//                self.initPullingConversation()
+//            }else {
+//                self.conversationTimer?.resume()
+//            }
+//        }else {
+//            self.initPullingConversation()
+//        }
     }
 }

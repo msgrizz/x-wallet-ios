@@ -17,7 +17,7 @@ import SugarRecord
 let kGtAppId:String = "iMahVVxurw6BNr7XSn9EF2"
 let kGtAppKey:String = "yIPfqwq6OMAPp6dkqgLpG5"
 let kGtAppSecret:String = "G0aBqAD6t79JfzTB6Z5lo5"
-
+let kRCAppKey:String = "lmxuhwagliu5d"
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserNotificationCenterDelegate, PKPushRegistryDelegate {
 
@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         
         SHFullscreenPopGesture.configure()
         
+        RCIMClient.shared().initWithAppKey(kRCAppKey)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         

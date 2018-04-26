@@ -8,52 +8,14 @@
 
 import UIKit
 import SwiftyUserDefaults
-import CoreData
-import SugarRecord
-
-class XWMessageListTableViewController: UIBaseTableViewController,NSFetchedResultsControllerDelegate {
-    lazy var db: CoreDataDefaultStorage = {
-        let store = CoreDataStore.named(dataName)
-        let bundle = Bundle(for: self.classForCoder)
-        let model = CoreDataObjectModel.merged([bundle])
-        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
-        return defaultStorage
-    }()
-    var observable: RequestObservable<ConversationEntity>!
-    
-    func setup() {
-        let request: FetchRequest<ConversationEntity> = FetchRequest<ConversationEntity>().sorted(with: "lastModifyTime", ascending: false)
-        self.observable = self.db.observable(request: request)
-        self.observable.observe { changes in
-            switch changes {
-            case .initial(let objects):
-            print("\(objects.count) objects in the database")
-                break
-            case .update(let deletions, let insertions, let modifications):
-                if insertions.count > 0 {
-                    for ele in insertions {
-                        self.entityArrays.insert(ele.element, at: 0)
-                    }
-                    self.convertData()
-                }
-                if modifications.count > 0 {
-                    debugPrint(insertions)
-                }
-            print("\(deletions.count) deleted | \(insertions.count) inserted | \(modifications.count) modified")
-                break
-//            case .error(let error):
-//            print("Something went wrong")
-//                break
-            default:
-                print("Something went wrong")
-                break
-            }
-        }
-    }
+class XWMessageListTableViewController: UIBaseTableViewController{
 
     var addContactButton: UIBarButtonItem!
     var dataModels: [XWConversationViewModel] = [XWConversationViewModel]()
-    var entityArrays: [ConversationEntity] = [ConversationEntity]()
+    
+    var conversationArray: [RCConversation] = [RCConversation]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Message", comment: "")
@@ -71,23 +33,31 @@ class XWMessageListTableViewController: UIBaseTableViewController,NSFetchedResul
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.tableView.register(UINib(nibName: "XWConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWConversationTableViewCell")
         self.tableView.register(UINib(nibName: "XWNewConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWNewConversationTableViewCell")
-
         
-        entityArrays = try! db.fetch(FetchRequest<ConversationEntity>().sorted(with: "id", ascending: false))
-        
-        self.setup()
+        conversationArray = RCIMClient.shared().getConversationList([RCConversationType.ConversationType_PRIVATE,
+                                                                     RCConversationType.ConversationType_GROUP,
+                                                                     RCConversationType.ConversationType_SYSTEM]) as! [RCConversation]
         self.convertData()
     }
     
     func convertData() {
         dataModels.removeAll()
-        for ele in entityArrays {
+        for ele in conversationArray {
             var model = XWConversationViewModel()
-            model.name = ele.name!
-            model.content = ele.lastMessage!
-            model.headURL = ele.avatar ?? ""
-            model.time = ele.lastModifyTime
-            model.id = ele.id
+            model.name = ele.conversationTitle!
+            
+            if ele.lastestMessage.isKind(of: RCImageMessage.classForCoder()) {
+                model.content = "[Image]"
+            }else if ele.lastestMessage.isKind(of: RCVoiceMessage.classForCoder()) {
+                model.content = "[Voice]"
+            }else if ele.lastestMessage.isKind(of: RCTextMessage.classForCoder()) {
+                let mes = ele.lastestMessage as! RCTextMessage
+                model.content = mes.content
+            }
+            model.content = ele.conversationTitle!
+//            model.headURL = ele.avatar ?? ""
+            model.time = ele.receivedTime
+            model.id = ele.targetId
             dataModels.append(model)
         }
         self.tableView.reloadData()
@@ -141,17 +111,6 @@ class XWMessageListTableViewController: UIBaseTableViewController,NSFetchedResul
                     SConversation2ControllerAPI.addSConversation2UsingPOST(sConversation2DTO: dto, completion: { (con, error) in
                         
                     })
-//                        do {
-//                            try self.db.operation { (context, save) throws in
-//                                // Do your operations here
-//                                let entity: ConversationEntity = try context.new()
-//                                XWConvertManager.sharedInstance().convertConversation(conversation: conversion!, entity: entity)
-//                                try context.insert(entity)
-//                                save()
-//                            }
-//                        } catch {
-//                            // There was an error in the operation
-//                        }
                 }
             }
             let navi = UIBaseNavigationViewController(rootViewController: contact)

@@ -4,3 +4,4 @@
 
 #import <GTExtensionSDK/GeTuiExtSdk.h>
 #import <GTSDK/GeTuiSdk.h>
+#import <RongIMLib/RongIMLib.h>
