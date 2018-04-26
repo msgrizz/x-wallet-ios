@@ -15,18 +15,20 @@ public enum ModelType: String, Codable {
     case profile = "Profile"
 }
 
+public enum MiniContractAction: String, Codable {
+    case created = "Created"
+    case confirmed = "Confirmed"
+    case rejected = "Rejected"
+}
+public enum TokenAction: String, Codable {
+    case created = "Created"
+    case transfered = "Transfered"
+    case received = "Received"
+}
+
 open class SMessage2: Codable {
 
-    public enum MiniContractAction: String, Codable { 
-        case created = "Created"
-        case confirmed = "Confirmed"
-        case rejected = "Rejected"
-    }
-    public enum TokenAction: String, Codable { 
-        case created = "Created"
-        case transfered = "Transfered"
-        case received = "Received"
-    }
+
 
     public var activated: Bool?
     /** token - 数量 */

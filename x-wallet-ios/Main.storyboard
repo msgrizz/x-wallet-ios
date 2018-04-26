@@ -256,7 +256,7 @@
                     <connections>
                         <segue destination="LLm-wR-1WR" kind="show" identifier="goToMyList" id="rje-dx-RZ9"/>
                         <segue destination="ESj-p9-VyZ" kind="show" identifier="goToMessageView" id="Oex-oX-4Tm"/>
-                        <segue destination="FSO-a3-pBU" kind="show" id="rJ0-rp-10J"/>
+                        <segue destination="FSO-a3-pBU" kind="show" identifier="goToNotifivation" id="rJ0-rp-10J"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bo-vU-oUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,7 +691,7 @@
                                             <outlet property="titleLabel" destination="FZ7-Fc-Z5W" id="Pxd-la-rcQ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="224" id="Yg5-F7-XGk" customClass="XWNotificationTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="XWNotificationTableViewCell" rowHeight="224" id="Yg5-F7-XGk" customClass="XWNotificationTableViewCell" customModule="x_wallet_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="323" width="375" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yg5-F7-XGk" id="wBH-26-eFj">

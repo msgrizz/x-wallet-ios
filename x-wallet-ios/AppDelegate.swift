@@ -235,7 +235,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         if  Defaults[.isLogin] {
-            XWMessageMannger.sharedInstance().suspendPulling()
+            
         }
     }
 
@@ -254,7 +254,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
             SAccountControllerAPI.clearCountUsingPOST(clearCountDTO: clear) { (error) in
                 
             }
-//            XWMessageMannger.sharedInstance().startPulling()
         }
     }
 

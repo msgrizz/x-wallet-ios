@@ -21,6 +21,9 @@ class XWMessageMannger: NSObject {
     let delayTime = 2
     var messageTimer: DispatchSourceTimer?
     var conversationTimer: DispatchSourceTimer?
+    
+    var lastCid: Int64?
+    
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreDataStore.named(dataName)
         let bundle = Bundle(for: self.classForCoder)
@@ -72,8 +75,26 @@ class XWMessageMannger: NSObject {
         conversationTimer = DispatchSource.makeTimerSource(queue:DispatchQueue.init(label: "conversationQueue"))
         conversationTimer?.schedule(deadline: DispatchTime.now(), repeating: .seconds(delayTime), leeway: DispatchTimeInterval.milliseconds(10))
         conversationTimer?.setEventHandler(handler: {
-            SConversation2ControllerAPI.mySConversation2UsingGET1(accountId: Int64(Defaults[.userId]), lastCId: 0, completion: { (conversations, error) in
-                
+            SConversation2ControllerAPI.mySConversation2UsingGET1(accountId: Int64(Defaults[.userId]), lastCId: self.lastCid!, completion: { (conversations, error) in
+                do {
+                    try self.db.operation { (context, save) throws in
+                        for ele in conversations! {
+                            let localModel = try! self.db.fetch(FetchRequest<ConversationEntity>().filtered(with: "id", equalTo: "\(ele.id!)")).first
+                            guard localModel == nil else {
+                                continue
+                            }
+                            let con: ConversationEntity = try! context.create()
+                            XWConvertManager.sharedInstance().convertConversation(conversation: ele, entity: con)
+                            con.lastMessage = ele.lastMsg?.content
+                            if ele.id! > self.lastCid! {
+                                self.lastCid = ele.id
+                            }
+                            save()
+                        }
+                    }
+                } catch {
+                    // There was an error in the operation
+                }
             })
         })
         conversationTimer?.resume()
@@ -89,10 +110,17 @@ class XWMessageMannger: NSObject {
     }
     
     func startPullingConversation() {
+        self.stopPullingMessage()
+        self.lastCid = try! db.fetch(FetchRequest<ConversationEntity>().sorted(with: "id", ascending: false)).first?.id ?? 0
+        
         if self.conversationTimer != nil {
-            self.conversationTimer?.resume()
+            if  (self.conversationTimer?.isCancelled)! {
+                self.initPullingConversation()
+            }else {
+                self.conversationTimer?.resume()
+            }
         }else {
-            self.initPullingMessage()
+            self.initPullingConversation()
         }
     }
 }

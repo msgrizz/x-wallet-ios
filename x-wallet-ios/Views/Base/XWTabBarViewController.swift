@@ -15,6 +15,8 @@ class XWTabBarViewController: UITabBarController {
         self.tabBar.tintColor = Colors.tintColor
         self.tabBar.barTintColor = Colors.backGroundColor
         self.tabBar.clipsToBounds = true
+        XWMessageMannger.sharedInstance().startPullingConversation()
+
         // Do any additional setup after loading the view.
     }
 
