@@ -248,6 +248,7 @@
 		D5ADC2EA205A3B34001307E8 /* BaseCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2E9205A3B34001307E8 /* BaseCardModel.swift */; };
 		D5ADC2EE205A424A001307E8 /* XWContractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADC2ED205A424A001307E8 /* XWContractView.swift */; };
 		D5ADC2F0205A425B001307E8 /* XWContractView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5ADC2EF205A425B001307E8 /* XWContractView.xib */; };
+		D5BC112120940BFF00C04328 /* XWMessageExtraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BC112020940BFF00C04328 /* XWMessageExtraModel.swift */; };
 		D5E6467C20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */; };
 		D5E646802074A3FE00AB6BC5 /* XWLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */; };
 		D5E646FE2079E56300AB6BC5 /* XWCouponDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E646FD2079E56300AB6BC5 /* XWCouponDetailViewController.swift */; };
@@ -557,6 +558,7 @@
 		D5ADC2E9205A3B34001307E8 /* BaseCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardModel.swift; sourceTree = "<group>"; };
 		D5ADC2ED205A424A001307E8 /* XWContractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWContractView.swift; sourceTree = "<group>"; };
 		D5ADC2EF205A425B001307E8 /* XWContractView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XWContractView.xib; sourceTree = "<group>"; };
+		D5BC112020940BFF00C04328 /* XWMessageExtraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWMessageExtraModel.swift; sourceTree = "<group>"; };
 		D5E6467B20747B3A00AB6BC5 /* XWReceiveCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWReceiveCodeViewController.swift; sourceTree = "<group>"; };
 		D5E6467F2074A3FE00AB6BC5 /* XWLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWLocalManager.swift; sourceTree = "<group>"; };
 		D5E646FD2079E56300AB6BC5 /* XWCouponDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWCouponDetailViewController.swift; sourceTree = "<group>"; };
@@ -902,6 +904,7 @@
 				D58DB98C2068A223005ABED8 /* XWUser.swift */,
 				A70EE04B206CB2C60012A4D7 /* XWContract.swift */,
 				D5228D1D208589A6007CE433 /* XWNotificationModel.swift */,
+				D5BC112020940BFF00C04328 /* XWMessageExtraModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1841,6 +1844,7 @@
 				A739C41B2080FDD900B595DD /* UseSCouponDTO.swift in Sources */,
 				D5228D292085F592007CE433 /* AddFriendDTO.swift in Sources */,
 				D58DB98A2068998C005ABED8 /* MessageViewModel.swift in Sources */,
+				D5BC112120940BFF00C04328 /* XWMessageExtraModel.swift in Sources */,
 				A70EE048206B33000012A4D7 /* XWCoinDetailViewController.swift in Sources */,
 				D5228D74209069CA007CE433 /* UpdateSProfileDTO.swift in Sources */,
 				D5A48972204E6D54001031F6 /* String.swift in Sources */,

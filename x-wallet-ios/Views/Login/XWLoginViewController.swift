@@ -92,6 +92,13 @@ class XWLoginViewController: UIBaseViewController {
         Defaults[.userId] = Double(userId!)
         Defaults[.isLogin] = true
         XWLocalManager.sharedInstance().localUser = account
+        RCIMClient.shared().connect(withToken: XWLocalManager.sharedInstance().localUser.rcToken, success: { (userId) in
+            XWLocalManager.sharedInstance().rcUserId = userId
+        }, error: { (error) in
+            debugPrint(error)
+        }) {
+            
+        }
         do {
             try self.db.operation { (context, save) throws -> Void in
                 let user: UserEntity = try! context.create()

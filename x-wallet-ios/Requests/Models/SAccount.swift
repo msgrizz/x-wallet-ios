@@ -14,6 +14,7 @@ open class SAccount: Codable {
     public var about: String?
     public var activated: Bool?
     public var avatar: String?
+    public var rcToken: String?
     public var createTime: Int64?
     public var credit: Int64?
     public var email: String?
@@ -29,7 +30,7 @@ open class SAccount: Codable {
 
 
     
-    public init(about: String?, activated: Bool?, avatar: String?, createTime: Int64?, credit: Int64?, email: String?, friend: Bool?, id: Int64?, lastModifyTime: Int64?, loginName: String?, loginPass: String?, mobile: String?, nickname: String?, paymentPass: String?, version: Int64?) {
+    public init(about: String?, activated: Bool?, avatar: String?, rcToken: String?,createTime: Int64?, credit: Int64?, email: String?, friend: Bool?, id: Int64?, lastModifyTime: Int64?, loginName: String?, loginPass: String?, mobile: String?, nickname: String?, paymentPass: String?, version: Int64?) {
         self.about = about
         self.activated = activated
         self.avatar = avatar
@@ -45,6 +46,7 @@ open class SAccount: Codable {
         self.nickname = nickname
         self.paymentPass = paymentPass
         self.version = version
+        self.rcToken = rcToken
     }
     
 
@@ -69,6 +71,7 @@ open class SAccount: Codable {
         try container.encodeIfPresent(nickname, forKey: "nickname")
         try container.encodeIfPresent(paymentPass, forKey: "paymentPass")
         try container.encodeIfPresent(version, forKey: "version")
+        try container.encodeIfPresent(rcToken, forKey: "rcToken")
     }
 
     // Decodable protocol methods
@@ -91,6 +94,7 @@ open class SAccount: Codable {
         nickname = try container.decodeIfPresent(String.self, forKey: "nickname")
         paymentPass = try container.decodeIfPresent(String.self, forKey: "paymentPass")
         version = try container.decodeIfPresent(Int64.self, forKey: "version")
+        rcToken = try container.decodeIfPresent(String.self, forKey: "rcToken")
     }
 }
 

@@ -250,6 +250,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GeTuiSdkDelegate, UNUserN
         if  Defaults[.isLogin] {
             SAccountControllerAPI.getOneUsingGET(id: Int64(Defaults[.userId])) {  (account, error) in
                 XWLocalManager.sharedInstance().localUser = account
+                RCIMClient.shared().connect(withToken: XWLocalManager.sharedInstance().localUser.rcToken, success: { (userId) in
+                    XWLocalManager.sharedInstance().rcUserId = userId
+                }, error: { (error) in
+                    debugPrint(error)
+                }) {
+                    
+                }
             }
             let clear = ClearCountDTO(accountId: Int64(Defaults[.userId]))
             SAccountControllerAPI.clearCountUsingPOST(clearCountDTO: clear) { (error) in

@@ -22,6 +22,8 @@ class XWLocalManager: NSObject {
     
     open var localUser :SAccount!
     
+    open var rcUserId: String?
+    
     private static var _instance = XWLocalManager()
     class func sharedInstance() -> XWLocalManager {
         return _instance
