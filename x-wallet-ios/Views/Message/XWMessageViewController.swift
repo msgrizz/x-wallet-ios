@@ -60,7 +60,10 @@ class XWMessageViewController: UIBaseViewController,UITableViewDelegate,UITableV
     }
     var items = [MessageViewModel]()
     var canSendLocation = true
+    
     var currentUser: XWUser?
+    var targetUser: XWUser?
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -558,6 +561,11 @@ extension XWMessageViewController: AVAudioRecorderDelegate {
             soundMeters[soundMeterCount - 1] = item
             NotificationCenter.default.post(name: NSNotification.Name.init("updateMeters"), object: soundMeters)
         }
+    }
+    
+    func addExtraData() {
+//        let extra = XWMessageExtraModel(logo: targetUser?.avatar!, content: "", name: targetUser?.name, action: "", tokenAmount: 0, tokenId: 0, title: targetUser?.name)
+        
     }
 }
 

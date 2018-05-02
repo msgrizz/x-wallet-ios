@@ -91,8 +91,9 @@ class XWLoginViewController: UIBaseViewController {
         let userId = account.id
         Defaults[.userId] = Double(userId!)
         Defaults[.isLogin] = true
+        Defaults[.rcToken] = account.rcToken!
         XWLocalManager.sharedInstance().localUser = account
-        RCIMClient.shared().connect(withToken: XWLocalManager.sharedInstance().localUser.rcToken, success: { (userId) in
+        RCIMClient.shared().connect(withToken: Defaults[.rcToken], success: { (userId) in
             XWLocalManager.sharedInstance().rcUserId = userId
         }, error: { (error) in
             debugPrint(error)

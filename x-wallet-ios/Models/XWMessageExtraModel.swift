@@ -16,14 +16,16 @@ class XWMessageExtraModel: Codable {
     public var action: String?
     public var tokenAmount: Int64?
     public var tokenId: Int64?
+    public var title: String?
 
-    public init(logo: String?, content: String?, name: String?, action: String?, tokenAmount: Int64?, tokenId: Int64?) {
+    public init(logo: String?, content: String?, name: String?, action: String?, tokenAmount: Int64?, tokenId: Int64?, title: String?) {
         self.logo = logo
         self.content = content
         self.name = name
         self.action = action
         self.tokenAmount = tokenAmount
         self.tokenId = tokenId
+        self.title = title
     }
     
     
@@ -39,7 +41,7 @@ class XWMessageExtraModel: Codable {
         try container.encodeIfPresent(action, forKey: "action")
         try container.encodeIfPresent(tokenAmount, forKey: "tokenAmount")
         try container.encodeIfPresent(tokenId, forKey: "tokenId")
-
+        try container.encodeIfPresent(title, forKey: "title")
     }
     
     // Decodable protocol methods
@@ -53,5 +55,6 @@ class XWMessageExtraModel: Codable {
         action = try container.decodeIfPresent(String.self, forKey: "action")
         tokenAmount = try container.decodeIfPresent(Int64.self, forKey: "tokenAmount")
         tokenId = try container.decodeIfPresent(Int64.self, forKey: "tokenId")
+        title = try container.decodeIfPresent(String.self, forKey: "title")
     }
 }

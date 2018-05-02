@@ -8,8 +8,8 @@
 
 import UIKit
 import SwiftyUserDefaults
-class XWMessageListTableViewController: UIBaseTableViewController{
 
+class XWMessageListTableViewController: UIBaseTableViewController{
     var addContactButton: UIBarButtonItem!
     var dataModels: [XWConversationViewModel] = [XWConversationViewModel]()
     
@@ -34,9 +34,7 @@ class XWMessageListTableViewController: UIBaseTableViewController{
         self.tableView.register(UINib(nibName: "XWConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWConversationTableViewCell")
         self.tableView.register(UINib(nibName: "XWNewConversationTableViewCell", bundle: nil), forCellReuseIdentifier: "XWNewConversationTableViewCell")
         
-        conversationArray = RCIMClient.shared().getConversationList([RCConversationType.ConversationType_PRIVATE,
-                                                                     RCConversationType.ConversationType_GROUP,
-                                                                     RCConversationType.ConversationType_SYSTEM]) as! [RCConversation]
+        conversationArray = RCIMClient.shared().getConversationList([(RCConversationType.ConversationType_PRIVATE).rawValue]) as! [RCConversation]
         self.convertData()
     }
     
@@ -53,6 +51,7 @@ class XWMessageListTableViewController: UIBaseTableViewController{
             }else if ele.lastestMessage.isKind(of: RCTextMessage.classForCoder()) {
                 let mes = ele.lastestMessage as! RCTextMessage
                 model.content = mes.content
+                debugPrint(mes.extra)
             }
             model.content = ele.conversationTitle!
 //            model.headURL = ele.avatar ?? ""

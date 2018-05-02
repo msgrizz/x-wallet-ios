@@ -10,8 +10,19 @@ import UIKit
 import DynamicBlurView
 import SnapKit
 import SwiftyUserDefaults
+import CoreData
+import SugarRecord
 
 class XWMainViewController: UIBaseViewController {
+    
+    lazy var db: CoreDataDefaultStorage = {
+        let store = CoreDataStore.named(dataName)
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
+        let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
+        return defaultStorage
+    }()
+    
     let defaultHeight: CGFloat = 204
     let defaultHeadHeight: CGFloat = 25
 
@@ -82,7 +93,7 @@ class XWMainViewController: UIBaseViewController {
         self.tableView.addSubview(refreshControl)
         
         self.getAppsData(UIRefreshControl())
-
+        self.getUserData()
         SAccountControllerAPI.registerPushTokenUsingPOST(sPushTokenDTO: SPushTokenDTO(deviceType: .ios, pushToken: Defaults[.pushToken], accountId: Int64(Defaults[.userId]))) { (suc, error) in}
     }
     
@@ -272,6 +283,31 @@ class XWMainViewController: UIBaseViewController {
             }
             self.refreshControl.endRefreshing()
             self.tableView.reloadData()
+        }
+    }
+    
+    func getUserData() {
+        FriendshipControllerAPI.myFriendsUsingGET(accountId:Int64(Defaults[.userId])) { (accounts, error) in
+            do {
+                try self.db.operation { (context, save) throws -> Void in
+                    
+                    for ele in accounts! {
+                        
+                        let localModel = try! self.db.fetch(FetchRequest<UserEntity>().filtered(with: "id", equalTo: "\(ele.id!)")).first
+                        guard localModel == nil else {
+                            continue
+                        }
+                        
+                        let user: UserEntity = try! context.create()
+                        XWConvertManager.sharedInstance().convertUser(user: ele, entity: user)
+                    }
+                    save()
+                }
+            }
+            catch {
+                // There was an error in the operation
+            }
+            
         }
     }
 }

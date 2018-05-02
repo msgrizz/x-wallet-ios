@@ -39,11 +39,12 @@
         <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="paymentPass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rcToken" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="BaseEntity" positionX="-774" positionY="-108" width="128" height="133"/>
         <element name="ConversationEntity" positionX="-153" positionY="-90" width="128" height="133"/>
         <element name="MessageEntity" positionX="-324" positionY="261" width="128" height="193"/>
-        <element name="UserEntity" positionX="-767" positionY="210" width="128" height="193"/>
+        <element name="UserEntity" positionX="-767" positionY="210" width="128" height="210"/>
     </elements>
 </model>
