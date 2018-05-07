@@ -14,7 +14,7 @@ class XWAppsViewController: XWWebViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Apps"
+        self.title = "Provider"
         self.launchURL = kMarketURL
         self.loadURL()
         self.navigationController?.navigationBar.prefersLargeTitles = true

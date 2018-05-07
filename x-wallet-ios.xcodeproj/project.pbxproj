@@ -2069,7 +2069,7 @@
 					"$(PROJECT_DIR)/x-wallet-ios/Others/RongIMLib",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iclass.xwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib/GtSdkDemo-swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -2100,7 +2100,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/x-wallet-ios/Others/RongIMLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iclass.x-wallet-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iclass.xwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/x-wallet-ios/Others/GtSdkLib/GtSdkDemo-swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

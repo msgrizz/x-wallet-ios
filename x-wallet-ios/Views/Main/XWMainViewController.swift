@@ -277,6 +277,9 @@ class XWMainViewController: UIBaseViewController {
                 app.dataModels = ele.data!
                 app.appImage = ele.logo
                 app.type = ele.dashboardType!
+                if app.type == DashboardType.miniCoin {
+                    continue
+                }
                 if ele.data?.count != 0 {
                     self.dataArray.append(app)
                 }

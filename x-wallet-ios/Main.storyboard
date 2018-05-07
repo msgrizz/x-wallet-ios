@@ -32,11 +32,11 @@
             </objects>
             <point key="canvasLocation" x="-1889" y="-2406"/>
         </scene>
-        <!--Apps-->
+        <!--Provider-->
         <scene sceneID="heC-x6-x3V">
             <objects>
                 <navigationController id="PTT-7i-Lsr" customClass="UIBaseNavigationViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Apps" image="buttonApps" id="MPi-mX-fjf"/>
+                    <tabBarItem key="tabBarItem" title="Provider" image="buttonApps" id="MPi-mX-fjf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o05-86-3v4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -179,11 +179,11 @@
             </objects>
             <point key="canvasLocation" x="1425" y="-4412"/>
         </scene>
-        <!--Wallet-->
+        <!--Assets-->
         <scene sceneID="yKG-D7-NaX">
             <objects>
                 <navigationController storyboardIdentifier="MainNavi" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f3Z-MM-XqV" customClass="UIBaseNavigationViewController" customModule="x_wallet_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wallet" image="mainButton" id="E8v-K3-QHo">
+                    <tabBarItem key="tabBarItem" title="Assets" image="mainButton" id="E8v-K3-QHo">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="mainButtonPress"/>
                         </userDefinedRuntimeAttributes>
